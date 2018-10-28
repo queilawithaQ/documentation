@@ -44,7 +44,7 @@ If you'd like to learn more about Codeship Basic, we recommend the [getting star
 
 Current versions of Google Chrome and Chromium are installed by default.
 
-Google Chrome is at version 69 and is located at `/usr/bin/google-chrome`.
+Google Chrome is at version 70 and is located at `/usr/bin/google-chrome`.
 
 Chromium is at version 65 and is located at `/usr/bin/chromium-browser`.
 
@@ -61,7 +61,7 @@ Beginning in Google Chrome 59, you can run Chrome in [headless mode](https://dev
 
 ## ChromeDriver
 
-[ChromeDriver](https://sites.google.com/a/chromium.org/chromedriver) 2.41 is installed by default and available in the PATH.
+[ChromeDriver](https://sites.google.com/a/chromium.org/chromedriver) 2.43 is installed by default and available in the PATH.
 
 To install a [custom ChromeDriver version](https://github.com/codeship/scripts/blob/master/packages/chromedriver.sh) add the following commands to your build steps:
 
