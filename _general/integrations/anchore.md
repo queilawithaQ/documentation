@@ -62,7 +62,7 @@ and your [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-con
   type: push
   image_name: jvalance/sampledockerfiles
   encrypted_dockercfg_path: dockercfg.encrypted
-``` 
+```
 
 **Note** that this example implies we have a Dockerfile to reference and build an image from.
 
@@ -81,7 +81,7 @@ and your [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-con
 ```
 - name: anchorestep
   service: anchorescan
-  command: sh -c 'echo "Adding image to Anchore engine" && 
+  command: sh -c 'echo "Adding image to Anchore engine" &&
     anchore-cli image add $ANCHORE_IMAGE_SCAN &&
     echo "Waiting for image analysis to complete" &&
     counter=0 && while (! (anchore-cli image get $ANCHORE_IMAGE_SCAN | grep 'Status\:\ analyzed') ) ; do echo -n "." ; sleep 10 ; if [ $counter -eq $ANCHORE_RETRIES ] ; then echo " Timeout waiting for analysis" ; exit 1 ; fi ; counter=$(($counter+1)) ; done &&
@@ -92,4 +92,8 @@ and your [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-con
 
 The job will poll the Anchore Engine every 10 seconds to check if the image has been analyzed and will repeat this until the maximum number of retries specified has been reached.
 
-**Note** that depending on the result of the Anchore policy evaluation and the `$ANCHORE_FAIL_ON_POLICY` environment variable, the build may or may not fail. 
+**Note** that depending on the result of the Anchore policy evaluation and the `$ANCHORE_FAIL_ON_POLICY` environment variable, the build may or may not fail.
+
+## Codeship Basic
+
+Anchore does not currently integrate with CodeShip Basic.
