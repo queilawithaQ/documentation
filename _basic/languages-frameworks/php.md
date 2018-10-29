@@ -196,6 +196,14 @@ composer global remove phpunit/phpunit
 composer global require phpunit/phpunit:5.*
 ```
 
+### Memcached
+
+If you need to install the [Memcached extension](https://pecl.php.net/package/memcached) for PHP 7 and up you may need to use this command to get it installed:
+
+```
+printf "/usr --disable-memcached-sasl\n" | pecl install memcached
+```
+
 ### libsodium
 
 If your project requires [libsodium](https://libsodium.org) you can install it with a [script](https://github.com/codeship/scripts/blob/master/packages/libsodium.sh) by adding this command to your setup steps:
