@@ -37,7 +37,7 @@ A running Anchore Engine is required, this does not need to be run within the Co
 
 1. Developers commit code into SCM
 2. CI/CD platform builds container image
-3. CI /CD platform pushes container image to staging registry
+3. CI/CD platform pushes container image to staging registry
 4. CI/CD calls Anchore to analyze container image
 5. Anchore passes or fails the image based on the policy mapped to the image
 6. CI/CD performs automated tests
