@@ -36,16 +36,16 @@ A running Anchore Engine is required, this does not need to be run within the Co
 **Note** that this CI/CD model implies the following:
 
 1. Developers commit code into SCM
-2. CI / CD platform builds container image
+2. CI/CD platform builds container image
 3. CI /CD platform pushes container image to staging registry
-4. CI / CD calls Anchore to Analyze container image
-5. Anchore Passes or Fails the image based on the policy mapped to the image
-6. CI / CD performs automated tests
+4. CI/CD calls Anchore to analyze container image
+5. Anchore passes or fails the image based on the policy mapped to the image
+6. CI/CD performs automated tests
 7. If the container passes automated tests and policy evaluation the container image is pushed to the production registry.
 
 ### Building Image
 
-To use Anchore in your CI/CD process, you'll need to add an Docker image build to a service in your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}) for Anchore to analyze.
+To use Anchore in your CI/CD process, you'll need to add a Docker image build to a service in your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}) for Anchore to analyze.
 
 ```
 imagebuild:
@@ -54,7 +54,7 @@ imagebuild:
   cached: true
 ```
 
-and your [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}).
+You'll also need to add a step to your [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}):
 
 ```
 - name: imagebuildstep
@@ -76,7 +76,7 @@ anchorescan:
   encrypted_env_file: env.encrypted
 ```
 
-and your [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}).
+You'll also need to add a step to your [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}):
 
 ```
 - name: anchorestep
