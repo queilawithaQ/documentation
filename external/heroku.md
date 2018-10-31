@@ -1,10 +1,15 @@
-[Codeship](http://addons.heroku.com/codeship) is an easy to use hosted [continuous integration and delivery](http://en.wikipedia.org/wiki/Continuous_delivery) service.
+[CodeShip](http://addons.heroku.com/codeship) is an easy to use hosted [continuous integration and delivery](http://en.wikipedia.org/wiki/Continuous_delivery) service provided by [CloudBees](https://www.cloudbees.com).
 
-Whenever you push your application to GitHub we run all your tests on the new version and automatically deploy your application to Heroku on success. Easily test and deploy your applications without setting up your own test server. Getting started takes less than two minutes and is fully integrated with Heroku. **Try it for free!**
+CodeShip automated the CI/CD process, letting you specify test and deployment commands that will run on all Git commits and PRs inside your Github, Gitlab or Bitbucket repos.
+
+CodeShip offers two products:
+
+- CodeShip Basic, focused on simplicity and quick Setup
+- CodeShip Pro, focused on Docker and advanced configurations
 
 ## Installing the add-on
 
-The free Codeship add-on can be installed to a Heroku application via the CLI by running the following command:
+The free CodeShip add-on can be installed to a Heroku application via the CLI by running the following command:
 
 ```shell
 $ heroku addons:add codeship:free
@@ -16,43 +21,28 @@ A list of all plans available can be found
 <a href="http://addons.heroku.com/codeship">here</a>.
 </div>
 
-To jump aboard the ship open your Codeship account by running
+Once installed,y ou can open CodeShip by running:
 
 ```shell
 $ heroku addons:open codeship
 ```
 
-You will be taken to the setup wizard if you haven't already configured a project. You can always access your Codeship dashboard using the above command. Alternatively you can sign in through GitHub / BitBucket or with your email and password.
+If you haven't already configured a project inside CodeShip, you will be taken to the new project screen. You can always access your Codeship dashboard using the above command. Alternatively, you can sign in through GitHub / BitBucket or with your email and password at [https://www.codeship.com](https://www.codeship.com).
 
 ## Configuration
 
-When you start setting up a project you have to select your source code repository first. At the moment we support GitHub and BitBucket based repositories. Choose your provider and select the project's repository.
+When adding a new project, the first step is to choose your SCM provider.
 
-![SCM Selection](https://s3.amazonaws.com/docs.codeship.io/documentation/images/external/heroku/connect_scm.png)
+![SCM Selection](https://documentation.codeship.com/images/new-user-setup/authenticate-scm.png)
 
-Now let's edit your setup and test commands. Setup commands usually include installing your dependencies or setting up your database. Test commands are shell commands needed to run your tests. For example `bundle exec rake` for ruby, `npm test` for Node.js or `mvn test` for JVM based languages. You can run as many test commands as you like.
+From there, you'll select either CodeShip Basic or CodeShip Pro.
 
-If a command's return code isn't zero the build will fail.
+- If you're not using Docker, or you don't want to use configuration files to set up your CI/CD process, choose CodeShip Basic
+- If you are using Docker, or want to configure your CI/CD with configuration files, choose CodeShip Pro
 
-![Test Settings](https://s3.amazonaws.com/docs.codeship.io/documentation/images/external/heroku/configure_tests.png)
+![Basic Or Pro](https://documentation.codeship.com/images/new-user-setup/select-infra.png)
 
-You can **configure deployments** for branches in the next step. The wizard will let you add a branch to make the setup quick and easy.
-
-![Select Deployment Branch](https://s3.amazonaws.com/docs.codeship.io/documentation/images/external/heroku/configure_deployment_branch.png)
-
-You can always go to back to the configuration later on and manage deployment commands for other branches as well.
-
-For example you might want to have a _production_ branch in your repository that gets deployed to your production app, plus a _master_ branch that is deployed to your staging application.
-
-You can also configure multiple deployments for a single branch. For example deploy to staging first and then, if the deployment works, to production. Another use case would be to run specific commands before and / or after your deployment.
-
-To add a deployment method simply click on the logo. It will be added to the end of the list of deployments. You can easily re-order your deployment methods by simply dragging and dropping their logos. All of your configured deployment methods will be run sequentially.
-
-Over time we will add more and more deployment methods so you can run various tools, test environments or commands easily. You can always fall back to **script deployments** which let you run any shell commands during the deployment.
-
-![Deploy Settings](https://s3.amazonaws.com/docs.codeship.io/documentation/images/external/heroku/configure_deployment_heroku.png)
-
-Deploying to Heroku is incredibly easy. Just click on the Heroku deployment method. The only necessary setting you have to do is type in your application name.
+Once you've selected which CodeShip product is right for you, we recommend [reading our setup guides](https://documentation.codeship.com/getting-started/) or [reviewing our code](https://documentation.codeship.com/getting-started/) samples to get started configuring your projects.
 
 ### Additional Settings
 
@@ -75,91 +65,6 @@ Copies the PostgreSQL database from another app into this applications database.
 #### URL
 
 The URL that will be called to check that a *HTTP/2xx* Status is returned. By default this will be `https://APP_NAME.herokuapp.com/`, but you can change that to anything you want. If you use *HTTP Basic Authentication*  add your credentials to the URL like  `https://USER:PASSWORD@APP_NAME.herokuapp.com`.
-
-### How to connect to the databases
-
-Codeship currently supports SQLite, PostgreSQL, MySQL, MongoDB, Redis and Memcached. All of them run on their respective default ports. Connecting to MongoDB, Redis and Memcached doesn't need any further configuration than the default one.
-
-#### PostgreSQL and MySQL
-
-If you use Rails Codeship automatically checks your `database.yml` file and replaces the appropriate configuration so you can access our databases.
-
-If a `database.yml` file cannot be found we will read your Gemfile and configure the `database.yml` depending on the gems you use.
-
-The credentials for our database are stored as **environment variables**
-
-* PostgreSQL
-
-  ```shell
-  Username: $PGUSER
-  Password: $PGPASSWORD
-  ```
-
-* MySQL
-
-  ```shell
-  Username: $MYSQL_USER
-  Password: $MYSQL_PASSWORD
-  ```
-
-See [the documentation](https://codeship.com/documentation/databases/) for more information on this topic.
-
-## Supported technologies
-
-Following is a list of technologies, languages and additional tools supported by the Codeship.
-
-### Source Code Management
-
-* Git
-* Mercurial (for BitBucket based repositories)
-
-### Databases
-
-* PostgreSQL
-* MySQL
-* SQLite
-* MongoDB
-* Beanstalkd
-* RabbitMQ
-* Redis
-* ElasticSearch
-* Memcached
-
-### Languages
-
-* Ruby
-  * Anything Ruby native (Rails, Sinatra, ...) is supported
-  * Rspec, Cucumber, Test::Uni, Minitest, ...
-  * Capybara(-webkit)
-* NodeJS (npm)
-* Python (virtualenv) – Django is supported
-* PHP (phpunit)
-* Java (Maven, Ant)
-* Scala (sbt)
-* Clojure
-* Groovy
-
-### Additional tools
-
-* Selenium
-  * Firefox
-  * Chrome
-* PhantomJS
-* CasperJS
-
-## Migrating between plans
-
-We all want to have flexibility. Changing plans is not a problem at all. Migrating from one Codeship plan to another will simply alter the resource limits of the service. No data will be lost in any way, thus making it a safe operation.
-
-Use the CLI to migrate to a new plan.
-
-```shell
-$ heroku addons:upgrade codeship:medium
------> Upgrading codeship:medium to sharp-mountain-4005... done,
-v18 ($49/mo) Your plan has been updated to: codeship:medium
-```
-
-You can upgrade your plan on one of your Heroku apps. All of your other Heroku apps are then covered by that one plan upgrade.
 
 ## Removing the add-on
 
