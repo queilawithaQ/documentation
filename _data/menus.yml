@@ -79,6 +79,9 @@ pro:
   - title: Continuous Deployment
     identifier: pro/cd
     url: pro/cd
+  - title: Common Issues
+    identifier: pro/common-issues
+    url: pro/common-issues
   - <<: *GENERAL_INTEGRATIONS
   - <<: *GENERAL_ABOUT
   - <<: *GENERAL_ACCOUNT
