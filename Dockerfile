@@ -1,9 +1,9 @@
 FROM ruby:2.5.3-slim
 
-ENV CACHE_BUST=2018-10-23 \
+ENV CACHE_BUST=2018-11-02 \
     DEBIAN_DISTRIBUTION="stretch" \
     DEBIAN_FRONTEND="noninteractive" \
-    NODE_VERSION="8.x" \
+    NODE_VERSION="10.x" \
     LANG=C.UTF-8
 
 # Basic project configuration
