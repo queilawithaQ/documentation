@@ -4,7 +4,7 @@ shortTitle: Setting an SSH Private Key
 menus:
   pro/builds:
     title: Setting an SSH Private Key
-    weight: 13
+    weight: 11
 tags:
   - ssh
   - private

@@ -4,7 +4,7 @@ shortTitle: Services and Databases
 menus:
   pro/builds:
     title: Services And Databases
-    weight: 12
+    weight: 10
 tags:
   - docker
   - jet

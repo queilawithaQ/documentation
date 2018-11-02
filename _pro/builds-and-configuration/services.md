@@ -3,7 +3,7 @@ title: Services Configuration
 menus:
   pro/builds:
     title: Services Config
-    weight: 2
+    weight: 1
 tags:
   - docker
   - jet

@@ -4,7 +4,7 @@ shortTitle: Environment Variables
 menus:
   pro/builds:
     title: Environment Variables
-    weight: 4
+    weight: 3
 tags:
   - docker
   - encryption

@@ -3,7 +3,7 @@ title: Steps Configuration
 menus:
   pro/builds:
     title: Steps Config
-    weight: 3
+    weight: 2
 tags:
   - docker
   - jet
