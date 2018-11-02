@@ -4,7 +4,7 @@ shortTitle: Using Volumes
 menus:
   pro/builds:
     title: Volumes
-    weight: 8
+    weight: 7
 tags:
   - docker
   - tutorial

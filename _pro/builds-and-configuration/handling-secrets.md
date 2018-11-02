@@ -4,7 +4,7 @@ shortTitle: Handling Secrets
 menus:
   pro/builds:
     title: Handling Secrets
-    weight: 10
+    weight: 8
 tags:
   - docker
   - secrets

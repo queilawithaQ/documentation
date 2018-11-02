@@ -4,7 +4,7 @@ shortTitle: Build Arguments
 menus:
   pro/builds:
     title: Build Arguments
-    weight: 7
+    weight: 6
 tags:
   - docker
   - tutorial

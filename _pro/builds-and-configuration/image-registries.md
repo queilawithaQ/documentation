@@ -4,7 +4,7 @@ shortTitle: Using Docker Image Registries
 menus:
   pro/builds:
     title: Image Registries
-    weight: 5
+    weight: 4
 tags:
   - aws
   - azure

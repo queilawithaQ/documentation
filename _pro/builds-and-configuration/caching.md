@@ -5,7 +5,7 @@ description: Technical documentation for speeding up Codeship Pro builds by util
 menus:
   pro/builds:
     title: Image Caching
-    weight: 6
+    weight: 5
 tags:
   - docker
   - tutorial
