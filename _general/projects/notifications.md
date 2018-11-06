@@ -77,7 +77,7 @@ Additionally, all rules can select between `started`, `failed`, `succeeded`, and
 * `started` -> sends a notification when a new build is triggered
 * `failed` -> sends a notification if a build fails or is stopped for some reason
 * `succeeded` -> sends a notification if the build finishes successfully
-* `recovered` -> sends a notification if the previous build failed, but the current build succeeded. Note: does not trigger when using 'Restart Build' from the console 
+* `recovered` -> sends a notification if the branch's current build finishes successfully, recovering from the failure of the branch's prior build. Note: does not trigger when using 'Restart Build' from the console
 * `requires approval` -> sends a notification if a build is paused pending a [manual approval]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}#manual-approval-steps)
 
 ## Campfire
