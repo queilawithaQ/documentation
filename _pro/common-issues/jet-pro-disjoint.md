@@ -1,0 +1,50 @@
+---
+title: Differing Results between Jet CLI and CodeShip Pro
+shortTitle: Differing Results between Jet CLI and CodeShip Pro
+menus:
+  pro/common-issues:
+    title: Differing Results with Jet CLI
+    weight: 3
+tags:
+  - docker
+  - pro
+  - jet
+
+categories:
+  - Common Issues
+
+---
+
+Results from your local machine `jet steps` process may differ from a build on CodeShip Pro. Let's explore why this might be the case.
+
+### Jet CLI Disjoints
+
+- Jet tool can be out of date (and out of alignment with CodeShip Pro environment).
+  > Run `jet update` to ensure latest version of CLI tool.
+
+- Jet may be reliant on outdated Docker image(s).
+  > Identify the current image with `docker image ls`, then remove via `docker rmi IMAGE_ID`. `jet steps` will now trigger an image rebuild.
+
+- `jet steps` runs with additional files present that would otherwise not be expected in the CodeShip Pro build.
+  > We recommend running `jet steps` on a freshly git cloned version of your project OR running a `git reset` and `git clean` operation on your project prior to `jet steps`.
+
+- Jet overlooks volume mappings to absolute paths on the host.
+  > This may work just fine on one's local machine, but can be problematic with an ephemeral Docker Host (i.e., the CodeShip Pro build). Please ensure that volumes are mapped relative to the project folder on the Docker Host.
+
+- Unless explicitly passed along to `jet steps` as a flag, most [CI environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) will not be present in a `jet steps` build.
+  > See `jet steps --help` for flag options.
+
+- Outdated Docker Engine version
+  > Ensure that your local machine is utilizing an [up-to-date version of Docker Engine](https://docs.docker.com/release-notes/).
+
+- AES key may have been recently reset from UI, preventing decryption of environment variables with the outdated AES key on local machine.
+
+### CodeShip Pro Disjoints
+
+- Resource constraints for the allotted CodeShip Pro instance size are forcing background processes to be killed on CodeShip Pro builds, while the same build runs without issue via `jet steps`.
+  > If you suspect your build is failing on account of resource constraints, then please reach out to our support team at [support@codeship.com](mailto:support@codeship.com) with the CodeShip Pro build url in question.
+
+- CodeShip Pro may be reliant on outdated Docker image(s).
+  > Clear the project cache and restart a build to rule this out as a concern.
+
+<br />
