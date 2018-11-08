@@ -15,7 +15,7 @@ categories:
 
 ---
 
-Results from your local machine `jet steps` process may differ from a build on CodeShip Pro. Let's explore why this might be the case.
+Results with the [Jet CLI tool]({{ site.baseurl }}{% link _pro/jet-cli/installation.md %}) may differ from a build on CodeShip Pro. Let's explore why this might be the case.
 
 ### Jet CLI Disjoints
 
@@ -35,16 +35,17 @@ Results from your local machine `jet steps` process may differ from a build on C
   > See `jet steps --help` for flag options.
 
 - Outdated Docker Engine version
-  > Ensure that your local machine is utilizing an [up-to-date version of Docker Engine](https://docs.docker.com/release-notes/).
+  > Ensure that your local machine is utilizing an [up-to-date version of Docker Engine](https://docs.docker.com/release-notes/). CodeShip Pro currently runs with {{ site.data.docker.version }}
 
 - AES key may have been recently reset from UI, preventing decryption of environment variables with the outdated AES key on local machine.
+  > The AES key for your project can be located on the `Project Settings > General` page.
 
 ### CodeShip Pro Disjoints
 
 - Resource constraints for the allotted CodeShip Pro instance size are forcing background processes to be killed on CodeShip Pro builds, while the same build runs without issue via `jet steps`.
-  > If you suspect your build is failing on account of resource constraints, then please reach out to our support team at [support@codeship.com](mailto:support@codeship.com) with the CodeShip Pro build url in question.
+  > If you suspect your build is failing on account of resource constraints, then please [reach out to our support team](https://helpdesk.codeship.com/hc/en-us/requests/new) with the CodeShip Pro build url in question.
 
 - CodeShip Pro may be reliant on outdated Docker image(s).
-  > Clear the project cache and restart a build to rule this out as a concern.
+  > To clear the project's Docker image cache, click the drop down arrow of any build status icon and select 'Reset Cache'.
 
 <br />
