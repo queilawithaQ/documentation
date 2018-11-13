@@ -159,6 +159,7 @@ CI_PROJECT_ID
 CI_REPO_NAME
 CI_STRING_TIME
 CI_TIMESTAMP
+CI_BUILD_APPROVED
 ```
 
 ### Service-defined Environment Variables
