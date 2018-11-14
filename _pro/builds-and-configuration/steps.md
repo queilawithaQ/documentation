@@ -267,7 +267,7 @@ There are several important things to note when using manual steps:
 
 - Manual approval steps must be the final steps in your pipeline. We will not process builds with steps _after_ your manual approval steps, as these steps should be grouped into the manual approval group instead.
 
-- Once approved, the pending steps will run as a new build, beginning to end, including the previously paused steps. These build runs will be grouped together under a single build on your dashboards, as seen in the screenshot below.
+- Once approved, the pending steps will run as a new build, beginning to end, including the previously paused steps. These build runs will be grouped together under a single build on your dashboards, as seen in the screenshot below. On these builds, an environment variable - `CI_BUILD_APPROVED` - will be set that allows you to write conditional scripts if need be.
 
 ![Manual approval step group]({{ site.baseurl }}/images/general/manual-approval.png)
 

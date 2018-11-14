@@ -147,6 +147,7 @@ The environment variables Codeship populates are:
 
 ```
 CI_BRANCH
+CI_BUILD_APPROVED
 CI_BUILD_ID
 CI_COMMITTER_EMAIL
 CI_COMMITTER_NAME
