@@ -47,6 +47,7 @@ mdillon/postgis:9.4
 mdillon/postgis:9.5
 mdillon/postgis:9.6
 mdillon/postgis:10
+mdillon/postgis:11
 
 mongo:3.4
 mongo:3.6
@@ -64,9 +65,12 @@ postgres:9.6
 postgres:9.6-alpine
 postgres:10
 postgres:10-alpine
+postgres:11
+postgres:11-alpine
 
 redis:3.2
 redis:4.0
+redis:5.0
 
 ruby:2.3
 ruby:2.3-alpine
