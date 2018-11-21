@@ -63,7 +63,7 @@ By default, Codeship populates a list of CI/CD related environment variables, su
 The environment variables Codeship populates are:
 
 ```
-CI                     #Always going to be true. Ex: true
+CI                     #Always true. Ex: true
 CI_BRANCH              #The branch name of the triggered build. Ex: master
 CI_BUILD_NUMBER        #The specific CodeShip build number, correlates to the number in the build URL.
 CI_BUILD_URL           #The URL for the specific build. Ex: https://app.codeship.com/projects/*project_id*/builds/*build_number*
@@ -71,10 +71,8 @@ CI_COMMITTER_EMAIL     #The committer's email address used by the SCM as set in 
 CI_COMMITTER_NAME      #The committer's name used by the SCM as set in the git commit.
 CI_COMMITTER_USERNAME  #The committer's username used by the SCM.
 CI_COMMIT_ID           #The HEAD commit ID of the triggered build. 
-CI_MESSAGE             #The commit message used in by SCM. Note: If the commit message is especially long, only the e
-nd of the message will be displayed.
-CI_NAME                #This will always say CodeShip. Ex: codeship 
-CI_PULL_REQUEST        #The value of `CI_PULL_REQUEST` is `false`, and doesn't indicate if a commit has a corresponding pull request, or if the build was triggered by a pull request. The variable exists because some third-party integrations require its existence.
+CI_MESSAGE             #The commit message set in the git commit. If the commit message is especially long, only the end of the message will be displayed.
+CI_NAME                #Always codeship. Ex: codeship 
+CI_PULL_REQUEST        #Always false and doesn't indicate if a commit has a corresponding pull request, or if the build was triggered by a pull request. The variable exists because some third-party integrations require its existence. Ex: false
 CI_REPO_NAME           #The name of the corresponding SCM repository.
 ```
-
