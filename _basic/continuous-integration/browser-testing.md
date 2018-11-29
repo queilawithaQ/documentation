@@ -165,7 +165,7 @@ Then connect to the debug session, taking note to forward port 5900:
 ssh rof@IP_ADDRESS -p PORT -L 5900:localhost:5900
 ```
 
-Now in the debug session run the following commands which will install [TigerVNC](http://tigervnc.org) and start the VNC server:
+Now in the debug session run the following commands which will install [TigerVNC](https://tigervnc.org) and start the VNC server:
 
 ```
 # Install TigerVNC
