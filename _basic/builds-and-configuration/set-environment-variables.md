@@ -63,7 +63,7 @@ By default, Codeship populates a list of CI/CD related environment variables, su
 The environment variables Codeship populates are:
 
 ```
-CI                     # Always going to be true. Ex: true
+CI                     # Always going to be true. Ex: true 
 CI_BRANCH              # The branch name of the triggered build. Ex: master
 CI_BUILD_NUMBER        # The specific CodeShip build number, correlates to the number in the build URL.
 CI_BUILD_URL           # The URL for the specific build. Ex: https://app.codeship.com/projects/*project_id*/builds/*build_number*
