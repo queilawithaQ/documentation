@@ -8,7 +8,7 @@ module Jekyll
 
     def render(context)
       ubuntu_version = context.registers[:site].config['ubuntu_version']
-      "http://manpages.ubuntu.com/manpages/#{ubuntu_version}/en/man#{@section}/#{@man_page.downcase}.#{@section}.html"
+      "https://manpages.ubuntu.com/manpages/#{ubuntu_version}/en/man#{@section}/#{@man_page.downcase}.#{@section}.html"
     end
   end
 end

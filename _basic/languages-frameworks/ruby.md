@@ -26,7 +26,7 @@ redirect_from:
 ## Versions And Setup
 
 ### RVM
-We use [RVM](https://rvm.io) to manage different [Ruby](https://www.ruby-lang.org/en) and [JRuby](http://jruby.org) versions. We set **{{ site.data.basic.defaults.ruby }}** as the default version. Currently we do not automatically load the Ruby version from your Gemfile. You can always change the Ruby version by running:
+We use [RVM](https://rvm.io) to manage different [Ruby](https://www.ruby-lang.org/en) and [JRuby](https://www.jruby.org) versions. We set **{{ site.data.basic.defaults.ruby }}** as the default version. Currently we do not automatically load the Ruby version from your Gemfile. You can always change the Ruby version by running:
 
 ```shell
 rvm use RUBY_VERSION_YOU_WANT_TO_USE --install
@@ -48,7 +48,7 @@ rvm use $(cat .ruby-version) --install
 One use case is that you can change your Ruby version for different branches.
 
 ### JRuby
-If you need to install a version of [JRuby](http://jruby.org/download) that is not already installed by default you can do so with:
+If you need to install a version of [JRuby](https://www.jruby.org/download) that is not already installed by default you can do so with:
 
 ```shell
 rvm use jruby-JRUBY_VERSION_YOU_WANT_TO_USE --install
