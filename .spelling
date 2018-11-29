@@ -175,6 +175,7 @@ ecs-related
 elasticbeanstalk
 elasticsearch
 ensure_called.sh
+entrypoint
 env
 erlang
 executables
