@@ -134,8 +134,8 @@ In some cases, you may have explicitly declared variables through the `environme
 In these cases, we will parse the variables in the following order:
 
 - 1) `environment` directive
-- 2) Unencrypted `env_var` file
-- 3) `encrypted_env_var` file
+- 2) Unencrypted `env_file` file
+- 3) `encrypted_env_file` file
 
 So, if the same variable is present in multiple declarations, it will overwrite in the above order.
 
