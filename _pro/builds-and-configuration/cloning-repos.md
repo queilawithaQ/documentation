@@ -81,7 +81,7 @@ RUN apt-get update \
 
 # Prevent the PRIVATE_SSH_KEY from persisting in an image layer by forcefully removing at end of multi-line command
 RUN mkdir -p $HOME/.ssh \
-  && echo -e $PRIVATE_SSH_KEY >> $HOME/.ssh/id_rsa \
+  && echo $PRIVATE_SSH_KEY >> $HOME/.ssh/id_rsa \
   && chmod 600 $HOME/.ssh/id_rsa \
   && ssh-keyscan -H github.com >> $HOME/.ssh/known_hosts \
   && git clone repo:repo.git \
