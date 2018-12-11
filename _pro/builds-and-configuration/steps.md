@@ -271,6 +271,11 @@ There are several important things to note when using manual steps:
 
 ![Manual approval step group]({{ site.baseurl }}/images/general/manual-approval.png)
 
+{% csnote info %}
+  Approvals are per commit, which means that if multiple builds on the same branch are paused, waiting for approval, you could just approve the latest one if you want to allow the final step to run for all previous changes. There's no need to approve each build.
+{% endcsnote %}
+
+
 ## Build Environment
 
 For each step, the running container is provided with a set of environment variables from the CI process. These values can help your containers to make decisions based on your build pipeline.
