@@ -13,175 +13,61 @@ categories:
   - Integrations
 ---
 
-
-{% csnote info %}
-The Code Climate test reporter takes a supported test coverage report, transforms it into a generalized format, and submits it to the Code Climate API. It can also combine multiple test coverage report payloads created from parallel test processes within a parallelized CI build. The test reporter relies on third party (typically open source) tools to generate local test coverage reports. When troubleshooting test coverage submission, please first ensure you're able to generate test coverage in a supported format locally, outside of Code Climate's test reporter.
-{% endcsnote %}
-
 * include a table of contents
 {:toc}
 
-## About Code Climate
+## About Gosec
 
-Code Climate is an automated code coverage service. Starting with Code Climate and Codeship is fast and easy.
+Gosec  exists to help spot problems right in your Go source code, such as hard coded passwords, personal access tokens,  insecure random number seeds and more.
 
-By using Code Climate you can help enforce higher standards of code quality and transparency with your engineering team.
+[Their documentation](https://github.com/securego/gosec) does a great job of providing more information, in addition to the setup instructions below.
 
-[Their documentation](https://docs.codeclimate.com/docs/configuring-test-coverage) does a great job of providing more information, in addition to the setup instructions below.
+## CodeShip Basic
 
-## Codeship Pro
+## Project Configuration
 
-### Adding Reporter ID
+To use Gosec with your CodeShip Basic project, you'll need to build Go in your project's [setup commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}). You can do this by selecting Go from the list of languages, or including a command similar to the below in your instructions:
 
-To start, you need to add your `CC_TEST_REPORTER_ID` to the [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) that you encrypt and include in your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
-
-### Project Configuration
-
-Once your Code Climate project ID is loaded via your environment variables, you will need to install Code Climate into one of your services via your Dockerfile by using the following command:
-
-```shell
-curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > "/usr/local/bin/cc-test-reporter"
-chmod +x "/usr/local/bin/cc-test-reporter"
+```
+export GO_VERSION="1.8.1"
+source /dev/stdin <<< "$(curl -sSL https://raw.githubusercontent.com/codeship/scripts/master/languages/go.sh)"
+go get -t -v ./...
+go build -v
 ```
 
-Next, you will need to add a couple additional commands to your pipeline via your [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}).
+From there, simply install Gosec and [specify the rules you need](https://github.com/securego/gosec) via your project's [test or deployment commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}), as seen below:
 
-Before your test commands:
+```
+curl -sfL https://raw.githubusercontent.com/securego/gosec/master/install.sh | sh -s -- -b $GOPATH/bin latest
+gosec ${HOME}/src/github.com/michaelneale/mikerowecode.com
+```
+
+## CodeShip Pro
+
+To use Gosec with your CodeShip Pro project, you'll need to have Go accessible either via an image you're  using or a Dockerfile you're building in your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
+
+An example set of instructions to customize and include in your Dockerfile is below, if you're not already including Go:
+
+```
+RUN export GO_VERSION="1.8.1"
+RUN source /dev/stdin <<< "$(curl -sSL https://raw.githubusercontent.com/codeship/scripts/master/languages/go.sh)"
+RUN go get -t -v ./...
+RUN go build -v
+```
+
+From there, simply install Gosec and [specify the rules you need](https://github.com/securego/gosec) via a script you call in your project's [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}).
+
+For instance, you can take the below code and store it as a script in your repository as `gosec.sh`:
+
+```
+curl -sfL https://raw.githubusercontent.com/securego/gosec/master/install.sh | sh -s -- -b $GOPATH/bin latest
+gosec ${HOME}/src/github.com/michaelneale/mikerowecode.com
+```
+
+Then, you can call this script as a step via your [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}):
 
 ```yaml
-- name: codeclimate_pre
-  service: YOURSERVICE
-  command: cc-test-reporter before-build
+- name: gosec
+  service: app
+  command: gosec.sh
 ```
-
-After your final test commands:
-
-```yaml
-- name: codeclimate_post
-  service: YOURSERVICE
-  command: cc-test-reporter after-build
-```
-
-You can view a simple implementation of Code Climate coverage [here](https://github.com/whiteotter/ruby-rails-todoapp-with-codeclimate).
-
-### Parallel Test Coverage
-
-Code Climate supports parallel test reports by uploading the partial result to an external service, such as S3.
-
-In addition to the pre-test and post-test commands above, to use Code Climate with parallel reporting you will need to add another command after your individual tests, and after all tests have completed, in your [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}).
-
-Here are [Code Climate's example](https://github.com/codeclimate/test-reporter#low-level-usage) scripts for doing so.
-
-After each parallel test command you'll run a new script:
-
-```yaml
-- type: parallel
-  steps:
-    - service: YOURSERVICE
-      command: tests1.sh
-    - service: YOURSERVICE
-      command: tests2.sh
-```
-
-Note that we're using script files to run our tests, so that we can execute the tests and export the coverage report as one command. This is because each step uses a new container, so the coverage report will not persist if the commands are separated. Inside the new `tests.sh` files, you will have:
-
-```shell
-# your test commands go here
-
-./cc-test-reporter format-coverage --output "coverage/codeclimate.$N.json"
-aws s3 sync coverage/ "s3://my-bucket/coverage/$CI_COMMIT_ID"
-```
-
-Note that you will need to modify the S3 path (or provide an alternative storage path), as well as set the `$N` value by manually declaring separate pipeline IDs.
-
-Next, at the end of your build itself you will not use the `after-build` call, but instead as a new test command placed after your normal tests:
-
-```yaml
-- name: codeclimate_assemble_results
-  service: YOURSERVICE
-  command: codeclimate-assemble.sh
-```
-
-Inside the `codeclimate-assemble.sh` file, you will have:
-
-```shell
-cc-test-reporter sum-coverage --output - --parts $PARTS coverage/codeclimate.*.json | ./cc-test-reporter upload-coverage
-```
-
-Note that you will need to manually set `$PARTS` to reflect the number of parallel threads.
-
-## Codeship Basic
-
-### Adding Reporter ID
-
-To start, you need to add your `CC_TEST_REPORTER_ID` to your to your project's [environment variables]({{ site.baseurl }}{% link _basic/builds-and-configuration/set-environment-variables.md %}).
-
-You can do this by navigating to _Project Settings_ and then clicking on the _Environment_ tab.
-
-### Project Configuration
-
-Once your Code Climate project ID is loaded via your environment variables, you will want to install Code Climate via your [setup commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}):
-
-```shell
-curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > "${HOME}/bin/cc-test-reporter"
-chmod +x "${HOME}/bin/cc-test-reporter"
-```
-
-Next, you will need to add special Code Climate commands before and after your [test commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}):
-
-Before your tests:
-
-```shell
-cc-test-reporter before-build
-```
-
-After your final tests have run:
-
-```shell
-cc-test-reporter after-build --exit-code $?
-```
-
-### Parallel Test Coverage
-
-Code Climate supports parallel test reports by uploading the partial result to an external service, such as S3.
-
-In addition to the pre-test and post-test commands above, to use Code Climate with parallel reporting you will need to add another command at the end of your [test commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}), in each [parallel pipeline]({{ site.baseurl }}{% link _basic/builds-and-configuration/parallel-tests.md %}) that you run tests in - as well as a new command at the end of your build.
-
-Here are [Code Climate's example scripts](https://github.com/codeclimate/test-reporter#low-level-usage) for doing so.
-
-At the end of each [parallel pipeline]({{ site.baseurl }}{% link _basic/builds-and-configuration/parallel-tests.md %}):
-
-```shell
-./cc-test-reporter format-coverage --output "coverage/codeclimate.$N.json"
-aws s3 sync coverage/ "s3://my-bucket/coverage/$CI_COMMIT_ID"
-```
-
-Note that you will need to modify the S3 path (or provide an alternative storage path), as well as set the `$N` value by manually declaring separate parallel test pipeline IDs.
-
-At the end of your build itself, you will not need to use the `after-build` call, but instead need to complete the parallel coverage reports in one of two ways:
-
-- As a command, run via the [custom-script deployment option]({{ site.baseurl }}{% link _basic/continuous-deployment/deployment-with-custom-scripts.md %}). This means code coverage for parallel testing will only run on branches you have configured deployments.
-
-- As an additional test step placed at the end of one of your parallel test pipelines. This method will require additional logic to be written to pause the script while it queries your external storage service for the existence of the appropriately-named coverage reports for all the additional pipelines, so that it doesn't erroneously combine coverage reports for pipelines that are still in progress.
-
-The code to use to end the parallel coverage report is:
-
-```shell
-cc-test-reporter sum-coverage --output - --parts $PARTS coverage/codeclimate.*.json | ./cc-test-reporter upload-coverage
-```
-
-Note that you will need to manually set `$PARTS` to reflect the number of parallel threads.
-
-All of these commands will work best when executed from script files.
-
-## Common Issues
-
-### Successful build, even though tests failed
-
-Because of a bug with version 0.8.x of simplecov, tests are reported as successful, even though they actually failed. This is caused by simplecov overriding the exit code of the test framework.
-
-According the the [issue report on GitHub](https://github.com/colszowka/simplecov/issues/281) this won't be fixed in the 0.8 release. Please either use versions prior to 0.8 or higher than 0.9.
-
-### Still having trouble setting up your Test Reporter?
-
-Check out Code Climate's [documentation on troubleshooting the Test Reporter setup](https://docs.codeclimate.com/docs/test-coverage-troubleshooting-tips).
