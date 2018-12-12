@@ -61,10 +61,12 @@ COPY . .
 stage-one:
   build:
     dockerfile: Dockerfile.stage-one
+  cached: true
 
 app:
   build:
     dockerfile: Dockerfile.app
+  cached: true
 ```
 
 ```yaml
