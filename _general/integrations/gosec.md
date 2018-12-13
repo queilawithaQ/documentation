@@ -18,7 +18,7 @@ categories:
 
 ## About Gosec
 
-Gosec  exists to help spot problems right in your Go source code, such as hard coded passwords, personal access tokens,  insecure random number seeds and more.
+Gosec exists to help spot problems right in your Go source code, such as hard coded passwords, personal access tokens,  insecure random number seeds and more.
 
 [Their documentation](https://github.com/securego/gosec) does a great job of providing more information, in addition to the setup instructions below.
 
@@ -42,9 +42,11 @@ curl -sfL https://raw.githubusercontent.com/securego/gosec/master/install.sh | s
 gosec ${HOME}/src/github.com/michaelneale/mikerowecode.com
 ```
 
+**Note** that this example uses a repo provided by a CloudBees team member, but you can develop your own repo for long-term use.
+
 ## CodeShip Pro
 
-To use Gosec with your CodeShip Pro project, you'll need to have Go accessible either via an image you're  using or a Dockerfile you're building in your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
+To use Gosec with your CodeShip Pro project, you'll need to have Go accessible either via an image you're using or a Dockerfile you're building in your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
 
 An example set of instructions to customize and include in your Dockerfile is below, if you're not already including Go:
 
@@ -64,7 +66,9 @@ curl -sfL https://raw.githubusercontent.com/securego/gosec/master/install.sh | s
 gosec ${HOME}/src/github.com/michaelneale/mikerowecode.com
 ```
 
-Then, you can call this script as a step via your [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}):
+**Note** that this example uses a repo provided by a CloudBees team member, but you can develop your own repo for long-term use.
+
+Next, you can call this script as a step via your [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}):
 
 ```yaml
 - name: gosec
