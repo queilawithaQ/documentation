@@ -122,6 +122,7 @@ chromedriver
 ci-guide
 cli
 cli-based
+cloudbees
 clojure
 cloudfoundry
 codacy
@@ -199,6 +200,7 @@ gitlab
 gitlab.com
 gocheck
 golang
+gosec
 gradle
 granularly
 gravatar
