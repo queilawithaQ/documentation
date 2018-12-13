@@ -18,7 +18,7 @@ categories:
 
 ## About Gosec
 
-Gosec exists to help spot problems right in your Go source code, such as hard coded passwords, personal access tokens,  insecure random number seeds and more.
+Gosec exists to help spot problems right in your Go source code, such as hard coded passwords, personal access tokens, insecure random number seeds and more.
 
 [Their documentation](https://github.com/securego/gosec) does a great job of providing more information, in addition to the setup instructions below.
 
