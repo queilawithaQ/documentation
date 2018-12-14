@@ -15,7 +15,7 @@ categories:
 
 ---
 
-Because CodeShip Pro only caches image layers of the final Dockerfile stage, artifacts copied into the final layer may continually invalidate subsequent cache layers.
+Because CodeShip Pro only caches image layers of the final Dockerfile stage, artifacts copied into the final stage may continually invalidate subsequent cache layers.
 
 In our contrived Dockerfile, we have a multi-stage build:
 
