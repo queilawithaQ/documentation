@@ -27,14 +27,17 @@ categories:
 
 If you need to install a different version or use a custom configuration, please see [this script](https://github.com/codeship/scripts/blob/master/packages/mongodb.sh). This script supports [MongoDB 3.0.0 and above](https://docs.mongodb.com/manual/release-notes).
 
-For example if you want to install **3.6.0**, set that version as an [environment variable]({{ site.baseurl }}{% link _basic/builds-and-configuration/set-environment-variables.md %}) in your project or add this in the _Setup Commands_:
+For example if you want to install **3.6.0**, set that version and port number as [environment variables]({{ site.baseurl }}{% link _basic/builds-and-configuration/set-environment-variables.md %}) in your project or add this in the _Setup Commands_:
 
 ```
 export MONGODB_VERSION=3.6.0
+export MONGODB_PORT=27017
 ```
 
-Next, add [this command](https://github.com/codeship/scripts/blob/master/packages/mongodb.sh#L10) to your _Setup Commands_ and the script will automatically be called at build time. Note, this script will automatically start MongoDB on port **27018** as the default port is taken by the default MongoDB version above. Your application will need to point to the updated port number.
+Next, add these commands to shutdown the default MongoDB instance and [install the new version](https://github.com/codeship/scripts/blob/master/packages/mongodb.sh#L10).
 
 ```
+sudo mongod --dbpath /var/lib/mongodb --shutdown
+
 \curl -sSL https://raw.githubusercontent.com/codeship/scripts/master/packages/mongodb.sh | bash -s
 ```
