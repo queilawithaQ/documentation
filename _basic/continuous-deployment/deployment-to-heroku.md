@@ -76,7 +76,7 @@ After each deployment, we check your application to make sure that it is up. We 
 If this URL requires **basic auth** please enter: `http://YOUR_USERNAME:YOUR_PASSWORD@YOUR_URL`
 
 #### Post-deploy Command
-You can specify a command to run post-deployment. The dynos will be restarted after running. This can be useful for running migrations or other commands that need to be run on each deploy.
+You can specify a command to run post-deployment. This can be useful for running migrations or other commands that need to be run on each deploy.
 
 #### Check app URL
 This will enable your build to check the URL of your application to make sure that it is up.
