@@ -48,6 +48,7 @@ _var
 15gb
 2xx
 3.75gb
+300ms
 30gb
 5.x
 5.x.x
@@ -154,6 +155,7 @@ de-facto
 decryptor
 depends_on
 depfu
+DEPLOYED_BASE_URL
 deployer
 dev
 digitalocean
@@ -435,6 +437,7 @@ virtualize
 virtualization
 vms
 walk-throughs
+Webdriver.io
 webhook
 webhooks
 webkit
