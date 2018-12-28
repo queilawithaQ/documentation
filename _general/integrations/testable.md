@@ -4,7 +4,7 @@ shortTitle: Testable Load Testing
 menus:
   general/integrations:
     title: Using Testable
-    weight: 7
+    weight: 27
 tags:
 - jmeter
 - gatling
@@ -37,17 +37,19 @@ Checkout the [Testable documentation](https://docs.testable.io) as a starting po
 
 ### Setting Your API Key
 
-You will need to add your Testable API key to your [environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) that you include in your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}). 
+You will need to add your Testable API key to your [environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) that you include in your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
 
 - `TESTABLE_KEY`
 
 API Keys can be [found on Testable](https://a.testable.io/account/api-keys) after registering for an account.
 
-### Running a load test
+### Running A Load Test
 
-Your Docker container will need to include any required test artifacts like a Node.js script, JMeter test plan, Gatling files, etc. 
+Your Docker container will need to include any required test artifacts like a Node.js script, JMeter test plan, Gatling files, etc.
 
-You will then add a step in your [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}) that downloads a Testable script for running a load test. That [script](https://raw.githubusercontent.com/testable/sample-scripts/master/testable-kpi-monitor.sh) runs the test on Testable, waits for it to finish, checks the success/failure status, prints the success rate and median response time, and downloads the raw results to a CSV file. You can also add this script to your repository and customize it as needed.
+You will then add a step in your [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}) that downloads a Testable script for running a load test.
+
+That [script](https://raw.githubusercontent.com/testable/sample-scripts/master/testable-kpi-monitor.sh) runs the test on Testable, waits for it to finish, checks the success/failure status, prints the success rate and median response time, and downloads the raw results to a CSV file. You can also add this script to your repository and customize it as needed.
 
 ```yaml
 - name: testable_load_test
