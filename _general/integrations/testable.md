@@ -41,7 +41,7 @@ You will need to add your Testable API key to your [environment variables]({{ si
 
 - `TESTABLE_KEY`
 
-API Keys can be [found on Testable](https://a.testable.io/account/api-keys) after registering for an account.
+API keys can be [found on Testable](https://a.testable.io/account/api-keys) after registering for an account.
 
 ### Running A Load Test
 
@@ -83,7 +83,7 @@ You will need to add your Testable API key to your to your project's [environmen
 
 - `TESTABLE_KEY`
 
-API Keys can be [found on Testable](https://a.testable.io/account/api-keys) after registering for an account.
+API keys can be [found on Testable](https://a.testable.io/account/api-keys) after registering for an account.
 
 ### Adding Setup Commands
 
@@ -92,7 +92,7 @@ After adding the API Key you'll just need to add Setup and Test commands.
 Add the following to your [project's setup commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}/#configuring-your-setup-commands) to install a script that executes tests on Testable, waits for the test to finish, checks the success/failure status, prints the success rate and median response time, and downloads the raw results to a CSV file. The commands to add are:
 
 ```bash
-## install jq
+## Install jq
 sudo apt-get update && sudo apt-get install -y jq
 
 ## Download script
@@ -106,7 +106,7 @@ chmod +x testable-kpi-monitor.sh
 
 Add the following to your [project's test commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}/#configuring-your-test-commands) to run the load test.  Check Testable's [parameter documentation](https://docs.testable.io/api/simple.html) for a complete reference.  
 
-The following example test command runs a load test that simulates 5 concurrent users each running a Node.js script for 1 minute from a shared grid in AWS N. Virginia and check that the success rate is greater than 95% and that the median response time is less than 300ms. It assumes that the base URL of the deployed environment is available in the $DEPLOYED_BASE_URL environment variable for [the Node.js test script to access](https://docs.testable.io/guides/scenario-params.html).
+The following example test command runs a load test that simulates 5 concurrent users each running a Node.js script for 1 minute from a shared grid in AWS N. Virginia and checks that the success rate is greater than 95% and that the median response time is less than 300ms. It assumes that the base URL of the deployed environment is available in the `$DEPLOYED_BASE_URL` environment variable for [the Node.js test script to access](https://docs.testable.io/guides/scenario-params.html).
 
 ```bash
 /bin/bash -c './testable-kpi-monitor.sh $(curl -sS -F "code=@test.js" -F "params[baseUrl]=${DEPLOYED_BASE_URL}" -F "concurrent_users_per_region=5" -F "duration_mins=1" -F "rampup_mins=0" -F "conf_testrunners[0].regions=aws-us-east-1" -F "kpis[0].expr=Outcome[success] > 95%" -F "kpis[1].expr=Response Time[Median] < 300ms" -F "testcase_name=Api Test" https://api.testable.io/start?key=${TESTABLE_KEY})'
