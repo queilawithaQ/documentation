@@ -30,4 +30,4 @@ To migrate from a Heroku add-on account, you will want to create a new organizat
 
 Once you have created a new organization, you will want to [transfer your existing projects]({{ site.baseurl }}/general/account/organizations/#transfer-a-project-to-an-organization) to the new organization. Then, you can add your billing info to the new organization and sign up for any generally available Codeship plan.
 
-We also recommend you [contact our sales team](mailto:solutions@codeship.com) to let them know of the migration and to assist with the project transfer and billing change.
+We also recommend you [contact our sales team](mailto:codeship-solutions@cloudbees.com) to let them know of the migration and to assist with the project transfer and billing change.

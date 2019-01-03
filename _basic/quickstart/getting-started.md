@@ -110,7 +110,7 @@ Codeship offers the option to upgrade your Basic account with additional paralle
 
 ![Parallel test pipelines on Codeship Basic]({{ site.baseurl }}/images/basic-guide/two-pipelines.png)
 
-You can sign up for a free ParallelCI trial from the sidebar or [get in touch with us](mailto:solutions@codeship.com) to discuss configuration options.
+You can sign up for a free ParallelCI trial from the sidebar or [get in touch with us](mailto:codeship-solutions@cloudbees.com) to discuss configuration options.
 
 ### Infrastructure
 

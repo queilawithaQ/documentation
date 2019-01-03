@@ -190,4 +190,4 @@ volumes:
 ```
 
 ### Pro Resources
-If you are seeing consistent unexplained crashes during your tests it could also be a resource issue. Pro comes in different instance sizes that can be configured for more CPU and memory resources. If you suspect this might be an issue, [get in touch with us](mailto:solutions@codeship.com) and we can check out the resource utilization for your build and can try out different instance configurations.
+If you are seeing consistent unexplained crashes during your tests it could also be a resource issue. Pro comes in different instance sizes that can be configured for more CPU and memory resources. If you suspect this might be an issue, [get in touch with us](mailto:codeship-solutions@cloudbees.com) and we can check out the resource utilization for your build and can try out different instance configurations.
