@@ -257,7 +257,7 @@ You can use the `type: manual` directive to require that a step requires manual 
       command: deploy.sh
 ```
 
-This is a new feature and we would love any [feedback you have](mailto:feedback@codeship.com) to help us learn more about expanding and improving the use cases.
+This is a new feature and we would love any [feedback you have](mailto:codeship-feedback@cloudbees.com) to help us learn more about expanding and improving the use cases.
 
 There are several important things to note when using manual steps:
 
