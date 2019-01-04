@@ -81,4 +81,4 @@ While we do not officially support or integrate with any of these modules, many 
 
 If builds are running slow or failing intermittently and you think memory or CPU constraints may be a cause, you can [contact our helpdesk](https://helpdesk.codeship.com), and we can investigate your resource usage and see if a larger build machine makes sense.
 
-Or, if you just want to upgrade to a larger build machine or try a larger machine out in a trial period, you can contact our [account team](mailto:solutions@codeship.com).
+Or, if you just want to upgrade to a larger build machine or try a larger machine out in a trial period, you can contact our [account team](mailto:codeship-solutions@cloudbees.com).
