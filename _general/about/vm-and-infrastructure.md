@@ -28,7 +28,7 @@ redirect_from:
 
 Codeship Basic runs [Ubuntu 14.04 (Trusty Tahr)](https://help.ubuntu.com/14.04/serverguide/index.html) on all build machines. To virtualize the build machines [Linux Containers (LXC)](https://linuxcontainers.org) are used. All Basic build machines run on AWS us-east-1. Basic is multi tenant meaning there are many Linux Containers running on a single AWS instance at a time.
 
-**Every build gets a new completely clean container.** Changes done to the filesystem during the build are stored on a temporary filesystem in memory so your code never touches a harddrive and is completely removed as soon as the build ends.
+**Every build is provisioned with a new LXC instance.** Changes done to the filesystem during the build are stored on a temporary filesystem in memory so your code never touches a harddrive and is completely removed as soon as the build ends.
 
 ### Codeship Pro
 
