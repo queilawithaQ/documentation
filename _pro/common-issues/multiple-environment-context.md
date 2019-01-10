@@ -15,7 +15,7 @@ categories:
 
 ---
 
-For services that have multiple environments (e.g., production, staging, development) and require these contexts to be present within the CodeShip Pro build, our proscribed recommendation is to create a service for every environmental variant, reference the same Dockerfile in each service and provide the custom environment variables as needed:
+For services that have multiple environments (e.g., production, staging, development) and require these contexts to be present within the CodeShip Pro build, our recommendation is to create a service for every environmental variant, reference the same Dockerfile in each service and provide the custom environment variables as needed:
 
 ```yaml
 # codeship-services.yml
