@@ -20,10 +20,14 @@ categories:
 * include a table of contents
 {:toc}
 
-RethinkDB is installed on our test VMs but not running by default. To use the RethinkDB during your builds, start the service via the following command:
+[RethinkDB](https://www.rethinkdb.com) can be [installed](https://www.rethinkdb.com/docs/install/ubuntu) and run on Basic with the following steps:
 
 ```shell
-sudo /etc/init.d/rethinkdb start
+source /etc/lsb-release && echo "deb http://download.rethinkdb.com/apt $DISTRIB_CODENAME main" | sudo tee /etc/apt/sources.list.d/rethinkdb.list
+wget -qO- https://download.rethinkdb.com/apt/pubkey.gpg | sudo apt-key add -
+sudo apt-get update
+sudo apt-get install -y rethinkdb
+sudo cp /etc/rethinkdb/default.conf.sample /etc/rethinkdb/instances.d/instance1.conf
+echo 'http-port=50836' | sudo tee --append /etc/rethinkdb/instances.d/instance1.conf
+sudo service rethinkdb start
 ```
-
-RethinkDB runs on the default port. Administrative HTTP connections are available via port `50836`.
