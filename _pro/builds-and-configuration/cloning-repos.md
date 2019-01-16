@@ -65,9 +65,18 @@ The process for securely setting your private SSH key is already covered in our 
 
 **The suggested deviation from the outlined approach is to:**
 
-1. Designate the encrypted file in `codeship-services.yml` as the `encrypted_args_file`
+1. Designate the encrypted file in `codeship-services.yml` as the `encrypted_args_file` for a build.
+
+```yaml
+app:
+  build:
+    image: project-image
+    encrypted_args_file: codeship.env.encrypted
+    dockerfile: Dockerfile
+```
+
 2. Ensure that a `git clone` can be performed with the generated public key (either setting as a deploy key with one repo, or setting up a [machine user]({{ site.baseurl }}{% link _basic/builds-and-configuration/access-to-other-repositories.md %}) with access to multiple repos)
-3. Configure your Dockerfile with the following guidance:
+3. Configure your Dockerfile with the following as a guide:
 
 ```dockerfile
 FROM ubuntu:16.04
