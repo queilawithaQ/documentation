@@ -8,7 +8,7 @@ menus:
 categories:
   - Quickstart
   - Docker
-  - Guide   
+  - Guide
 tags:
   - docker
   - jet
@@ -36,7 +36,7 @@ However, teams not using Docker can still make use of the flexibility offered by
 
 ## What Is Docker?
 
-Docker is a technology product, created by [Docker Inc.](https://www.docker.com), based on the [open-source Moby project](https://mobyproject.org). Docker is a tool to build and and run applications inside of containers based on Docker images, which is a portable and reusable file that launches an almost full-stack application environment.
+Docker is a technology product, created by [Docker Inc.](https://www.docker.com), based on the [open-source Moby project](https://mobyproject.org). Docker is a tool to build and run applications inside of containers based on Docker images, which is a portable and reusable file that launches an almost full-stack application environment.
 
 For more information, [visit Docker's "What Is Docker?" page](https://www.docker.com/what-docker).
 
