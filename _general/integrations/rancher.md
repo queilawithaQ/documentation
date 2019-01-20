@@ -44,7 +44,7 @@ You will add these encrypted environment variables to the service you create bel
 
 ## Defining Your Service
 
-Because all the commands in your pipeline, via your [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}), are executed inside the service you define and build build via your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}) - the first thing you will need to do is define a service that is capable of executing Rancher commands (and, specifically Rancher Compose commands.)
+Because all the commands in your pipeline, via your [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}), are executed inside the service you define and build via your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}) - the first thing you will need to do is define a service that is capable of executing Rancher commands (and, specifically Rancher Compose commands.)
 
 You can use an [existing image with Rancher compose configured](https://hub.docker.com/r/bfosberry/rancher-compose/) or build your own with a Dockerfile that looks similar to the one below:
 
