@@ -68,7 +68,7 @@ RUN gem install percy-capybara
 
 **Note** that this will require you to be building an image that contains both Ruby and Rubygems. If the image does not contain both of these, you will be unable to install the necessary `percy-cli` gem.
 
-From there, you will need to add specific hooks to your Rspec, Capybara, Minitest, or any other test specs you may have. You can find specific integration integration for calling Percy from your test specs [at the Percy documentation](https://percy.io/docs/clients/ruby/capybara-rails).
+From there, you will need to add specific hooks to your Rspec, Capybara, Minitest, or any other test specs you may have. You can find specific instructions for calling Percy from your test specs [at the Percy documentation](https://percy.io/docs/clients/ruby/capybara-rails).
 
 These test specs will be called via your [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}).
 
@@ -76,7 +76,7 @@ These test specs will be called via your [codeship-steps.yml file]({{ site.baseu
 
 To integrate Percy with Codeship Pro on an Ember and Docker project, you will want to install the `ember-percy` package into your application, typically via your `package.json`.
 
-From there, you will need to add specific hooks in to your project's test specs. You can find specific integration integration for calling Percy from your test specs [at the Percy documentation](https://percy.io/docs/clients/javascript/ember).
+From there, you will need to add specific hooks in to your project's test specs. You can find specific instructions for calling Percy from your test specs [at the Percy documentation](https://percy.io/docs/clients/javascript/ember).
 
 These test specs will be called via your [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}).
 
@@ -114,7 +114,7 @@ To integrate Percy with Codeship Basic on a Ruby project, you will want to insta
 gem install percy-capybara
 ```
 
-From there, you will need to add specific hooks to your Rspec, Capybara, Minitest, or any other test specs you may have. You can find specific integration integration for calling Percy from your test specs [at the Percy documentation](https://percy.io/docs/clients/ruby/capybara-rails).
+From there, you will need to add specific hooks to your Rspec, Capybara, Minitest, or any other test specs you may have. You can find specific instructions for calling Percy from your test specs [at the Percy documentation](https://percy.io/docs/clients/ruby/capybara-rails).
 
 ### Ember
 
@@ -124,4 +124,4 @@ To integrate Percy with Codeship Basic on an Ember project, you will want to ins
 ember install ember-percy
 ```
 
-From there, you will need to add specific hooks in to your test specs. You can find specific integration integration for calling Percy from your test specs [at the Percy documentation](https://percy.io/docs/clients/javascript/ember).
+From there, you will need to add specific hooks in to your test specs. You can find specific instructions for calling Percy from your test specs [at the Percy documentation](https://percy.io/docs/clients/javascript/ember).
