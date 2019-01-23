@@ -294,6 +294,7 @@ The following features available in Docker Compose are not available on Codeship
   * `devices`
   * `extends`
   * `group_add`
+  * `init`
   * `ipc`
   * `isolation`
   * `logging`, `log_driver`, `log_opt`
