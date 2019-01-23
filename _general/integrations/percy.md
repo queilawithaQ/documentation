@@ -37,7 +37,7 @@ By using Percy you can easily test your UI without complex browser testing overh
 
 ### Setting Your Percy Variables
 
-You will need to add the two values Percy provides when you create a new project inside their application - `PERCY_TOKEN` and `PERCY_PROJECT` - to the [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) that you  encrypt and include in your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
+You will need to add a value that Percy provides when you create a new project inside their application - `PERCY_TOKEN` - to the [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) that you  encrypt and include in your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
 
 ### Static Sites
 
@@ -84,7 +84,7 @@ These test specs will be called via your [codeship-steps.yml file]({{ site.baseu
 
 ### Setting Your Percy Variables
 
-You will need to add the two values Percy provides when you create a new project inside their application - `PERCY_TOKEN` and `PERCY_PROJECT` - to your project's [environment variables]({{ site.baseurl }}{% link _basic/builds-and-configuration/set-environment-variables.md %}).
+You will need to add a value that Percy provides when you create a new project inside their application - `PERCY_TOKEN` - to your project's [environment variables]({{ site.baseurl }}{% link _basic/builds-and-configuration/set-environment-variables.md %}).
 
 You can do this by navigating to _Project Settings_ and then clicking on the _Environment_ tab.
 
