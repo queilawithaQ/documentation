@@ -15,6 +15,7 @@ tags:
   - oracle
   - junit
   - jce
+  - sdkman
 menus:
   basic/languages:
     title: Java And JVM
@@ -111,6 +112,25 @@ java -version
 # Java(TM) SE Runtime Environment (build 9.0.4+11)
 # Java HotSpot(TM) 64-Bit Server VM (build 9.0.4+11, mixed mode)
 ```
+
+### Other Versions With SDKMAN
+
+If you need to install a different JDK version, consider using [SDKMAN](https://sdkman.io) to install it. For example if you want to install OpenJDK 11, you can add the following to your _Setup Commands_:
+
+```
+source /dev/stdin <<< "$(curl -sSL https://raw.githubusercontent.com/codeship/scripts/master/packages/sdkman.sh)"
+
+sdk install java 11.0.2-open
+
+export PATH=$HOME/.sdkman/candidates/java/current/bin:$PATH
+
+export JAVA_HOME=$HOME/.sdkman/candidates/java/current
+
+# Add if you want to confirm the installed version
+java -version
+```
+
+Note the available JDK versions in SDKMAN change as new JDK versions come out so the specific version you are installing may need to be updated occasionally. You can check the available versions by running `sdk list java`.
 
 ### Build Tools
 
