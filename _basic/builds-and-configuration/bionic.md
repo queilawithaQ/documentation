@@ -27,7 +27,7 @@ categories:
 
 We are starting to test Ubuntu Bionic build containers for CodeShip Basic. If you are interested in running your builds on Ubuntu Bionic and helping us beta test, please [get in touch](https://helpdesk.codeship.com/hc/en-us/requests/new) and we can get you started.
 
-In general, the overall environment is setup and configured in the same way you are familiar with. The underlying OS version is just getting upgraded. Most existing build commands should continue to work the same.
+In general, the overall environment is setup and configured in the same way you are familiar with. Most existing build commands should continue to work the same. The underlying OS version is just getting upgraded, specifically to **Ubuntu 18.04.1 LTS (Bionic Beaver)**.
 
 ### Common Issues
 
