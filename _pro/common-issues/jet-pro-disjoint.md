@@ -42,13 +42,13 @@ Running a build on your local machine with the [Jet CLI tool]({{ site.baseurl }}
 
 ### CodeShip Pro Disjoints
 
-- Application level resource constraints may be imposed on CodeShip Pro builds. Usually resulting in an explicit "out of memory" error in the stacktrace.
+- Application level resource constraints may be imposed on CodeShip Pro builds. Usually resulting in an explicit "out of memory" error in the stack trace.
   > Consult your library's documentation on increasing the memory allocation limit (e.g., [Composer](https://getcomposer.org/doc/articles/troubleshooting.md#memory-limit-errors), [Node.js](https://stackoverflow.com/questions/38558989/node-js-heap-out-of-memory)) and [Java](https://stackoverflow.com/a/14763095/9041368)).
 
 - CodeShip Pro may be reliant on outdated Docker image(s).
   > To clear the project's Docker image cache, click the drop down arrow of any build status icon and select 'Reset Cache'.
 
-- Resource constraints for the allotted CodeShip Pro instance size could force background processes to be killed on CodeShip Pro builds, while the same build runs without issue via `jet steps`. The error stacktrace can be a bit more cryptic than with resource constraints imposed on the application level.
+- Resource constraints for the allotted CodeShip Pro instance size could force background processes to be killed on CodeShip Pro builds, while the same build runs without issue via `jet steps`. The error stack trace can be a bit more cryptic than with resource constraints imposed on the application level.
   > If you suspect your build is failing on account of resource constraints, then please [reach out to our support team](https://helpdesk.codeship.com/hc/en-us/requests/new) with the CodeShip Pro build url in question.
 
 <br />
