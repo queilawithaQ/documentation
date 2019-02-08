@@ -19,4 +19,9 @@ redirect_from:
 * include a table of contents
 {:toc}
 
-Beanstalkd **1.7** runs on the default port and doesn't require any credentials.
+[Beanstalkd](https://beanstalkd.github.io) `1.9` can be installed and started by adding the following commands to your _Setup Commands_:
+
+```
+sudo apt-get update
+sudo apt-get install -y beanstalkd
+```
