@@ -1,9 +1,9 @@
 ---
-title: Configuring Build Triggers
+title: Skipping Individual Builds
 menus:
   general/projects:
-    title: Configuring Build Triggers
-    weight: 4
+    title: Skipping Individual Builds
+    weight: 3
 tags:
   - docker
   - basic
@@ -26,7 +26,6 @@ redirect_from:
   - /pro/getting-started/skipping-builds/
   - /basic/getting-started/skipping-builds/
   - /continuous-integration/skipping-builds/
-  - /general/projects/skipping-builds/
 ---
 
 * include a table of contents
