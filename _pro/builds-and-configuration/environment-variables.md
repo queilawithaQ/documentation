@@ -146,20 +146,20 @@ By default, Codeship populates a list of CI/CD related environment variables, su
 The environment variables Codeship populates are:
 
 ```
-CI_BRANCH
-CI_BUILD_APPROVED
-CI_BUILD_ID
-CI_COMMITTER_EMAIL
-CI_COMMITTER_NAME
+CI_BRANCH               # The Branch name of the triggered build. Ex: master
+CI_BUILD_APPROVED       # Build trigger on manual approval
+CI_BUILD_ID             # ID of the build
+CI_COMMITTER_EMAIL      # The committer's email address as set in the git commit
+CI_COMMITTER_NAME       # The committer's name as set in the git commit.
 CI_COMMITTER_USERNAME
-CI_COMMIT_DESCRIPTION
-CI_COMMIT_ID
-CI_COMMIT_MESSAGE
-CI_NAME
-CI_PROJECT_ID
-CI_REPO_NAME
-CI_STRING_TIME
-CI_TIMESTAMP
+CI_COMMIT_DESCRIPTION   # The description of the commit message
+CI_COMMIT_ID            # The HEAD commit ID of the triggered build.
+CI_COMMIT_MESSAGE       # The commit message
+CI_NAME                 # Always codeship
+CI_PROJECT_ID           # The codeship project ID
+CI_REPO_NAME            # The name of the repo
+CI_STRING_TIME          # The timestamp of the build as a string 
+CI_TIMESTAMP            # The timestamp of the build in time format
 ```
 
 ### Service-defined Environment Variables
