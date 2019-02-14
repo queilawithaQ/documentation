@@ -39,14 +39,14 @@ To trigger a build on commit, builds and tags:
 
 2. Select the _Build Triggers_ tab.
 
-3. Select the _Build on commit, merge, and tags_ button.
+3. Select the _Build on commit, merge, and tags_ radio button.
 
-4. Click Save Configuration.
+4. Click the Save Configuration button.
 
 
 ### Triggering Builds Only On Pull Requests
 
-You can trigger a build when opening, merging, and updating a Pull Requests (PR).
+You can trigger a build when opening, merging, and updating a Pull Request (PR).
 
 To trigger a build only on PRs:
 
@@ -54,9 +54,9 @@ To trigger a build only on PRs:
 
 2. Select the _Build Triggers_ tab.
 
-3. Select the _Build only on PR events_ button.
+3. Select the _Build only on PR events_ radio button.
 ![Build only on PRs]({{ site.baseurl }}/images/general/build_only_PR.png)
-4. Click Save Configuration.
+4. Click the Save Configuration button.
 
 Note:
 The following environment variables are populated after the _Build only on PR events_ configuration is saved:
@@ -88,29 +88,29 @@ The default behavior is to run builds for all branches.
 
 To exclude branches from triggering a build:
 
-1. Go to Project Settings
+1. Go to Project Settings.
 
-2. Select the _Build Triggers_ tab
+2. Select the _Build Triggers_ tab.
 
-3. Select the _Don't run builds for these branches_ button
+3. Select the _Don't run builds for these branches_ radio button.
 
 4. Enter either full branch names like "master" or a regular expressions like "^release.*$".
 ![Exclude branches from running builds]({{ site.baseurl }}/images/general/exclude_branches.png)
-5. Click Save Configuration
+5. Click the Save Configuration button.
 
 ### Running Builds Only For These Branches
 
 To run builds only on certain branches: 
 
-1. Go to Project Settings
+1. Go to Project Settings.
 
-2. Select the _Build Triggers_ tab
+2. Select the _Build Triggers_ tab.
 
-3. Select the _Run build for these branches only_ button
+3. Select the _Run build for these branches only_ radio button.
 
 4. Enter either full branch names like "master" or a regular expressions like "^release.*$".
 
-5. Click Save Configuration
+5. Click the Save Configuration button.
 
 ## Skipping Individual Builds
 
