@@ -13,7 +13,7 @@ tags:
   - builds
   - testing
   - skipping
-  - skip:
+  - skip
   - triggers
   - triggering
   - trigger
@@ -51,7 +51,7 @@ To trigger a build on commit, builds and tags:
 
 ### Triggering Builds Only On Pull Requests
 
-You can trigger a build when opening, merging, and updating a Pull Requests (PR).
+You can trigger a build when opening, merging, and updating a Pull Request (PR).
 
 To trigger a build only on PRs:
 
@@ -65,10 +65,10 @@ To trigger a build only on PRs:
 
 Note:
 The following environment variables are populated after the _Build only on PR events_ configuration is saved:
-PR_NUMBER is populated with the PR number.
-CI_PULL_REQUEST is populated with the URL of the pull request. 
+* PR_NUMBER is populated with the PR number.
+* CI_PULL_REQUEST is populated with the URL of the pull request. 
 
-See link for more information on environment variables.
+See [Codeship Basic Environment Variables](https://https://documentation.codeship.com/basic/builds-and-configuration/set-environment-variables/) or [Codeship Pro Environment Variables](https://documentation.codeship.com/pro/builds-and-configuration/environment-variables/) for more information.
 
 ### Triggering Builds on Commits versus on Pull Requests
 
@@ -86,7 +86,7 @@ The following table shows when a build is triggered.
 
 ## Configuring Branches
 
-You can run builds for all branch, exclude branches from triggering builds, and run builds only for certain branches. 
+You can run builds for all branches, only certain branches or exclude branches. 
 The default behavior is to run builds for all branches.
  
 ### Excluding Branches From Triggering Builds
