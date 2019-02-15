@@ -7,7 +7,6 @@ tags:
   - alerts
   - slack
   - hipchat
-  - stride
   - webhook
   - email
   - campfire
@@ -53,7 +52,6 @@ We have in-build support for the following services:
 1. [Flowdock](#flowdock)
 1. [Hipchat](#hipchat)
 1. [Slack](#slack)
-1. [Stride](#stride)
 1. [Webhooks](#webhook)
 
 If the service you're looking for isn't on the list, you might be able to use the `webhook` option but if not, feel free to reach out to us (see bottom of the page).
@@ -115,10 +113,6 @@ Hipchat mainly requires a token and the room that you want the notification to b
 ## Slack
 
 For Slack, the only thing you need is the webhook URL Slack provides when you configure a Codeship integration. Copy-paste the URL to the Webhook URL field.
-
-## Stride
-
-Stride needs an access token as well as a webhook URL. In Stride, you need to add a 'custom app' from the Apps menu for the room you want the notifications to be delivered to. You're given a token and a webhook URL as part of the app creation.
 
 ## Webhook
 
