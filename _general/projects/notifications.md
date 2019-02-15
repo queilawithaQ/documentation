@@ -6,7 +6,6 @@ tags:
   - notifications
   - alerts
   - slack
-  - hipchat
   - webhook
   - email
   - campfire
@@ -50,7 +49,6 @@ We have in-build support for the following services:
 1. [Campfire](#campfire)
 1. [Email](#email-notification)
 1. [Flowdock](#flowdock)
-1. [Hipchat](#hipchat)
 1. [Slack](#slack)
 1. [Webhooks](#webhook)
 
@@ -105,10 +103,6 @@ If all those settings look correct and you are still not receiving notifications
 ## Flowdock
 
 Flowdock expects a token as well, but the where to send the notification is handled on the flowdock side of things.
-
-## Hipchat
-
-Hipchat mainly requires a token and the room that you want the notification to be posted to.
 
 ## Slack
 
