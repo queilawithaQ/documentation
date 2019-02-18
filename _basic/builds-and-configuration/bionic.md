@@ -39,6 +39,7 @@ If you would like your projects switched to Bionic sooner, please [let us know](
 
 * MySQL 5.7 running by default
 * Python 3.7 installed by default
+* PHP 5.3, 5.4 and 5.5 removed due to [end of life](http://php.net/supported-versions.php)
 
 ### Common Issues
 
