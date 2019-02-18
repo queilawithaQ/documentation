@@ -63,7 +63,7 @@ The following environment variables are populated after the _Build only on PR ev
 PR_NUMBER is populated with the PR number.
 CI_PULL_REQUEST is populated with the URL of the pull request. 
 
-See link for more information on environment variables.
+See [Codeship Basic Environment Variables](https://documentation.codeship.com/basic/builds-and-configuration/set-environment-variables/) or [Codeship Pro Environment Variables](https://documentation.codeship.com/pro/builds-and-configuration/environment-variables/) for more information.
 
 ### Triggering Builds on Commits versus on Pull Requests
 
@@ -94,7 +94,7 @@ To exclude branches from triggering a build:
 
 3. Select the _Don't run builds for these branches_ radio button.
 
-4. Enter either full branch names like "master" or a regular expressions like "^release.*$".
+4. Enter either full branch names like "master" for exact matches or a regular expressions like "^release.*$" for a search pattern.
 ![Exclude branches from running builds]({{ site.baseurl }}/images/general/exclude_branches.png)
 5. Click the Save Configuration button.
 
@@ -108,26 +108,6 @@ To run builds only on certain branches:
 
 3. Select the _Run build for these branches only_ radio button.
 
-4. Enter either full branch names like "master" or a regular expressions like "^release.*$".
+4. Enter either full branch names like "master" for exact matches or a regular expressions like "^release.*$" for a search pattern.
 
 5. Click the Save Configuration button.
-
-## Skipping Individual Builds
-
-You can skip builds on both [Codeship Basic](https://codeship.com/features/basic) and [Codeship Pro](https://codeship.com/features/pro) by using a special commit directive.
-
-### Skipping Builds Using The Commit Message
-
-You can add either of the following skip directives to the commit message of the last commit before you push and that push will be ignored:
-
-* `--skip-ci`
-* `--ci-skip`
-* `[skip ci]`
-* `[ci skip]`
-
-Skipped builds do not have a build record and will not show up in the Codeship UI. They will also not count towards the concurrent builds or monthly build limits for users.
-
-
-### Skipping Builds Using A Step Tag on Pro
-
-On [Codeship Pro](https://codeship.com/features/pro), in addition to using a commit message, you can also de-facto skip builds by making sure that every step in your `codeship-steps.yml` file has a `tag`, which limits that step to a certain branch. You can learn more about limiting your steps to a certain branch [codeship-steps.yml documentation]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}).

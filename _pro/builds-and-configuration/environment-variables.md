@@ -160,8 +160,8 @@ CI_PROJECT_ID           # The codeship project ID
 CI_REPO_NAME            # The name of the repo
 CI_STRING_TIME          # The timestamp of the build as a string 
 CI_TIMESTAMP            # The timestamp of the build in time format
-CI_PULL_REQUEST         # Include the URL with the Pull Request. If no URL then the default is false.
-PR_NUMBER               # Include the Pull Request number on the build
+CI_PULL_REQUEST         # The URL of the Pull Request associated with the build. The value is false if the build was triggered on a commit, merge, or tag.
+PR_NUMBER               # The Pull Request number associated with the build. This value is black if the build was triggered on a commit, merge, or tag.
 ```
 
 ### Service-defined Environment Variables
