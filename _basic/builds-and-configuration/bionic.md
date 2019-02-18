@@ -52,7 +52,7 @@ Finally, if you are using any [CodeShip scripts](https://github.com/codeship/scr
 
 ### Opting Out
 
-If you have a project that is failing to build on Bionic and there is not a clear solution, you can opt that project out. Under Project Settings > General is a button to switch back to the old environment.
+If you have a project that is failing on Bionic and there is not a clear solution, you can opt that project out. Under _Project Settings > General_ is a button to switch back to the old environment.
 
 ### Support
 
