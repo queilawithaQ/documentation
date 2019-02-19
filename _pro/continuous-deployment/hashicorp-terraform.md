@@ -46,14 +46,12 @@ Note here that we are creating a working directory and switching to that directo
 Next, we'll make use of the above `Dockerfile` in a service definition, via our [codeship-services.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}) file. The below example covers just the Terraform service, but your [codeship-services.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}) file can have any other required services defined as well.
 
 ```yaml
-version: '2'
-services:
-  terraform:
-    build:
-      dockerfile: Dockerfile
-    volumes:
-      - ./:/terraform
-    encrypted_env_file: secrets.env.encrypted
+terraform:
+  build:
+    dockerfile: Dockerfile
+  volumes:
+    - ./:/terraform
+  encrypted_env_file: secrets.env.encrypted
 ```
 
 ### Configuration Via Environment Variables
