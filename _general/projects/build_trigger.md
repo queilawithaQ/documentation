@@ -41,7 +41,7 @@ To trigger a build on commit, builds and tags:
 
 3. Select the _Build on commit, merge, and tags_ radio button.
 
-4. Click the Save Configuration button.
+4. Click the _Save Configuration_ button.
 
 
 ### Triggering Builds Only On Pull Requests
@@ -56,7 +56,7 @@ To trigger a build only on PRs:
 
 3. Select the _Build only on PR events_ radio button.
 ![Build only on PRs]({{ site.baseurl }}/images/general/build_only_PR.png)
-4. Click the Save Configuration button.
+4. Click the _Save Configuration_ button.
 
 Note:
 The following environment variables are populated after the _Build only on PR events_ configuration is saved:
@@ -96,7 +96,7 @@ To exclude branches from triggering a build:
 
 4. Enter either full branch names like "master" for exact matches or a regular expressions like "^release.*$" for a search pattern.
 ![Exclude branches from running builds]({{ site.baseurl }}/images/general/exclude_branches.png)
-5. Click the Save Configuration button.
+5. Click the _Save Configuration_ button.
 
 ### Running Builds Only For These Branches
 
@@ -110,4 +110,4 @@ To run builds only on certain branches:
 
 4. Enter either full branch names like "master" for exact matches or a regular expressions like "^release.*$" for a search pattern.
 
-5. Click the Save Configuration button.
+5. Click the _Save Configuration_ button.
