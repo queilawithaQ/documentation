@@ -74,8 +74,6 @@ data:
 
 
 ```yaml
-version: '2'
-
 services:
   app:
     build: .
