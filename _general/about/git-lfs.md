@@ -1,9 +1,9 @@
 ---
-title: Support For Git LFS Codeship
+title: Support For Git LFS
 shortTitle: Git LFS
 menus:
   general/about:
-    title: GIT LFS
+    title: Git LFS
     weight: 8
 tags:
   - git
@@ -16,24 +16,16 @@ categories:
 * include a table of contents
 {:toc}
 
-Git LFS is not natively supported on Codeship, although we do provide [a script](https://github.com/codeship/scripts/blob/master/packages/git-lfs.sh) that may conditionally allow Git LFS to be usable in your builds.
+[Git LFS](https://git-lfs.github.com) is not installed by default on Codeship Basic, but can easily be added with [this script](https://github.com/codeship/scripts/blob/master/packages/git-lfs.sh).
 
-## LFS On Codeship Pro
+For example if you want to install **2.7.0**, set that version as an [environment variable]({{ site.baseurl }}{% link _basic/builds-and-configuration/set-environment-variables.md %}) in your project or add this in the _Setup Commands_:
 
-To use Git LFS on [Codeship Pro](https://codeship.com/features/pro) you will need to use [these lines of this script](https://github.com/codeship/scripts/blob/master/packages/git-lfs.sh#L31-L33).
-
-You will need to run this script inside a container with both Git and Git LFS installed via the Dockerfile.
-
-This container will also need to mount your entire cloned repository as volume in your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}), such as:
-
-```yaml
-app:
-  image: alpine:3.6
-  volumes:
-    - .:/data/
 ```
-Within the container, in this `app` using an Alpine base image, you can then run `git lfs fetch` and `git lfs checkout` to get the files stored via LFS.
+export GIT_LFS_VERSION=2.7.0
+```
 
-## LFS On Codeship Basic
+Next, add [this command](https://github.com/codeship/scripts/blob/master/packages/git-lfs.sh#L6) to your _Setup Commands_ and the script will automatically be called at build time. Note, this script will automatically call `git lfs fetch` after installation.
 
-To use Git LFS on [Codeship Basic](https://codeship.com/features/basic), you will need to install and setup [this script](https://github.com/codeship/scripts/blob/master/packages/git-lfs.sh) in your project's [setup commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %})
+```
+\curl -sSL https://raw.githubusercontent.com/codeship/scripts/master/packages/git-lfs.sh | bash -s
+```
