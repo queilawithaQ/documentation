@@ -2,14 +2,14 @@
 title: Support For Git LFS
 shortTitle: Git LFS
 menus:
-  general/about:
+  basic/builds:
     title: Git LFS
     weight: 8
 tags:
   - git
   - lfs
 categories:
-  - About Codeship  
+  - Builds and Configuration
   - Configuration
 ---
 
