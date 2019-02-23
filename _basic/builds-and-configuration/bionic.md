@@ -4,7 +4,7 @@ shortTitle: Ubuntu Bionic
 menus:
   basic/builds:
     title: Ubuntu Bionic
-    weight: 13
+    weight: 14
 tags:
   - sudo
   - root
