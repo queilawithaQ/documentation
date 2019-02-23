@@ -19,4 +19,4 @@ categories:
 * include a table of contents
 {:toc}
 
-Memcached **1.4.14** runs on the default port and doesn't require any credentials.
+Memcached **1.5.6** runs on the default port and doesn't require any credentials.

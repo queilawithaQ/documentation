@@ -19,7 +19,7 @@ redirect_from:
 * include a table of contents
 {:toc}
 
-[Beanstalkd](https://beanstalkd.github.io) `1.9` can be installed and started by adding the following commands to your _Setup Commands_:
+[Beanstalkd](https://beanstalkd.github.io) `1.10` can be installed and started by adding the following commands to your _Setup Commands_:
 
 ```
 sudo apt-get update

@@ -20,7 +20,7 @@ redirect_from:
 * include a table of contents
 {:toc}
 
-[RabbitMQ](https://www.rabbitmq.com) `3.2.4` runs with the default configuration on top of [Erlang](https://www.erlang.org) `17.4`.
+[RabbitMQ](https://www.rabbitmq.com) `3.6.10` runs with the default configuration on top of [Erlang](https://www.erlang.org) `20.2.2`.
 
 The `rabbitmq_management` plugin is also enabled, which allows for changing various server related settings. Please look at the [plugin documentation](https://www.rabbitmq.com/management.html) for more information.
 
