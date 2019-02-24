@@ -19,7 +19,14 @@ redirect_from:
 
 ## Versions And Setup
 
-`$DART_SDK` is available in the Environment and included in the PATH. The installed version of the Dart SDK is `1.5.1`.
+[Dart](https://www.dartlang.org) is not installed on the build VMs by default, but it can be easily added by including [these steps](https://webdev.dartlang.org/tools/sdk#install-using-apt-get) in your _Setup Commands_:
+
+```shell
+sudo sh -c 'curl https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -'
+sudo sh -c 'curl https://storage.googleapis.com/download.dartlang.org/linux/debian/dart_stable.list > /etc/apt/sources.list.d/dart_stable.list'
+sudo apt-get update
+sudo apt-get install dart
+```
 
 You can use these commands from the Dart SDK:
 
@@ -27,10 +34,6 @@ You can use these commands from the Dart SDK:
 * Dart VM (dart)
 * Dart package manager (pub)
 * Dart Analyzer (dart_analyzer)
-
-### Installing New Versions
-
-To change to another version, use [this script](https://github.com/codeship/scripts/blob/master/languages/dart.sh) in your Setup Commands.
 
 ## Dependencies
 
@@ -48,7 +51,7 @@ We do not cache Dart dependencies between builds by default, but any dependencie
 
 As dart currently doesn't have a default way to run your tests you can use exactly the same command to run those tests as you would on your local machine. Note that almost all tools for custom machine configuration will install and run without issue on Codeship.
 
-### Browser testing
+### Browser Testing
 
 We automatically have `xvfb` running on our System. You can use Firefox, Chrome
 or PhantomJS to run your Dart tests in a browser. You can read more in our
