@@ -13,7 +13,6 @@ tags:
   - install
   - packages
   - ubuntu
-  - trusty
   - bionic
 categories:
   - Builds and Configuration

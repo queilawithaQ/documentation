@@ -46,7 +46,7 @@ Current versions of Google Chrome and Chromium are installed by default.
 
 Google Chrome is at version 72 and is located at `/usr/bin/google-chrome`.
 
-Chromium is at version 65 and is located at `/usr/bin/chromium-browser`.
+Chromium is at version 71 and is located at `/usr/bin/chromium-browser`.
 
 There is a `chrome` symlink in the PATH that defaults to calling Google Chrome. You can change it to point to Chromium by adding these commands to your build steps:
 

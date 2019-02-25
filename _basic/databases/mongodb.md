@@ -21,16 +21,16 @@ categories:
 * include a table of contents
 {:toc}
 
-[MongoDB](https://www.mongodb.com) `2.6.4` runs on the default port **27017** and doesn't require any credentials.
+[MongoDB](https://www.mongodb.com) `3.6.3` runs on the default port **27017** and doesn't require any credentials.
 
 ## Other Versions
 
 If you need to install a different version or use a custom configuration, please see [this script](https://github.com/codeship/scripts/blob/master/packages/mongodb.sh). This script supports [MongoDB 3.0.0 and above](https://docs.mongodb.com/manual/release-notes).
 
-For example if you want to install **3.6.0**, set that version and port number as [environment variables]({{ site.baseurl }}{% link _basic/builds-and-configuration/set-environment-variables.md %}) in your project or add this in the _Setup Commands_:
+For example if you want to install **4.0.6**, set that version and port number as [environment variables]({{ site.baseurl }}{% link _basic/builds-and-configuration/set-environment-variables.md %}) in your project or add this in the _Setup Commands_:
 
 ```
-export MONGODB_VERSION=3.6.0
+export MONGODB_VERSION=4.0.6
 export MONGODB_PORT=27017
 ```
 

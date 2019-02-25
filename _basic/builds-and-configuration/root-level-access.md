@@ -35,7 +35,7 @@ With the sudo access, you can run `apt-get update` and `apt-get install <package
 
 You can also start new services (custom or standard), assuming they don't try to do any of the things mentioned below.
 
-**Note**: When you are looking for packages to install, look for those that work on `Ubuntu 14.04 (Trusty)` as that is the underlying Linux we use for the build machines. A newer version of Ubuntu (and other flavors) might be available later in the year.
+**Note**: When you are looking for packages to install, look for those that work on `Ubuntu 18.04 (Bionic)` as that is the underlying Linux we use for the build machines.
 
 ### What Can't You Do?
 

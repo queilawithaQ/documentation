@@ -3,6 +3,7 @@ title: Using Elixir In CI/CD with Codeship Basic
 shortTitle: Elixir
 tags:
   - elixir
+  - erlang
   - languages
 menus:
   basic/languages:
@@ -17,17 +18,21 @@ categories:
 
 ## Versions And Setup
 
-We currently don't have Elixir pre-installed on our build VMs so we'd recommend using our [Docker]({{ site.baseurl }}{% link pro/index.md %}) platform or downloading Elixir via the shell commands in your project's [setup commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}).
+[Elixir](https://elixir-lang.org) is not installed on the build VMs by default, but it can be easily added with [this script](https://github.com/codeship/scripts/blob/master/languages/elixir.sh).
 
-The easiest way to do this is by using our [scripts repository](https://github.com/codeship/scripts), specifically the [Erlang](https://github.com/codeship/scripts/blob/master/languages/erlang.sh) and [Elixir](https://github.com/codeship/scripts/blob/master/languages/elixir.sh) scripts both. After connecting your repository, you can add these setup commands that will automatically download Elixir and Erlang. Both are needed to be able to run Elixir.
+For example if you want to install **1.8.1**, set that version as an [environment variable]({{ site.baseurl }}{% link _basic/builds-and-configuration/set-environment-variables.md %}) in your project or add this in the _Setup Commands_. Elixir requires Erlang as well so you should also configure the necessary Erlang version here:
+
+```
+export ERLANG_VERSION=21.2
+export ELIXIR_VERSION=1.8.1
+```
+
+Next, add [these commands](https://github.com/codeship/scripts/blob/master/languages/elixir.sh#L12) to your _Setup Commands_ and the scripts will automatically be called at build time.
 
 ```shell
 source /dev/stdin <<< "$(curl -sSL https://raw.githubusercontent.com/codeship/scripts/master/languages/erlang.sh)"
 source /dev/stdin <<< "$(curl -sSL https://raw.githubusercontent.com/codeship/scripts/master/languages/elixir.sh)"
 ```
-
-The setup looks like this:
-![Elixir Setup]({{ site.baseurl }}/images/languages/setupelixir.png)
 
 ## Dependencies
 
@@ -39,8 +44,7 @@ We do not cache Elixir dependencies between builds.
 
 ## Frameworks And Testing
 
-Elixir frameworks such as Phoenix, and test tools
-such as ExUnit, are all supported on Codeship. Note that you will need to manually install all tools needed, in your project's [setup commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}).
+Elixir frameworks such as Phoenix, and test tools such as ExUnit, are all supported on Codeship. Note that you will need to manually install all tools needed, in your project's [setup commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}).
 
 ## Parallel Testing
 

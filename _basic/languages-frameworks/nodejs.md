@@ -42,10 +42,10 @@ If the version isn't already pre-installed on the build VMs `nvm` will download 
 
 ### Default Version
 
-The default version when we can't find a setting in your `package.json` is the latest version of the `0.10` release.
+The default version when we can't find a setting in your `package.json` is the latest version of the `10` release.
 
 ### Pre-installed versions
-The latest versions of the following [Node.js releases](https://nodejs.org/en/download/releases) are pre-installed on our build VMs: `0.8.x`, `0.9.x`, `0.10.x`, `0.11.x`, `0.12.x`, `4.x`, `5.x`, `6.x`, `7.x`, `8.x` and `9.x`.
+The latest versions of the following [Node.js releases](https://nodejs.org/en/download/releases) are pre-installed on our build VMs: `4.x`, `5.x`, `6.x`, `7.x`, `8.x`, `9.x`, `10.x` and `11.x`.
 
 Please note that we only install the latest version for each of those releases. You can however install any custom version via the `nvm install` command mentioned above.
 

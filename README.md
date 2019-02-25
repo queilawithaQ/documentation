@@ -126,7 +126,7 @@ generates the output as follows (depending on configuration values):
 
 #### Man Pages
 
-Link to a particular Ubuntu man page. The Ubuntu version currently defaults to Ubuntu Trusty.
+Link to a particular Ubuntu man page. The Ubuntu version currently defaults to Ubuntu Bionic.
 
 ```
 {% man_url formatdb %}
@@ -135,7 +135,7 @@ Link to a particular Ubuntu man page. The Ubuntu version currently defaults to U
 generates the following output:
 
 ```
-http://manpages.ubuntu.com/manpages/trusty/en/man1/formatdb.1.html
+http://manpages.ubuntu.com/manpages/bionic/en/man1/formatdb.1.html
 ```
 
 #### Notes
