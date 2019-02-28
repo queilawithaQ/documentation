@@ -1878,10 +1878,10 @@ gulp-decompress@^1.2.0:
     gulp-util "^3.0.1"
     readable-stream "^2.0.2"
 
-gulp-folders@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/gulp-folders/-/gulp-folders-1.1.0.tgz#0ea83ba6a8e4beb8c2c6109993e7d6528084875e"
-  integrity sha1-Dqg7pqjkvrjCxhCZk+fWUoCEh14=
+gulp-folders-4x@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/gulp-folders-4x/-/gulp-folders-4x-1.0.1.tgz#901adc3b71afa1fe23d58332509e41865e90e240"
+  integrity sha512-qNu0xtqAgoG+E6n8Gzn9u+RA30RI/ndV32jSfam/nyLMfokzoz5tpAQm4To91VtYars+kwUh0wmiY9yCdkZSkw==
   dependencies:
     event-stream "^3.2.1"
 
