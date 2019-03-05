@@ -120,6 +120,7 @@ checkmark
 checksum
 checksums
 chromedriver
+CI_PR_NUMBER
 CI_PULL_REQUEST
 ci-guide
 cli
@@ -337,7 +338,6 @@ pre-installed
 pre-populated
 pre-test
 preinstalled
-PR_NUMBER
 prepending
 prlimit
 profitwell

@@ -58,10 +58,9 @@ To trigger a build only on PRs:
 ![Build only on PRs]({{ site.baseurl }}/images/general/build_only_PR.png)
 4. Click the _Save Configuration_ button.
 
-Note:
-The following environment variables are populated after the _Build only on PR events_ configuration is saved:
-PR_NUMBER is populated with the PR number.
-CI_PULL_REQUEST is populated with the URL of the pull request. 
+Note: The following environment variables are populated after the _Build only on PR events_ configuration is saved:
+* CI_PR_NUMBER is populated with the pull request number.
+* CI_PULL_REQUEST is populated with the URL of the pull request. 
 
 See [Codeship Basic Environment Variables](https://documentation.codeship.com/basic/builds-and-configuration/set-environment-variables/) or [Codeship Pro Environment Variables](https://documentation.codeship.com/pro/builds-and-configuration/environment-variables/) for more information.
 
