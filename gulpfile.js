@@ -5,8 +5,7 @@ var gulp = require('gulp'),
 	imageResize = require('gulp-image-resize'),
 	jsonlint = require('gulp-jsonlint'),
 	path = require('path'),
-	postcss = require('gulp-postcss'),
-	print = require('gulp-print');
+	postcss = require('gulp-postcss');
 
 var site = '/site/';
 
