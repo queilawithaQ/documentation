@@ -24,15 +24,13 @@ categories:
 
 ## Ubuntu Bionic On CodeShip Basic
 
-We are starting to run Ubuntu Bionic build containers for CodeShip Basic. In general, the overall environment is setup and configured in the same way you are familiar with. Most existing build commands should continue to work the same. The underlying OS version is just getting upgraded, specifically to **Ubuntu 18.04.2 LTS (Bionic Beaver)**.
+We are now running Ubuntu Bionic build containers for CodeShip Basic. In general, the overall environment is setup and configured in the same way you are familiar with. Most existing build commands should continue to work the same. The underlying OS version is now **Ubuntu 18.04.2 LTS (Bionic Beaver)**.
 
 ### Rollout Plan
 
-Starting February 18th we will start automatically opting in projects and running them on Bionic. This will be a gradual rollout, meaning we will start with a very small number of projects and steadily increase over the next several weeks. Your projects might get opted in on the first day or it could happen at a later time.
+On February 18th we started automatically opting in projects and running them on Bionic. At this time all projects are running on Bionic unless you manually opted a project out. All projects need to be migrated to Bionic by **April 15th**. If you are unable to migrate by **April 15th**, your projects will be manually changed over for you which may result in failing builds.
 
 If the build is running on Bionic, step 6 of the build will say `Preparing Bionic Build Container`.
-
-If you would like your projects switched to Bionic sooner, please [let us know](https://helpdesk.codeship.com/hc/en-us/requests/new).
 
 ### Key Changes
 
@@ -52,8 +50,8 @@ Finally, if you are using any [CodeShip scripts](https://github.com/codeship/scr
 
 ### Opting Out
 
-If you have a project that is failing on Bionic and there is not a clear solution, you can opt that project out. Under _Project Settings > General_ is a button to switch back to the old environment.
+If you have a project that is failing on Bionic and there is not a clear solution, you can opt that project out. Under _Project Settings > General_ is a button to switch back to the old environment. All projects need to be migrated to Bionic by **April 15th**.
 
 ### Support
 
-If the above steps do not help to get your projects running, [reach out to us](https://helpdesk.codeship.com/hc/en-us/requests/new). We will help you work through any migration challenges. Your feedback is also helpful to us and other customers as we work on resolving issues in the new environment.
+If the above steps do not help to get your projects running, [reach out to us](https://helpdesk.codeship.com/hc/en-us/requests/new). We will help you work through any migration challenges.
