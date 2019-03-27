@@ -23,8 +23,11 @@
    ruby-2.5.1 [ x86_64 ]
    ruby-2.5.2 [ x86_64 ]
 =* ruby-2.5.3 [ x86_64 ]
+   ruby-2.5.4 [ x86_64 ]
+   ruby-2.5.5 [ x86_64 ]
    ruby-2.6.0 [ x86_64 ]
    ruby-2.6.1 [ x86_64 ]
+   ruby-2.6.2 [ x86_64 ]
 
 # => - current
 # =* - current && default
