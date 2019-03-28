@@ -19,7 +19,7 @@ redirect_from:
 
 ## Versions And Setup
 
-We have Go 1.4 installed by default in our virtual machine.
+We have Go 1.12 installed by default in our virtual machine.
 To change to another Go version, use this [script](https://github.com/codeship/scripts/blob/master/languages/go.sh) in your Setup Commands.
 
 ### Path
