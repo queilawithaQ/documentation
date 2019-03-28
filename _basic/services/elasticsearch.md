@@ -18,7 +18,7 @@ categories:
 * include a table of contents
 {:toc}
 
-[Elasticsearch](https://www.elastic.co) **1.2.2** is installed on the default port **9200** and doesn't require any credentials. However, it is not running by default. To use Elasticsearch during your builds, start the service with the following command:
+[Elasticsearch](https://www.elastic.co) **6.6.1** is installed on the default port **9200** and doesn't require any credentials. However, it is not running by default. To use Elasticsearch during your builds, start the service with the following command:
 
 ```shell
 sudo /etc/init.d/elasticsearch start

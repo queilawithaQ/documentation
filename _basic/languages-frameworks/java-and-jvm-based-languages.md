@@ -136,11 +136,11 @@ Note the available JDK versions in SDKMAN change as new JDK versions come out so
 
 The following tools are preinstalled in our virtual machine. You can add them to your setup or test commands to start your build:
 
-* [Ant](https://ant.apache.org) (1.9.10)
-* [Gradle](https://gradle.org) (4.6)
-* [Leiningen](https://leiningen.org) (2.8.1)
-* [Maven](https://maven.apache.org) (3.5.3)
-* [sbt](https://www.scala-sbt.org) (0.13.16)
+* [Ant](https://ant.apache.org) (1.10.5)
+* [Gradle](https://gradle.org) (5.2.1)
+* [Leiningen](https://leiningen.org) (2.9.1)
+* [Maven](https://maven.apache.org) (3.6.0)
+* [sbt](https://www.scala-sbt.org) (1.2.8)
 
 ### JVM-based languages
 
