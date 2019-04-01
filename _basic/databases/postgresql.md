@@ -23,12 +23,6 @@ categories:
 * include a table of contents
 {:toc}
 
-{% csnote warning %}
-PostgreSQL 9.2 officially reached its [end-of-life (EOL)](https://www.postgresql.org/support/versioning) and as a result it was removed from the build environment as of **March 29, 2018**.
-
-PostgreSQL 10 is now the new default running on port 5432.
-{% endcsnote %}
-
 PostgreSQL `10` runs on the default port and the credentials are stored in the `PGUSER` and `PGPASSWORD` environment variables. The default databases created for you are **development** and **test**.
 
 We install the Ubuntu `postgresql-contrib` package. It includes the [extension modules](https://www.postgresql.org/docs/10/static/contrib.html) listed in the PostgreSQL documentation.
