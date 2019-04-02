@@ -31,14 +31,6 @@ You need to activate them with `CREATE EXTENSION` as explained in the [Extension
 
 ## Versions
 
-### 10
-
-The **default version** of PostgreSQL on Codeship is **10**, which runs on the default port of `5432`. No additional configuration is required to use version 10.
-
-{% csnote info %}
-PostgreSQL 10 includes PostGIS version 2.5.
-{% endcsnote %}
-
 ### 11
 
 PostgreSQL version **11** is running on port `5433` and configured (almost) identical to the others. Make sure to specify the correct port in your project configuration if you want to test against this version.
@@ -52,6 +44,14 @@ For Rails based projects, please add the following command to your _Setup Comman
 ```shell
 sed -i "s|5432|5433|" "config/database.yml"
 ```
+
+### 10
+
+The **default version** of PostgreSQL on Codeship is **10**, which runs on the default port of `5432`. No additional configuration is required to use version 10.
+
+{% csnote info %}
+PostgreSQL 10 includes PostGIS version 2.5.
+{% endcsnote %}
 
 ### 9.6
 
