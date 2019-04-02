@@ -36,7 +36,7 @@ You need to activate them with `CREATE EXTENSION` as explained in the [Extension
 The **default version** of PostgreSQL on Codeship is **10**, which runs on the default port of `5432`. No additional configuration is required to use version 10.
 
 {% csnote info %}
-PostgreSQL 10 includes PostGIS version 2.4.
+PostgreSQL 10 includes PostGIS version 2.5.
 {% endcsnote %}
 
 ### 11
@@ -58,7 +58,7 @@ sed -i "s|5432|5433|" "config/database.yml"
 PostgreSQL version **9.6** is running on port `5436` and configured (almost) identical to the others. Make sure to specify the correct port in your project configuration if you want to test against this version.
 
 {% csnote info %}
-PostgreSQL 9.6 includes PostGIS version 2.3.
+PostgreSQL 9.6 includes PostGIS version 2.5.
 {% endcsnote %}
 
 For Rails based projects, please add the following command to your _Setup Commands_ to work around the auto-configuration in place.
@@ -72,7 +72,7 @@ sed -i "s|5432|5436|" "config/database.yml"
 PostgreSQL version **9.5** is running on port `5435` and configured (almost) identical to the others. Make sure to specify the correct port in your project configuration if you want to test against this version.
 
 {% csnote info %}
-PostgreSQL 9.5 includes PostGIS version 2.2.
+PostgreSQL 9.5 includes PostGIS version 2.5.
 {% endcsnote %}
 
 For Rails based projects, please add the following command to your _Setup Commands_ to work around the auto-configuration in place.
@@ -86,7 +86,7 @@ sed -i "s|5432|5435|" "config/database.yml"
 PostgreSQL version **9.4** is running on port `5434` and configured (almost) identical to the others. Make sure to specify the correct port in your project configuration if you want to test against this version.
 
 {% csnote info %}
-PostgreSQL 9.4 includes PostGIS version 2.1.
+PostgreSQL 9.4 includes PostGIS version 2.5.
 {% endcsnote %}
 
 For Rails based projects, please add the following command to your _Setup Commands_ to work around the auto-configuration in place.
@@ -124,7 +124,14 @@ psql -d DATABASE_NAME -p DATABASE_PORT -c 'create extension if not exists hstore
 ```
 
 ### PostGIS
-PostgreSQL version 9.4 includes PostGIS 2.1, 9.5 includes 2.2, 9.6 includes 2.3, 10 includes 2.4 and 11 includes 2.5.
+All PostgreSQL versions include [PostGIS](https://postgis.net) 2.5.
+
+To use PostGIS, enable the extension and optionally verify the version.
+
+```shell
+psql -p DATABASE_PORT -c 'create extension postgis;'
+psql -p DATABASE_PORT -c 'select PostGIS_Version();'
+```
 
 ## Framework-specific configuration
 
