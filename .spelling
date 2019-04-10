@@ -120,6 +120,8 @@ checkmark
 checksum
 checksums
 chromedriver
+CI_PR_NUMBER
+CI_PULL_REQUEST
 ci-guide
 cli
 cli-based
@@ -206,7 +208,6 @@ gradle
 granularly
 gravatar
 gravatar.com
-grove.io
 hakiri
 hardcoded
 harddrive
@@ -224,6 +225,7 @@ http
 https
 i.e.
 index.docker.io
+init
 initializers
 io.js
 ios
@@ -299,7 +301,7 @@ nvm
 oauth
 onboarding
 openjdk
-openjdk7
+openjdk8
 openredis
 openstack
 opsgenie

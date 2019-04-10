@@ -21,7 +21,7 @@ redirect_from:
 
 ## Versions And Setup
 
-We use **PHPENV** to manage PHP versions. We currently have **5.3**, **5.4**, **5.5**, **5.6**, **7.0**, **7.1** and **7.2** installed.
+We use **PHPENV** to manage PHP versions. We currently have **5.6**, **7.0**, **7.1**, **7.2** and **7.3** installed.
 These are aliases that are pointing to the specific 5.x.x and 7.x.x versions we have installed.
 
 For a full list of installed versions (including patch level versions) open a SSH debug build and run the following command
@@ -30,10 +30,10 @@ For a full list of installed versions (including patch level versions) open a SS
 phpenv versions
 ```
 
-### Ubuntu 14.04
-By default we use 5.5
+### Ubuntu 18.04
+By default we use {{ site.data.basic.defaults.php }}
 
-Specific versions: 5.3.29, 5.4.45, 5.5.38, 5.6.32, 7.0.26, 7.1.12 and 7.2.0
+Specific versions: 5.6.40, 7.0.33, 7.1.26, 7.2.15 and 7.3.2
 
 ***Do not rely on the specific versions we have as this can change any time and could break your build.***
 
@@ -41,7 +41,7 @@ You can change the version you want to use by running `phpenv local PHP_VERSION`
 For example
 
 ```shell
-phpenv local 5.5
+phpenv local 7.3
 ```
 
 ### PHP.ini

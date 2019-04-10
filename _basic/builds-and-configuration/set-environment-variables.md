@@ -73,6 +73,7 @@ CI_COMMITTER_USERNAME  # The committer's SCM username.
 CI_COMMIT_ID           # The HEAD commit ID of the triggered build.
 CI_MESSAGE             # The commit message set in the git commit. If the commit message is especially long, only the end of the message will be displayed.
 CI_NAME                # Always codeship. Ex: codeship
-CI_PULL_REQUEST        # Always false and doesn't indicate if a commit has a corresponding pull request, or if the build was triggered by a pull request. The variable exists because some third-party integrations require its existence. Ex: false
+CI_PR_NUMBER           # The pull request number associated with the build. This value is blank if the build was triggered on a commit, merge, or tag.
+CI_PULL_REQUEST        # The URL of the pull request associated with the build. The value is false if the build was triggered on a commit, merge, or tag.
 CI_REPO_NAME           # The name of the corresponding SCM repository.
 ```

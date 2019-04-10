@@ -4,7 +4,7 @@ baseurl:
 permalink: /:categories/:title/
 tags_dir: tags
 categories_dir: categories
-ubuntu_version: trusty
+ubuntu_version: bionic
 zendesk:
   widget: true
   chat: false

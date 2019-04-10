@@ -1,12 +1,11 @@
 var gulp = require('gulp'),
 	autoprefixer = require('autoprefixer'),
-	folders = require('gulp-folders'),
+	folders = require('gulp-folders-4x'),
 	imagemin = require('gulp-imagemin'),
 	imageResize = require('gulp-image-resize'),
 	jsonlint = require('gulp-jsonlint'),
 	path = require('path'),
-	postcss = require('gulp-postcss'),
-	print = require('gulp-print');
+	postcss = require('gulp-postcss');
 
 var site = '/site/';
 
@@ -19,7 +18,7 @@ gulp.task('css', folders(site, function(folder) {
 
 	return gulp.src(path.join(site, folder, 'assets', 'css', '*.css'))
 		.pipe(postcss(processors))
-		.pipe(gulp.dest(''))
+		.pipe(gulp.dest(path.join(site, 'assets', 'css')));
 }));
 
 gulp.task('img:resize', folders(site, function(folder) {
@@ -27,7 +26,8 @@ gulp.task('img:resize', folders(site, function(folder) {
 		path.join(site, folder, 'assets', 'img', '*.*'),
 		path.join(site, folder, 'images', '*.*'),
 		path.join(site, folder, 'images', '**', '*.*')
-	]
+	];
+
 	return gulp.src(paths)
 		.pipe(imageResize({
 			width: 1024,
@@ -36,12 +36,13 @@ gulp.task('img:resize', folders(site, function(folder) {
 		.pipe(gulp.dest(path.join(site, 'images')));
 }));
 
-gulp.task('img:minify', ['img:resize'], folders(site, function(folder) {
+gulp.task('img:minify', gulp.series('img:resize', folders(site, function(folder) {
 	var paths = [
 		path.join(site, folder, 'assets', 'img', '*.*'),
 		path.join(site, folder, 'images', '*.*'),
 		path.join(site, folder, 'images', '**', '*.*')
-	]
+	];
+
 	return gulp.src(paths)
 		.pipe(imagemin({
 			progressive: true,
@@ -50,13 +51,13 @@ gulp.task('img:minify', ['img:resize'], folders(site, function(folder) {
 			}],
 		}))
 		.pipe(gulp.dest(path.join(site, 'images')));
-}));
+})));
 
 gulp.task('jsonlint', function() {
-	gulp.src('./*.json')
+	return gulp.src('./*.json')
 		.pipe(jsonlint())
-		.pipe(jsonlint.failAfterError())
+		.pipe(jsonlint.failAfterError());
 });
 
-gulp.task('post-process', ['css', 'img:minify'])
-gulp.task('lint', ['jsonlint'])
+gulp.task('post-process', gulp.parallel('css', 'img:minify'));
+gulp.task('lint', gulp.series('jsonlint'));

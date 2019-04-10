@@ -37,7 +37,7 @@ Codeship creates a SSH key pair for each project when you first configure it. Th
 
 On Codeship you can view the SSH public key under _Project Settings > General_. This key is automatically added as a deploy key to the repository on your SCM. For example on GitHub you can see this deploy key by going to your repository and navigating to _Settings > Deploy keys_.
 
-If your project needs to access private repositories during the build you will get a [cloning error]({{ site.baseurl }}{% link _basic/builds-and-configuration/access-to-other-repositories.md %}#typical-error-messages) and will need to do additional configuration to enable access.
+If your project needs to access other private repositories during the build (e.g., git submodules) you will encounter a [cloning error]({{ site.baseurl }}{% link _basic/builds-and-configuration/access-to-other-repositories.md %}#typical-error-messages) and will need to do additional configuration to enable access.
 
 ## The Machine User Solution
 

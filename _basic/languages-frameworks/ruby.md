@@ -39,7 +39,7 @@ The following Ruby versions are preinstalled:
 {% include basic/ami/{{ site.data.basic.ami_id }}/ruby.md %}
 
 ### Using a .ruby-version file
-You can also use your `.ruby-version` file on Codeship. The `.ruby-version` file lives in the project root and its content is just your Ruby version, for example: `2.5.1`. You can read the Ruby version to use from that file:
+You can also use your `.ruby-version` file on Codeship. The `.ruby-version` file lives in the project root and its content is just your Ruby version, for example: `2.6.1`. You can read the Ruby version to use from that file:
 
 ```shell
 rvm use $(cat .ruby-version) --install
@@ -167,7 +167,7 @@ gem install bundler -v YOUR_BUNDLER_VERSION
 
 ### FreeTDS
 
-[FreeTDS](http://www.freetds.org) `0.91-5` is installed by default. If your project requires a newer version you can install it with a [script](https://github.com/codeship/scripts/blob/master/packages/freetds.sh) by adding this command to your setup steps:
+[FreeTDS](http://www.freetds.org) `1.00.82` is installed by default. If your project requires a newer version you can install it with a [script](https://github.com/codeship/scripts/blob/master/packages/freetds.sh) by adding this command to your setup steps:
 
 ```
 \curl -sSL https://raw.githubusercontent.com/codeship/scripts/master/packages/freetds.sh | bash -s
