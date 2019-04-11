@@ -27,6 +27,10 @@ We use [pyenv](https://github.com/pyenv/pyenv) to manage Python environments for
 
 By default, we run Python version `2.7`, but versions `3.4`, `3.5`, `3.6` and `3.7` are preinstalled as well. These are aliases that are pointing to the specific versions installed.
 
+The following Python versions are preinstalled:
+
+{% include basic/ami/{{ site.data.basic.ami_id }}/python.md %}
+
 ### Specifying Version
 
 You have several options to specify which Python version you would like to use.
