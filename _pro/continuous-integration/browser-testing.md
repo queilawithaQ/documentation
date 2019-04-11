@@ -87,7 +87,7 @@ ENV PATH $CHROMEDRIVER_DIR:$PATH
 Now Chrome is installed in your path and available to use for any of your browser tests.
 
 ### Headless Chrome
-Beginning in Google Chrome 59, you can run Chrome in [headless mode](https://developers.google.com/web/updates/2017/04/headless-chrome). To take advantage of this be sure your Dockerfile is using ChromeDriver 2.30 or greater.  Your application will also need to pass the `headless` and `disable-gpu` flags to Chrome. You can also remove Xvfb as it is not needed for headless mode.
+Beginning in Google Chrome 59, you can run Chrome in [headless mode](https://developers.google.com/web/updates/2017/04/headless-chrome). To take advantage of this be sure your Dockerfile is using ChromeDriver 2.30 or greater.  Your application will also need to pass the `headless` and `disable-gpu` flags to Chrome. You can also remove Xvfb as it is not needed for headless mode. [See this example repository for more information](https://github.com/codeship-library/codeship-pro-headless-chrome/).
 
 ## Firefox
 
@@ -124,32 +124,6 @@ ENV PATH $FIREFOX_DIR:$PATH
 ```
 
 Now Firefox is installed in your path and available to use for any of your browser tests.
-
-## PhantomJS
-
-PhantomJS is a headless browser, thus we don't need any Xvfb setup to run tests. Simply download it, unpack it and put it into the PATH.
-
-```dockerfile
-# Starting from Ubuntu Xenial
-FROM ubuntu:xenial
-
-# We need wget to download PhantomJS and several other dependency libraries
-RUN apt-get update
-RUN apt-get install -y wget bzip2 libfontconfig1 libfreetype6
-
-# Set up PhantomJS environment variables
-ENV PHANTOMJS_VERSION 2.1.1
-ENV PHANTOMJS_DIR /phantomjs
-
-# Download and install PhantomJS
-RUN wget -q --continue -P $PHANTOMJS_DIR "https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-${PHANTOMJS_VERSION}-linux-x86_64.tar.bz2"
-RUN tar -xaf $PHANTOMJS_DIR/phantomjs* --strip-components=1 --directory $PHANTOMJS_DIR
-
-# Put PhantomJS into the PATH
-ENV PATH $PHANTOMJS_DIR/bin:$PATH
-```
-
-Now PhantomJS is installed in your path and available to use for any of your browser tests.
 
 ## Selenium Server
 
