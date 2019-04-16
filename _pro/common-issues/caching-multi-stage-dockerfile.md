@@ -27,7 +27,7 @@ COPY ./artifact-materials .
 RUN ./make-artifact.sh
 
 FROM ubuntu:xenial as app
-COPY --from stage-one ./artifact.sh ./artifact.sh
+COPY --from=stage-one ./artifact.sh ./artifact.sh
 RUN ./time-consuming-build-process.sh
 COPY . .
 ```
@@ -44,13 +44,13 @@ RUN ./make-artifact.sh
 ```
 
 ```yaml
-# Dockerfile.app
+# Dockerfile.final
 
 FROM stage-one as stage-one
 
 FROM ubuntu:xenial
 
-COPY --from stage-one ./artifact.sh ./artifact.sh
+COPY --from=stage-one ./artifact.sh ./artifact.sh
 RUN ./time-consuming-build-process.sh
 COPY . .
 ```
@@ -61,18 +61,19 @@ COPY . .
 stage-one:
   build:
     dockerfile: Dockerfile.stage-one
+    image: stage-one # assert image name to prevent `codeship_` prefix from being applied
   cached: true
 
 app:
   build:
-    dockerfile: Dockerfile.app
+    dockerfile: Dockerfile.final
   cached: true
 ```
 
 ```yaml
 # codeship-steps.yml
 
-- name: build stage-one before triggering a build on app image/service
+- name: build stage-one first in order to be available for `app` docker build
   service: stage-one
   command: true
 
