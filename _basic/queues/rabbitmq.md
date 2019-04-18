@@ -20,24 +20,25 @@ redirect_from:
 * include a table of contents
 {:toc}
 
-[RabbitMQ](https://www.rabbitmq.com) `3.2.4` runs with the default configuration on top of [Erlang](https://www.erlang.org) `17.4`.
+[RabbitMQ](https://www.rabbitmq.com) `3.6.10` runs with the default configuration on top of [Erlang](https://www.erlang.org) `20.2.2`.
 
 The `rabbitmq_management` plugin is also enabled, which allows for changing various server related settings. Please look at the [plugin documentation](https://www.rabbitmq.com/management.html) for more information.
 
 ## Other Versions
 
-If you need to install a different version or use a custom configuration, please see [this script](https://github.com/codeship/scripts/blob/master/packages/rabbitmq.sh).
+To install a different version or use a custom configuration, please see the following steps. The [RabbitMQ documentation](https://www.rabbitmq.com/install-debian.html) has additional details as well.
 
-For example if you want to install **3.7.8**, set that version as an [environment variable]({{ site.baseurl }}{% link _basic/builds-and-configuration/set-environment-variables.md %}) in your project or add this in the _Setup Commands_. RabbitMQ requires Erlang as well so you should also configure the necessary Erlang version here:
-
-```
-export ERLANG_VERSION=21.1
-export RABBITMQ_VERSION=3.7.8
-```
-
-Next, add [these commands](https://github.com/codeship/scripts/blob/master/packages/rabbitmq.sh#L6) to your _Setup Commands_ and the script will automatically be called at build time. Note, this script will automatically start the RabbitMQ service with its default configuration.
+For example, to install the latest version of RabbitMQ running on the latest version of Erlang add the following to your _Setup Commands_:
 
 ```
-source /dev/stdin <<< "$(curl -sSL https://raw.githubusercontent.com/codeship/scripts/master/languages/erlang.sh)"
-\curl -sSL https://raw.githubusercontent.com/codeship/scripts/master/packages/rabbitmq.sh | bash -s
+sudo rabbitmqctl stop
+sudo apt-get remove -y erlang rabbitmq-server
+wget -O - "https://github.com/rabbitmq/signing-keys/releases/download/2.0/rabbitmq-release-signing-key.asc" | sudo apt-key add -
+echo "deb https://dl.bintray.com/rabbitmq-erlang/debian bionic erlang" | sudo tee /etc/apt/sources.list.d/bintray.erlang.list
+echo "deb https://dl.bintray.com/rabbitmq/debian bionic main" | sudo tee /etc/apt/sources.list.d/bintray.rabbitmq.list
+sudo apt-get update
+sudo apt-get install -y erlang rabbitmq-server
+
+# Add to confirm the service is running
+sudo rabbitmqctl status
 ```

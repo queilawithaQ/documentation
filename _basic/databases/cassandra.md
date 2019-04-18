@@ -20,16 +20,17 @@ redirect_from:
 * include a table of contents
 {:toc}
 
-The latest version from the `2.0.x` release of [Apache Cassandra](https://cassandra.apache.org/) is installed on the build VMs, but not running by default.
+[Apache Cassandra](https://cassandra.apache.org/) **2.1.21** is installed on the build VMs, but not running by default.
 
-To use the service during your builds, start the service via the following command:
+To use the service during your builds, start the service with the following command:
 
 ```shell
 sudo /etc/init.d/cassandra start
 ```
 
-If you require a CLI tool to access or Cassandra server, we would recommend [cqlsh](https://pypi.python.org/pypi/cqlsh) available via pip.
+If you require a CLI tool to access the Cassandra server, try [cqlsh](https://pypi.python.org/pypi/cqlsh) available via pip.
 
 ```shell
 pip install cqlsh
+cqlsh --cqlversion="3.2.1"
 ```

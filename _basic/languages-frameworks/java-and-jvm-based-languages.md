@@ -15,6 +15,7 @@ tags:
   - oracle
   - junit
   - jce
+  - sdkman
 menus:
   basic/languages:
     title: Java And JVM
@@ -34,7 +35,7 @@ redirect_from:
 
 The following JDKs are installed:
 
-* OpenJDK 7
+* OpenJDK 8
 * Oracle JDK 7
 * Oracle JDK 8
 * Oracle JDK 9
@@ -45,23 +46,23 @@ This function can take one of two commands, `use` or `home`:
 * `use` will select the given JDK by changing the java executables, and setting JAVA_HOME and JRE_HOME.
 * `home` will print out the value of JAVA_HOME for a given JDK (but make no modifications).
 
-The valid values for `use` or `home` are _openjdk7_, _oraclejdk7_, _oraclejdk8_ and _oraclejdk9_.
-By default, OpenJDK 7 is selected. The following would be the resulting Java version, JAVA_HOME, and JRE_HOME for each JDK:
+The valid values for `use` or `home` are _openjdk8_, _oraclejdk7_, _oraclejdk8_ and _oraclejdk9_.
+By default, OpenJDK 8 is selected. The following is the resulting Java version, JAVA_HOME, and JRE_HOME for each JDK:
 
-### OpenJDK 7 (default)
+### OpenJDK 8 (Default)
 
 ```shell
-jdk_switcher home openjdk7
-# /usr/lib/jvm/java-7-openjdk-amd64
-jdk_switcher use openjdk7
+jdk_switcher home openjdk8
+# /usr/lib/jvm/java-8-openjdk-amd64
+jdk_switcher use openjdk8
 echo $JAVA_HOME
-# /usr/lib/jvm/java-7-openjdk-amd64
+# /usr/lib/jvm/java-8-openjdk-amd64
 echo $JRE_HOME
-# /usr/lib/jvm/java-7-openjdk-amd64/jre
+# /usr/lib/jvm/java-8-openjdk-amd64/jre
 java -version
-# java version "1.7.0_151"
-# OpenJDK Runtime Environment (IcedTea 2.6.11) (7u151-2.6.11-2ubuntu0.14.04.1)
-# OpenJDK 64-Bit Server VM (build 24.151-b01, mixed mode)
+# openjdk version "1.8.0_191"
+# OpenJDK Runtime Environment (build 1.8.0_191-8u191-b12-2ubuntu0.18.04.1-b12)
+# OpenJDK 64-Bit Server VM (build 25.191-b12, mixed mode)
 ```
 
 ### Oracle JDK 7
@@ -91,9 +92,9 @@ echo $JAVA_HOME
 echo $JRE_HOME
 # /usr/lib/jvm/java-8-oracle/jre
 java -version
-# java version "1.8.0_161"
-# Java(TM) SE Runtime Environment (build 1.8.0_161-b12)
-# Java HotSpot(TM) 64-Bit Server VM (build 25.161-b12, mixed mode)
+# java version "1.8.0_201"
+# Java(TM) SE Runtime Environment (build 1.8.0_201-b09)
+# Java HotSpot(TM) 64-Bit Server VM (build 25.201-b09, mixed mode)
 ```
 
 ### Oracle JDK 9
@@ -112,15 +113,34 @@ java -version
 # Java HotSpot(TM) 64-Bit Server VM (build 9.0.4+11, mixed mode)
 ```
 
+### Other Versions With SDKMAN
+
+If you need to install a different JDK version, consider using [SDKMAN](https://sdkman.io) to install it. For example if you want to install OpenJDK 11, you can add the following to your _Setup Commands_:
+
+```
+source /dev/stdin <<< "$(curl -sSL https://raw.githubusercontent.com/codeship/scripts/master/packages/sdkman.sh)"
+
+sdk install java 11.0.2-open
+
+export PATH=$HOME/.sdkman/candidates/java/current/bin:$PATH
+
+export JAVA_HOME=$HOME/.sdkman/candidates/java/current
+
+# Add if you want to confirm the installed version
+java -version
+```
+
+Note the available JDK versions in SDKMAN change as new JDK versions come out so the specific version you are installing may need to be updated occasionally. You can check the available versions by running `sdk list java`.
+
 ### Build Tools
 
 The following tools are preinstalled in our virtual machine. You can add them to your setup or test commands to start your build:
 
-* [Ant](https://ant.apache.org) (1.9.10)
-* [Gradle](https://gradle.org) (4.6)
-* [Leiningen](https://leiningen.org) (2.8.1)
-* [Maven](https://maven.apache.org) (3.5.3)
-* [sbt](https://www.scala-sbt.org) (0.13.16)
+* [Ant](https://ant.apache.org) (1.10.5)
+* [Gradle](https://gradle.org) (5.2.1)
+* [Leiningen](https://leiningen.org) (2.9.1)
+* [Maven](https://maven.apache.org) (3.6.0)
+* [sbt](https://www.scala-sbt.org) (1.2.8)
 
 ### JVM-based languages
 

@@ -1,4 +1,4 @@
-# [Codeship Documentation](https://documentation.codeship.com/) [![Codeship Status for codeship/documentation](https://codeship.com/projects/0bdb0440-3af5-0133-00ea-0ebda3a33bf6/status?branch=master)](https://codeship.com/projects/102044)
+# [Codeship Documentation](https://documentation.codeship.com/) [![Codeship Status for codeship/documentation](https://codeship.com/projects/0bdb0440-3af5-0133-00ea-0ebda3a33bf6/status?branch=master)](https://codeship.com/projects/102044) [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=codeship/documentation)](https://dependabot.com) 
 
 ## Contributing
 
@@ -126,7 +126,7 @@ generates the output as follows (depending on configuration values):
 
 #### Man Pages
 
-Link to a particular Ubuntu man page. The Ubuntu version currently defaults to Ubuntu Trusty.
+Link to a particular Ubuntu man page. The Ubuntu version currently defaults to Ubuntu Bionic.
 
 ```
 {% man_url formatdb %}
@@ -135,7 +135,7 @@ Link to a particular Ubuntu man page. The Ubuntu version currently defaults to U
 generates the following output:
 
 ```
-http://manpages.ubuntu.com/manpages/trusty/en/man1/formatdb.1.html
+http://manpages.ubuntu.com/manpages/bionic/en/man1/formatdb.1.html
 ```
 
 #### Notes

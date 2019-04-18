@@ -20,7 +20,7 @@ categories:
 * include a table of contents
 {:toc}
 
-MySQL **5.6** runs on the default port and the credentials are stored in the `MYSQL_USER` and `MYSQL_PASSWORD` environment variables.
+MySQL **5.7** runs on the default port and the credentials are stored in the `MYSQL_USER` and `MYSQL_PASSWORD` environment variables.
 
 A **development** and **test** database are setup by default for you in addition to the system databases.
 

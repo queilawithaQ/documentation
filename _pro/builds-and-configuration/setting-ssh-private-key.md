@@ -35,6 +35,10 @@ Many operations require the configuration of an SSH private key within your cont
 
 While the task _seems_ as simple as copying a private key right into your Docker image, this is considered [highly inadvisable](https://medium.com/@mccode/dont-embed-configuration-or-secrets-in-docker-images-7b2e0f916fdd).
 
+{% csnote warning %}
+If you must have the private SSH key available during the image build (e.g., pulling dependencies) then please remove the private key before the end of the Dockerfile instruction (see the 'SSH Key Option' on [this page]({{ site.baseurl }}{% link _pro/builds-and-configuration/cloning-repos.md %}) before continuing with the information below).
+{% endcsnote %}
+
 ---
 <br>
 
