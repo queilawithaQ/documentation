@@ -32,18 +32,19 @@ Codeship requires that you set up a Codeship Account and connect to a Source Con
 See [Setting Up A New Codeship Account Guide ]({{ site.baseurl }}{% link _general/account/new-user-signup.md %}) for more information.
 
 
-![Select Basic Infrastructure]({{ site.baseurl }}/images/basic-guide/select-infra.png)
-
-
 ### Setting up tests for your deployments
 
 Setup commands are the commands you need to be able to run your tests and deployments. Examples of setup commands include fetching dependencies and seeding database.
 
 To configure your setup commands:
 
-1. Click the dropdown arrow on the right to select the technology to prepopulate basic commands
+1. Select Tests in the dashboard.
 
-2. Either enter a new setup command or select existing Setup command.
+2. Click the dropdown arrow on the right to select the technology to prepopulate basic commands
+
+3. Either enter a new setup command or select existing Setup command.
+
+4. Either click _Save and go to dashboard_ or _Save Changes_.
 
 ![Setup Commands on Codeship Basic]({{ site.baseurl }}/images/basic-guide/setup-commands.png)
 
@@ -61,15 +62,19 @@ Now that you've defined your setup and test commands, you'll want to define your
 
 To configure your deployment pipelines:
 
-1. 
+1. Select _Deploy_ in the dashboard. 
 
-2.
+2. Select either _Branch is exactly_ to match a specific branch or select _Branch starts with_ to match any branch that starts with a specific string.
 
-Defining the branches that will trigger your deployment pipelines is the first step. You can either match a specific branch - i.e. `master` - or you can choose to match any branch that _starts with_ a [specific string]({{ site.baseurl }}{% link _basic/builds-and-configuration/deployment-pipelines.md %}).
+3. Enter branch name with the drop down window.
+
+4. Click the _Save Pipeline Settings_ button.
+
+See [deployment pipeline]({{ site.baseurl }}{% link _basic/builds-and-configuration/deployment-pipelines.md %}) for more information.
 
 ![Add New Deployment Pipeline on Codeship Basic]({{ site.baseurl }}/images/basic-guide/add-new-deployment.png)
 
-### Using preconfigured deployment scripts to deploy to cloud services 
+### Using preconfigured deployments to deploy to cloud services 
 
 After specifying which branch triggers your new deployment pipeline, you can choose to use one of Codeship's turnkey deployment integrations or to use your own custom script deployment.
 
@@ -77,7 +82,7 @@ If you want to use one of Codeship's turnkey deployment integrations, just click
 
 ![Add New Deployment Pipeline on Codeship Basic]({{ site.baseurl }}/images/basic-guide/turnkey-deployments.png)
 
-### Using custom deployment scripts to deploy to cloud services
+### Using your own custom deployment scripts to deploy to cloud services
 
 
 If you don't want to use one of the turnkey deployment integrations, you can instead use your own custom script deployment. From the list of deployment targets, just select the last option - Custom Script.
@@ -104,13 +109,13 @@ By using the string `--skip-ci` in your commit message, you can instruct Codeshi
 
 ## Speeding up a build
 
-### Clearing the cache to speed up a build
+### Using the cache to speed up a build
 
 Codeship Basic has an automatic, built-in dependency cache, meaning we cache the packages directory for the most common dependency management systems, like NPM and Rubygems. You can clear your dependency cache at any time via the sidebar.
 
 ![Reset Dependency Cache]({{ site.baseurl }}/images/basic-guide/reset-dependency-cache.png)
 
-### Creating parallel test pipelines to speed up a build 
+### Creating parallel test tests to speed up a build 
 
 Codeship offers the option to upgrade your Basic account with additional parallel test pipelines, allowing you to run multiple test commands simultaneously as a way to speed up your builds.
 
