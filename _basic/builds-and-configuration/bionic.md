@@ -48,10 +48,6 @@ Keep in mind that you have [root permissions]({{ site.baseurl }}{% link _basic/b
 
 Finally, if you are using any [CodeShip scripts](https://github.com/codeship/scripts) they should work on Bionic, but if you encounter any problems let us know. Also consider that with newer versions of many packages in Bionic, you may not need a particular script any longer.
 
-### Opting Out
-
-If you have a project that is failing on Bionic and there is not a clear solution, you can opt that project out. Under _Project Settings > General_ is a button to switch back to the old environment. All projects need to be migrated to Bionic by **April 15th**.
-
 ### Support
 
 If the above steps do not help to get your projects running, [reach out to us](https://helpdesk.codeship.com/hc/en-us/requests/new). We will help you work through any migration challenges.
