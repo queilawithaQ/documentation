@@ -1,7 +1,7 @@
 ```shell
    default [ x86_64 ]
    jruby-9.1.17.0 [ x86_64 ]
-   jruby-9.2.6.0 [ x86_64 ]
+   jruby-9.2.7.0 [ x86_64 ]
    ruby-2.1.10 [ x86_64 ]
    ruby-2.2.10 [ x86_64 ]
    ruby-2.3.0 [ x86_64 ]
@@ -29,6 +29,7 @@
    ruby-2.6.0 [ x86_64 ]
    ruby-2.6.1 [ x86_64 ]
    ruby-2.6.2 [ x86_64 ]
+   ruby-2.6.3 [ x86_64 ]
 
 # => - current
 # =* - current && default
