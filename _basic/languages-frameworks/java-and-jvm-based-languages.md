@@ -36,6 +36,7 @@ redirect_from:
 The following JDKs are installed:
 
 * OpenJDK 8
+* OpenJDK 11
 * Oracle JDK 7
 * Oracle JDK 8
 * Oracle JDK 9
@@ -46,7 +47,7 @@ This function can take one of two commands, `use` or `home`:
 * `use` will select the given JDK by changing the java executables, and setting JAVA_HOME and JRE_HOME.
 * `home` will print out the value of JAVA_HOME for a given JDK (but make no modifications).
 
-The valid values for `use` or `home` are _openjdk8_, _oraclejdk7_, _oraclejdk8_ and _oraclejdk9_.
+The valid values for `use` or `home` are _openjdk8_, _openjdk11_, _oraclejdk7_, _oraclejdk8_ and _oraclejdk9_.
 By default, OpenJDK 8 is selected. The following is the resulting Java version, JAVA_HOME, and JRE_HOME for each JDK:
 
 ### OpenJDK 8 (Default)
@@ -63,6 +64,22 @@ java -version
 # openjdk version "1.8.0_191"
 # OpenJDK Runtime Environment (build 1.8.0_191-8u191-b12-2ubuntu0.18.04.1-b12)
 # OpenJDK 64-Bit Server VM (build 25.191-b12, mixed mode)
+```
+
+### OpenJDK 11
+
+```shell
+jdk_switcher home openjdk11
+# /usr/lib/jvm/java-11-openjdk-amd64
+jdk_switcher use openjdk11
+echo $JAVA_HOME
+# /usr/lib/jvm/java-11-openjdk-amd64
+echo $JRE_HOME
+# /usr/lib/jvm/java-11-openjdk-amd64/jre
+java -version
+#openjdk version "11.0.2" 2019-01-15
+#OpenJDK Runtime Environment (build 11.0.2+9-Ubuntu-3ubuntu118.04.3)
+#OpenJDK 64-Bit Server VM (build 11.0.2+9-Ubuntu-3ubuntu118.04.3, mixed mode, sharing)
 ```
 
 ### Oracle JDK 7
