@@ -154,7 +154,7 @@ In order to troubleshoot issues, Codeship provides command line access to a repl
 
 If a command runs for longer than 10 minutes without printing any log output, the command and build will be automatically failed. Additionally, if a build runs for longer than 3 hours, it will be automatically failed.
 
-## Additional Information 
+## Additional information 
 
 ### Accessing Codeship using the API
 
