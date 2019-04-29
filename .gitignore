@@ -4,6 +4,7 @@ _site
 .jekyll-metadata
 .sass-cache
 codeship.aes
+credentials.env
 deployment.env
 dockercfg
 node_modules
