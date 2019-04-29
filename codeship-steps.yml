@@ -1,5 +1,6 @@
 - type: parallel
   name: testing
+  exclude: master
   steps:
     - type: serial
       name: prepare_site
@@ -31,7 +32,7 @@
           command: yarn run check
 - name: fail_master_on_forks
   service: documentation
-  tag: master
+  exclude: master
   command: sh bin/check_fork.sh
 - type: parallel
   name: deploying
@@ -39,6 +40,7 @@
   steps:
     - type: serial
       name: s3_deployment
+      exclude: master
       steps:
         - name: s3_sync
           service: aws
