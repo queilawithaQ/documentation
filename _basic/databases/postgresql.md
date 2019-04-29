@@ -124,7 +124,7 @@ psql -d DATABASE_NAME -p DATABASE_PORT -c 'create extension if not exists hstore
 ```
 
 ### PostGIS
-All PostgreSQL versions include [PostGIS](https://postgis.net) 2.5.
+All PostgreSQL versions include [PostGIS](http://postgis.net) 2.5.
 
 To use PostGIS, enable the extension and optionally verify the version.
 
