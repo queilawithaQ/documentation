@@ -80,7 +80,7 @@ See [deployment pipeline]({{ site.baseurl }}{% link _basic/builds-and-configurat
 
 ### Using pre-configured deployments to deploy to cloud services 
 
-After specifying which branch triggers your new deployment pipeline, you can choose to use one of Codeship's preconfigured deployment integrations or to use your own custom script deployment.
+After specifying which branch triggers your new deployment pipeline, you can choose to use one of Codeship's pre-configured deployment integrations or to use your own custom script deployment.
 
 To use a pre-configured deployment:
  
@@ -90,7 +90,7 @@ Click on your host provider and then provide the necessary account credentials a
 
 ### Using your own custom deployment scripts to deploy to cloud services
 
-If you don't want to use one of the preconfigured deployment integrations, you can instead use your own custom script deployment.
+If you don't want to use one of the pre-configured deployment integrations, you can instead use your own custom script deployment.
 
 To use your own custom script deployment:
 1. Select the _Custom Script_ button.
