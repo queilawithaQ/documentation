@@ -66,7 +66,7 @@ As mentioned above, Codeship requires both repository and access level permissio
 #### Bitbucket
 
 - For setting up a new project (repository level permissions), we need the account to have `master` or `owner` permissions.
-- For regular access, we currently ask for full access to everything in the repository, but will change this soon to only cover reading/writing to your repos and webhooks as well as reading your email addresses (more specifically `repository:write`, `email`, and `webhook`. You can see the full list of permission options available from BitBucket [here](https://developer.atlassian.com/bitbucket/concepts/bitbucket-rest-scopes.html).
+- For regular access, we currently ask for full access to everything in the repository. In the future we plan to reduce this to only cover reading/writing to your repos and webhooks as well as reading your email addresses (more specifically `repository:write`, `email`, and `webhook`). You can see the full list of permission options available from BitBucket [here](https://developer.atlassian.com/bitbucket/concepts/bitbucket-rest-scopes.html).
 
 #### Gitlab
 - For setting up a new project (repository level permissions), we need the account to have `admin` permissions.
