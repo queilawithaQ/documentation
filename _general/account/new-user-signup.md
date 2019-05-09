@@ -33,25 +33,29 @@ weight: 1
 
 If you're looking to sign up and create a project on Codeship, this guide will walk you through the initial onboarding process.
 
-### Signing up for Codeship with GitHub, GitLab or Bitbucket 
+### Signing up for Codeship with GitHub, Bitbucket or GitLab
 
-You can sign up for a new Codeship Account either with your Source Code Management (SCM) or email address.  The following SCMs are supported: GitLab, Bitbucket, or GitHub.
+You can sign up for a new Codeship account either with your source code management (SCM) system or email address. The following SCMs are supported: GitHub, Bitbucket or GitLab.
 
 To signup with your SCM:
 
 Note that these oAuth login pages come directly from the SCM tools themselves and we do not have access to them or to the credentials you provide.
+
 1. [Navigate to our signup page](https://app.codeship.com/registrations/new).
+
+2. Select either GitHub, Bitbucket or GitLab.
+
 ![SCM Choice]({{ site.baseurl }}/images/new-user-setup/scm-choice.png)
-2. Select either GitHub, GitLab or Bitbucket.
 
-- **If GitHub:**  You are automatically navigated to a login page where you must enter your GitHub login credentials in order to give Codeship access to your account.
+- **If GitHub:** You are automatically directed to a login page where you must enter your GitHub login credentials in order to give Codeship access to your account.
 
-![Github Login]({{ site.baseurl }}/images/new-user-setup/gh-login.png)
-- **If Bitbucket:**  You are automatically navigated to a login page where you must enter your bitbucket login credentials in order to give Codeship access to your account.
+![GitHub Login]({{ site.baseurl }}/images/new-user-setup/gh-login.png)
+
+- **If Bitbucket:** You are automatically directed to a login page where you must enter your Bitbucket login credentials in order to give Codeship access to your account.
 
 ![Bitbucket Login]({{ site.baseurl }}/images/new-user-setup/bb-login.png)
 
-- **If GitLab:** You are automatically navigated to a login page where you must enter your GitLab login credentials in order to give Codeship access to your account.
+- **If GitLab:** You are automatically directed to a login page where you must enter your GitLab login credentials in order to give Codeship access to your account.
 
 ![GitLab Login]({{ site.baseurl }}/images/new-user-setup/gl-login.png)
 
@@ -59,15 +63,15 @@ Note that these oAuth login pages come directly from the SCM tools themselves an
 
 To sign up for Codeship with an email:
 
-1. Enter your Name, Email Address, and create a Password.
+1. Enter your name, email address, and create a password.
 
-2. Click the _Sign up for free_ button.
+2. Click the _Sign Up for Free_ button.
 
 ![Email Login]({{ site.baseurl }}/images/new-user-setup/email-login.png)
 
-*You can learn more about the permissions we ask when authenticating with SCM [here]({{ site.baseurl }}{% link _general/about/permissions.md %}). Learn more about security at Codeship [here]({{ site.baseurl }}{% link _general/about/security.md %}).*
+You can learn more about the permissions required when authenticating with your SCM [here]({{ site.baseurl }}{% link _general/about/permissions.md %}). Learn more about security at Codeship [here]({{ site.baseurl }}{% link _general/about/security.md %}).
 
-**Note**: When signing up using your email, we won't know what your git username is, which means that your personal dashboard (aka your home page) won't be populated with your builds. To get your builds to show up, head over to your [Connected Services](https://app.codeship.com/authentications) page and enter your git username(s) there.
+**Note**: When signing up using your email, we won't know what your git username is, which means that your personal dashboard won't be populated with your builds. To get your builds to show up, visit the [Connected Services](https://app.codeship.com/authentications) page and connect your accounts there.
 
 ### Creating your organization account 
 
@@ -79,14 +83,16 @@ Once you’ve signed up, unless you were invited by a team member to an existing
 To create your organization account:
 
 1. Enter a unique organization name.
-![Account Creation Page]({{ site.baseurl }}/images/new-user-setup/organization-creation.png)
+
 2. Click _Create Organization_.
+
+![Account Creation Page]({{ site.baseurl }}/images/new-user-setup/organization-creation.png)
 
 or
 
 Ask your team to invite you to an existing organization with your e-mail.
 
-_In case you are expecting to be invited to an already existing organization, you will find the email you signed up with - sometimes less obvious for oauth signup - on the organization creation page._
+In case you are expecting to be invited to an already existing organization, you will find the email you signed up with - sometimes less obvious for oAuth signup - on the organization creation page.
 
 ### Creating your first project
 
@@ -94,24 +100,32 @@ Right after account creation, you can either create your first project right awa
 
 To create your first project:
 
-1. Select either GitHub, Bitbucket, or GitLab. If you signed up for Codeship with GitLab, Bitbucket, or Github, you can skip this step.
+1. Select either GitHub, Bitbucket, or GitLab. If you signed up for Codeship with your SCM, you can skip this step.
 
-2. Enter your Git clone URL. You can find the correct clone command in the header of the repository under Clone.  
-The following are examples of Git clone URLs:  
-git@gitlab.com:<username>/<repository_name>.git, https://username@gitlab.com/<username>/<repository_name>.git, and https://gitlab.com/<username>/<repository_name>.git
+2. Enter your git clone URL. You can find the correct clone command in the header of the repository under Clone.  
+
+    The following are examples of git clone URLs:  
+
+    ```
+    git@github.com:<username>/<repository_name>.git
+    https://github.com/<username>/<repository_name>.git
+    ```
+
 3. Click the _Connect_ button.
-Note that a repository can only be connected to one project, and a project can only have one repository.
-Now that you’ve connected your repository, it’s time to select your infrastructure!
-4. Either select _Select Pro Project_ or _Select Basic Project_. You can choose to set up your project with [Codeship's Basic Infrastructure.](https://codeship.com/features/basic) or [Codeship's Pro Infrastructure.](https://codeship.com/features/pro).
-**Basic** is a good place to start if:
-- You want out of the box configuration.
-- You can use common, pre-installed CI dependencies.
-- You would prefer easy, 1-click app integrations.
-**Pro** is a good place to start if:
-- You want Native Docker support.
-- You want a fully customizable CI environment.
-- You want a local build runner for test consistency.
 
+    Note that a repository can only be connected to one Codeship project.
+
+4. Either select _Select Pro Project_ or _Select Basic Project_. You can choose to set up your project with [Codeship Basic](https://codeship.com/features/basic) or [Codeship Pro](https://codeship.com/features/pro).
+
+    **Basic** is a good place to start if:
+    - You want out of the box configuration.
+    - You can use common, pre-installed CI dependencies.
+    - You prefer easy, 1-click deployment integrations.
+
+    **Pro** is a good place to start if:
+    - You want Docker support.
+    - You want a fully customizable CI environment.
+    - You want a local build runner for test consistency.
 
 ### Customizing your project
 
@@ -125,30 +139,27 @@ To add team members to your project:
 
 3. Enter the  team name and select the team role.
 
-We recommend inviting people to the _Managers_ team if they will need to create or delete projects or manage additional team members. See [Team roles and permissions]({{ site.baseurl }}/general/account/organizations/#managing-teams-and-projects) for more information.
-
+We recommend inviting people to the _Managers_ team if they will need to create or delete projects or manage additional team members. See [team roles and permissions]({{ site.baseurl }}/general/account/organizations/#managing-teams-and-projects) for more information.
 
 #### Adding status badges to your repository
 
-If you want to add a badge showing your last builds status to your ReadMe, you can find the code in the **Notification** settings of your project.
+If you want to add a badge to your README showing your last build's status, you can find the code under _Project Settings > General_.
 
 ![Codeship Status for codeship/documentation](https://codeship.com/projects/0bdb0440-3af5-0133-00ea-0ebda3a33bf6/status?branch=master)
 
-The raw URL for the image looks like the this:
+The raw URL for the image looks like this:
 
 ```
-https://codeship.com/projects/YOUR_PROJECT_UUID/status?branch=master
+https://app.codeship.com/projects/YOUR_PROJECT_UUID/status?branch=master
 ```
-
-The UUID for a specific project is available on the **General** tab in your project settings.
 
 ### Additional information
 
 #### Configuring your avatar
 
-Git identifies people by your e-mail and Codeship uses your Gravatar settings for your profile picture. If you have not set up Gravatar yet and want to change the avatar shown on Codeship and in your commit messages, please head over to [Gravatar.com](https://en.gravatar.com/) and setup an avatar for both the email address you configured in your Codeship [Account Settings](https://app.codeship.com/user/edit) as well as for any email addresses you use in your git configuration.
+Git identifies people by your e-mail and Codeship uses your Gravatar settings for your profile picture. If you have not set up Gravatar yet and want to change the avatar shown on Codeship and in your commit messages, please head over to [Gravatar.com](https://en.gravatar.com/) and setup an avatar for both the email address you configured in your [account settings](https://app.codeship.com/user/edit) as well as for any email addresses you use in your git configuration.
 
-You can check the latter by running the following command in your local git checkout.
+You can check the latter by running the following command on your local git repository:
 
 ```shell
 # global configuration
@@ -158,7 +169,7 @@ git config --global --get user.email
 git config --get user.email
 ```
 
-Note that different projects can have different email addresses configured and that your VCS can have other email addresses configured for the actions you take via their interfaces.
+Note that different projects can have different email addresses configured and that your SCM can have other email addresses configured for the actions you take via their interfaces.
 
 #### Keyboard shortcuts
 
