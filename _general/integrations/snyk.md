@@ -59,11 +59,9 @@ We will combine the Snyk authentication and Snyk scan commands into a script fil
 Inside this `snyk.sh` script, you will have something similar to:
 
 ```shell
-snyk auth
+snyk auth $SNYK_TOKEN
 snyk test
 ```
-
-**Note** that the above `snyk auth` command will use the `SNYK_TOKEN` environment variable you set earlier for authentication.
 
 ## Codeship Basic
 
@@ -88,8 +86,6 @@ Once your Snyk token is loaded via your environment variables and you have insta
 You will need to add the following commands to your project's [setup and test commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %})
 
 ```shell
-snyk auth
+snyk auth $SNYK_TOKEN
 snyk test
 ```
-
-**Note** that the above `snyk auth` command will use the `SNYK_TOKEN` environment variable you set earlier for authentication.
