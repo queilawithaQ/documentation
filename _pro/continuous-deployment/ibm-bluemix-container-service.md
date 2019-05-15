@@ -38,7 +38,7 @@ Prior to getting started, please ensure you have the following:
 
 - [An Understanding Of Codeship Pro]({% link _pro/quickstart/getting-started.md %})
 - [Codeship's Jet CLI]({% link _pro/jet-cli/usage-overview.md %}) installed locally
-- [Docker](https://www.docker.com/community-edition)
+- [Docker](https://www.docker.com/products/docker-desktop)
 - [An IBM Cloud Account](https://www.ibm.com/cloud)
 - An understanding of using IBM Cloud Container Service and the required manifest and database files for a Container Service application
 
