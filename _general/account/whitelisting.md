@@ -28,11 +28,11 @@ If you use AWS, Google Cloud, or Azure you shouldn't need to use whitelisting, u
 As a rule of thumb, you only need the whitelisting feature if you're connecting to a server/service that does not have a public IP address.
 
 ## How whitelisting works
-Once the whitelisting feature is enabled, all traffic from Codeship (including the build machine your build is running on) will originate from one of the eight IP addresses listed further below.
+Once the whitelisting feature is enabled, all traffic from Codeship builds will originate from one of the eight IP addresses listed further below.
 
 This will allow you to open your firewall to allow access from just these IP addresses, instead of allowing access from the entire AWS us-east-1 network (or worse still, from any public IP address). Our whitelisting IP addresses also won't change, at least not without sufficient notice, which makes maintenance much easier.
 
-Note though, that whitelisting only applies to traffic originating from Codeship. If your organization limits outgoing traffic, you won't be able to rely on these eight IP addresses to limit outbound traffic to Codeship. Please [get in touch](https://helpdesk.codeship.com/hc/en-us/requests/new) if you're in this situation and we'll see what we can do to help.
+Note though, that whitelisting only applies to traffic originating from Codeship builds. If your organization limits outgoing traffic, you won't be able to rely on these eight IP addresses to limit outbound traffic to Codeship. Please [get in touch](https://helpdesk.codeship.com/hc/en-us/requests/new) if you're in this situation and we'll see what we can do to help.
 
 ## Setting up Whitelisting
 
