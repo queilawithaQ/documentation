@@ -8,7 +8,7 @@ gem 'shipyard-framework', '~> 1.0.1'
 
 # Jekyll Plugins
 gem 'jekyll-coffeescript', '~> 1.2.2'
-gem 'jekyll-seo-tag', '~> 2.6.0'
+gem 'jekyll-seo-tag', '~> 2.6.1'
 gem 'jekyll-sitemap', '~> 1.3.1'
 gem 'jekyll-redirect-from', '~> 0.15.0'
 gem 'jekyll-menus', '~> 0.6.0'
