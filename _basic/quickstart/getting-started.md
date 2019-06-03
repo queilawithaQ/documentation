@@ -1,5 +1,5 @@
 ---
-title: Getting Started With Codeship Basic
+title: Getting Started With CodeShip Basic
 menus:
   basic/quickstart:
     title: Getting Started
@@ -18,18 +18,18 @@ redirect_from:
 * include a table of contents
 {:toc}
 
-## Introducing Codeship Basic
+## Introducing CodeShip Basic
 
-Codeship Basic makes it easy and simple to get a working CI/CD process running through an easy-to-configure web UI and turnkey deployments.
+CodeShip Basic makes it easy and simple to get a working CI/CD process running through an easy-to-configure web UI and turnkey deployments.
 
-This article will walk you through setting up a Codeship Basic project. For a video introduction to Codeship Basic, you can view our [overview video](https://codeship.com/features/basic).
+This article will walk you through setting up a CodeShip Basic project. For a video introduction to CodeShip Basic, you can view our [overview video](https://codeship.com/features/basic).
 
-## Setting up continuous integration with Codeship
+## Setting up continuous integration with CodeShip
 
 ### Prerequisites
 
-Codeship requires that you set up a Codeship Account and connect to a Source Content Management (SCM).
-See [Setting Up A New Codeship Account Guide ]({{ site.baseurl }}{% link _general/account/new-user-signup.md %}) for more information.
+CodeShip requires that you set up a CodeShip Account and connect to a Source Content Management (SCM).
+See [Setting Up A New CodeShip Account Guide ]({{ site.baseurl }}{% link _general/account/new-user-signup.md %}) for more information.
 
 
 ### Configuring your setup commands
@@ -48,17 +48,17 @@ To configure your setup commands:
 
 5. Either click _Save and go to dashboard_ or _Save Changes_.
 
-![Setup Commands on Codeship Basic]({{ site.baseurl }}/images/basic-guide/setup-commands.png)
+![Setup Commands on CodeShip Basic]({{ site.baseurl }}/images/basic-guide/setup-commands.png)
 
-**Note** that Codeship provides a list of popular setup commands for many common languages in the dropdown, but you can enter in your own commands as needed.
+**Note** that CodeShip provides a list of popular setup commands for many common languages in the dropdown, but you can enter in your own commands as needed.
 
 ### Configuring your test commands
 
 Next, you will enter in your test commands. These are all tests you want to have run in your CI/CD pipeline, and all deployments you configure will be contingent on these tests passing.
 
-![Setup Commands on Codeship Basic]({{ site.baseurl }}/images/basic-guide/test-commands.png)
+![Setup Commands on CodeShip Basic]({{ site.baseurl }}/images/basic-guide/test-commands.png)
 
-## Defining your deployment pipeline with Codeship
+## Defining your deployment pipeline with CodeShip
 
 Now that you've defined your setup and test commands, you'll want to define your deployment pipelines. Deployment pipelines run only when a build's setup and tests commands have completed successful _and_ only when the branch defined for the deployment is matched. We call them deployment pipelines rather than deployments because you can have different deployment destinations - perhaps staging and master environments - triggered by different branches.
 
@@ -76,17 +76,17 @@ To configure your deployment pipelines:
 
 See [deployment pipeline]({{ site.baseurl }}{% link _basic/builds-and-configuration/deployment-pipelines.md %}) for more information.
 
-![Add New Deployment Pipeline on Codeship Basic]({{ site.baseurl }}/images/basic-guide/add-new-deployment.png)
+![Add New Deployment Pipeline on CodeShip Basic]({{ site.baseurl }}/images/basic-guide/add-new-deployment.png)
 
 ### Using pre-configured deployments to deploy to cloud services 
 
-After specifying which branch triggers your new deployment pipeline, you can choose to use one of Codeship's pre-configured deployment integrations or to use your own custom script deployment.
+After specifying which branch triggers your new deployment pipeline, you can choose to use one of CodeShip's pre-configured deployment integrations or to use your own custom script deployment.
 
 To use a pre-configured deployment:
  
 Click on your host provider and then provide the necessary account credentials as requested.
 
-![Add New Deployment Pipeline on Codeship Basic]({{ site.baseurl }}/images/basic-guide/turnkey-deployments.png)
+![Add New Deployment Pipeline on CodeShip Basic]({{ site.baseurl }}/images/basic-guide/turnkey-deployments.png)
 
 ### Using your own custom deployment scripts to deploy to cloud services
 
@@ -94,9 +94,9 @@ If you don't want to use one of the pre-configured deployment integrations, you 
 
 To use your own custom script deployment:
 1. Select the _Custom Script_ button.
-![Custom Script Deployment on Codeship Basic]({{ site.baseurl }}/images/basic-guide/custom-script-deployment.png)
+![Custom Script Deployment on CodeShip Basic]({{ site.baseurl }}/images/basic-guide/custom-script-deployment.png)
 2. Enter your custom deployment script in the box.
-![Custom Script Deployment on Codeship Basic]({{ site.baseurl }}/images/basic-guide/custom-script-deployment-bash.png)
+![Custom Script Deployment on CodeShip Basic]({{ site.baseurl }}/images/basic-guide/custom-script-deployment-bash.png)
 3. Click the _Create Deployment_ button.
 
 ### Adding multiple deployment steps
@@ -107,7 +107,7 @@ To add multiple steps or deployments to a pipeline:
 
 Click on an additional deployment target and specify as needed. You can then use the simple drag-and-drop interface to arrange the deployment commands in the order you need them to run in.
 
-![Custom Script Deployment on Codeship Basic]({{ site.baseurl }}/images/basic-guide/multiple-deployments.png)
+![Custom Script Deployment on CodeShip Basic]({{ site.baseurl }}/images/basic-guide/multiple-deployments.png)
 
 ## Running a build
 
@@ -121,7 +121,7 @@ You can skip builds on both CodeShip Basic and CodeShip Pro by using a special c
 
 ### Using the cache to speed up a build
 
-Codeship Basic has an automatic, built-in dependency cache, meaning we cache the packages directory for the most common dependency management systems, like NPM and Rubygems. You can clear your dependency cache at any time.
+CodeShip Basic has an automatic, built-in dependency cache, meaning we cache the packages directory for the most common dependency management systems, like NPM and Rubygems. You can clear your dependency cache at any time.
 
 To clear your dependency cache:
 
@@ -135,10 +135,10 @@ To clear your dependency cache:
 
 ### Creating parallel test pipelines to speed up a build 
 
-Codeship offers the option to upgrade your Basic account with additional parallel test pipelines, allowing you to run multiple test commands simultaneously as a way to speed up your builds.
+CodeShip offers the option to upgrade your Basic account with additional parallel test pipelines, allowing you to run multiple test commands simultaneously as a way to speed up your builds.
 
 You can sign up for a free Parallel Test Pipelines Trial by clicking _Add Pipeline_ or [get in touch with us](mailto:codeship-solutions@cloudbees.com) to discuss configuration options.
-![Parallel test pipelines on Codeship Basic]({{ site.baseurl }}/images/basic-guide/two-pipelines.png)
+![Parallel test pipelines on CodeShip Basic]({{ site.baseurl }}/images/basic-guide/two-pipelines.png)
 
 ## Troubleshooting 
 
@@ -148,7 +148,7 @@ You can clear the cache to help clear failing builds.
 
 ### Opening a SSH debug session
 
-In order to troubleshoot issues, Codeship provides command line access to a replicated instance of your build. The SSH debug session will include all configured variables from the original build run.  See [Debugging builds via SSH]({{ site.baseurl }}{% link _basic/builds-and-configuration/ssh-access.md %}) for more information.
+In order to troubleshoot issues, CodeShip provides command line access to a replicated instance of your build. The SSH debug session will include all configured variables from the original build run.  See [Debugging builds via SSH]({{ site.baseurl }}{% link _basic/builds-and-configuration/ssh-access.md %}) for more information.
 
 ### System timeouts
 
@@ -156,19 +156,19 @@ If a command runs for longer than 10 minutes without printing any log output, th
 
 ## Additional information 
 
-### Accessing Codeship using the API
+### Accessing CodeShip using the API
 
-If you're looking to automate more of your processes, you can access your projects and builds via the Codeship API. See the [Codeship API Documentation]({{ site.baseurl }}{% link _general/integrations/api.md %}) for more details and examples.
+If you're looking to automate more of your processes, you can access your projects and builds via the CodeShip API. See the [CodeShip API Documentation]({{ site.baseurl }}{% link _general/integrations/api.md %}) for more details and examples.
 
 ### Scripts library
 
-We maintain a [scripts library](https://github.com/codeship/scripts) with scripts for common packages, deployments and other useful workflow improvements on Codeship Basic.
+We maintain a [scripts library](https://github.com/codeship/scripts) with scripts for common packages, deployments and other useful workflow improvements on CodeShip Basic.
 
 If you're looking for a specific tool or version, the scripts library is a great first place to check.
 
 
 
-### Codeship infrastructure
+### CodeShip infrastructure
 
-Codeship Basic builds run on fresh VMs provisioned on Ubuntu 18.04 (Bionic). You can learn more about our infrastructure setup [here]({{ site.baseurl }}{% link _general/about/vm-and-infrastructure.md %}).
+CodeShip Basic builds run on fresh VMs provisioned on Ubuntu 18.04 (Bionic). You can learn more about our infrastructure setup [here]({{ site.baseurl }}{% link _general/about/vm-and-infrastructure.md %}).
 
