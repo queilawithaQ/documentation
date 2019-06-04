@@ -39,7 +39,7 @@ This guide shows you how to use CodeShip Pro to build, test, and deploy your app
 
 ### Prerequisites
 
-CodeShip requires that you set up a CodeShip Account and connect to a Source Content Mangement (SCM). See
+CodeShip requires that you set up a CodeShip Account and connect to a Source Content Management (SCM). See
 Setting up a new CodeShip account guide for more information.
 
 ### Installing Jet
