@@ -1,5 +1,5 @@
 ---
-title: Codeship Pro Introduction Guide Part 4
+title: CodeShip Pro Introduction Guide Part 4
 layout: page
 tags:
   - docker
@@ -22,7 +22,7 @@ redirect_from:
 {:toc}
 
 {% csnote info %}
-In addition to this guide, we've also got [quickstart repos and sample apps]({% link _pro/quickstart/quickstart-examples.md %}) available to make starting out with Codeship Pro faster and easier.
+In addition to this guide, we've also got [quickstart repos and sample apps]({% link _pro/quickstart/quickstart-examples.md %}) available to make starting out with CodeShip Pro faster and easier.
 {% endcsnote %}
 
 The source for the tutorial is available on Github as [codeship/ci-guide](https://github.com/codeship/ci-guide/) and you can clone it via
@@ -31,19 +31,19 @@ The source for the tutorial is available on Github as [codeship/ci-guide](https:
 git clone git@github.com:codeship/ci-guide.git
 ```
 
-## Getting Started With Codeship Pro (Part 4)
+## Getting Started With CodeShip Pro (Part 4)
 
 Let's take a look at volumes, and let's start with *what is a volume and what is it good for*?
 
-First, it's important to know that Codeship does not reuse containers on different steps, meaning there is no way for a container to grab data or information - or maintain changes - made by a previous container or step in your workflow.
+First, it's important to know that CodeShip does not reuse containers on different steps, meaning there is no way for a container to grab data or information - or maintain changes - made by a previous container or step in your workflow.
 
 This can create some problems. What if you want to create a service responsible for generating all your production assets, or what if you prepare your database in one service and need it to remain the same in the next step when you run your tests?
 
-That's where volumes come in. A volume is mounted on the host, "underneath" your containers, and you can specify which containers can read from volumes defined by other services. This lets you artifact data, generate assets and pass data between services easily - while keeping your services and steps isolated like you would want for a truly high-integrity CI process. Note that volumes are standard Docker functionality, not Codeship-specific.
+That's where volumes come in. A volume is mounted on the host, "underneath" your containers, and you can specify which containers can read from volumes defined by other services. This lets you artifact data, generate assets and pass data between services easily - while keeping your services and steps isolated like you would want for a truly high-integrity CI process. Note that volumes are standard Docker functionality, not CodeShip-specific.
 
 ![Volume/Host/Container Diagram]({{ site.baseurl }}/images/gettingstarted/sharedhostvolume.png)
 
-## How To Set One Up
+### Creating volumes
 
 Let's open our services file and find our main application service and make a quick modification.
 
@@ -63,7 +63,7 @@ demo:
 
 The `volumes` directive takes a parameter that maps a host directory (`./tmp`) to a container directory (`/code`). This means that inside of our container, anything written or read from `/code` will actually be taking place on the host in the `./tmp` directory.
 
-## Making It Work
+### Configuring volumes
 
 With our volume mounted, we're next going to need to test if it's working. To make sure it's working, we have to do two things: Write to it and read from it in a later step.
 
@@ -86,7 +86,7 @@ Second, we've added a new directive, `volumes_from` and specified that it will r
 
 Of course, since our new service needs a new Dockerfile, we'll need to create our `Dockerfile.volumes` really quick. For this example, we're just going to clone our existing `Dockerfile` and rename it.
 
-## Creating A New Test
+### Testing the volume setup
 
 Now that our service for reading from the volume exists, let's create a new file named `write.rb` to create the artifact on our volume that we'll be testing for. After creating the file, drop in the following code:
 
@@ -104,7 +104,7 @@ puts "Reading from the volume" + data
 exit 0
 ```
 
-## Making It All Work
+### Using volumes in the continuous integration pipeline
 
 Now that we have our new service and both of our scripts, we need to edit our `codeship-steps.yml` file so that everything get's executed. We're going to take advantage of nested parallel and serial steps to do this. Open up `codeship-steps.yml` and modify it to the following:
 
@@ -144,7 +144,7 @@ Let's go ahead and run `jet steps` to see it all work.
 
 ![Image of a volumes log output]({{ site.baseurl }}/images/gettingstarted/volumesworking.png)
 
-## Theoretical Uses
+### Examples of how to use volumes
 
 The one thing this example probably doesn't cover is why YOU might need to use volumes.
 
@@ -156,6 +156,6 @@ Here are some of the most common real world use-cases for volumes:
 
 Of course, every application is different so there are a ton of potential reasons your specific application might need volumes that aren't covered here.
 
-## Next: Parallel, Speed, etc
+## Next: Speeding up your builds
 
-Next we're going to look at two of the more powerful and productive things you can do to create really fast and efficient CI/CD pipelines with Codeship Pro. [Taking a look at parallel steps and caching.]({% link _pro/quickstart/getting-started-part-five.md %})
+Next we're going to look at two of the more powerful and productive things you can do to create really fast and efficient CI/CD pipelines with CodeShip Pro. [Taking a look at parallel steps and caching.]({% link _pro/quickstart/getting-started-part-five.md %})

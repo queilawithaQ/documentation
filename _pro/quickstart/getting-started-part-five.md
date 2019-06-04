@@ -1,5 +1,5 @@
 ---
-title: Codeship Pro Introduction Guide Part 5
+title: CodeShip Pro Introduction Guide Part 5
 tags:
   - docker
   - jet
@@ -21,7 +21,7 @@ redirect_from:
 {:toc}
 
 {% csnote info %}
-In addition to this guide, we've also got [quickstart repos and sample apps]({% link _pro/quickstart/quickstart-examples.md %}) available to make starting out with Codeship Pro faster and easier.
+In addition to this guide, we've also got [quickstart repos and sample apps]({% link _pro/quickstart/quickstart-examples.md %}) available to make starting out with CodeShip Pro faster and easier.
 {% endcsnote %}
 
 The source for the tutorial is available on Github as [codeship/ci-guide](https://github.com/codeship/ci-guide/) and you can clone it via
@@ -30,11 +30,11 @@ The source for the tutorial is available on Github as [codeship/ci-guide](https:
 git clone git@github.com:codeship/ci-guide.git
 ```
 
-## Getting Started With Codeship Pro (Part 5)
+## Getting Started With CodeShip Pro (Part 5)
 
 Now that we've covered the basic pieces of the service, we should take a few minutes and cover two additional features that make for more flexible and powerful CI/CD workflows for your team.
 
-## Caching
+### Speeding up your builds with caching 
 
 Next up, let's take a look at caching. When you use caching, we'll push your image out to a secure image registry. Then, on your next build, we'll quickly check your Dockerfile to see what has changed and we'll pull the cached image to reuse any layers we can. This is a layer by layer cache, so we'll reuse as much of the image as we can before rebuilding the rest of the image once we encounter a change.
 
@@ -91,7 +91,7 @@ Once the new build runs, we can check our log output and see our cache in action
 
 Caching is a really powerful way to speed your builds up. We also have a great article on optimizing your builds overall, as well as making sure your Dockerfile is designed with caching in mind. [You can read that here.](https://blog.codeship.com/speeding-up-your-docker-based-builds-with-codeship/)
 
-## Tests Per Branch
+### Running tags on the master branch
 
 Now I want to take a look at a bit of the flexibility you can implement around running your tests.
 
@@ -99,12 +99,12 @@ Let's go back to our `codeship-steps.yml` file and look at the command where we 
 
 On our step, let's add a new line: `tag: master`
 
-This tag tells Codeship to only run this tag on the master branch. You can imagine creating branches that run all your tests (before deployments, for instance), branches that only run front-end tests or tests for certain apis (**/api/_** for instance)... and a ton of other combinations that will streamline your workflows and keep developers productive.
+This tag tells CodeShip to only run this tag on the master branch. You can imagine creating branches that run all your tests (before deployments, for instance), branches that only run front-end tests or tests for certain apis (**/api/_** for instance)... and a ton of other combinations that will streamline your workflows and keep developers productive.
 
-## Learn More!
+## Additional resources
 
 From here, there's still a ton more you can learn to optimize your builds, troubleshoot your problems and build more complex and productive workflows.
 
 We recommend [our blog](https://blog.codeship.com), [our documentation]({{ site.url }}), and [our webinars](https://resources.codeship.com/webinars) to keep learning more.
 
-It's important to get to a working build as soon as possible when you start your new CI/CD process with Codeship Pro. From there, take some time with your team every few weeks or every few months to find ways to optimize, save time, keep the developers coding with fewer waiting periods and improve your application and Docker image efficiency.
+It's important to get to a working build as soon as possible when you start your new CI/CD process with CodeShip Pro. From there, take some time with your team every few weeks or every few months to find ways to optimize, save time, keep the developers coding with fewer waiting periods and improve your application and Docker image efficiency.
