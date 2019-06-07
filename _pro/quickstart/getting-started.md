@@ -1,5 +1,5 @@
 ---
-title: Codeship Pro Introduction Guide Part 1
+title: CodeShip Pro Introduction Guide Part 1
 tags:
   - docker
   - jet
@@ -31,21 +31,28 @@ The source for the tutorial is available on GitHub at [codeship/ci-guide](https:
 git clone git@github.com:codeship/ci-guide.git
 ```
 
-## Getting Started With Codeship Pro (Part 1)
+## Getting started with CodeShip Pro (Part 1) 
 
-We’re going to walk you through using Codeship Pro to build, test, and deploy your applications. Codeship Pro uses Docker to define your CI/CD environment and run your build pipeline. We chose Docker because it’s a well-known and documented standard, but your application itself does not need to be “fully Dockerized” to make use of Codeship Pro’s benefits. As long as you can build containers for your application, Codeship Pro will let you run a flexible, powerful CI/CD pipeline.
+This guide shows you how to use CodeShip Pro to build, test, and deploy your applications. CodeShip Pro uses Docker to define your CI/CD environment and run your build pipeline. We chose Docker because it’s a well-known and documented standard, but your application itself does not need to be “fully Dockerized” to make use of CodeShip Pro’s benefits. As long as you can build containers for your application, CodeShip Pro will let you run a flexible, powerful CI/CD pipeline.
 
-Additionally, Codeship Pro uses a complimentary command-line tool called Jet to help you encrypt your secrets, as well as to debug and troubleshoot locally for a much faster feedback cycle.
+## Setting up continuous integration with CodeShip Pro
+
+### Prerequisites
+
+CodeShip requires that you set up a CodeShip Account and connect to a Source Content Management (SCM). See
+Setting up a new CodeShip account guide for more information.
+
+### Installing Jet
+
+CodeShip Pro uses a complimentary command-line tool called Jet to help you encrypt your secrets, as well as to debug and troubleshoot locally for a much faster feedback cycle.
 
 The first thing you want to do is [install the Jet CLI]({% link _pro/jet-cli/installation.md %}) on your local machine. For Mac users, you can do this through [Homebrew](https://brew.sh/) and Linux users can curl the Jet CLI binary directly.
-
-## Testing Jet
 
 Once Jet is installed, type `jet version` to print the version number on screen. Next, type `jet help` to bring up the help options. Jet is very powerful - from running CI to encrypting your credentials, so take some time to play around with what you see when you run `jet help`.
 
 ![Jet Help Log Output]({{ site.baseurl }}/images/gettingstarted/jet-help.png)
 
-## Make A Simple Ruby Script
+### Creating a simple application with Ruby Script
 
 Now that we have Jet installed, we're going to take a few minutes and build a simple little "app". This isn't a real app, we're just going to write a little Ruby script and a Dockerfile to use as case studies. We'll expand on them later on.
 
@@ -74,9 +81,9 @@ test = PG.connect("postgres", 5432, "", "", "postgres", postgres_username, postg
 puts test.exec("SELECT version();").first["version"]
 ```
 
-## Create Your Dockerfile
+### Creating a Dockerfile for your application and environment
 
-Next we're going to create a Dockerfile. Since Codeship Pro uses Docker as a standardized domain language, you'll need at least a minimal Dockerfile to get going. If you're already building your application with Docker, this will require very little (if any) adjustment - and if you're not using Docker, creating a basic container to run your application should work just fine.
+Next we're going to create a Dockerfile. Since CodeShip Pro uses Docker as a standardized domain language, you'll need at least a minimal Dockerfile to get going. If you're already building your application with Docker, this will require very little (if any) adjustment - and if you're not using Docker, creating a basic container to run your application should work just fine.
 
 If you're not familiar with Dockerfiles, and you want to spend a little bit of time getting up to speed on Docker, we highly recommend using these resources as a jumping-off point.
 
@@ -124,13 +131,13 @@ Once saved, run the following Docker command to generate the corresponding `Gemf
 docker run -it --rm -v $(pwd):/app -w /app ruby:2.5.0 bundle lock
 ```
 
-## Define Your Services
+### Defining your services needed for continuous integration
 
 So, now we have a script, we have a Docker container that includes this script... now what?
 
 Well, we want to orchestrate our app (which means build the Dockerfile we just created), as well as build containers for Postgres and Redis. Remember, the script we wrote prints version numbers for Postgres and Redis, so we're going to need those services to be able to run it.
 
-On Codeship Pro, you define the services you want to build by creating a `codeship-services.yml` file. This is a simple file that lives in your repo and tells Codeship what infrastructure and services to use. If you're familiar with Docker Compose, we lean heavily on the syntax and options of a standard Compose file. If you're not familiar with Docker Compose, [you can learn a bit more about it here](https://docs.docker.com/compose/).
+On CodeShip Pro, you define the services you want to build by creating a `codeship-services.yml` file. This is a simple file that lives in your repo and tells CodeShip what infrastructure and services to use. If you're familiar with Docker Compose, we lean heavily on the syntax and options of a standard Compose file. If you're not familiar with Docker Compose, [you can learn a bit more about it here](https://docs.docker.com/compose/).
 
 One big difference between a standard Compose file and a `codeship-services.yml` file is that a Compose file is typically built to run your application, whereas your `codeship-services.yml` file will also define services you need just for CI/CD as well (such as deployment containers).
 
@@ -160,11 +167,11 @@ Also note that in this configuration example we are using the [healthcheck]({% l
 
 ![Three containers]({{ site.baseurl }}/images/gettingstarted/3containers.png)
 
-## Pick Your Steps To Run
+### Defining steps to run in the continuous integration workflow
 
 Next up, we define what steps run in your CI/CD workflow. This is done through another simple .yml file that lives in your repo - `codeship-steps.yml`.  This file is nothing but a list of the commands you want to pass to the containers you defined earlier in your `codeship-services.yml` file.
 
-With Codeship Pro, your containers are the CI/CD environment, meaning every command you run - tests, deployments, scripts - all run _inside_ of the containers you build. This means you have full control of your CI/CD environment because anything you need to do, whether it's use a particular version or orchestrate your production infrastructure, is as simple as defining a container that can accept the commands you need to run.
+With CodeShip Pro, your containers are the CI/CD environment, meaning every command you run - tests, deployments, scripts - all run _inside_ of the containers you build. This means you have full control of your CI/CD environment because anything you need to do, whether it's use a particular version or orchestrate your production infrastructure, is as simple as defining a container that can accept the commands you need to run.
 
 As one example, if you need to deploy to Heroku then you just need to build a container with the Heroku Toolbelt and then run Heroku deployment commands in your `codeship-steps.yml` file!
 
@@ -186,7 +193,7 @@ Next we call a command inside our new *demo* container. We tell it to run the `c
 
 As you'll recall, that script prints the version of *redis* and *postgres* - which it will do by checking the version of the services we launched via the declared dependencies on our original *demo* service.
 
-## Run Your Build Pipeline Locally
+### Testing and debugging your pipeline locally with Jet
 
 Now -  let's see how all of this ties together. Open up a terminal and go to the directory with the files we created.
 
@@ -200,18 +207,17 @@ If everything is working, you should see something like this:
 
 And if you scroll through your logs, you should see the versions for *redis* and *postgres* printed just as `check.rb` instructs it to.
 
-## Change Version
+### Updating the version in codeship-services.yml
 
 Now we'll take a look at one of the cool benefits of doing all of your CI/CD process with these simple files in your repo.
 
 Open up `codeship-services.yml` and find the line where you define your *redis* service. Change `image: healthcheck/redis:alpine` to `image: redis:3.2.11`.
 
-## Run Locally Again
+### Running your new build pipeline locally with Jet
 
 Now switch back to your terminal and run: `jet steps` again.
 
 Looking at the same logs as before, you'll see that now your *redis* service is launching an entirely new version! Changing your CI infrastructure is as simple as changing a few characters in a single file on your repo. This can be done branch by branch, build by build - making upgrading, testing and iteration as easy and risk-free as possible.
 
-## Next: Adding Tests
-
-Now that we've covered the basics of how Codeship Pro uses Jet CLI, `codeship-services.yml`, `codeship-steps.yml` and containers to create a flexible, powerful CI/CD process, we'll move on to explore some more robust examples. Up next, [running your tests.]({% link _pro/quickstart/getting-started-part-two.md %})
+## Next: Adding tests
+Now that we've covered the basics of how CodeShip Pro uses Jet CLI, `codeship-services.yml`, `codeship-steps.yml` and containers to create a flexible, powerful CI/CD process, we'll move on to explore some more robust examples. Up next, [running your tests.]({% link _pro/quickstart/getting-started-part-two.md %})

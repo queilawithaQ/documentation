@@ -1,5 +1,5 @@
 ---
-title: Codeship Pro Introduction Guide Part 3
+title: CodeShip Pro Introduction Guide Part 3
 layout: page
 tags:
   - docker
@@ -22,7 +22,7 @@ redirect_from:
 {:toc}
 
 {% csnote info %}
-In addition to this guide, we've also got [quickstart repos and sample apps]({% link _pro/quickstart/quickstart-examples.md %}) available to make starting out with Codeship Pro faster and easier.
+In addition to this guide, we've also got [quickstart repos and sample apps]({% link _pro/quickstart/quickstart-examples.md %}) available to make starting out with CodeShip Pro faster and easier.
 {% endcsnote %}
 
 The source for the tutorial is available on Github as [codeship/ci-guide](https://github.com/codeship/ci-guide/) and you can clone it via
@@ -31,26 +31,17 @@ The source for the tutorial is available on Github as [codeship/ci-guide](https:
 git clone git@github.com:codeship/ci-guide.git
 ```
 
-## Getting Started With Codeship Pro (Part 3)
+## Getting Started With CodeShip Pro (Part 3)
 
 Now that you have a working CI process with a successful test, the next step is to push out your Docker image!
 
-## Required Services Before We Push
+### Required Services 
 
-### A Codeship Pro Project
+#### Image Registry Account
 
-The first thing you'll need is a working Codeship account with a Codeship Pro project (**Codeship Pro is now free for 100 builds per month, 1 concurrent build, unlimited projects and unlimited users**).
-When creating your new project, make sure to select Codeship Pro after choosing the repo you're using.
+You need an image repository account. For this example, we use Docker Hub but you could use Quay.io or your own self-hosted image repo.
 
-![Selecting Codeship Pro]({{ site.baseurl }}/images/gettingstarted/setup_select_docker.png)
-
-If you don't have a repo configured, just create a new repo on Github and push the code examples we've been using so far.
-
-### An Image Registry Account
-
-Now, you're also gonna need an image repo account. For this example, we're gonna go with Docker Hub but you could use Quay.io or your own self-hosted image repo.
-
-## Let's Do A Push
+### Adding a push step
 
 Now that we have our accounts created, let's go ahead and open up our `codeship-steps.yml` file. After our test step, we're going to add a new step - a `push` step.
 
@@ -86,11 +77,11 @@ There are a few things to note here:
 
 * `encrypted_dockercfg_path` is where we grab the credentials for your image repo account from. But, why is it encrypted and how did we encrypt it? Let's take a look at that now...
 
-## Encrypted Credentials
+### Encrypting credentials
 
 So, just like we did with our environmental variables in the previous lesson, we'll want to encrypt our image repository examples so that our repo doesn't have our logins sitting around in plain text.
 
-First, if you didn't do it on the last step, you'll need to download your project's AES key in to your code's directory. To get the AES key, just go to your project on Codeship.com and look at the project settings.
+First, if you didn't do it on the last step, you'll need to download your project's AES key in to your code's directory. To get the AES key, just go to your project on CodeShip.com and look at the project settings.
 
 ![Downloading AES key]({{ site.baseurl }}/images/gettingstarted/aes_key.png)
 
@@ -146,7 +137,7 @@ You should see your new `dockercfg.encrypted` file populate within your project 
 Be sure to remove the unencrypted `dockercfg` file - or, at the very least, add it to your **.gitignore** file like your AES key.
 {% endcsnote %}
 
-## Push!
+### Pushing a Docker image
 
 Now, assuming you've swapped in your credentials in the push step and created your encrypted Dockercfg file, it's time to push all this up and run our build!
 
@@ -158,7 +149,7 @@ git commit . -m "Deploying our image"
 git push origin master
 ```
 
-## Look At Web UI and Repo
+### Checking the build logs
 
 Now that we've got our build running, let's hop over the web UI and look for evidence of our successful push.
 
@@ -170,9 +161,9 @@ Now, if we go over to our Docker Hub repo, we should see some meta data indicati
 
 ![Docker Hub repo screenshot]({{ site.baseurl }}/images/gettingstarted/dockerhub-recent-push.png)
 
-## Debugging Your Builds
+### Debugging builds
 
-Let's take a quick detour to discuss debugging your builds, in case something has gone wrong in the build you just pushed up and you're trying to solve the problem. Codeship Pro does not offer SSH access to build machines for debugging like Codeship Basic does, but can debug your builds locally using `jet`.
+Let's take a quick detour to discuss debugging your builds, in case something has gone wrong in the build you just pushed up and you're trying to solve the problem. CodeShip Pro does not offer SSH access to build machines for debugging like CodeShip Basic does, but can debug your builds locally using `jet`.
 
 You will just need to use `jet run` (a command we didn't see earlier, which leaves your containers running until you kill them) and then connect to your running containers to manually run the commands from your [codeship-steps.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}) file.
 
@@ -187,8 +178,8 @@ docker exec -it CONTAINER_ID /bin/sh
 
 Note that you are running your containers, looking up the container ID and then connecting to the running container using the container ID.
 
-## Up Next: Using Volumes
+## Next: Using Volumes
 
 Now we've built an app, added a test, pushed an image and deployed our code. What's next?
 
-We want to walk through a couple of the powerful, flexible things you can achieve with Codeship Pro - and we're going to start with *volumes*. [Let's learn about volumes.]({% link _pro/quickstart/getting-started-part-four.md %})
+We want to walk through a couple of the powerful, flexible things you can achieve with CodeShip Pro - and we're going to start with *volumes*. [Let's learn about volumes.]({% link _pro/quickstart/getting-started-part-four.md %})
