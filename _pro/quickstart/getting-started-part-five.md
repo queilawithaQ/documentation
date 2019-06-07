@@ -91,7 +91,7 @@ Once the new build runs, we can check our log output and see our cache in action
 
 Caching is a really powerful way to speed your builds up. We also have a great article on optimizing your builds overall, as well as making sure your Dockerfile is designed with caching in mind. [You can read that here.](https://blog.codeship.com/speeding-up-your-docker-based-builds-with-codeship/)
 
-### Running tags on a branch
+### Running step commands by branch name
 
 Now I want to take a look at a bit of the flexibility you can implement around running your tests.
 
