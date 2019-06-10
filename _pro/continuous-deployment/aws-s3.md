@@ -51,7 +51,7 @@ Note that the `awsdeployment` and the data from the volume are both discussed in
 
 ### S3 Permissions Policy
 
-To upload new application versions to the S3 bucket specified in the deployment configuration, we need at least _Put_ access to the bucket (or a the _appname_ prefix). See the following snippet for an example.
+To upload new application versions to the S3 bucket specified in the deployment configuration, we need at least _Put_ access to the bucket (or the _appname_ prefix). See the following snippet for an example.
 
 ```json
 {
@@ -66,7 +66,7 @@ To upload new application versions to the S3 bucket specified in the deployment 
                 "s3:ListBucket"
             ],
             "Resource": [
-                "arn:aws:s3:::[s3-bucket]/*"
+                "arn:aws:s3:::test/*"
             ]
         }
     ]
