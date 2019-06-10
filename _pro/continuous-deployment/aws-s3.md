@@ -62,13 +62,21 @@ To upload new application versions to the S3 bucket specified in the deployment 
             "Action": [
                 "s3:PutObject",
                 "s3:PutObjectAcl",
-                "s3:GetObject",
+                "s3:GetObject"
+            ],
+            "Resource": [
+                "arn:aws:s3:::[s3-bucket]/*"
+            ]
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
                 "s3:ListBucket"
             ],
             "Resource": [
-                "arn:aws:s3:::test/*"
+                "arn:aws:s3:::[s3-bucket]"
             ]
         }
     ]
-}
+}   
 ```
