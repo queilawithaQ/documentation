@@ -153,7 +153,7 @@ Codeship supports the `HEALTHCHECK` directive for health checks built into a Doc
 
 ![Healthchecks logs output]({{ site.baseurl }}/images/docker/healthchecks.png)
 
-You can use the `healthcheck` version of a base image, [which can be found on Docker Hub](https://hub.docker.com/u/healthcheck/), to add a healthcheck to your builds with minimal configuration. NOTE: These images include the `latest` tag and [are not maintained](https://github.com/docker-library/healthcheck/blob/master/README.md).
+You can use the `healthcheck` version of a base image, [which can be found on Docker Hub](https://hub.docker.com/u/healthcheck/), to add a healthcheck to your builds with minimal configuration. NOTE: These images are meant to [serve as examples](https://github.com/docker-library/healthcheck/blob/master/README.md).
 
 Inside of your `codeship-services.yml` file:
 
