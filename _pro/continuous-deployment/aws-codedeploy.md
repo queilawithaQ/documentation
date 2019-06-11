@@ -19,7 +19,7 @@ tags:
 ---
 
 {% csnote info %}
-You can find a [sample repo for deploying to AWS with CodeShip Pro](https://github.com/codeship-library/aws-utilities) on Github.
+You can find a [sample repo for deploying to AWS with Codeship Pro](https://github.com/codeship-library/aws-utilities) on Github.
 {% endcsnote %}
 
 * include a table of contents
@@ -27,9 +27,9 @@ You can find a [sample repo for deploying to AWS with CodeShip Pro](https://gith
 
 To make it easy for you to deploy your application to AWS CodeDeploy, we've built a container that has the AWSCLI installed. We will set up a simple example showing you how to configure any deployment to AWS CodeDeploy.
 
-## CodeShip AWS Deployment Container
+## Codeship AWS Deployment Container
 
-CodeShip Pro uses an AWS deployment container that we maintain to authenticate with your AWS account.
+Codeship Pro uses an AWS deployment container that we maintain to authenticate with your AWS account.
 
 Please review our [AWS documentation]({% link _pro/continuous-deployment/aws.md %}) to learn how to set up and use this authentication container.
 
@@ -50,4 +50,4 @@ Add the following into your [codeship-steps.yml file]({% link _pro/builds-and-co
 
 This command will zip your application code, upload it to S3 and start a new deployment on CodeDeploy. You can take a look at the [full script](https://github.com/codeship-library/aws-utilities/blob/master/deployment/scripts/codeship_aws_codedeploy_deploy) if you would like to review or modify it.
 
-Note that you will need to make sure that the IAM User used with CodeShip has all necessary permissions to interact with CodeDeploy. Take a look at the [getting started](https://docs.aws.amazon.com/codedeploy/latest/userguide/getting-started-setup.html) documentation from AWS to get the full policy template.
+Note that you will need to make sure that the IAM User used with Codeship has all necessary permissions to interact with CodeDeploy. Take a look at the [getting started](https://docs.aws.amazon.com/codedeploy/latest/userguide/getting-started-setup.html) documentation from AWS to get the full policy template.

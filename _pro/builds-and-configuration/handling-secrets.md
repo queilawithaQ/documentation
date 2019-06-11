@@ -1,5 +1,5 @@
 ---
-title: Handling Secrets With Docker And CodeShip Pro
+title: Handling Secrets With Docker And Codeship Pro
 shortTitle: Handling Secrets
 menus:
   pro/builds:
@@ -30,12 +30,12 @@ redirect_from:
 * include a table of contents
 {:toc}
 
-During most CodeShip builds, your build machine needs to access or communicate with some resource that requires some kind of credential. There are two main ways to pass in secrets to the Docker containers where your build steps run:
+During most Codeship builds, your build machine needs to access or communicate with some resource that requires some kind of credential. There are two main ways to pass in secrets to the Docker containers where your build steps run:
 
 - Environment variables
 - Build arguments
 
-CodeShip supports encrypted and unencrypted versions of both. Depending on how and when the secret is used, either build arguments or environment variables may be a better choice - and you might often need both.
+Codeship supports encrypted and unencrypted versions of both. Depending on how and when the secret is used, either build arguments or environment variables may be a better choice - and you might often need both.
 
 
 <table style="border: 1px solid #adadad; padding: 15px; margin: 15px 0 15px;">
@@ -78,9 +78,9 @@ Typically, the need for passing secrets to the build falls into three main categ
 - Accessing private assets during the image build
 - Deployments access for a remote host.
 
-> Note: Docker advises against using build arguments to pass in any sort of secrets to your images, as they can be seen when inspecting the image layers. This is great advice for production environments, but during CI/CD with CodeShip all your builds run in a single-tenant environment, and no other user or machine has access to your build machine. Your machine (and everything on it!) is also destroyed after each build, never being reused. Because of this, it *is* advised to use build arguments necessary for the CI/CD process on CodeShip while being sure *not* to deploy images to production that use them in the same way.
+> Note: Docker advises against using build arguments to pass in any sort of secrets to your images, as they can be seen when inspecting the image layers. This is great advice for production environments, but during CI/CD with Codeship all your builds run in a single-tenant environment, and no other user or machine has access to your build machine. Your machine (and everything on it!) is also destroyed after each build, never being reused. Because of this, it *is* advised to use build arguments necessary for the CI/CD process on Codeship while being sure *not* to deploy images to production that use them in the same way.
 
-## How do I push or pull from a private Docker image registry during a CodeShip Pro build?
+## How do I push or pull from a private Docker image registry during a Codeship Pro build?
 
 You can store login credentials for your Docker image registry by using an encrypted credentials file. That file is declared in the service with the `encrypted_dockercfg_path` key or being using a `dockercfg_service` generator.
 
@@ -94,10 +94,10 @@ When these private assets need to be accessed at buildtime, to successfully buil
 
 Build arguments can be passed to the image via your `codeship-services.yml` file either encrypted or unencrypted. [You can learn how to set up build arguments here](https://docs.docker.com/engine/reference/builder/#/arg))
 
-## How can I provide deployment credentials to CodeShip?
+## How can I provide deployment credentials to Codeship?
 For any secret that needs to be accessed during container runtime, meaning _after_ your containers have built when you are running commands via your `codeship-steps.yml` file, then you should use [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}).
 
-You'll need to [download Jet]({{ site.baseurl }}{% link _pro/jet-cli/usage-overview.md %}), the CLI for running CodeShip Pro builds locally, as well as [grab your project's AES key]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}#downloading-your-aes-key) from the Project Settings page.
+You'll need to [download Jet]({{ site.baseurl }}{% link _pro/jet-cli/usage-overview.md %}), the CLI for running Codeship Pro builds locally, as well as [grab your project's AES key]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}#downloading-your-aes-key) from the Project Settings page.
 
 {% csnote info %}
 If you need to reset your AES key you can do so by visiting _Project Settings_ > _General_ and clicking _Reset project AES key_.

@@ -22,9 +22,9 @@ menus:
 * include a table of contents
 {:toc}
 
-Organizations simplify and enhance team management as well as subscription management for (larger) teams on CodeShip.
+Organizations simplify and enhance team management as well as subscription management for (larger) teams on Codeship.
 
-You can define arbitrary teams and add them to any organization project and add CodeShip accounts to those teams. You can also provide read-only access to some of your team members.
+You can define arbitrary teams and add them to any organization project and add Codeship accounts to those teams. You can also provide read-only access to some of your team members.
 
 ## Managing Teams And Projects
 
@@ -65,7 +65,7 @@ We currently offer the following roles (though more roles are already on our tod
 ### Default Teams
 
 Two teams are created for each organization by default:
-* **Owners**, containing only the user who created the organization by default. However, you can add any other CodeShip account to the _Owners_ team, as well.
+* **Owners**, containing only the user who created the organization by default. However, you can add any other Codeship account to the _Owners_ team, as well.
   * Use that team to share responsibility around subscription, team management and billing.
 * **Managers**, which is empty by default but is assigned the Managers permissions level.
   * Use that team to give everyone access to all projects with full permission to view, edit and configure projects.
@@ -134,7 +134,7 @@ On the account page, you also have the option to enable the IP Whitelisting feat
 
 ## Delete Your Organization Account
 
-To delete your organization account on CodeShip, navigate to the _Settings_ page of your organization and select delete organization.
+To delete your organization account on Codeship, navigate to the _Settings_ page of your organization and select delete organization.
 Be aware that:
 * You have to be part of the **Owner Team**
 * You must cancel your billing subscription before you are able to delete your organization account

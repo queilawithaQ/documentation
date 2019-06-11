@@ -29,7 +29,7 @@ By using Raygun you can keep track of error logs and deployment events easier.
 
 [Their documentation](https://raygun.com/docs) does a great job of providing more information, in addition to the setup instructions below.
 
-## CodeShip Pro
+## Codeship Pro
 
 ### Setting Your API Key And Variables
 
@@ -137,7 +137,7 @@ fi
 
 You can also run API calls in the same way, simply running API calls rather than the deployment commands above.
 
-## CodeShip Basic
+## Codeship Basic
 
 ### Setting Your API Key And Variables
 

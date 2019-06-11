@@ -1,5 +1,5 @@
 ---
-title: Using PHP In CI/CD with CodeShip Basic
+title: Using PHP In CI/CD with Codeship Basic
 shortTitle: PHP
 menus:
   basic/languages:
@@ -126,9 +126,9 @@ Downloading: connection... Failed to download phpunit/phpunit from dist: Could n
 Now trying to download from source
 ```
 
-To avoid this create a [new personal access token on GitHub](https://github.com/settings/tokens/new). For the description you can use something like _CodeShip Composer_ and you can unselect all scopes. Copy your personal access token and add it to the environment variables in your CodeShip project settings (on the _Environment_ page) as `GITHUB_ACCESS_TOKEN`.
+To avoid this create a [new personal access token on GitHub](https://github.com/settings/tokens/new). For the description you can use something like _Codeship Composer_ and you can unselect all scopes. Copy your personal access token and add it to the environment variables in your Codeship project settings (on the _Environment_ page) as `GITHUB_ACCESS_TOKEN`.
 
-Then use the following Setup Commands in your CodeShip project settings:
+Then use the following Setup Commands in your Codeship project settings:
 
 ```shell
 composer config -g github-oauth.github.com $GITHUB_ACCESS_TOKEN
@@ -137,9 +137,9 @@ composer install --prefer-dist --no-interaction
 
 ## Frameworks And Testing
 
-CodeShip supports essentially all popular PHP frameworks, such as Laravel, Symfony, CodeIgniter and CakePHP.
+Codeship supports essentially all popular PHP frameworks, such as Laravel, Symfony, CodeIgniter and CakePHP.
 
-Additionally, all testing frameworks, such as phpunit and codeception, will work on CodeShip.
+Additionally, all testing frameworks, such as phpunit and codeception, will work on Codeship.
 
 ## Parallel Testing
 
@@ -165,7 +165,7 @@ Note that we do not officially support or integrate with this module and that it
 
 - When setting environment variables with PHP, the syntax can be either `$_ENV["VAR_NAME"]` or `$varname`. Individual frameworks may have their own formatting. For instance, [Symfony](https://symfony.com/doc/current/index.html) uses `%env(VAR_NAME)%` for environment variables in configuration files, such as database configuration.
 
-- Due to PHP version issues, you may find it helpful to test your commands with different versions via an [SSH debug session]({{ site.baseurl }}{% link _basic/builds-and-configuration/ssh-access.md %}) if tests are running differently on CodeShip compared to your local machine.
+- Due to PHP version issues, you may find it helpful to test your commands with different versions via an [SSH debug session]({{ site.baseurl }}{% link _basic/builds-and-configuration/ssh-access.md %}) if tests are running differently on Codeship compared to your local machine.
 
 ### Running your PHP Server
 
@@ -185,7 +185,7 @@ Thanks to [Jeff Donios](https://github.com/doniosjm) for the tip.
 
 ### Exiting Tests
 
-All commands must return an `exit code 0` to CodeShip to report a successful result, or any other error code to report an unsuccessful result. This means you must configure your test scripts to exit with a `0` status if they do not do so by default.
+All commands must return an `exit code 0` to Codeship to report a successful result, or any other error code to report an unsuccessful result. This means you must configure your test scripts to exit with a `0` status if they do not do so by default.
 
 ### Custom PHPUnit Version
 

@@ -1,5 +1,5 @@
 ---
-title: Integrating CodeShip With Snyk For Security Analysis
+title: Integrating Codeship With Snyk For Security Analysis
 shortTitle: Using Snyk For Security Analysis
 tags:
   - security
@@ -23,9 +23,9 @@ categories:
 
 By using Snyk you can be sure that your dependencies are up to date and secure.
 
-Starting with Snyk and CodeShip is fast and easy. The [Snyk documentation](https://snyk.io/docs) does a great job of providing more information, in addition to the setup instructions below.
+Starting with Snyk and Codeship is fast and easy. The [Snyk documentation](https://snyk.io/docs) does a great job of providing more information, in addition to the setup instructions below.
 
-## CodeShip Pro
+## Codeship Pro
 
 ### Adding Token
 
@@ -63,7 +63,7 @@ snyk auth $SNYK_TOKEN
 snyk test
 ```
 
-## CodeShip Basic
+## Codeship Basic
 
 ### Adding Token
 

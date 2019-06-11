@@ -1,5 +1,5 @@
 ---
-title: Setting Up Or Migrating A Project To CodeShip Pro
+title: Setting Up Or Migrating A Project To Codeship Pro
 menus:
   pro/quickstart:
     title: Migrating To Pro
@@ -31,27 +31,27 @@ redirect_from:
 
 ## Setting Up A New Project
 
-Once you have your [project running locally]({{ site.baseurl }}{% link _pro/quickstart/getting-started.md %}) you can configure the repository on CodeShip and have the builds run on each push.
+Once you have your [project running locally]({{ site.baseurl }}{% link _pro/quickstart/getting-started.md %}) you can configure the repository on Codeship and have the builds run on each push.
 
-If you already worked with CodeShip the process will be familiar (and if not, it should be very simple nonetheless).
+If you already worked with Codeship the process will be familiar (and if not, it should be very simple nonetheless).
 
 1. Click on the _Select Project_ dropdown in the top bar and select the _Create a new project_ button.
 
 2. Select the repository provider you want to host your repositories with.
 
-3. Select the repository you want to build on CodeShip. You can filter the list via the search form. (If a repository belonging to an organization on GitHub isn't listed, please take a look at [3rd party restrictions]({{ site.baseurl }}{% link _general/about/permissions.md %}).)
+3. Select the repository you want to build on Codeship. You can filter the list via the search form. (If a repository belonging to an organization on GitHub isn't listed, please take a look at [3rd party restrictions]({{ site.baseurl }}{% link _general/about/permissions.md %}).)
 
-So far these are the standard steps to add a new project on CodeShip.
+So far these are the standard steps to add a new project on Codeship.
 
-4. You can now choose between CodeShip Basic (hosted) and CodeShip Pro (Docker). Choose the latter.
-	![Select CodeShip Pro]({{ site.baseurl }}/images/docker/setup_select_docker.png)
+4. You can now choose between Codeship Basic (hosted) and Codeship Pro (Docker). Choose the latter.
+	![Select Codeship Pro]({{ site.baseurl }}/images/docker/setup_select_docker.png)
 
-5. You will be presented with a screen offering basic setup instructions, as well as a link to the documentation for CodeShip Pro.
+5. You will be presented with a screen offering basic setup instructions, as well as a link to the documentation for Codeship Pro.
 	![Docker Project Help Screen]({{ site.baseurl }}/images/docker/setup_docker_setup.png)
 
-	As we already added all the required information to the [repository](https://github.com/codeship/jet-tutorial), you can simply push a new commit and this will trigger a new build on CodeShip.
+	As we already added all the required information to the [repository](https://github.com/codeship/jet-tutorial), you can simply push a new commit and this will trigger a new build on Codeship.
 
-6. Once you trigger a (couple) new builds, you'll see the standard CodeShip build listing page.
+6. Once you trigger a (couple) new builds, you'll see the standard Codeship build listing page.
 	![Build Listing]({{ site.baseurl }}/images/docker/build_listing.png)
 
 7. Clicking on a single build takes you to the build details.
@@ -67,26 +67,26 @@ So far these are the standard steps to add a new project on CodeShip.
 	* the service the step is running on (on the right hand side)
 	* the status indicated by an icon
 
-8. The remaining project configuration (e.g. team management or notifications) is identical to a standard CodeShip project and accessible via the _Project Settings_ dropdown at the top.
+8. The remaining project configuration (e.g. team management or notifications) is identical to a standard Codeship project and accessible via the _Project Settings_ dropdown at the top.
 
 ## Migrating From Basic To Pro
 
 ### Create A New Pro Project
 
-To create a new CodeShip Pro project, just select the Pro infrastructure after connecting your source control.
+To create a new Codeship Pro project, just select the Pro infrastructure after connecting your source control.
 
-![Selecting CodeShip Pro]({{ site.baseurl }}/images/gettingstarted/setup_select_docker.png)
+![Selecting Codeship Pro]({{ site.baseurl }}/images/gettingstarted/setup_select_docker.png)
 
 [You can learn more about creating a new project here.]({{ site.baseurl }}{% link _general/projects/getting-started.md %}).
 
 ### Switch A Basic Project To A Pro Project
 
-To switch a project from CodeShip Basic to CodeShip Pro, just click on "Project Settings" in the top right. Then, under the "General" tab, you will see a "Switch project to CodeShip Pro" button.
+To switch a project from Codeship Basic to Codeship Pro, just click on "Project Settings" in the top right. Then, under the "General" tab, you will see a "Switch project to Codeship Pro" button.
 
-![Selecting CodeShip Pro]({{ site.baseurl }}/images/general/enable-pro.png)
+![Selecting Codeship Pro]({{ site.baseurl }}/images/general/enable-pro.png)
 
 ### Run Pro Builds On Basic Projects
 
-On any CodeShip Basic project, you can commit to the branch `codeship-docker-migration` to trigger a CodeShip Pro build. Note that this is the only branch that will run Pro builds on Basic projects, and you will also need to click "View Docker based builds" above your project's builds to see the Pro build results.
+On any Codeship Basic project, you can commit to the branch `codeship-docker-migration` to trigger a Codeship Pro build. Note that this is the only branch that will run Pro builds on Basic projects, and you will also need to click "View Docker based builds" above your project's builds to see the Pro build results.
 
-![Selecting CodeShip Pro]({{ site.baseurl }}/images/general/view-docker-builds.png)
+![Selecting Codeship Pro]({{ site.baseurl }}/images/general/view-docker-builds.png)

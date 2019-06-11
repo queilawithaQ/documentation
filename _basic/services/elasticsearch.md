@@ -1,5 +1,5 @@
 ---
-title: Using Elasticsearch In CI/CD with CodeShip Basic
+title: Using Elasticsearch In CI/CD with Codeship Basic
 shortTitle: Elasticsearch
 tags:
   - services

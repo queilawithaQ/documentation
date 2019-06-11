@@ -1,5 +1,5 @@
 ---
-title: Self-hosted SCMs on CodeShip
+title: Self-hosted SCMs on Codeship
 shortTitle: Self-hosted SCM
 menus:
   general/about:
@@ -23,7 +23,7 @@ tags:
   - enterprise
   - whitelisting
 categories:
-  - About CodeShip  
+  - About Codeship  
   - Account
   - Security
 ---
@@ -33,11 +33,11 @@ categories:
 
 ## Enterprise Support
 
-CodeShip supports self-hosted [Git](https://git-scm.com) repositories for the [GitHub Enterprise](https://enterprise.github.com/home), [GitLab Community Edition](https://gitlab.com/gitlab-org/gitlab-ce), [GitLab Enterprise Edition](https://about.gitlab.com/gitlab-ee) and [Bitbucket Server](https://www.atlassian.com/software/bitbucket/server) products - in addition to our [standard cloud SCM support]({{ site.baseurl }}{% link _general/about/scm-support.md %}).
+Codeship supports self-hosted [Git](https://git-scm.com) repositories for the [GitHub Enterprise](https://enterprise.github.com/home), [GitLab Community Edition](https://gitlab.com/gitlab-org/gitlab-ce), [GitLab Enterprise Edition](https://about.gitlab.com/gitlab-ee) and [Bitbucket Server](https://www.atlassian.com/software/bitbucket/server) products - in addition to our [standard cloud SCM support]({{ site.baseurl }}{% link _general/about/scm-support.md %}).
 
 ## Exposing Ports
 
-To use your private Git server with CodeShip, you will need a publicly reachable endpoint with ports 22 and 443 open to the internet.
+To use your private Git server with Codeship, you will need a publicly reachable endpoint with ports 22 and 443 open to the internet.
 
 We require port 22 to clone your repository to run your builds and port 443 for status and clone requests.
 
@@ -63,7 +63,7 @@ To fetch your token, follow these instructions:
 - [GitLab Community Edition](https://docs.gitlab.com/ce/user/profile/personal_access_tokens.html) or [Enterprise Edition](https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html)
 - [Bitbucket Server](https://confluence.atlassian.com/bitbucketserver/personal-access-tokens-939515499.html)
 
-**Bitbucket Note** CodeShip requires Bitbucket Server 5.5 due to prior versions not providing personal access tokens.
+**Bitbucket Note** Codeship requires Bitbucket Server 5.5 due to prior versions not providing personal access tokens.
 
 **Github Note** Although we now use Github Apps for connecting CodeShip to your cloud Github organization, Github Apps are not yet available for Github Enterprise. Once they become available we will update our integration.
 
@@ -71,7 +71,7 @@ To fetch your token, follow these instructions:
 
 ### Token Access Scopes
 
-In order for CodeShip to be allowed to setup the necessary hooks etc. the personal access tokens need to have the correct set of scopes. Below you'll find the necessary setting for each of the three self-hosted Git servers:
+In order for Codeship to be allowed to setup the necessary hooks etc. the personal access tokens need to have the correct set of scopes. Below you'll find the necessary setting for each of the three self-hosted Git servers:
 
 **GitHub Enterprise**
 
@@ -87,8 +87,8 @@ In order for CodeShip to be allowed to setup the necessary hooks etc. the person
 
 ### Usernames
 
-When you're using a self-hosted git server, you will need to supply your username as well so that we can map up your builds with your CodeShip account and show them on your personal dashboard. All users of self-hosted git servers will need to do this, for the personal dashboard to work, but are not required to supply access codes.
-If you don't expect to be pushing code, and are mainly setting up CodeShip for others, you can leave the username(s) blank.
+When you're using a self-hosted git server, you will need to supply your username as well so that we can map up your builds with your Codeship account and show them on your personal dashboard. All users of self-hosted git servers will need to do this, for the personal dashboard to work, but are not required to supply access codes.
+If you don't expect to be pushing code, and are mainly setting up Codeship for others, you can leave the username(s) blank.
 
 **Note**: Users of cloud SCMs, who authenticate with oAuth, do not need to supply usernames as we get the username as part of the authentication workflow.
 

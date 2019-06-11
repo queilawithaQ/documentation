@@ -1,5 +1,5 @@
 ---
-title: Using Go In CI/CD with CodeShip Basic
+title: Using Go In CI/CD with Codeship Basic
 shortTitle: Go
 tags:
 - go
@@ -89,4 +89,4 @@ Note that aggressive parallelization can cause resource and build failure issues
 
 ## Notes And Known Issues
 
-Due to Go version and build issues, you may find it helpful to tests your commands with different versions via an [SSH debug session]({{ site.baseurl }}{% link _basic/builds-and-configuration/ssh-access.md %}) if tests are running differently on CodeShip compared to your local machine.
+Due to Go version and build issues, you may find it helpful to tests your commands with different versions via an [SSH debug session]({{ site.baseurl }}{% link _basic/builds-and-configuration/ssh-access.md %}) if tests are running differently on Codeship compared to your local machine.

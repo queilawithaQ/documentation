@@ -1,5 +1,5 @@
 ---
-title: Browser Testing During CI/CD With CodeShip Basic
+title: Browser Testing During CI/CD With Codeship Basic
 shortTitle: Browser Testing
 menus:
   basic/ci:
@@ -35,9 +35,9 @@ redirect_from:
 {:toc}
 
 {% csnote info %}
-This article is about running browser testing in your CI/CD pipeline with CodeShip Basic.
+This article is about running browser testing in your CI/CD pipeline with Codeship Basic.
 
-If you'd like to learn more about CodeShip Basic, we recommend the [getting started guide]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}) or [the features overview page](https://codeship.com/features/basic).
+If you'd like to learn more about Codeship Basic, we recommend the [getting started guide]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}) or [the features overview page](https://codeship.com/features/basic).
 {% endcsnote %}
 
 ## Chrome
@@ -109,7 +109,7 @@ If there are no packages available for your framework or you want to use the sta
 
 ## Sauce Labs
 
-You can use [Sauce Connect](https://wiki.saucelabs.com/display/DOCS/Sauce+Connect+Proxy) to connect the Sauce Labs browser testing service with the application running in your CodeShip build.
+You can use [Sauce Connect](https://wiki.saucelabs.com/display/DOCS/Sauce+Connect+Proxy) to connect the Sauce Labs browser testing service with the application running in your Codeship build.
 
 There is a [script](https://github.com/codeship/scripts/blob/master/packages/sauce_connect.sh) available for installing Sauce Connect in the build environment. Make sure you set the username and API key or other necessary variables in the [environment configuration]({{ site.baseurl }}{% link _basic/builds-and-configuration/set-environment-variables.md %}). You can run your tests exactly the same way as you would run them on your own development machine through Sauce Connect.
 
@@ -135,7 +135,7 @@ npm install slimerjs
 
 ## Screenshots
 
-During your tests you may want to generate screenshots when tests fail. CodeShip Basic starts a new build machine for each build and that machine gets terminated as soon as the build finishes. As a result there is not a simple way to save screenshots from failing builds.
+During your tests you may want to generate screenshots when tests fail. Codeship Basic starts a new build machine for each build and that machine gets terminated as soon as the build finishes. As a result there is not a simple way to save screenshots from failing builds.
 
 However, you can use a [SSH debug session]({{ site.baseurl }}{% link _basic/builds-and-configuration/ssh-access.md %}) to manually run your failing build again which will generate new screenshots. Then from another terminal window you can use `scp` to copy any screenshot files from the debug machine to your local machine for viewing.
 

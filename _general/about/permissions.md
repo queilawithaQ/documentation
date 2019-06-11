@@ -1,5 +1,5 @@
 ---
-title: Repository Permissions and Access On CodeShip
+title: Repository Permissions and Access On Codeship
 shortTitle: Repository Permissions and Access
 menus:
   general/about:
@@ -14,7 +14,7 @@ tags:
   - organizations
   - git
 categories:
-  - About CodeShip
+  - About Codeship
   - Security
   - Account 
 redirect_from:
@@ -27,17 +27,17 @@ redirect_from:
 * include a table of contents
 {:toc}
 
-## How Permissions Work On CodeShip
+## How Permissions Work On Codeship
 
-Let's take a look at how CodeShip manages permissions around your source control, your builds and your team.
+Let's take a look at how Codeship manages permissions around your source control, your builds and your team.
 
 ### What do we mean by permissions?
 
-When we say permissions, we are  talking about access you give CodeShip to your source control repo, or access you give to people on your team to your CodeShip builds and account information.
+When we say permissions, we are  talking about access you give Codeship to your source control repo, or access you give to people on your team to your Codeship builds and account information.
 
 #### Repository permissions vs. Access permissions ####
 
-In terms of access you give CodeShip, there are two different types that are in play: repository level permissions (for setting up new projects on CodeShip) and access level permissions (for authenticating with an SCM instead of username/password).
+In terms of access you give Codeship, there are two different types that are in play: repository level permissions (for setting up new projects on CodeShip) and access level permissions (for authenticating with an SCM instead of username/password).
 
 To configure CodeShip with your Bitbucket or Gitlab repository correctly, the account that connects a repository needs to have the necessary permissions to setup a webhook, add deploy keys, update commit statuses, as well as clone the code in your repositories. For the initial configuration of CodeShip, we expect the user's account to have `admin` permissions (or `master` or `owner` depending on your source control system) to allow us to properly configure your SCM.
 In case a user will not need to setup new projects on CodeShip, we mainly need to
@@ -51,7 +51,7 @@ The next section explains which specific permissions we ask for, depending on yo
 
 ### What permissions are needed on my source control?
 
-As mentioned above, CodeShip requires both repository and access level permissions. Depending on the source control service being used, these are called something different:
+As mentioned above, Codeship requires both repository and access level permissions. Depending on the source control service being used, these are called something different:
 
 #### Github
 
@@ -74,7 +74,7 @@ As mentioned above, CodeShip requires both repository and access level permissio
 
 ### What permissions can I assign my team members?
 
-You can learn more about organization management on CodeShip [by clicking here]({% link _general/account/organizations.md %}), but in general there are four basic security levels for teams on CodeShip:
+You can learn more about organization management on Codeship [by clicking here]({% link _general/account/organizations.md %}), but in general there are four basic security levels for teams on Codeship:
 
 - **Owners** have control over all aspects of an organization. From changing the subscription to managing organization projects and teams.
 
@@ -88,12 +88,12 @@ You can learn more about organization management on CodeShip [by clicking here](
 
 **Note this only applies to Github.**
 
-If the repositories for a GitHub organization don't show up on CodeShip, please head over to the settings for the [CodeShip application on GitHub](https://github.com/settings/connections/applications/457423eb34859f8eb490) and in the section labeled **Organization access** either
+If the repositories for a GitHub organization don't show up on Codeship, please head over to the settings for the [Codeship application on GitHub](https://github.com/settings/connections/applications/457423eb34859f8eb490) and in the section labeled **Organization access** either
 
 * _Request access_ if you are not an administrator for the organization. (Your request will then have to be approved by an admin.)
 * _Grant access_ if you are an administrator.
 
-Once this is done and access has been granted, the organizations repositories will show up in the repository selector on CodeShip again.
+Once this is done and access has been granted, the organizations repositories will show up in the repository selector on Codeship again.
 
 See GitHub's help article on [3rd party restrictions](https://help.github.com/articles/about-third-party-application-restrictions/) for more background information about this feature.
 
@@ -103,19 +103,19 @@ If you attempt to connect a repository to a new project, and you don't have `adm
 
 1. The simplest option is to get `admin` permissions to the repo, which can be given to the team you're in or specifically to your user
 1. (Non Github): The second option is to have someone else, who have `admin` permissions, setup the project for you. The flow would look like this:
-    1. User with `admin` permission creates the project and connects the repo (CodeShip will create a webhook and register an SSH key)
+    1. User with `admin` permission creates the project and connects the repo (Codeship will create a webhook and register an SSH key)
     1. Same user changes the project settings (Project settings > General > Account used for authentication) and assigns the project to you or another user with limited permissions
-    1. The project can now be used by CodeShip, even without having admin permissions to the repo
+    1. The project can now be used by Codeship, even without having admin permissions to the repo
 1. (Github Only): you can get a user with sufficient rights to install the CodeShip Github App and provide it access to the repositories you need, and then proceed to setup the new projects. During the setup the app will retrieve the repositories available to it and you can select the one you want for your new project
 
 ## Security
 
-You can learn more about security on CodeShip [by clicking here]({% link _general/about/security.md %}).
+You can learn more about security on Codeship [by clicking here]({% link _general/about/security.md %}).
 
-### Can CodeShip staff see my code or builds?
+### Can Codeship staff see my code or builds?
 
-There are two CodeShip services, and staff have different levels of access for each:
+There are two Codeship services, and staff have different levels of access for each:
 
-- On [CodeShip Basic](https://codeship.com/features/basic), with your permission, our support team can open an SSH debug session into your build machine, which allows us to see your source code.
+- On [Codeship Basic](https://codeship.com/features/basic), with your permission, our support team can open an SSH debug session into your build machine, which allows us to see your source code.
 
-- On [CodeShip Pro](https://codeship.com/features/pro), we have no direct access to your source control, but our support team can see your builds and build logs, as well as account information.
+- On [Codeship Pro](https://codeship.com/features/pro), we have no direct access to your source control, but our support team can see your builds and build logs, as well as account information.

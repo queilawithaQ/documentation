@@ -21,9 +21,9 @@ redirect_from:
 ---
 
 {% csnote info %}
-This article is about deploying to AWS using CodeShip Pro.
-If you are unfamiliar with CodeShip Pro, we recommend our [getting started guide]({{ site.baseurl }}{% link _pro/quickstart/getting-started.md %}) or [the features overview page](https://codeship.com/features/pro).
-You can find a [sample repo for deploying to AWS with CodeShip Pro](https://github.com/codeship-library/aws-utilities) on GitHub.
+This article is about deploying to AWS using Codeship Pro.
+If you are unfamiliar with Codeship Pro, we recommend our [getting started guide]({{ site.baseurl }}{% link _pro/quickstart/getting-started.md %}) or [the features overview page](https://codeship.com/features/pro).
+You can find a [sample repo for deploying to AWS with Codeship Pro](https://github.com/codeship-library/aws-utilities) on GitHub.
 {% endcsnote %}
 
 * include a table of contents
@@ -31,7 +31,7 @@ You can find a [sample repo for deploying to AWS with CodeShip Pro](https://gith
 
 To make it easy for you to deploy your application to AWS we've built a container that has the AWSCLI installed. We will set up a simple example showing you how to configure any deployment to AWS.
 
-## CodeShip AWS deployment container
+## Codeship AWS deployment container
 
 The AWS deployment container lets you plugin your deployment tools without the need to include that in the testing or even production container. That keeps your containers small and focused on the specific task they need to accomplish in the build. By using the AWS deployment container you get the tools you need to deploy to any AWS service and still have the flexibility to adapt it to your needs.
 
@@ -60,7 +60,7 @@ It is advised that you review AWS' [IAM documentation](https://docs.aws.amazon.c
 
 ## Service Definition
 
-Before reading through the documentation please take a look at the [Services]({% link _pro/builds-and-configuration/services.md %}) and [Steps]({% link _pro/builds-and-configuration/steps.md %}) documentation page so you have a good understanding how services and steps on CodeShip work.
+Before reading through the documentation please take a look at the [Services]({% link _pro/builds-and-configuration/services.md %}) and [Steps]({% link _pro/builds-and-configuration/steps.md %}) documentation page so you have a good understanding how services and steps on Codeship work.
 
 The `codeship-services.yml` file uses the `codeship/aws-deployment` container and sets the encrypted environment file. Additionally it sets the `AWS_DEFAULT_REGION` through the environment config setting. We set up a volume that shares `./` (the repository folder) to `/deploy`. This gives us access to all files in the repository in `/deploy/...` for the following steps.
 

@@ -1,5 +1,5 @@
 ---
-title: Integrating CodeShip With Gemnasium
+title: Integrating Codeship With Gemnasium
 shortTitle: Using Gemnasium
 tags:
   - security
@@ -23,7 +23,7 @@ By using Gemnasium you can be sure that your Ruby gems are up to date and secure
 
 [The Gemnasium documentation](https://github.com/gemnasium/toolbelt) does a great job of providing more information, in addition to the setup instructions below.
 
-## CodeShip Pro
+## Codeship Pro
 
 ### Setting Your Gemnasium Token
 
@@ -67,7 +67,7 @@ There is a larger list of possible uses for Gemnasium, and commands you can run,
 
 **Note** that the above commands will require that the `GEMNASIUM_TOKEN` environment variable be set, as instructions earlier. They will also require passing the `GEMNASIUM-PROJECT-ID` either directly or through an environment variable.
 
-## CodeShip Basic
+## Codeship Basic
 
 ### Setting Your Gemnasium Token
 

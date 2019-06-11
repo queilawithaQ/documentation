@@ -1,5 +1,5 @@
 ---
-title: Integrating CodeShip With Pulumi
+title: Integrating Codeship With Pulumi
 shortTitle: Using Pulumi In CI/CD
 tags:
   - integrations
@@ -19,9 +19,9 @@ menus:
 ## About Pulumi
 
 {% csnote info %}
-Pulumi only integrates with [CodeShip Pro](https://codeship.com/features/pro) and will not work with [CodeShip Basic](https://codeship.com/features/basic).
+Pulumi only integrates with [Codeship Pro](https://codeship.com/features/pro) and will not work with [Codeship Basic](https://codeship.com/features/basic).
 
-If you do not have a familiarity with CodeShip Pro, we recommend watching this [introductory webinar](https://resources.codeship.com/webinars/env-parity-docker-codeship-jet) before proceeding with your Pulumi setup.
+If you do not have a familiarity with Codeship Pro, we recommend watching this [introductory webinar](https://resources.codeship.com/webinars/env-parity-docker-codeship-jet) before proceeding with your Pulumi setup.
 {% endcsnote %}
 
 [Pulumi](https://pulumi.io/) is a platform for defining cloud applications and infrastructure, making configuration and deployment fast and easy.

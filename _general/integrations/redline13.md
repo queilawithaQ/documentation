@@ -1,5 +1,5 @@
 ---
-title: Using RedLine13 and CodeShip For Load testing
+title: Using RedLine13 and Codeship For Load testing
 shortTitle: RedLine13 Load Testing
 menus:
   general/integrations:
@@ -25,13 +25,13 @@ categories:
 
 [RedLine13](https://www.redline13.com) is a load testing and reporting tool that can be used with continuous integration and delivery services to determine performance and throughput of your web applications and mobile APIs.
 
-The [RedLine13 documentation](https://www.redline13.com/blog/kb/) provides a starting point for running load tests, and the instructions below have more information on integrating with [CodeShip](https://codeship.com) to [run load tests during CI](#starting-load-tests).
+The [RedLine13 documentation](https://www.redline13.com/blog/kb/) provides a starting point for running load tests, and the instructions below have more information on integrating with [Codeship](https://codeship.com) to [run load tests during CI](#starting-load-tests).
 
-## CodeShip Pro
+## Codeship Pro
 
 ### Setting your API token
 
-To run your RedLine13 load tests on CodeShip, you will need to add your API Key to your [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) that you encrypt and include in your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}):
+To run your RedLine13 load tests on Codeship, you will need to add your API Key to your [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) that you encrypt and include in your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}):
 
 - `RedLine13_API_KEY`
 
@@ -94,11 +94,11 @@ To customize the API call via Curl you can read the [RedLine13 API documentation
 
 When your build runs, your test will be started and RedLine13 will be tracking the results.  You can always see real time results on the [RedLine13 Dashboard](https://www.redline13.com/Service).
 
-## CodeShip Basic
+## Codeship Basic
 
 ### Setting your API token
 
-To run your RedLine13 load tests on CodeShip Basic, you will need to add your API Key to your CodeShip project's [environment variables]({{ site.baseurl }}{% link _basic/builds-and-configuration/set-environment-variables.md %})
+To run your RedLine13 load tests on Codeship Basic, you will need to add your API Key to your Codeship project's [environment variables]({{ site.baseurl }}{% link _basic/builds-and-configuration/set-environment-variables.md %})
 
 - `RedLine13_API_KEY`
 
@@ -106,7 +106,7 @@ You can get the API Key from your RedLine13 account after [registering for a Red
 
 ### Other Settings
 
-The test runner provides for multiple configuration items which can be managed via environment variables. These variables can also be configured in your CodeShip project's environment variables.
+The test runner provides for multiple configuration items which can be managed via environment variables. These variables can also be configured in your Codeship project's environment variables.
 
 - `TIMEOUT` # of seconds before test consider failure, default 900 seconds
 - `SUCCESS_RATE` % of test cases that must pass for success, default 0 - always pass

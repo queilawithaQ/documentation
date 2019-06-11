@@ -1,5 +1,5 @@
 ---
-title: Using Beanstalkd In CI/CD with CodeShip Basic
+title: Using Beanstalkd In CI/CD with Codeship Basic
 shortTitle: Beanstalkd
 tags:
   - services

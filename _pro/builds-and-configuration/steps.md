@@ -28,9 +28,9 @@ redirect_from:
 {:toc}
 
 <div class="info-block">
-This article is about the `codeship-steps.yml` file that powers CodeShip Pro.
+This article is about the `codeship-steps.yml` file that powers Codeship Pro.
 
- If you are unfamiliar with CodeShip Pro, we recommend our [getting started guide]({{ site.baseurl }}{% link _pro/quickstart/getting-started.md %}) or [the features overview page](https://codeship.com/features/pro).
+ If you are unfamiliar with Codeship Pro, we recommend our [getting started guide]({{ site.baseurl }}{% link _pro/quickstart/getting-started.md %}) or [the features overview page](https://codeship.com/features/pro).
 
  Also note that the `codeship-steps.yml` file depends on the `codeship-services.yml` file, which you can [learn more about here]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
 </div>
@@ -45,7 +45,7 @@ This article is about the `codeship-steps.yml` file that powers CodeShip Pro.
 _Jet_ will look for a steps file in this order. If you are running _Jet_ locally, you can override the filename with the `--steps-path` flag. Both YAML and JSON formats are accepted.
 
 ## Prerequisites
-Your Steps file will require that you have [installed Jet locally]({{ site.baseurl }}{% link _pro/jet-cli/usage-overview.md %}) or [set up your project on CodeShip.]({{ site.baseurl }}{% link _pro/quickstart/codeship-configuration.md %}). It will also require that you have configured your [codeship-services.yml file]({% link _pro/builds-and-configuration/services.md %}).
+Your Steps file will require that you have [installed Jet locally]({{ site.baseurl }}{% link _pro/jet-cli/usage-overview.md %}) or [set up your project on Codeship.]({{ site.baseurl }}{% link _pro/quickstart/codeship-configuration.md %}). It will also require that you have configured your [codeship-services.yml file]({% link _pro/builds-and-configuration/services.md %}).
 
 ## Using codeship-steps.yml
 
@@ -64,20 +64,20 @@ Steps are specified in a list, such as:
 Steps are executed in the order they are specified. All steps share these directives:
 
 * `name` specifies the name of the step, outputted in the logs. This must be unique for all steps. **This field is optional** and will be auto-generated if not specified.
-* `tag` this field will cause the step to be executed only when the build tag matches the `tag` value. During a CodeShip build, the build tag is either the branch name or tag associated with the commit. If you are using this feature locally, you can pass in `jet steps --tag TAG_NAME` to create a build tag. This field is optional.
-* `exclude` this field prevents the step from being executed on branches or tags that match the `exclude` tag value. During a CodeShip build, the build tag is either the branch name or tag associated with the commit. If you are using this feature locally, you can pass in `jet steps --tag TAG_NAME` to create a build tag. This field is the functional opposite of the `tag` field above. This field is optional. It takes precedence over the `tag` field.
+* `tag` this field will cause the step to be executed only when the build tag matches the `tag` value. During a Codeship build, the build tag is either the branch name or tag associated with the commit. If you are using this feature locally, you can pass in `jet steps --tag TAG_NAME` to create a build tag. This field is optional.
+* `exclude` this field prevents the step from being executed on branches or tags that match the `exclude` tag value. During a Codeship build, the build tag is either the branch name or tag associated with the commit. If you are using this feature locally, you can pass in `jet steps --tag TAG_NAME` to create a build tag. This field is the functional opposite of the `tag` field above. This field is optional. It takes precedence over the `tag` field.
 * `encrypted_dockercfg_path` the path to your relevant dockercfg file, encrypted using `jet encrypt`. This is required for any steps using private base images or push steps. The dockercfg **must** contain an account for the registry being hit (e.g. _quay.io_ or _index.docker.io_)  with access to the repository being pulled.
 
 ## Limiting steps to specific branches or tags
 
-As already mentioned you can specify a `tag` or `exclude`  attribute for each step. CodeShip Pro supports two types of values for these attributes:
+As already mentioned you can specify a `tag` or `exclude`  attribute for each step. Codeship Pro supports two types of values for these attributes:
 
 * A simple string will match the complete branch or tag name and allows you to limit a command to a single matching branch or tag. (This is the default mode if the value is a simple string.)
 
     * `tag: gh-pages` would limit the step to branches or tags matching `gh-pages`.
     * `exclude: gh-pages` would run the step on every branch or tag *except* `gh-pages`.
 
-* A regular expression for more advanced configurations. Please note, that you need to specify line matchers `^` or `$` to trigger regular expression matching for tags.  __Note__ CodeShip Pro uses the Golang regex library, so negative lookahead and conditional regexes are not supported.
+* A regular expression for more advanced configurations. Please note, that you need to specify line matchers `^` or `$` to trigger regular expression matching for tags.  __Note__ Codeship Pro uses the Golang regex library, so negative lookahead and conditional regexes are not supported.
 
     * `tag: ^(master|staging)` would run a command on `master` or `staging`, or any branch or tag beginning with `master` or `staging`, like `master-rebase`.
     * `exclude: ^(master|staging)` would skip the step on `master` or `staging`, or any branch or tag beginning with `master` or `staging`, like `master-rebase`.
@@ -212,8 +212,8 @@ Push steps allow a generated container to be pushed to a remote docker registry.
 * `name` the name of this push step.
 * `image_name` the name of the generated image as it exists in your service.yml/json file, in the format `[registry/][owner/][name]`.
 * `image_tag` the tag the generated image should be pushed to. This can be either a hardcoded string (like `latest` ) or a golang [`Template` object](https://golang.org/pkg/text/template/) referencing any of the following variables. The resulting template will be stripped of any invalid characters. As an example, take the following configuration `{% raw %}"{{.ServiceName}}.{{.Branch}}"{% endraw %}` to get a tagged image like `sandbox-app.v0.2.6`.
-    * `ProjectID` (the CodeShip defined project ID)
-    * `BuildID` (the CodeShip defined build ID)
+    * `ProjectID` (the Codeship defined project ID)
+    * `BuildID` (the Codeship defined build ID)
     * `RepoName` (the name of the repository according to the SCM)
     * `Branch` (the name of the current branch)
     * `CommitID` (the commit hash or ID)
@@ -280,8 +280,8 @@ There are several important things to note when using manual steps:
 
 For each step, the running container is provided with a set of environment variables from the CI process. These values can help your containers to make decisions based on your build pipeline.
 
-* `CI_PROJECT_ID` (the CodeShip defined project ID)
-* `CI_BUILD_ID` (the CodeShip defined build ID)
+* `CI_PROJECT_ID` (the Codeship defined project ID)
+* `CI_BUILD_ID` (the Codeship defined build ID)
 * `CI_REPO_NAME` (the name of the repository according to the SCM)
 * `CI_BRANCH` (the name of the current branch)
 * `CI_COMMIT_ID` (the commit hash or ID)
@@ -314,7 +314,7 @@ It is important to note that steps that run on failure inherit the service of th
 
 ## Step Timeouts
 
-On **CodeShip Pro**, a build can run for up to 5 hours, although builds will time out if there is no log activity for 15 minutes.
+On **Codeship Pro**, a build can run for up to 5 hours, although builds will time out if there is no log activity for 15 minutes.
 
 ## Validating Your Files
 

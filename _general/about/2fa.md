@@ -1,7 +1,7 @@
 ---
 title: Two-Factor Authentication
 shortTitle: Two-Factor Authentication
-description: Enabling and using Two-Factor Authentication (2FA) on CodeShip
+description: Enabling and using Two-Factor Authentication (2FA) on Codeship
 menus:
   general/about:
     title: Two-Factor Authentication
@@ -14,7 +14,7 @@ tags:
   - two factor
   - authentication
 categories:
-  - About CodeShip
+  - About Codeship
   - Account
   - Security
 ---
@@ -31,7 +31,7 @@ Two-Factor Authentication (more commonly referred to as 2FA) is a way to secure 
 There are a couple of different approaches to 2FA, some are purely app-based while others require you to have a special piece of hardware that can generate unique codes.
 In all cases you will be asked for a unique code as part of logging in the online service, and the unique code is delivered to/by your personal device.
 
-For our implementation on CodeShip, we have chosen to rely on mobile apps that can generate the unique codes. These apps will continuously generate one-time use codes that are only valid for a short period of time. The apps rely on a shared unique code between CodeShip and the specific app, to ensure that only the app on your personal device is able to generate the correct codes; it's impossible for someone to generate the same codes, at the same time, on their own device.
+For our implementation on Codeship, we have chosen to rely on mobile apps that can generate the unique codes. These apps will continuously generate one-time use codes that are only valid for a short period of time. The apps rely on a shared unique code between Codeship and the specific app, to ensure that only the app on your personal device is able to generate the correct codes; it's impossible for someone to generate the same codes, at the same time, on their own device.
 
 ### Authenticator Apps
 
@@ -40,15 +40,15 @@ There are a lot of other authenticator apps available, so check your app store i
 
 ## Enabling 2FA
 
-Once you have decided on an authenticator app, and have installed it on your device, you can go to your Personal Settings in CodeShip and enable 2FA.
+Once you have decided on an authenticator app, and have installed it on your device, you can go to your Personal Settings in Codeship and enable 2FA.
 
 ![button to enable 2fa]({{ site.baseurl }}/images/general/2fa_enable.png)
 
-When you enable 2FA we will display a unique QR code that you will need to scan with your authenticator app. This is how an (automatically generated) shared secret is agreed upon between CodeShip and your app.
+When you enable 2FA we will display a unique QR code that you will need to scan with your authenticator app. This is how an (automatically generated) shared secret is agreed upon between Codeship and your app.
 
 ![2fa qr code]({{ site.baseurl }}/images/general/2fa_qrcode.png)
 
-Before you can finalize the setup, you will need to provide a valid code from your authenticator app. Your app will start to generate codes once you have scanned the QR code (and potentially have finished it's setup - that depends a bit on the app). The setup on CodeShip will not be complete until you've entered a code, to make sure that everything works as it's supposed to.
+Before you can finalize the setup, you will need to provide a valid code from your authenticator app. Your app will start to generate codes once you have scanned the QR code (and potentially have finished it's setup - that depends a bit on the app). The setup on Codeship will not be complete until you've entered a code, to make sure that everything works as it's supposed to.
 
 If something goes wrong in setting up the app, simply cancel out of enabling 2FA and try again. As long as the we haven't been able to validate a code from your authenticator app, your setup will not change.
 
@@ -85,6 +85,6 @@ To reset your setup, simply go to your account and click the Reset button. This 
 
 If you need to disable 2FA, simply access your account, navigate to your Personal Settings, and disable 2FA.
 
-## 2FA and the CodeShip API
+## 2FA and the Codeship API
 
 As the API is built with system-to-system interaction in mind, it's not possible to access the API with a user that has 2FA enabled. We're looking into personal access tokens and similar options, but do [get in touch](https://helpdesk.codeship.com/hc/en-us/requests/new) if this is a concern for you, as we would like to learn more about which options might work best in which scenarios.

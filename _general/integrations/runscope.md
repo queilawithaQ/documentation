@@ -1,5 +1,5 @@
 ---
-title: Using Runscope and CodeShip For API testing
+title: Using Runscope and Codeship For API testing
 shortTitle: Runscope API Testing And Monitoring
 menus:
   general/integrations:
@@ -25,17 +25,17 @@ categories:
 
 ## About Runscope
 
-[Runscope](https://runscope.com) is an API testing and monitoring tool that can be used with continuous integration and delivery services like [CodeShip](https://codeship.com) to test and validate your web applications.
+[Runscope](https://runscope.com) is an API testing and monitoring tool that can be used with continuous integration and delivery services like [Codeship](https://codeship.com) to test and validate your web applications.
 
 By using Runscope you can ship more reliable code for your teams and your customers.
 
-The [Runscope documentation](https://www.runscope.com/docs/api-testing/integrations) provides a great guide to getting started, and the instructions below have more information on integrating with CodeShip.
+The [Runscope documentation](https://www.runscope.com/docs/api-testing/integrations) provides a great guide to getting started, and the instructions below have more information on integrating with Codeship.
 
-## CodeShip Pro
+## Codeship Pro
 
 ### Setting Your Access Token
 
-To run your Runscope API tests on CodeShip, you will need to add your Runscope Access Token to your [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) that you encrypt and include in your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}):
+To run your Runscope API tests on Codeship, you will need to add your Runscope Access Token to your [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) that you encrypt and include in your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}):
 
 You can get your access token from your [Runscope settings](https://www.runscope.com/docs/api/authentication).
 
@@ -78,11 +78,11 @@ python app.py https://api.runscope.com/radar/your_test_trigger_id/trigger?runsco
 
 **Note** that you will need to change the URL to reflect the actual Trigger URL you have configured in Runscope.
 
-## CodeShip Basic
+## Codeship Basic
 
 ### Setting Your Access Token
 
-To run your Runscope API tests on CodeShip, you will need to add your Runscope Access Token to your CodeShip project's [environment variables]({{ site.baseurl }}{% link _basic/builds-and-configuration/set-environment-variables.md %}):
+To run your Runscope API tests on Codeship, you will need to add your Runscope Access Token to your Codeship project's [environment variables]({{ site.baseurl }}{% link _basic/builds-and-configuration/set-environment-variables.md %}):
 
 You can get your access token from your [Runscope settings](https://www.runscope.com/docs/api/authentication).
 

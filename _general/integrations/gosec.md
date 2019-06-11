@@ -1,7 +1,7 @@
 ---
-title: Integrating CodeShip With Gosec for Go Security Analysis
+title: Integrating Codeship With Gosec for Go Security Analysis
 shortTitle: Using Gosec For Go Security Analysis
-description: Technical documentation for the how to integrate CodeShip with Gosec to automatically run a security analysis for Go code
+description: Technical documentation for the how to integrate Codeship with Gosec to automatically run a security analysis for Go code
 tags:
   - go
   - security

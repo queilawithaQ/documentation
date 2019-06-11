@@ -1,5 +1,5 @@
 ---
-title: Using CouchDB In CI/CD with CodeShip Basic
+title: Using CouchDB In CI/CD with Codeship Basic
 shortTitle: CouchDB
 tags:
   - services

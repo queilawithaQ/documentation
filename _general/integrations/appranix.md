@@ -1,6 +1,6 @@
 ---
-title: Integrating CodeShip With Appranix
-shortTitle: Integrating CodeShip With Appranix
+title: Integrating Codeship With Appranix
+shortTitle: Integrating Codeship With Appranix
 tags:
   - integrations
   - operations
@@ -23,13 +23,13 @@ categories:
 
 By using Appranix you can reduce the amount of time it takes to run and monitor cloud operations.
 
-The [Appranix documentation](https://docs.appranix.net/) provides a great guide to getting started, and the instructions below have more information on integrating with [CodeShip Basic](https://codeship.com/features/basic) and [CodeShip Pro](https://codeship.com/features/pro).
+The [Appranix documentation](https://docs.appranix.net/) provides a great guide to getting started, and the instructions below have more information on integrating with [Codeship Basic](https://codeship.com/features/basic) and [Codeship Pro](https://codeship.com/features/pro).
 
-## CodeShip Pro
+## Codeship Pro
 
 ### Appranix.sh
 
-Integrating Appranix with CodeShip requires that you include the [appranix.sh](https://github.com/RushinthJohn/documentation/blob/master/_data/appranix.sh) script file in your project repository.
+Integrating Appranix with Codeship requires that you include the [appranix.sh](https://github.com/RushinthJohn/documentation/blob/master/_data/appranix.sh) script file in your project repository.
 
 Inside this script, you will have the following:
 
@@ -93,11 +93,11 @@ To use Appranix, you will need to call your `appranix.sh` script from your [code
 The container must have [Ruby version 2.3.3]({{ site.baseurl }}{% link _pro/languages-frameworks/ruby.md %}) or higher for the `appranix.sh` file to execute the required gem install.
 {% endcsnote %}
 
-## CodeShip Basic
+## Codeship Basic
 
 ### Appranix.sh
 
-Integrating Appranix with CodeShip requires that you include the [appranix.sh](https://github.com/RushinthJohn/documentation/blob/master/_data/appranix.sh) script file in your project repository.
+Integrating Appranix with Codeship requires that you include the [appranix.sh](https://github.com/RushinthJohn/documentation/blob/master/_data/appranix.sh) script file in your project repository.
 
 ```shell
 echo "Installing Appranix CLI"

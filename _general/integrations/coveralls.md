@@ -1,5 +1,5 @@
 ---
-title: Integrating CodeShip With Coveralls for Code Coverage Reports
+title: Integrating Codeship With Coveralls for Code Coverage Reports
 shortTitle: Using Coveralls For Code Coverage
 tags:
   - analytics
@@ -28,7 +28,7 @@ redirect_from:
 
 ## About Coveralls
 
-Coveralls is an automated code coverage service. Starting with Coveralls and CodeShip is fast and easy.
+Coveralls is an automated code coverage service. Starting with Coveralls and Codeship is fast and easy.
 
 By using Coveralls you can help enforce higher standards of code quality and transparency with your engineering team.
 
@@ -42,7 +42,7 @@ Thanks to our partnership with Coveralls we can provide a 25% Discount for 3 mon
 
 Coveralls supports a lot of other languages. Check out their fantastic [documentation](https://coveralls.io/docs/supported_continuous_integration).
 
-## CodeShip Pro
+## Codeship Pro
 
 ### Setting Your Variables
 
@@ -97,7 +97,7 @@ The last thing you'll need to be sure to do is to actually push your data out to
   command: bundle exec rake coveralls:push
 ```
 
-## CodeShip Basic
+## Codeship Basic
 
 ### Setting Your Variables
 
@@ -149,7 +149,7 @@ Coveralls::RakeTask.new
 
 ### Pushing Data
 
-To push the data to Coveralls, add the following after your [test commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}) on CodeShip:
+To push the data to Coveralls, add the following after your [test commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}) on Codeship:
 
 ```shell
 bundle exec rake coveralls:push

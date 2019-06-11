@@ -1,5 +1,5 @@
 ---
-title: Using Apache Cassandra In CD/CD With CodeShip Basic
+title: Using Apache Cassandra In CD/CD With Codeship Basic
 shortTitle: Apache Cassandra
 tags:
   - services

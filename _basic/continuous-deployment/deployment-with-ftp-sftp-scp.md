@@ -23,11 +23,11 @@ redirect_from:
 {:toc}
 
 {% csnote info %}
-This article is about deploying via SFTP with CodeShip Basic.
+This article is about deploying via SFTP with Codeship Basic.
 
-If you'd like to learn more about CodeShip Basic, we recommend the [getting started guide]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}) or [the features overview page](https://codeship.com/features/basic).
+If you'd like to learn more about Codeship Basic, we recommend the [getting started guide]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}) or [the features overview page](https://codeship.com/features/basic).
 
-You should also be aware of how [deployment pipelines]({{ site.baseurl }}{% link _basic/builds-and-configuration/deployment-pipelines.md %}) work on CodeShip Basic.
+You should also be aware of how [deployment pipelines]({{ site.baseurl }}{% link _basic/builds-and-configuration/deployment-pipelines.md %}) work on Codeship Basic.
 {% endcsnote %}
 
 After your code passed through the pipeline successfully, the last step in your CI chain is deploying your code. You're either using one of our many integrations or deploying with your own script. If you're using your own means of deployment, we recommend tools like rsync, [Capistrano (Ruby)](https://capistranorb.com/), [Rocketeer (PHP)](http://rocketeer.autopergamene.eu/), [Deployer (PHP)](https://deployer.org/), or [Fabric (Python)](https://www.fabfile.org/).
@@ -36,11 +36,11 @@ Generally, we advise on using any SSH-based tool over FTP since the latter is no
 
 Our recommendation if you do not want to use a deployment tool or one of our integrations is the following:
 
-1. Add the CodeShip public key to your `~/.ssh/authorized_keys` file, see [Authenticating via SSH Public Keys](#authenticating-via-ssh-public-keys).
+1. Add the Codeship public key to your `~/.ssh/authorized_keys` file, see [Authenticating via SSH Public Keys](#authenticating-via-ssh-public-keys).
 2. Create a deployment script, see [Run commands on a remote server via SSH](#run-commands-on-a-remote-server-via-ssh). At the very least, you will have to copy all files needed by your application to the server and start the services needed by your application.
 
 {% csnote info %}
-When CodeShip checks out your repository, we clone it to a folder called `clone` directly beneath the home directory. So when you see references to `~/clone/` folder, we talk about our local copy of your repository.
+When Codeship checks out your repository, we clone it to a folder called `clone` directly beneath the home directory. So when you see references to `~/clone/` folder, we talk about our local copy of your repository.
 {% endcsnote %}
 
 **Table of Contents**
@@ -49,21 +49,21 @@ When CodeShip checks out your repository, we clone it to a folder called `clone`
 
 ## Authenticating via SSH public keys
 
-All of the methods below can use key-based authentication. As this does not require you to provide your account password to CodeShip, we strongly advise to configure this.
+All of the methods below can use key-based authentication. As this does not require you to provide your account password to Codeship, we strongly advise to configure this.
 
-You need to add the [CodeShip public SSH key]({{ site.baseurl }}{% link _general/projects/project-ssh-key.md %}) for your project to the `~/.ssh/authorized_keys` file on your server. Below are the commands you need to prepare everything and open an editor window where you can simply paste your key and save the file. Please run those commands via an SSH session on your server.
+You need to add the [Codeship public SSH key]({{ site.baseurl }}{% link _general/projects/project-ssh-key.md %}) for your project to the `~/.ssh/authorized_keys` file on your server. Below are the commands you need to prepare everything and open an editor window where you can simply paste your key and save the file. Please run those commands via an SSH session on your server.
 
 ```shell
 mkdir -p ~/.ssh
 touch ~/.ssh/authorized_keys
 chmod -R go-rwx ~/.ssh/
 
-# add the CodeShip public SSH key to ~/.ssh/authorized_keys
+# add the Codeship public SSH key to ~/.ssh/authorized_keys
 nano ~/.ssh/authorized_keys
 ```
 In the above example, we use `nano` to paste the public SSH key, but you might use any editor like `vi` or others that are installed on your server.
 
-See [Run commands on a remote server via SSH](#run-commands-on-a-remote-server-via-ssh) on how to run commands on a remote server when building your application on CodeShip.
+See [Run commands on a remote server via SSH](#run-commands-on-a-remote-server-via-ssh) on how to run commands on a remote server when building your application on Codeship.
 
 ## Run commands on a remote server via SSH
 

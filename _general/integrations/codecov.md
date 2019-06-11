@@ -1,5 +1,5 @@
 ---
-title: Integrating CodeShip With Codecov for Code Coverage Reports
+title: Integrating Codeship With Codecov for Code Coverage Reports
 shortTitle: Using Codecov For Code Coverage
 tags:
   - analytics
@@ -23,13 +23,13 @@ menus:
 
 ## About Codecov
 
-Codecov is an automated code coverage service. Starting with Codecov and CodeShip is fast and easy.
+Codecov is an automated code coverage service. Starting with Codecov and Codeship is fast and easy.
 
 By using Codecov you can help enforce higher standards of code quality and transparency with your engineering team.
 
 [Their documentation](https://docs.codecov.io/docs/) does a great job of providing more information, in addition to the setup instructions below.
 
-## CodeShip Pro
+## Codeship Pro
 
 ### Adding Upload Token
 
@@ -49,7 +49,7 @@ After running your test commands, you can add:
 
 **Note** that this uses their universal uploader. They also provide language and framework-specific packages that you can integrate directly into your test suite if you prefer. [View their language-specific documentation and examples](https://github.com/codecov/example-ruby) for more specific information.
 
-## CodeShip Basic
+## Codeship Basic
 
 ### Adding Upload Token
 

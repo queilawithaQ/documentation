@@ -20,7 +20,7 @@ redirect_from:
 * include a table of contents
 {:toc}
 
-CodeShip makes it easy to deploy your application to Heroku using CodeShip's integrated [deployment pipelines]({{ site.baseurl }}{% link _basic/builds-and-configuration/deployment-pipelines.md %}).
+Codeship makes it easy to deploy your application to Heroku using Codeship's integrated [deployment pipelines]({{ site.baseurl }}{% link _basic/builds-and-configuration/deployment-pipelines.md %}).
 
 {% csnote info %}
 Note that this documentation refers to the new Heroku Deployment template, which uses the Heroku API instead of the older `git push` method. The main difference between the two methods is that the new method copies files from the build environment directly to Heroku, as opposed to the old method that pushed the final files to a git repo, which Heroku then deployed from.
@@ -55,7 +55,7 @@ Next step is to provide the application name and API key.
 Copy-paste the name of the Heroku application you want the pipeline to deploy to.
 
 #### Heroku API Key
-In order for you to deploy your app using CodeShip, you need to provide the Heroku API key from your Heroku account. You can access your Heroku API key [here](https://dashboard.heroku.com/account).
+In order for you to deploy your app using Codeship, you need to provide the Heroku API key from your Heroku account. You can access your Heroku API key [here](https://dashboard.heroku.com/account).
 
 ### Push A Build
 
@@ -87,7 +87,7 @@ This is what will be uploaded to Heroku. If you have your deployment files in a 
 ## Troubleshooting
 
 ### Missing SSH Key
-The public SSH key for your CodeShip project should automatically get added to Heroku when you setup the deployment. If the key is missing or incorrect you may see an error like this during the `git push` step of the deploy:
+The public SSH key for your Codeship project should automatically get added to Heroku when you setup the deployment. If the key is missing or incorrect you may see an error like this during the `git push` step of the deploy:
 
 ```
 Permission denied (publickey).

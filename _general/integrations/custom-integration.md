@@ -1,5 +1,5 @@
 ---
-title: Integrating A Tool Or Service With CodeShip
+title: Integrating A Tool Or Service With Codeship
 shortTitle: Creating Custom Service Integrations
 tags:
   - continuous integration
@@ -17,9 +17,9 @@ categories:
 
 ## Using Third-Party Tools Services
 
-If you want to use a third-party tool or service with CodeShip that we do not currently have examples or documentation set up for, it is usually fairly easy to get an integration working once you understand the necessary concepts for using external services.
+If you want to use a third-party tool or service with Codeship that we do not currently have examples or documentation set up for, it is usually fairly easy to get an integration working once you understand the necessary concepts for using external services.
 
-## CodeShip Pro
+## Codeship Pro
 
 ### Adding Keys And Tokens
 
@@ -29,7 +29,7 @@ If the service or tool you are integrating requires something like an API key or
 
 ### Tooling And Environment
 
-The CodeShip Pro build environment is defined in a project's [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}). This file uses Docker images, or Dockerfiles included in the repository, to build the containers that run all the commands in the CI/CD pipeline that are specified in the other required file - [codeship-steps.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
+The Codeship Pro build environment is defined in a project's [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}). This file uses Docker images, or Dockerfiles included in the repository, to build the containers that run all the commands in the CI/CD pipeline that are specified in the other required file - [codeship-steps.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
 
 Due to the fact that the containers built from the service definitions in the [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}) execute all of the commands in the pipeline, any packages or environment-specific setup must be defined via this file as well as the project's Dockerfiles.
 
@@ -37,7 +37,7 @@ As one example of this, if you have a CLI tool that is required to execute the t
 
 ### Executing Commands
 
-All commands on CodeShip Pro are executed via the project's [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}). If the tool or service you are integrating has commands that must be directly called, you can do that as a new step, such as:
+All commands on Codeship Pro are executed via the project's [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}). If the tool or service you are integrating has commands that must be directly called, you can do that as a new step, such as:
 
 ```yaml
 - name: your_service
@@ -55,9 +55,9 @@ You can also place these types of commands as scripts that you include in the re
 
 As covered above, all of the steps take place _inside_ the containers you define in the `service` portion of the step. So, as long as that container is capable of executing the script or command you are passing it, it will execute without issue.
 
-The step itself is complete when an exit code is surfaced to CodeShip. An exit code `0` means the step is successful, whereas any other exit code means the step has failed and the build will be stopped.
+The step itself is complete when an exit code is surfaced to Codeship. An exit code `0` means the step is successful, whereas any other exit code means the step has failed and the build will be stopped.
 
-## CodeShip Basic
+## Codeship Basic
 
 ### Adding Keys And Tokens
 
@@ -67,12 +67,12 @@ You can do this by navigating to _Project Settings_ and then clicking on the _En
 
 ### Tooling And Environment
 
-CodeShip Basic builds run on shared virtual machines with tooling preinstalled. A user can install any package that they need via the project's [setup commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}), including anything that requires `sudo` or root access.
+Codeship Basic builds run on shared virtual machines with tooling preinstalled. A user can install any package that they need via the project's [setup commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}), including anything that requires `sudo` or root access.
 
 As an example if your project has a CLI that is required to be installed for the tool's commands to execute, you will need to install the CLI (potentially using `sudo`) via the project's [setup commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}) so that you may call the commands you need in the [test commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}) section.
 
 ### Executing Commands
 
-All commands on CodeShip Basic are executed via the project's [setup and test commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}). Setup commands happen before any tests are run, while test commands happen only after setup is complete.
+All commands on Codeship Basic are executed via the project's [setup and test commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}). Setup commands happen before any tests are run, while test commands happen only after setup is complete.
 
 **Note** that you should consider that tests can run in parallel when determine if a command should be a setup command or a test command, as well as whether it should execute only in one potential test pipeline or if it should execute in multiple test pipelines.
