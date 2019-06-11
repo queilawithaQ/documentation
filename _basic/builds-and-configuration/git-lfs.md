@@ -16,7 +16,7 @@ categories:
 * include a table of contents
 {:toc}
 
-[Git LFS](https://git-lfs.github.com) is not installed by default on CodeShip Basic, but can easily be added with [this script](https://github.com/codeship/scripts/blob/master/packages/git-lfs.sh).
+[Git LFS](https://git-lfs.github.com) is not installed by default on Codeship Basic, but can easily be added with [this script](https://github.com/codeship/scripts/blob/master/packages/git-lfs.sh).
 
 For example if you want to install **2.7.0**, set that version as an [environment variable]({{ site.baseurl }}{% link _basic/builds-and-configuration/set-environment-variables.md %}) in your project or add this in the _Setup Commands_:
 

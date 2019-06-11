@@ -17,7 +17,7 @@ tags:
 ---
 
 {% csnote info %}
-You can find a sample repo for deploying to Google Cloud with CodeShip Pro on Github [here](https://github.com/codeship-library/google-cloud-deployment).
+You can find a sample repo for deploying to Google Cloud with Codeship Pro on Github [here](https://github.com/codeship-library/google-cloud-deployment).
 {% endcsnote %}
 
 * include a table of contents
@@ -75,11 +75,11 @@ jet encrypt your_env_file your_env_file.encrypted
 
  This encrypted file will be committed to your repository and used in your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
 
-### CodeShip Public Key
+### Codeship Public Key
 
-Some Google Cloud services will require that you add your [CodeShip public key]({{ site.baseurl }}{% link _general/projects/project-ssh-key.md %}) for authentication purposes.
+Some Google Cloud services will require that you add your [Codeship public key]({{ site.baseurl }}{% link _general/projects/project-ssh-key.md %}) for authentication purposes.
 
-**Note** that Google may fail authentication if you do not add the Google Cloud user the key is for to the end of the key. For example, if the Google Cloud user is `deploy@CodeShip`, you will want to add `deploy@CodeShip` to the end of the SSH key itself, otherwise Google will not load the key for the user appropriately.
+**Note** that Google may fail authentication if you do not add the Google Cloud user the key is for to the end of the key. For example, if the Google Cloud user is `deploy@Codeship`, you will want to add `deploy@Codeship` to the end of the SSH key itself, otherwise Google will not load the key for the user appropriately.
 
 ## Pushes And Deployments
 
@@ -184,7 +184,7 @@ gcloud container clusters delete $KUBERNETES_APP_NAME -q
 
 ### Permissions
 
-To use Google Cloud with CodeShip Pro, your generator service on CodeShip will need to authenticate with an account with the correct permissions.
+To use Google Cloud with Codeship Pro, your generator service on Codeship will need to authenticate with an account with the correct permissions.
 
 While the permissions may vary and do change, the minimal required permissions are:
 

@@ -1,5 +1,5 @@
 ---
-title: Speed Up Your Builds With Parallel Testing on CodeShip Basic
+title: Speed Up Your Builds With Parallel Testing on Codeship Basic
 shortTitle: Parallel Testing
 menus:
   basic/builds:
@@ -39,7 +39,7 @@ Parallel test pipelines allow you to split your test commands across multiple te
 
 ## Using Parallel Test Pipelines
 
-Once parallel test pipelines are enabled, each project can have multiple **test pipelines** that will be run in parallel. CodeShip will first run your setup commands and then any arbitrary _test commands_ you defined for this specific pipeline via the interface.
+Once parallel test pipelines are enabled, each project can have multiple **test pipelines** that will be run in parallel. Codeship will first run your setup commands and then any arbitrary _test commands_ you defined for this specific pipeline via the interface.
 
 To ease distinguishing different pipelines you can provide a name for each one.
 
@@ -79,7 +79,7 @@ If this is not desirable for your project make sure to manually move the steps t
 
 In addition to parallelizing explicitly with parallel pipelines, most popular frameworks offer modules that you can install to parallelize within the codebase itself.
 
-While we do not officially support or integrate with any of these modules, many CodeShip users find success speeding their tests up by using them. Note that in many cases these modules create additional strain on your machine resource usage, so you will want to keep an eye on this as misconfiguration can result in a resource max out that ultimately slows your builds down or causes failures.
+While we do not officially support or integrate with any of these modules, many Codeship users find success speeding their tests up by using them. Note that in many cases these modules create additional strain on your machine resource usage, so you will want to keep an eye on this as misconfiguration can result in a resource max out that ultimately slows your builds down or causes failures.
 
 **Rails**
 - [https://github.com/grosser/parallel_tests](https://github.com/grosser/parallel_tests)

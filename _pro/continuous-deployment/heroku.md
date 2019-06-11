@@ -17,9 +17,9 @@ redirect_from:
 ---
 
 {% csnote info %}
-This article is about deploying to Heroku using CodeShip Pro.
-If you are unfamiliar with CodeShip Pro, we recommend our [getting started guide]({{ site.baseurl }}{% link _pro/quickstart/getting-started.md %}) or [the features overview page](https://codeship.com/features/pro).
-You can find a sample repository for deploying to Heroku with CodeShip Pro on GitHub [here](https://github.com/codeship-library/heroku-deployment).
+This article is about deploying to Heroku using Codeship Pro.
+If you are unfamiliar with Codeship Pro, we recommend our [getting started guide]({{ site.baseurl }}{% link _pro/quickstart/getting-started.md %}) or [the features overview page](https://codeship.com/features/pro).
+You can find a sample repository for deploying to Heroku with Codeship Pro on GitHub [here](https://github.com/codeship-library/heroku-deployment).
 {% endcsnote %}
 
 * include a table of contents
@@ -35,7 +35,7 @@ This image will support both a standard Heroku deployment by using the Heroku To
 
 Before setting up the [codeship-services.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}) and [codeship-steps.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}) files, you will need to create an encrypted environment file that contains the Heroku API key.
 
-This will be done by using CodeShip Pro's [encrypted environment files feature]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}), which allows you to add your environment variables through an encrypted file placed in your repository. In this example, the file will be called `heroku-deployment.env.encrypted` and will encrypt the following data at a minimum:
+This will be done by using Codeship Pro's [encrypted environment files feature]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}), which allows you to add your environment variables through an encrypted file placed in your repository. In this example, the file will be called `heroku-deployment.env.encrypted` and will encrypt the following data at a minimum:
 
 ```
 HEROKU_API_KEY=your_api_key_here
@@ -47,7 +47,7 @@ You can get the Heroku API key from your [Heroku Dashboard](https://dashboard.he
 
 In the [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}), you will add a new service definition in addition to your primary application services. This definition will be for an image that will create the deployment container, which is the container all Heroku authentication and deployment commands will execute on.
 
-Note that CodeShip maintains an image for this purpose. All you need to do is include it and provide your API key through the encrypted file discussed above, as well as set a [host volume]({{ site.baseurl }}{% link _pro/builds-and-configuration/docker-volumes.md %}) so that you can share data with your primary containers.
+Note that Codeship maintains an image for this purpose. All you need to do is include it and provide your API key through the encrypted file discussed above, as well as set a [host volume]({{ site.baseurl }}{% link _pro/builds-and-configuration/docker-volumes.md %}) so that you can share data with your primary containers.
 
 ```yaml
 heroku-deployment:
@@ -81,7 +81,7 @@ Also note above that the deployment container has the Heroku Toolbelt installed 
 
 If you are using [Heroku's Docker support](https://devcenter.heroku.com/articles/container-registry-and-runtime), you can trigger a deployment simply by doing an [image push]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}#push-steps) to the Heroku registry.
 
-On CodeShip Pro, a push step happens in your [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}) and requires that we generate an authentication token to authenticate with the Heroku registry. CodeShip maintains an image that you will use to generate your authentication token, simply add it to your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}) and provide your Heroku API key via the encrypted environment variables file discussed above.
+On Codeship Pro, a push step happens in your [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}) and requires that we generate an authentication token to authenticate with the Heroku registry. Codeship maintains an image that you will use to generate your authentication token, simply add it to your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}) and provide your Heroku API key via the encrypted environment variables file discussed above.
 
 ```yaml
 app:

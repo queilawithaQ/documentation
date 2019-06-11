@@ -1,5 +1,5 @@
 ---
-title: Integrating CodeShip With Anchore For Container Image Scanning
+title: Integrating Codeship With Anchore For Container Image Scanning
 shortTitle: Using Anchore For Container Image Scanning
 tags:
   - security
@@ -25,13 +25,13 @@ By using Anchore you can be sure that your container images are secure and compl
 
 The [Anchore documentation](https://anchore.freshdesk.com/support/home) does a great job of providing more information, in addition to the setup instructions below.
 
-## CodeShip Pro
+## Codeship Pro
 
 ### Setting up Anchore Engine service
 
 [Install Anchore Engine](https://anchore.freshdesk.com/support/solutions/articles/36000020728-overview)
 
-A running Anchore Engine is required, this does not need to be run within the CodeShip infrastructure as long as the HTTP(s) endpoint of the Anchore Engine is accessible.
+A running Anchore Engine is required, this does not need to be run within the Codeship infrastructure as long as the HTTP(s) endpoint of the Anchore Engine is accessible.
 
 **Note** that this CI/CD model implies the following:
 
@@ -94,6 +94,6 @@ The job will poll the Anchore Engine every 10 seconds to check if the image has 
 
 **Note** that depending on the result of the Anchore policy evaluation and the `$ANCHORE_FAIL_ON_POLICY` environment variable, the build may or may not fail.
 
-## CodeShip Basic
+## Codeship Basic
 
 Anchore does not currently integrate with CodeShip Basic.

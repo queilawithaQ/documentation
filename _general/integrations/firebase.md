@@ -1,6 +1,6 @@
 ---
-title: Integrating CodeShip With Firebase
-shortTitle: Integrating CodeShip With Firebase
+title: Integrating Codeship With Firebase
+shortTitle: Integrating Codeship With Firebase
 tags:
   - integrations
   - db
@@ -24,13 +24,13 @@ categories:
 
 By using Firebase you can streamline a variety of data and account operations for your cloud application.
 
-The [Firebase documentation](https://firebase.google.com/docs/) provides a great guide to getting started, and the instructions below have more information on integrating with [CodeShip Basic](https://codeship.com/features/basic) and [CodeShip Pro](https://codeship.com/features/pro).
+The [Firebase documentation](https://firebase.google.com/docs/) provides a great guide to getting started, and the instructions below have more information on integrating with [Codeship Basic](https://codeship.com/features/basic) and [Codeship Pro](https://codeship.com/features/pro).
 
-## CodeShip Pro
+## Codeship Pro
 
 ### Installing Firebase
 
-To use Firebase with CodeShip Pro, you'll need to install the `firebase-tools` CLI.
+To use Firebase with Codeship Pro, you'll need to install the `firebase-tools` CLI.
 
 This CLI is packaged with NPM, so you will need a service defined in your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}) with Node and NPM installed.
 
@@ -69,11 +69,11 @@ For example:
 
 **Note** that in this example `app` would be the service defined in the [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}) with the Firebase Tools CLI installed.
 
-## CodeShip Basic
+## Codeship Basic
 
 ### Installing Firebase
 
-To use Firebase with CodeShip Basic, you'll need to install the `firebase-tools` CLI using `npm` in your project's [setup commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}).
+To use Firebase with Codeship Basic, you'll need to install the `firebase-tools` CLI using `npm` in your project's [setup commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}).
 
 **Note** that you will also need to specify what version of Node you require using `nvm`, as the default Node version is older than the minimum required for the Firebase Tools CLI.
 

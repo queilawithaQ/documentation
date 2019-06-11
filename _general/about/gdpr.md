@@ -1,7 +1,7 @@
 ---
-title: CodeShip GDPR Compliance
+title: Codeship GDPR Compliance
 shortTitle: GDPR Compliance
-description: Technical documentation outlining CodeShip's GDPR compliance
+description: Technical documentation outlining Codeship's GDPR compliance
 menus:
   general/about:
     title: GDPR Compliance
@@ -11,7 +11,7 @@ tags:
   - gdpr
   - compliance
 categories:
-  - About CodeShip
+  - About Codeship
   - Security
 ---
 
@@ -24,23 +24,23 @@ GDPR (General Data Protection Regulation) is an EU regulation that provides cons
 
 When it comes to processing, storing, etc. there are two roles that a company can have under GDPR: controller and processor (also covers sub-processors). The controller decides what personal data is captured, while the processor handles personal data on behalf of a controller. Every entity that's involved in capturing or processing the personal data needs to be compliant.
 
-In the context of GDPR, CodeShip is only a controller and not a processor. The next two sections will provide more detail on CodeShip in the context of each role.
+In the context of GDPR, Codeship is only a controller and not a processor. The next two sections will provide more detail on Codeship in the context of each role.
 
-## CodeShip Is Not A Processor
+## Codeship Is Not A Processor
 
 To be considered a processor under GDPR, we would have to store or process personal information from your users or customers, on your behalf. Since we only work with your source code, which shouldn’t contain any personal information, we do not fall into the category of processors. To help clarify this, we’ll provide more detail on how source code is handled and what to do if you use personal data in your testing.
 
 ### Your Source Code
 
-For every build that is run on CodeShip (CodeShip Basic or CodeShip Pro) we will connect to the repo and use your source code along with other artifacts as part of the build process. Once the build is complete, the build machine along with its content is destroyed and replaced with a new clean machine on the next build.
+For every build that is run on Codeship (Codeship Basic or Codeship Pro) we will connect to the repo and use your source code along with other artifacts as part of the build process. Once the build is complete, the build machine along with its content is destroyed and replaced with a new clean machine on the next build.
 
-We cache dependencies between builds, so if you include a custom package or save data in the cache folder, that will be persisted and stored on CodeShip infrastructure. Since we cannot fully control what is cached, or easily access cached data, it will be up to you to ensure that no personal data, or other sensitive information, ends up being cached.
+We cache dependencies between builds, so if you include a custom package or save data in the cache folder, that will be persisted and stored on Codeship infrastructure. Since we cannot fully control what is cached, or easily access cached data, it will be up to you to ensure that no personal data, or other sensitive information, ends up being cached.
 
 In some circumstances, as mentioned on the [Security page]({{ site.baseurl }}{% link _general/about/security.md %}), our support team is able to see the code that is checked out from your SCM, but only in a debug scenario where you've reported an issue.
 
 ### Your Customers' Data
 
-Although CodeShip runs databases, servers, and scripts on your behalf, we don't expect you to include any personal information in the data that is used or stored for you. If you use personal information for testing purposes (e.g. name, usernames, email addresses of actual people) you should ensure that this data is not persisted. As mentioned above, data written to the caching folder will be persisted, but you should also ensure logging output is free from personal information as these are also persisted.
+Although Codeship runs databases, servers, and scripts on your behalf, we don't expect you to include any personal information in the data that is used or stored for you. If you use personal information for testing purposes (e.g. name, usernames, email addresses of actual people) you should ensure that this data is not persisted. As mentioned above, data written to the caching folder will be persisted, but you should also ensure logging output is free from personal information as these are also persisted.
 
 The best approach to avoid any issues around personal information, is to always use fake names, email addresses, etc. If you use a data-dump from a production system as test data input, make sure to fully anonymize it so that nothing can be traced back to a specific individual.
 
@@ -48,7 +48,7 @@ The best approach to avoid any issues around personal information, is to always 
 
 Should you find that you have personal information in e.g. log output or cached data, [please reach out](https://helpdesk.codeship.com/hc/en-us/requests/new) so we can help you purge the data from our systems.
 
-## CodeShip As A Controller
+## Codeship As A Controller
 
 As a controller in the context of GDPR, we are very cognizant of what data we store about our users and how we can best protect your privacy.
 
@@ -61,7 +61,7 @@ We will capture and store the following data that contain personal information:
 * Commit Messages
   * these usually contain a username as well as email, and sometimes full name as well
 * User Profile
-  * when you sign up, we need to know your name, email, and git username(s) for you to make use of CodeShip
+  * when you sign up, we need to know your name, email, and git username(s) for you to make use of Codeship
 * oAuth Access
   * in case you authenticate via Github, Bitbucket, or Gitlab, we will store the oauth token that is provided to us along with information like username etc.
 
@@ -69,41 +69,41 @@ Aside from the above, we will also store the results of some of your actions, e.
 
 #### Deleting Your User
 
-In case you no longer want to use CodeShip, you can delete your user via the Personal Settings page. This will not actually remove your information (we're obligated to keep it to be able to prove that the account existed) but we will delete any oauth token that we have on file, and make sure it will no longer be possible to authenticate as that user.
+In case you no longer want to use Codeship, you can delete your user via the Personal Settings page. This will not actually remove your information (we're obligated to keep it to be able to prove that the account existed) but we will delete any oauth token that we have on file, and make sure it will no longer be possible to authenticate as that user.
 
 ### Other Data That We Use
 
-As part of running the CodeShip infrastructure, we use a few monitoring and error capturing tools (rollbar, papertrail, newrelic, etc.). Errors may occasionally contain personal information, such as a username, name, or email, but will never contain anything more sensitive than that. We also have a 30 day data retention policy in place for the tools, so anything older than that will be deleted.
+As part of running the Codeship infrastructure, we use a few monitoring and error capturing tools (rollbar, papertrail, newrelic, etc.). Errors may occasionally contain personal information, such as a username, name, or email, but will never contain anything more sensitive than that. We also have a 30 day data retention policy in place for the tools, so anything older than that will be deleted.
 
-Another service that we use, which captures personal information on some users, is Profitwell. This is a service that monitors payments and credit cards, and will proactively reach out to users whose credit card is about to expire. It also provides the ability to update payment information without being a CodeShip user, which is very convenient for Finance who pays the bills but have no need for an actual account.
+Another service that we use, which captures personal information on some users, is Profitwell. This is a service that monitors payments and credit cards, and will proactively reach out to users whose credit card is about to expire. It also provides the ability to update payment information without being a Codeship user, which is very convenient for Finance who pays the bills but have no need for an actual account.
 
 ### Optional Data Capturing
 
 When it comes to data that is not strictly necessary for us to provide you with a CI/CD service, we believe you should be in full control.
 
-We would like to be able to capture how you use CodeShip, what tech-stack you use, how much you use different parts of CodeShip etc., to learn more about how CodeShip is used and how we can improve it. But as this is not strictly needed, we will explicitly ask you for your consent before enabling any of the tools we use.
+We would like to be able to capture how you use Codeship, what tech-stack you use, how much you use different parts of Codeship etc., to learn more about how Codeship is used and how we can improve it. But as this is not strictly needed, we will explicitly ask you for your consent before enabling any of the tools we use.
 
-In the future, we would also like to be more proactive in helping you improve your own workflow, e.g. by providing you with help or updates that relate to how you’re using CodeShip, instead of alerting you about every small update that may not be relevant. We would use the same behavioral data captured to improve CodeShip, to help us help you.
+In the future, we would also like to be more proactive in helping you improve your own workflow, e.g. by providing you with help or updates that relate to how you’re using Codeship, instead of alerting you about every small update that may not be relevant. We would use the same behavioral data captured to improve Codeship, to help us help you.
 
-When allowing us to capture how you use CodeShip, we will enable the following services:
+When allowing us to capture how you use Codeship, we will enable the following services:
 
 * [Fullstory](https://fullstory.com) (for optimizing our design and tracking UI issues)
 * [Appcues](https://www.appcues.com) (for communicating workflows and in-app changes)
 * [Segment](https://segment.com) (a data hub that sends data to our data warehouse)
 
-If you do opt in, but change your mind, you can easily opt out again via your Personal Settings page. Likewise, you can easily opt in on the same page, and help us improve CodeShip.
+If you do opt in, but change your mind, you can easily opt out again via your Personal Settings page. Likewise, you can easily opt in on the same page, and help us improve Codeship.
 
 ### Exercising Your Rights
 
-Any CodeShip user can request any of the following:
+Any Codeship user can request any of the following:
 
-* **Right to Erasure**: have all personal information removed from CodeShip and any 3rd party system or service where it may exist
+* **Right to Erasure**: have all personal information removed from Codeship and any 3rd party system or service where it may exist
   * Note: this applies only to data collected as part of the optional data capture, as we're legally obligated to keep records of who has used the system etc.
-* **Right of Access**: receive a copy of the personal data captured by CodeShip as well as a list of other data profiles that may exist (e.g. from having opted in to the optional data capturing)
-* **Right of Rectification**: correct personal data that is incorrectly stored by CodeShip or other services
-* **Right to Restrict Processing**: disallow CodeShip from using any optionally captured data for profiling or other analysis (data will still be captured)
+* **Right of Access**: receive a copy of the personal data captured by Codeship as well as a list of other data profiles that may exist (e.g. from having opted in to the optional data capturing)
+* **Right of Rectification**: correct personal data that is incorrectly stored by Codeship or other services
+* **Right to Restrict Processing**: disallow Codeship from using any optionally captured data for profiling or other analysis (data will still be captured)
 * **Right to Portability**: receive a JSON version of the Right to Access document
-  * Note: as CodeShip isn't a personal service, project configuration etc. is not included here, but can be exported via the API
+  * Note: as Codeship isn't a personal service, project configuration etc. is not included here, but can be exported via the API
 * **Right to Object**: if you're not satisfied with how we capture data, respond to your requests, or otherwise comply with GDPR you can object to any outcome
 * **Right not to be subject to automated decision-making including profiling**: to avoid being included in profiling etc., do not opt in to the optional data capturing
 

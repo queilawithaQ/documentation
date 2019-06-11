@@ -1,5 +1,5 @@
 ---
-title: Integrating CodeShip With Rancher for Container Orchestration
+title: Integrating Codeship With Rancher for Container Orchestration
 shortTitle: Using Rancher For Container Orchestration
 tags:
   - integrations
@@ -19,9 +19,9 @@ menus:
 ## About Rancher
 
 {% csnote info %}
-Rancher only integrates with [CodeShip Pro](https://codeship.com/features/pro) and will not work with [CodeShip Basic](https://codeship.com/features/basic).
+Rancher only integrates with [Codeship Pro](https://codeship.com/features/pro) and will not work with [Codeship Basic](https://codeship.com/features/basic).
 
-If you do not have a familiarity with CodeShip Pro, we recommend watching this [introductory webinar](https://resources.codeship.com/webinars/env-parity-docker-codeship-jet) before proceeding with your Rancher setup.
+If you do not have a familiarity with Codeship Pro, we recommend watching this [introductory webinar](https://resources.codeship.com/webinars/env-parity-docker-codeship-jet) before proceeding with your Rancher setup.
 {% endcsnote %}
 
 Rancher is a container management platform that helps bridge the gap between container stacks and infrastructure platforms.

@@ -1,7 +1,7 @@
 ---
-title: CodeShip Pro Image List
-shortTitle: CodeShip Pro Image List
-description: Technical documentation listing all preinstalled Docker images of the CodeShip Pro build environment
+title: Codeship Pro Image List
+shortTitle: Codeship Pro Image List
+description: Technical documentation listing all preinstalled Docker images of the Codeship Pro build environment
 menus:
   pro/builds:
     title: Preinstalled Images
@@ -21,9 +21,9 @@ This page was last updated on 11/2/2018.
 * include a table of contents
 {:toc}
 
-## CodeShip Pro Preinstalled Images
+## Codeship Pro Preinstalled Images
 
-The CodeShip Pro build environment includes many common images from [Docker Hub](https://hub.docker.com) by default. In a best effort to list everything preinstalled on CodeShip Pro, we offer the following list of installed images. While the list may not be fully complete at any given moment, we try our best to keep it comprehensive and up to date.
+The Codeship Pro build environment includes many common images from [Docker Hub](https://hub.docker.com) by default. In a best effort to list everything preinstalled on Codeship Pro, we offer the following list of installed images. While the list may not be fully complete at any given moment, we try our best to keep it comprehensive and up to date.
 
 ## Full List of Preinstalled Images
 

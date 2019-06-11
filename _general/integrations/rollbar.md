@@ -1,5 +1,5 @@
 ---
-title: Using Rollbar To Track Deployments With CodeShip Pro
+title: Using Rollbar To Track Deployments With Codeship Pro
 shortTitle: Tracking Deployments With Rollbar
 menus:
   general/integrations:
@@ -26,13 +26,13 @@ redirect_from:
 
 ## About Rollbar
 
-[Rollbar](https://www.rollbar.com) lets you collect and track errors and events related to your web applications. During your continuous deployment workflow with CodeShip Pro, you can use Rollbar to log information related to your deployments.
+[Rollbar](https://www.rollbar.com) lets you collect and track errors and events related to your web applications. During your continuous deployment workflow with Codeship Pro, you can use Rollbar to log information related to your deployments.
 
 By using Rollbar you can track important logs for future analysis and alerting.
 
 [Their documentation](https://rollbar.com/docs/) does a great job of providing more information, in addition to the setup instructions below.
 
-## CodeShip Pro
+## Codeship Pro
 
 ### Setting Your Access Token
 
@@ -65,7 +65,7 @@ You will need to call this script on all deployment-related branches by specifyi
   command: deploy-rollbar.sh
 ```
 
-## CodeShip Basic
+## Codeship Basic
 
 ### Setting Your Access Token
 

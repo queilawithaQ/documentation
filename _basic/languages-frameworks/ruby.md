@@ -1,5 +1,5 @@
 ---
-title: Using Ruby In CI/CD with CodeShip Basic
+title: Using Ruby In CI/CD with Codeship Basic
 shortTitle: Ruby
 menus:
   basic/languages:
@@ -39,7 +39,7 @@ The following Ruby versions are preinstalled:
 {% include basic/ami/{{ site.data.basic.ami_id }}/ruby.md %}
 
 ### Using a .ruby-version file
-You can also use your `.ruby-version` file on CodeShip. The `.ruby-version` file lives in the project root and its content is just your Ruby version, for example: `2.6.1`. You can read the Ruby version to use from that file:
+You can also use your `.ruby-version` file on Codeship. The `.ruby-version` file lives in the project root and its content is just your Ruby version, for example: `2.6.1`. You can read the Ruby version to use from that file:
 
 ```shell
 rvm use $(cat .ruby-version) --install
@@ -67,7 +67,7 @@ bundle install
 
 ### Dependency Cache
 
-CodeShip automatically configures bundler to use the `$HOME/cache/bundler` directory, which we save between builds to optimize build performance. You can [read this article to learn more]({{ site.baseurl }}{% link _basic/builds-and-configuration/dependency-cache.md %}) about the dependency cache and how to clear it.
+Codeship automatically configures bundler to use the `$HOME/cache/bundler` directory, which we save between builds to optimize build performance. You can [read this article to learn more]({{ site.baseurl }}{% link _basic/builds-and-configuration/dependency-cache.md %}) about the dependency cache and how to clear it.
 
 ## Frameworks And Testing
 
@@ -95,7 +95,7 @@ rspec spec/spec_2
 
 In addition to parallelizing your tests explicitly [with parallel pipelines]({{ site.baseurl }}{% link _basic/builds-and-configuration/parallel-tests.md %}), there are a couple Rails gems that are popular ways to parallelize within your codebase.
 
-While we do not officially support or integrate with these modules, many CodeShip users find success speeding their tests up by using them. Note that it is possible for these gems to cause resource and build failure issues.
+While we do not officially support or integrate with these modules, many Codeship users find success speeding their tests up by using them. Note that it is possible for these gems to cause resource and build failure issues.
 
 - [https://github.com/grosser/parallel_tests](https://github.com/grosser/parallel_tests)
 - [https://github.com/ArturT/knapsack](https://github.com/ArturT/knapsack)

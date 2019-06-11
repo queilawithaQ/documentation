@@ -1,6 +1,6 @@
 ---
 title: Using the Jet CLI
-description: Technical documentation for CodeShip Pro's CLI (Jet) that allows to debug and run builds locally on the development machine
+description: Technical documentation for Codeship Pro's CLI (Jet) that allows to debug and run builds locally on the development machine
 menus:
   pro/jet:
     title: Using the Jet CLI
@@ -29,8 +29,8 @@ redirect_from:
 ---
 
 {% csnote info %}
-If you are unfamiliar with CodeShip Pro, we recommend our [getting started guide]({{ site.baseurl }}{% link _pro/quickstart/quickstart-examples.md %}) or [the features overview page](https://codeship.com/features/pro).
-Note that if you are using CodeShip Basic, you will not be able to use the local CLI.
+If you are unfamiliar with Codeship Pro, we recommend our [getting started guide]({{ site.baseurl }}{% link _pro/quickstart/quickstart-examples.md %}) or [the features overview page](https://codeship.com/features/pro).
+Note that if you are using Codeship Basic, you will not be able to use the local CLI.
 {% endcsnote %}
 
 * include a table of contents
@@ -68,9 +68,9 @@ Use "jet [command] --help" for more information about a command.
 
 Because the Jet CLI accurately reproduces your CI/CD build pipeline locally, you can use it to quickly solve difficult problems.
 
-For instance, if a test or command fails on a build in CodeShip, you can try to reproduce the error with `jet steps`. When you want to test a change, `jet steps` will let you verify the change is working prior to committing so that you don't have to wait for the full build to run remotely to get feedback.
+For instance, if a test or command fails on a build in Codeship, you can try to reproduce the error with `jet steps`. When you want to test a change, `jet steps` will let you verify the change is working prior to committing so that you don't have to wait for the full build to run remotely to get feedback.
 
-We recommend that developers using CodeShip make use of the Jet CLI to improve productivity and solve build-related issues.
+We recommend that developers using Codeship make use of the Jet CLI to improve productivity and solve build-related issues.
 
 {% csnote info %}
 The results of a `jet steps` run can differ from the corresponding CodeShip Pro build. We've [listed a number of reasons for why that may be the case]({{ site.baseurl }}{% link _pro/common-issues/jet-pro-disjoint.md %}).

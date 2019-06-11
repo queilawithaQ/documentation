@@ -45,7 +45,7 @@ Or, if you need to fetch your existing local key, you can do so by running:
 cat ~/.ssh/id_rsa.pub
 ```
 
-Once you have your local key, you will need to add it to your CodeShip *Account Settings*, which is accessible by clicking on your name in the top right of your screen. Once there, you will paste your local machine's key into the box labeled *Public SSH Key*.
+Once you have your local key, you will need to add it to your Codeship *Account Settings*, which is accessible by clicking on your name in the top right of your screen. Once there, you will paste your local machine's key into the box labeled *Public SSH Key*.
 
 ![Public Key Setup]({{ site.baseurl }}/images/basic/public-key.png)
 
@@ -69,7 +69,7 @@ There are several key ways to use SSH sessions to solve your issues:
 
 ### Useful Commands
 
-Inside the SSH session, you have access to default CodeShip commands. It provides some convenient methods to debug your project. You can view the available methods by running:
+Inside the SSH session, you have access to default Codeship commands. It provides some convenient methods to debug your project. You can view the available methods by running:
 
 ```shell
 cs help
@@ -99,7 +99,7 @@ cs clear-cache
 
 The SSH client expects to find the default private key in `~/.ssh/id_rsa`. In the case you are using a custom configuration for the identity file, you could be passed it by `-i` parameter to the SSH client or you could load it into the ssh-agent.
 
-Having said that, if you are still being prompted for a password while connecting to your SSH debug session, you likely have a mismatch with the key you added to your CodeShip account.
+Having said that, if you are still being prompted for a password while connecting to your SSH debug session, you likely have a mismatch with the key you added to your Codeship account.
 
 Try removing the key, verifying or regenerating the key locally and then re-adding it.
 

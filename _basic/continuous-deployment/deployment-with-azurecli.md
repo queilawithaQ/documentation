@@ -19,13 +19,13 @@ categories:
 
 ## Azure Deployments
 
-Deployments to [Azure](https://azure.microsoft.com/en-us) can be done using the Azure CLI directly on a CodeShip Basic build machine similar to how you might use the CLI locally.
+Deployments to [Azure](https://azure.microsoft.com/en-us) can be done using the Azure CLI directly on a Codeship Basic build machine similar to how you might use the CLI locally.
 
 You will need to install the CLI, configure your authentication with environment variables and then define the CLI commands you want to run as a [custom-script deployment pipeline]({{ site.baseurl }}{% link _basic/continuous-deployment/deployment-with-custom-scripts.md %}).
 
 ### Installing The CLI
 
-The [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/overview?view=azure-cli-latest) _does not_ come pre-installed on CodeShip Basic build machines.
+The [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/overview?view=azure-cli-latest) _does not_ come pre-installed on Codeship Basic build machines.
 
 Please add the following commands in the [Setup Commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}#configuring-your-setup-commands) section of your test settings to [install the Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-apt?view=azure-cli-latest):
 
@@ -46,7 +46,7 @@ The easiest way to keep the authentication secure is to use [environment variabl
 
 You will need to create a new [custom-script deployment pipeline]({{ site.baseurl }}{% link _basic/continuous-deployment/deployment-with-custom-scripts.md %}) to run the Azure CLI commands you need for your deployment.
 
-These commands will run every time the branch the deployment pipeline is associated with is updated. They are not CodeShip specific and will be standard Azure CLI input.
+These commands will run every time the branch the deployment pipeline is associated with is updated. They are not Codeship specific and will be standard Azure CLI input.
 
 ## Azure CLI Information
 

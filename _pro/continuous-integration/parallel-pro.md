@@ -1,5 +1,5 @@
 ---
-title: Speed Up Your Builds With Parallel Testing on CodeShip Pro
+title: Speed Up Your Builds With Parallel Testing on Codeship Pro
 shortTitle: Parallel Testing
 menus:
   pro/ci:
@@ -21,17 +21,17 @@ categories:
 * include a table of contents
 {:toc}
 
-## Parallelizing on CodeShip Pro
+## Parallelizing on Codeship Pro
 
-One of the ways CodeShip Pro makes it easy to get faster and more powerful build pipelines is with an open-ended approach to parallelization.
+One of the ways Codeship Pro makes it easy to get faster and more powerful build pipelines is with an open-ended approach to parallelization.
 
-On CodeShip Pro, you can parallelize any commands you want, and at any point in your pipeline you wish. You can also parallelize _as much_ as you want to - the only barrier is the resources on the host machine.
+On Codeship Pro, you can parallelize any commands you want, and at any point in your pipeline you wish. You can also parallelize _as much_ as you want to - the only barrier is the resources on the host machine.
 
-The [pricing](https://codeship.com/pricing/pro) for CodeShip Pro is centered around what size build machine you need, essentially the CPU and memory resources you need available. Every build and every group of containers use a unique amount of resources, but as a rule of thumb the more you have running at once, the more CPU and memory resources you'll need.
+The [pricing](https://codeship.com/pricing/pro) for Codeship Pro is centered around what size build machine you need, essentially the CPU and memory resources you need available. Every build and every group of containers use a unique amount of resources, but as a rule of thumb the more you have running at once, the more CPU and memory resources you'll need.
 
 ## Setting Up Parallel Steps
 
-To set up your parallel steps in CodeShip Pro, you will be making changes to your [codeship-services.yml]({% link _pro/builds-and-configuration/services.md %}) file.
+To set up your parallel steps in Codeship Pro, you will be making changes to your [codeship-services.yml]({% link _pro/builds-and-configuration/services.md %}) file.
 
 A parallel step group is just defined by using the `type: parallel` header and then nesting all steps you want parallelized underneath, as seen in this example:
 
@@ -65,7 +65,7 @@ To break a larger test suite into parallelized groups of test specs running simu
 
 In addition to parallelizing explicitly in your [codeship-services.yml]({% link _pro/builds-and-configuration/services.md %}), most popular frameworks offer modules that you can install to parallelize within the codebase itself.
 
-While we do not officially support or integrate with any of these modules, many CodeShip users find success speeding their tests up by using them. **Note** that in many cases these modules create additional strain on your machine resource usage, so you will want to keep an eye on this as misconfiguration can result in a resource max out that ultimately slows your builds down or causes failures.
+While we do not officially support or integrate with any of these modules, many Codeship users find success speeding their tests up by using them. **Note** that in many cases these modules create additional strain on your machine resource usage, so you will want to keep an eye on this as misconfiguration can result in a resource max out that ultimately slows your builds down or causes failures.
 
 ### Rails
 - [https://github.com/grosser/parallel_tests](https://github.com/grosser/parallel_tests)

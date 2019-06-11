@@ -19,7 +19,7 @@ redirect_from:
 
 ## Using A Custom Script
 
-A custom script deployment is useful if your deployment requires additional or custom commands that are not available with some of CodeShip's integrated deployment options.
+A custom script deployment is useful if your deployment requires additional or custom commands that are not available with some of Codeship's integrated deployment options.
 
 A custom script deployment is also useful when you need to execute another task after or prior to a deployment. For example:
 

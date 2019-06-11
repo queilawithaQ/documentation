@@ -1,5 +1,5 @@
 ---
-title: Using Rust In CI/CD with CodeShip Basic
+title: Using Rust In CI/CD with Codeship Basic
 shortTitle: Rust
 tags:
 - rust

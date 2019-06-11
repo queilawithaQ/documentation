@@ -1,7 +1,7 @@
 ---
-title: Integrating CodeShip With Code Climate for Code Coverage Reports
+title: Integrating Codeship With Code Climate for Code Coverage Reports
 shortTitle: Using Code Climate For Code Coverage
-description: Technical documentation for the how to integrate CodeShip with Code Climate to automatically check your code coverage with every build
+description: Technical documentation for the how to integrate Codeship with Code Climate to automatically check your code coverage with every build
 tags:
   - analytics
   - code-coverage
@@ -34,13 +34,13 @@ The Code Climate test reporter takes a supported test coverage report, transform
 
 ## About Code Climate
 
-Code Climate is an automated code coverage service. Starting with Code Climate and CodeShip is fast and easy.
+Code Climate is an automated code coverage service. Starting with Code Climate and Codeship is fast and easy.
 
 By using Code Climate you can help enforce higher standards of code quality and transparency with your engineering team.
 
 [Their documentation](https://docs.codeclimate.com/docs/configuring-test-coverage) does a great job of providing more information, in addition to the setup instructions below.
 
-## CodeShip Pro
+## Codeship Pro
 
 ### Adding Reporter ID
 
@@ -121,7 +121,7 @@ cc-test-reporter sum-coverage --output - --parts $PARTS coverage/codeclimate.*.j
 
 Note that you will need to manually set `$PARTS` to reflect the number of parallel threads.
 
-## CodeShip Basic
+## Codeship Basic
 
 ### Adding Reporter ID
 

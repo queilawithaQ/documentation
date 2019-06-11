@@ -20,7 +20,7 @@ categories:
 
 ## How To Delete Your User Account
 
-To completely delete your CodeShip user account, navigate to _Personal Settings_ in the upper right corner. At the bottom of that page is a button to delete your account. This will completely remove your access to CodeShip and remove your user and user data. **This action cannot be undone.**
+To completely delete your Codeship user account, navigate to _Personal Settings_ in the upper right corner. At the bottom of that page is a button to delete your account. This will completely remove your access to Codeship and remove your user and user data. **This action cannot be undone.**
 
 If you are interested in cancelling your subscription or deleting your organization account checkout the corresponding sections on the [organization account article]({{ site.baseurl }}{% link _general/account/organizations.md %}) here:
 * [Cancel Your Billing Subscription]({{ site.baseurl }}{% link _general/account/organizations.md %}#cancel-your-billing-subscription)

@@ -28,7 +28,7 @@ This deployment method does not create the required configuration on AWS CodeDep
 
 ## IAM Policies
 
-It is generally a good idea to create a separate [IAM user](https://docs.aws.amazon.com/general/latest/gr/root-vs-iam.html) for CodeShip when deploying to AWS. This allows you to explicitly control which resources CodeShip can access during your builds. Please take note of the **Access Key ID** and **Secret Access Key** created during the process, as you'll need this when configuring the deployment.
+It is generally a good idea to create a separate [IAM user](https://docs.aws.amazon.com/general/latest/gr/root-vs-iam.html) for Codeship when deploying to AWS. This allows you to explicitly control which resources Codeship can access during your builds. Please take note of the **Access Key ID** and **Secret Access Key** created during the process, as you'll need this when configuring the deployment.
 
 It is advised that you review AWS' [IAM documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction_access-management.html) to find the correct policies for your account.
 
@@ -115,4 +115,4 @@ If you have specific _Deployment Configs_ you can provide one via clicking on _m
 + [AWS CodeDeploy](https://aws.amazon.com/codedeploy/)
 + [AWS CodeDeploy Documentation](https://docs.aws.amazon.com/codedeploy/latest/userguide/welcome.html)
 + AWS Blog: [New AWS Tools for Code Management and Deployment](https://aws.amazon.com/blogs/aws/code-management-and-deployment/)
-+ CodeShip Blog: [The AWS CodeDeploy Integration on CodeShip](https://blog.codeship.com/aws-codedeploy-codeship/)
++ Codeship Blog: [The AWS CodeDeploy Integration on Codeship](https://blog.codeship.com/aws-codedeploy-codeship/)

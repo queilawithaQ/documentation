@@ -1,5 +1,5 @@
 ---
-title: Getting Started With CodeShip Pro Overview And Resources
+title: Getting Started With Codeship Pro Overview And Resources
 menus:
   pro/quickstart:
     title: Getting Started
@@ -26,11 +26,11 @@ redirect_from:
 * include a table of contents
 {:toc}
 
-If you're looking to get started with CodeShip Pro, we have some great resources that make for different entry points depending on your needs.
+If you're looking to get started with Codeship Pro, we have some great resources that make for different entry points depending on your needs.
 
 ## Comprehensive Introduction Guide
 
-[Read our five-part Getting Started guide]({% link _pro/quickstart/getting-started.md %}) if you'd like to spend a couple hours following along with a guide that walks you through the basics of working with CodeShip Pro, writing your configuration files and explaining the system overall.
+[Read our five-part Getting Started guide]({% link _pro/quickstart/getting-started.md %}) if you'd like to spend a couple hours following along with a guide that walks you through the basics of working with Codeship Pro, writing your configuration files and explaining the system overall.
 
 ## Quickstart Example Repos
 
@@ -53,12 +53,12 @@ If you're looking for a full, working proof of concept application ready to test
 
 ## Webinars
 
-We've got some great webinars that you can watch to learn everything from the basics of CodeShip Pro to Docker deployment best practices.
+We've got some great webinars that you can watch to learn everything from the basics of Codeship Pro to Docker deployment best practices.
 
 - [An Introduction to CI/CD With Docker Best Practices](https://resources.codeship.com/webinars/thank-you-video-an-introduction-to-ci-cd-with-docker-best-practices)
 
 - [Using Docker Images For Continuous Deployment](https://resources.codeship.com/webinars/using-docker-images-for-continuous-deployment)
 
-- [Integrating Tools And Services Into CI/CD With CodeShip Pro](https://resources.codeship.com/webinars/integrating-tools-services-into-ci-cd-with-codeship-pro)
+- [Integrating Tools And Services Into CI/CD With Codeship Pro](https://resources.codeship.com/webinars/integrating-tools-services-into-ci-cd-with-codeship-pro)
 
 - [How to Build, Test & Deploy Docker Images when Running Microservices in Production](https://resources.codeship.com/webinars/build-test-deploy-docker-images-when-running-microservices-in-production)

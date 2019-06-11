@@ -1,5 +1,5 @@
 ---
-title: Using Ionic In CI/CD with CodeShip Basic
+title: Using Ionic In CI/CD with Codeship Basic
 shortTitle: Ionic
 tags:
  - ionic

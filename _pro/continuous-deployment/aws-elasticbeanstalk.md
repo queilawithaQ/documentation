@@ -18,7 +18,7 @@ tags:
 ---
 
 {% csnote info %}
-You can find a [sample repo for deploying to AWS with CodeShip Pro](https://github.com/codeship-library/aws-utilities) on Github.
+You can find a [sample repo for deploying to AWS with Codeship Pro](https://github.com/codeship-library/aws-utilities) on Github.
 {% endcsnote %}
 
 * include a table of contents
@@ -26,7 +26,7 @@ You can find a [sample repo for deploying to AWS with CodeShip Pro](https://gith
 
 ## Prerequisites
 
-- You will need to set up our [CodeShip maintained awsdeployment container]({% link _pro/continuous-deployment/aws.md %}) to automate authentication with your AWS account.
+- You will need to set up our [Codeship maintained awsdeployment container]({% link _pro/continuous-deployment/aws.md %}) to automate authentication with your AWS account.
 - This `awsdeployment` service (as well as your application container) needs to be defined via your [codeship-services.yml file]({% link _pro/builds-and-configuration/services.md %})
 - A folder must be designated for deployment purposes
 - A Dockerrun.aws.json file configured for either [single container](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_docker_image.html) or [multi-container service](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_docker_v2config.html) must be placed in the deployment folder

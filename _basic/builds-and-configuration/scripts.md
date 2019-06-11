@@ -1,5 +1,5 @@
 ---
-title: Using Scripts In CI/CD with CodeShip Basic
+title: Using Scripts In CI/CD with Codeship Basic
 shortTitle: Using Scripts
 menus:
   basic/builds:
@@ -19,7 +19,7 @@ categories:
 
 ## Using Scripts
 
-Using scripts on CodeShip Basic is a great way to customize and further automate tasks in your builds. Scripts can be used in a variety of ways from build setup to [deployments]({{ site.baseurl }}{% link _basic/continuous-deployment/deployment-with-custom-scripts.md %}). We also have a [repository of scripts](https://github.com/codeship/scripts) that help with various package installations and deployments. These scripts are also great starting points for writing your own customizations.
+Using scripts on Codeship Basic is a great way to customize and further automate tasks in your builds. Scripts can be used in a variety of ways from build setup to [deployments]({{ site.baseurl }}{% link _basic/continuous-deployment/deployment-with-custom-scripts.md %}). We also have a [repository of scripts](https://github.com/codeship/scripts) that help with various package installations and deployments. These scripts are also great starting points for writing your own customizations.
 
 ## Storing and Calling Scripts
 
@@ -63,7 +63,7 @@ source /dev/stdin <<< "$(curl -sSL https://raw.githubusercontent.com/codeship/sc
 
 ### set -e
 
-Using `set -e` in your scripts can have undesirable side effects on CodeShip Basic if called incorrectly. You should only use `set -e` in a script you are calling directly. It should not be used in scripts that you are sourcing and it should also not be used directly on CodeShip as a build step.
+Using `set -e` in your scripts can have undesirable side effects on Codeship Basic if called incorrectly. You should only use `set -e` in a script you are calling directly. It should not be used in scripts that you are sourcing and it should also not be used directly on Codeship as a build step.
 
 By default the shell doesn’t exit after a failed command, but continues to run other commands until the script finishes and then returns with the exit code of the last run command.
 
@@ -89,4 +89,4 @@ $(exit 255)
 $(exit 0)
 ```
 
-It is safe and recommended to use `set -e` directly in your scripts, but again you cannot use `set -e` in sourced scripts or directly as a build step. This is because the option will cause the process that called the command to exit if there is an error in the script. In this case that is the SSH session which is used to control your build. From CodeShip's view the build container has terminated and the build will fail.
+It is safe and recommended to use `set -e` directly in your scripts, but again you cannot use `set -e` in sourced scripts or directly as a build step. This is because the option will cause the process that called the command to exit if there is an error in the script. In this case that is the SSH session which is used to control your build. From Codeship's view the build container has terminated and the build will fail.

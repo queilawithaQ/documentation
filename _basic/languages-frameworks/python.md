@@ -1,5 +1,5 @@
 ---
-title: Using Python In CI/CD with CodeShip Basic
+title: Using Python In CI/CD with Codeship Basic
 shortTitle: Python
 menus:
   basic/languages:
@@ -64,7 +64,7 @@ pip install -r requirements.txt
 
 ### Dependency Cache
 
-CodeShip automatically caches all dependencies installed through `pip`. You can [read this article to learn more]({{ site.baseurl }}{% link _basic/builds-and-configuration/dependency-cache.md %}) about the dependency cache and how to clear it.
+Codeship automatically caches all dependencies installed through `pip`. You can [read this article to learn more]({{ site.baseurl }}{% link _basic/builds-and-configuration/dependency-cache.md %}) about the dependency cache and how to clear it.
 
 ## Frameworks And Testing
 
@@ -90,11 +90,11 @@ py.test tests_2.py
 
 In addition to parallelizing your tests explicitly [via parallel pipelines]({{ site.baseurl }}{% link _basic/builds-and-configuration/parallel-tests.md %}), you may find that there are packages available for parallelizing different types of testing, such as [nose-parallel](https://pypi.python.org/pypi/nose-parallel), to speed your tests up.
 
-While we do not officially support or integrate with these modules, many CodeShip users find success speeding their tests up by using them. Note that it is possible for these modules to cause resource and build failure issues, as well.
+While we do not officially support or integrate with these modules, many Codeship users find success speeding their tests up by using them. Note that it is possible for these modules to cause resource and build failure issues, as well.
 
 ## Notes And Known Issues
 
-Due to Python version issues, you may find it helpful to tests your commands with different versions via an [SSH debug session]({{ site.baseurl }}{% link _basic/builds-and-configuration/ssh-access.md %}) if tests are running differently on CodeShip compared to your local machine.
+Due to Python version issues, you may find it helpful to tests your commands with different versions via an [SSH debug session]({{ site.baseurl }}{% link _basic/builds-and-configuration/ssh-access.md %}) if tests are running differently on Codeship compared to your local machine.
 
 ### Executable Not Available
 

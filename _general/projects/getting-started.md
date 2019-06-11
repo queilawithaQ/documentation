@@ -53,7 +53,7 @@ After connecting to a repository, you will be able to choose between [CodeShip B
 
 To get started with a CodeShip project, you will want to have a few resources available:
 
-- A Github account with permission to install the CodeShip Github app, or a Bitbucket or Gitlab account with admin permissions for a repo or organization
+- A Github account with permission to install the Codeship Github app, or a Bitbucket or Gitlab account with admin permissions for a repo or organization
 
 - A CodeShip account, either using your email or using source control authentication
 

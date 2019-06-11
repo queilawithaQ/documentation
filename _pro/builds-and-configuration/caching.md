@@ -1,7 +1,7 @@
 ---
-title: Speed Up Your Builds With Caching on CodeShip Pro
+title: Speed Up Your Builds With Caching on Codeship Pro
 shortTitle: Image Caching
-description: Technical documentation for speeding up CodeShip Pro builds by utilizing CodeShip's image cache that works per-branch and per-service
+description: Technical documentation for speeding up Codeship Pro builds by utilizing Codeship's image cache that works per-branch and per-service
 menus:
   pro/builds:
     title: Image Caching
@@ -27,7 +27,7 @@ redirect_from:
 ---
 
 {% csnote info %}
-This tutorial describes the way caching works on CodeShip's infrastructure during a build. For [local builds using the `jet` CLI]({{ site.baseurl }}{% link _pro/jet-cli/usage-overview.md %}), rely on the local Docker image cache.
+This tutorial describes the way caching works on Codeship's infrastructure during a build. For [local builds using the `jet` CLI]({{ site.baseurl }}{% link _pro/jet-cli/usage-overview.md %}), rely on the local Docker image cache.
 {% endcsnote %}
 
 * include a table of contents
@@ -35,7 +35,7 @@ This tutorial describes the way caching works on CodeShip's infrastructure durin
 
 ## Using Caching
 
-As a way to speed up your build pipelines, CodeShip supports image caching that works per-service and per-branch.
+As a way to speed up your build pipelines, Codeship supports image caching that works per-service and per-branch.
 
 This mean's after your build is finished, we will push any images you enable caching for out to a secure registry and pull the image at the start of future builds to reuse as many of the image layers as possible rather than rebuilding them. [Read more about optimizing your Dockerfile for caching.](#optimizing-your-build-to-use-the-docker-image-cache)
 
@@ -84,11 +84,11 @@ Note that branch-cache images are automatically removed after 90 days of inactiv
 
 During local builds, there is no need for a remote or persistent caching solution. Rely on the local Docker image cache.
 
-In previous versions of Jet, you were able to use the remote cache when running a local build with `jet steps`. This feature has been deprecated, because CodeShip no longer relies on registries to provide remote caching. Instead, rely on the local Docker image cache for image caching during local builds.
+In previous versions of Jet, you were able to use the remote cache when running a local build with `jet steps`. This feature has been deprecated, because Codeship no longer relies on registries to provide remote caching. Instead, rely on the local Docker image cache for image caching during local builds.
 
 ## Optimizing Your Build To Use The Docker Image Cache
 
-In order to fully utilize the caching provided by CodeShip, you should optimize your Docker builds to take advantage of the Docker image cache. Here is a simple guide to optimizing your build:
+In order to fully utilize the caching provided by Codeship, you should optimize your Docker builds to take advantage of the Docker image cache. Here is a simple guide to optimizing your build:
 
 ### 1. Order your Dockerfile
 
@@ -106,7 +106,7 @@ The more files which get added to the Docker image during an ADD or COPY, the hi
 
 ## Caching With Multi-stage Builds
 
-Docker's multi-stage build feature allows you to build Docker images with multiple build stages in the Dockerfile, ultimately saving an image from just the final stage. You can [read more about Docker multi-stage builds on our blog](https://blog.codeship.com/docker-17-05-on-codeship-pro/), but this has certain impacts on caching your image with CodeShip Pro.
+Docker's multi-stage build feature allows you to build Docker images with multiple build stages in the Dockerfile, ultimately saving an image from just the final stage. You can [read more about Docker multi-stage builds on our blog](https://blog.codeship.com/docker-17-05-on-codeship-pro/), but this has certain impacts on caching your image with Codeship Pro.
 
 Since the build stage layers are untagged and not associated with the final image, they are not part of the cached image. This means that -- for now -- it’s possible that your build may take a bit longer if you relied on caching all of the layers to speed up the build.
 

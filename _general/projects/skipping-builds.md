@@ -33,7 +33,7 @@ redirect_from:
 
 ## Skipping Individual Builds
 
-You can skip builds on both [CodeShip Basic](https://codeship.com/features/basic) and [CodeShip Pro](https://codeship.com/features/pro) by using a special commit directive.
+You can skip builds on both [Codeship Basic](https://codeship.com/features/basic) and [Codeship Pro](https://codeship.com/features/pro) by using a special commit directive.
 
 ### Skipping Builds Using The Commit Message
 
@@ -44,9 +44,9 @@ You can add either of the following skip directives to the commit message of the
 * `[skip ci]`
 * `[ci skip]`
 
-Skipped builds do not have a build record and will not show up in the CodeShip UI. They will also not count towards the concurrent builds or monthly build limits for users.
+Skipped builds do not have a build record and will not show up in the Codeship UI. They will also not count towards the concurrent builds or monthly build limits for users.
 
 
 ### Skipping Builds Using A Step Tag on Pro
 
-On [CodeShip Pro](https://codeship.com/features/pro), in addition to using a commit message, you can also de-facto skip builds by making sure that every step in your `codeship-steps.yml` file has a `tag`, which limits that step to a certain branch. Learn more about [limiting your steps to a certain branch]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}#limiting-steps-to-specific-branches-or-tags).
+On [Codeship Pro](https://codeship.com/features/pro), in addition to using a commit message, you can also de-facto skip builds by making sure that every step in your `codeship-steps.yml` file has a `tag`, which limits that step to a certain branch. Learn more about [limiting your steps to a certain branch]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}#limiting-steps-to-specific-branches-or-tags).

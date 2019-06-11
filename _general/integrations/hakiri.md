@@ -1,5 +1,5 @@
 ---
-title: Integrating CodeShip With Hakiri
+title: Integrating Codeship With Hakiri
 shortTitle: Using Hakiri
 tags:
   - security
@@ -25,7 +25,7 @@ By using Hakiri you can be sure that your Ruby gems are up to date and secure.
 
 [The Hakiri documentation](https://hakiri.io/docs) does a great job of providing more information, in addition to the setup instructions below.
 
-## CodeShip Pro
+## Codeship Pro
 
 ### Setting Your Hakiri Stack ID
 
@@ -77,7 +77,7 @@ hakiri system:sync -s $STACK_ID
 
 There is a larger list of commands you can run over at [the Hakiri documentation](https://hakiri.io/docs).
 
-## CodeShip Basic
+## Codeship Basic
 
 ### Setting Your Hakiri Stack ID
 

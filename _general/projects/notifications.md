@@ -84,7 +84,7 @@ For campfire, we need both an API key and your domain name (just the first part,
 
 For an email rule, you can select whether all members of the project will receive notifications, or only the person whos commit triggered the build.
 
-If only the committer should be notified, either the emails or usernames must be the same in both CodeShip and Github/Bitbucket/Gitlab. If they're different, no notifications are sent.
+If only the committer should be notified, either the emails or usernames must be the same in both Codeship and Github/Bitbucket/Gitlab. If they're different, no notifications are sent.
 
 #### Disable Email
 
@@ -92,7 +92,7 @@ If you don't want to receive any emails you can set that on your [account page](
 
 #### Not Receiving Email
 
-If you are not receiving email notifications, but are expecting them, there are a few things to check. First make sure notifications are enabled for your [account](https://app.codeship.com/user/edit). Next make sure that the email address on your [CodeShip account](https://app.codeship.com/user/edit) matches the email you have set in your Git configuration on your local machine.  You can check this with:
+If you are not receiving email notifications, but are expecting them, there are a few things to check. First make sure notifications are enabled for your [account](https://app.codeship.com/user/edit). Next make sure that the email address on your [Codeship account](https://app.codeship.com/user/edit) matches the email you have set in your Git configuration on your local machine.  You can check this with:
 
 ```
 git config --get user.email
@@ -106,7 +106,7 @@ Flowdock expects a token as well, but the where to send the notification is hand
 
 ## Slack
 
-For Slack, the only thing you need is the webhook URL Slack provides when you configure a CodeShip integration. Copy-paste the URL to the Webhook URL field.
+For Slack, the only thing you need is the webhook URL Slack provides when you configure a Codeship integration. Copy-paste the URL to the Webhook URL field.
 
 ## Webhook
 
@@ -148,15 +148,15 @@ The _status_ field can have one of the following values:
 - `blocked` for builds blocked because of excessive resource consumption
 - `infrastructure_failure` for builds which failed because of an internal error on the build VM
 
-## Custom Notifications With CodeShip Pro
+## Custom Notifications With Codeship Pro
 
-Due to CodeShip Pro's unique architecture, you have  more flexibility in implementing custom notifications via your [codeship-steps.yml file]({% link _pro/builds-and-configuration/steps.md %}).
+Due to Codeship Pro's unique architecture, you have  more flexibility in implementing custom notifications via your [codeship-steps.yml file]({% link _pro/builds-and-configuration/steps.md %}).
 
-In addition to using the above webhooks method, you can also define custom steps in your build pipeline to push notifications via methods not otherwise supported by CodeShip.
+In addition to using the above webhooks method, you can also define custom steps in your build pipeline to push notifications via methods not otherwise supported by Codeship.
 
 #### The Notification Script
 
-To look at using your CodeShip Pro pipeline for flexible, custom notifications we will review a simple Slack script as a custom notification method.
+To look at using your Codeship Pro pipeline for flexible, custom notifications we will review a simple Slack script as a custom notification method.
 
 First of all, we can create a simple notification script, pulling all configuration and credentials from environment variables, or mounted volumes should we need to use build artifacts.
 
@@ -171,7 +171,7 @@ First of all, we can create a simple notification script, pulling all configurat
 # project settings.
 
 SLACK_WEBHOOK_TOKEN=${SLACK_WEBHOOK_TOKEN:?'You need to configure the SLACK_WEBHOOK_TOKEN environment variable!'}
-SLACK_BOT_NAME=${SLACK_BOT_NAME:="CodeShip Bot"}
+SLACK_BOT_NAME=${SLACK_BOT_NAME:="Codeship Bot"}
 SLACK_ICON_URL=${SLACK_ICON_URL:="https://d1089v03p3mzyq.cloudfront.net/assets/website/logo-dark-90f893a2645c98929b358b2f93fa614b.png"}
 SLACK_MESSAGE=${SLACK_MESSAGE:?"${CI_COMMITTER_USERNAME} just deployed version ${CI_COMMIT_ID}"}
 
@@ -214,7 +214,7 @@ By adding a relevant step to the steps file, we can control under what condition
   tag: master
 ```
 
-#### Other Integrations With CodeShip Pro
+#### Other Integrations With Codeship Pro
 
 Since you can integrate any container you wish into your pipeline, there are no limitations on what notifications you can use. In our scripts repo, [you can see other examples of custom notifications.](https://github.com/codeship/scripts/tree/master/notifications).
 
@@ -228,7 +228,7 @@ We will automatically use the status API for pull requests on Github, Bitbucket 
 
 If you want to add a badge showing your last builds status to your ReadMe, you can find the code in the **General** settings of your project.
 
-![CodeShip Status for codeship/documentation](https://codeship.com/projects/0bdb0440-3af5-0133-00ea-0ebda3a33bf6/status?branch=master)
+![Codeship Status for codeship/documentation](https://codeship.com/projects/0bdb0440-3af5-0133-00ea-0ebda3a33bf6/status?branch=master)
 
 The raw URL for the image looks like the this:
 

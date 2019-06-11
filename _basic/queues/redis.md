@@ -1,5 +1,5 @@
 ---
-title: Using Redis In CI/CD with CodeShip Basic
+title: Using Redis In CI/CD with Codeship Basic
 shortTitle: Redis
 tags:
   - services

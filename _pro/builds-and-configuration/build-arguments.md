@@ -33,11 +33,11 @@ redirect_from:
 
 
 {% csnote info %}
-This article is about using Docker build arguments with CodeShip Pro. If you are unfamiliar with build arguments, we recommend reading [Docker's build arguments documentation](https://docs.docker.com/engine/reference/builder/#arg). If you are unfamiliar with CodeShip Pro, we recommend our [getting started guide]({{ site.baseurl }}{% link _pro/quickstart/getting-started.md %}) or [the features overview page](https://codeship.com/features/pro).
+This article is about using Docker build arguments with Codeship Pro. If you are unfamiliar with build arguments, we recommend reading [Docker's build arguments documentation](https://docs.docker.com/engine/reference/builder/#arg). If you are unfamiliar with Codeship Pro, we recommend our [getting started guide]({{ site.baseurl }}{% link _pro/quickstart/getting-started.md %}) or [the features overview page](https://codeship.com/features/pro).
 {% endcsnote %}
 
 {% csnote %}
-Note that you will also need to use the [CodeShip Pro local CLI tool]({{ site.baseurl }}{% link _pro/jet-cli/usage-overview.md %}) to encrypt your build arguments.
+Note that you will also need to use the [Codeship Pro local CLI tool]({{ site.baseurl }}{% link _pro/jet-cli/usage-overview.md %}) to encrypt your build arguments.
 {% endcsnote %}
 
 ## Overview: Build Arguments
@@ -46,7 +46,7 @@ For each service, you can declare [build arguments](https://docs.docker.com/comp
 
 ## Build Arguments vs. Environment Variables
 
-During a build on CodeShip's Docker platform, there are three ways to pass custom values to your services:
+During a build on Codeship's Docker platform, there are three ways to pass custom values to your services:
 
 * Build arguments or encrypted build arguments: available only at image build time
 * ENV variable declared in Dockerfile: available at build time and runtime
@@ -96,7 +96,7 @@ Note: YAML boolean values (true, false, yes, no, on, off) must be enclosed in qu
 
 ## Encrypted Build Arguments
 
-In a lot of cases, the values needed by the image at build time are secrets -- credentials, passwords, and other things that you don't want to check in to source control in plain text. Because of this, CodeShip supports encrypted build arguments. You can either encrypt a build argument individually, or encrypt an entire file containing all of the build arguments you need.
+In a lot of cases, the values needed by the image at build time are secrets -- credentials, passwords, and other things that you don't want to check in to source control in plain text. Because of this, Codeship supports encrypted build arguments. You can either encrypt a build argument individually, or encrypt an entire file containing all of the build arguments you need.
 
 First, create a file in the root directory - in this case, a file named `build_args`. You will also need to [download the project AES key]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}#downloading-your-aes-key) to the root directory (and add it to the `.gitignore` file).
 
@@ -122,7 +122,7 @@ app:
     encrypted_args_file: build_args.encrypted
 ```
 
-If your use case is simple enough, you may want to pass in encrypted values directly instead of requiring CodeShip to read them from a file. The following syntax is also supported:
+If your use case is simple enough, you may want to pass in encrypted values directly instead of requiring Codeship to read them from a file. The following syntax is also supported:
 
 ```yaml
 app:
@@ -131,11 +131,11 @@ app:
     encrypted_args: 8rD1P1xO1CwB4L99JBqnvoSOX+1wimf9qwHXATf9foasPtU6Sw==
 ```
 
-CodeShip will decrypt your build arguments and pass them to the image when it is built.
+Codeship will decrypt your build arguments and pass them to the image when it is built.
 
 ## CI/CD Variables As Build Arguments
 
-CodeShip sets a variety of CI/CD-related environment variables at runtime with information about your build.
+Codeship sets a variety of CI/CD-related environment variables at runtime with information about your build.
 
 These can be set as build arguments and used in the Dockerfile, but they must be explicitly set as unencrypted arguments in your [codeship-services.yml file]({% link _pro/builds-and-configuration/services.md %}).
 
@@ -161,8 +161,8 @@ app:
 
 The full list of CI/CD-related variables is:
 
-* `ProjectID` (the CodeShip defined project ID)
-* `BuildID` (the CodeShip defined build ID)
+* `ProjectID` (the Codeship defined project ID)
+* `BuildID` (the Codeship defined build ID)
 * `RepoName` (the name of the repository according to the SCM)
 * `Branch` (the name of the current branch)
 * `CommitID` (the commit hash or ID)

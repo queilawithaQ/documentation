@@ -1,5 +1,5 @@
 ---
-title: Integrating CodeShip With Percy Visual Testing
+title: Integrating Codeship With Percy Visual Testing
 shortTitle: Using Percy Visual Testing
 tags:
   - screenshots
@@ -33,7 +33,7 @@ By using Percy you can easily test your UI without complex browser testing overh
 
 [Their documentation](https://percy.io/docs) does a great job of providing more information, in addition to the setup instructions below.
 
-## CodeShip Pro
+## Codeship Pro
 
 ### Setting Your Percy Variables
 
@@ -41,7 +41,7 @@ You will need to add a value that Percy provides when you create a new project i
 
 ### Static Sites
 
-To use Percy with static sites inside Docker images on CodeShip Pro, you will need to install the `percy-cli` gem inside your images, either as part of a Gemfile or by adding the following command to the Dockerfile:
+To use Percy with static sites inside Docker images on Codeship Pro, you will need to install the `percy-cli` gem inside your images, either as part of a Gemfile or by adding the following command to the Dockerfile:
 
 ```dockerfile
 RUN gem install percy-cli
@@ -60,7 +60,7 @@ Note that you can use multiple commands to take snapshots of multiple directorie
 
 ### Ruby
 
-To integrate Percy with CodeShip Pro on a Ruby and Docker project, you will want to install the you will need to install the `percy-capybara` gem inside your images, either as part of a Gemfile or by adding the following command to the Dockerfile:
+To integrate Percy with Codeship Pro on a Ruby and Docker project, you will want to install the you will need to install the `percy-capybara` gem inside your images, either as part of a Gemfile or by adding the following command to the Dockerfile:
 
 ```dockerfile
 RUN gem install percy-capybara
@@ -74,13 +74,13 @@ These test specs will be called via your [codeship-steps.yml file]({{ site.baseu
 
 ### Ember
 
-To integrate Percy with CodeShip Pro on an Ember and Docker project, you will want to install the `ember-percy` package into your application, typically via your `package.json`.
+To integrate Percy with Codeship Pro on an Ember and Docker project, you will want to install the `ember-percy` package into your application, typically via your `package.json`.
 
 From there, you will need to add specific hooks in to your project's test specs. You can find specific instructions for calling Percy from your test specs [at the Percy documentation](https://percy.io/docs/clients/javascript/ember).
 
 These test specs will be called via your [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}).
 
-## CodeShip Basic
+## Codeship Basic
 
 ### Setting Your Percy Variables
 
@@ -92,7 +92,7 @@ You can do this by navigating to _Project Settings_ and then clicking on the _En
 
 ### Static Sites
 
-To use Percy with static sites on CodeShip Basic, you will need to install the `percy-cli` gem, either in your [setup commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}) or in your `Gemfile` itself. You can install the gem with the command:
+To use Percy with static sites on Codeship Basic, you will need to install the `percy-cli` gem, either in your [setup commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}) or in your `Gemfile` itself. You can install the gem with the command:
 
 ```shell
 gem install percy-cli
@@ -108,7 +108,7 @@ Note that you can use multiple commands to take snapshots of multiple directorie
 
 ### Ruby
 
-To integrate Percy with CodeShip Basic on a Ruby project, you will want to install the `percy-capybara` gem in either your [setup commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}) or your Gemfile. You can install the gem with the command:
+To integrate Percy with Codeship Basic on a Ruby project, you will want to install the `percy-capybara` gem in either your [setup commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}) or your Gemfile. You can install the gem with the command:
 
 ```shell
 gem install percy-capybara
@@ -118,7 +118,7 @@ From there, you will need to add specific hooks to your Rspec, Capybara, Minites
 
 ### Ember
 
-To integrate Percy with CodeShip Basic on an Ember project, you will want to install the `ember-percy` package by adding the following to your [setup commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}):
+To integrate Percy with Codeship Basic on an Ember project, you will want to install the `ember-percy` package by adding the following to your [setup commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}):
 
 ```shell
 ember install ember-percy
