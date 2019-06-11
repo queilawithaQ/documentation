@@ -1,5 +1,5 @@
 ---
-title: SCM Support on Codeship
+title: SCM Support on CodeShip
 shortTitle: SCM Support
 menus:
   general/about:
@@ -17,7 +17,7 @@ tags:
   - enterprise
   - whitelisting
 categories:
-  - About Codeship  
+  - About CodeShip  
   - Account
   - Security
 ---
@@ -25,15 +25,15 @@ categories:
 * include a table of contents
 {:toc}
 
-Codeship supports [Git](https://git-scm.com) repositories hosted directly on [GitHub](https://github.com), [Bitbucket](https://bitbucket.org) and [GitLab](https://about.gitlab.com). There is support for [on-premise versions]({{ site.baseurl }}{% link _general/about/self-hosted-scm.md %}) of these SCM systems as well.
+CodeShip supports [Git](https://git-scm.com) repositories hosted directly on [GitHub](https://github.com), [Bitbucket](https://bitbucket.org) and [GitLab](https://about.gitlab.com). There is support for [on-premise versions]({{ site.baseurl }}{% link _general/about/self-hosted-scm.md %}) of these SCM systems as well.
 
-Integration between a repository and any forked repositories is not currently supported for any SCM. You can setup forked repositories as separate projects on Codeship, but any builds for the forked repository will not link back to the parent repository.
+Integration between a repository and any forked repositories is not currently supported for any SCM. You can setup forked repositories as separate projects on CodeShip, but any builds for the forked repository will not link back to the parent repository.
 
-Get started by [creating a project]({{ site.baseurl }}{% link _general/projects/getting-started.md %}) on Codeship. If you are having trouble getting your SCM connected to Codeship, [check that the correct permissions are set]({{ site.baseurl }}{% link _general/about/permissions.md %}).
+Get started by [creating a project]({{ site.baseurl }}{% link _general/projects/getting-started.md %}) on CodeShip. If you are having trouble getting your SCM connected to CodeShip, [check that the correct permissions are set]({{ site.baseurl }}{% link _general/about/permissions.md %}).
 
 ## GitHub
 
-* Codeship can clone your GitHub repositories and report build statuses back via the [GitHub API](https://developer.github.com/v3/repos/statuses).
+* CodeShip can clone your GitHub repositories and report build statuses back via the [GitHub API](https://developer.github.com/v3/repos/statuses).
 
 * Required [GitHub permissions]({{ site.baseurl }}{% link _general/about/permissions.md %}#github).
 
@@ -41,7 +41,7 @@ Get started by [creating a project]({{ site.baseurl }}{% link _general/projects/
 
 ## Bitbucket
 
-* Codeship can clone your Bitbucket repositories and report build statuses back via the [Bitbucket API](https://confluence.atlassian.com/bitbucket/buildstatus-resource-779295267.html).
+* CodeShip can clone your Bitbucket repositories and report build statuses back via the [Bitbucket API](https://confluence.atlassian.com/bitbucket/buildstatus-resource-779295267.html).
 
 * Required [Bitbucket permissions]({{ site.baseurl }}{% link _general/about/permissions.md %}#bitbucket).
 
@@ -51,7 +51,7 @@ Get started by [creating a project]({{ site.baseurl }}{% link _general/projects/
 
 ## GitLab
 
-* Codeship can clone your GitLab repositories and report build statuses back via the [GitLab API](https://docs.gitlab.com/ce/api/commits.html#commit-status).
+* CodeShip can clone your GitLab repositories and report build statuses back via the [GitLab API](https://docs.gitlab.com/ce/api/commits.html#commit-status).
 
 * Required [GitLab permissions]({{ site.baseurl }}{% link _general/about/permissions.md %}#gitlab).
 

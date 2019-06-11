@@ -20,7 +20,7 @@ You can deploy any kind of application with Capistrano. For detailed information
 
 ## Capistrano with a custom script deployment
 
-To setup a Capistrano deployment on Codeship, first create a new [custom script deployment]({{ site.baseurl }}{% link _basic/continuous-deployment/deployment-with-custom-scripts.md %}). From there you can add any commands you need, including installing and calling your Capistrano deployment.
+To setup a Capistrano deployment on CodeShip, first create a new [custom script deployment]({{ site.baseurl }}{% link _basic/continuous-deployment/deployment-with-custom-scripts.md %}). From there you can add any commands you need, including installing and calling your Capistrano deployment.
 
 ```shell
 gem install capistrano
@@ -43,7 +43,7 @@ gem install capistrano
 
 ### Deployment fails because of detached checkout
 
-Because Codeship only fetches the last 50 commits as well as checks out your repository in detached head mode, Capistrano may fail the deployment. If this is the case for your setup, please add the following two commands to your deployment script. They will fetch the full history of the repository and switch to the branch you are currently testing.
+Because CodeShip only fetches the last 50 commits as well as checks out your repository in detached head mode, Capistrano may fail the deployment. If this is the case for your setup, please add the following two commands to your deployment script. They will fetch the full history of the repository and switch to the branch you are currently testing.
 
 ```shell
 git fetch --unshallow || true

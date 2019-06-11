@@ -1,5 +1,5 @@
 ---
-title: Integrating Codeship With SourceClear for Security Analysis
+title: Integrating CodeShip With SourceClear for Security Analysis
 shortTitle: Using SourceClear For Security Analysis
 tags:
   - security
@@ -29,7 +29,7 @@ By using SourceClear you can be sure that your application code is tested and se
 
 [Their documentation](https://www.sourceclear.com/docs/) does a great job of providing more information, in addition to the setup instructions below.
 
-## Codeship Pro
+## CodeShip Pro
 
 ### Setting Your API Token
 
@@ -46,7 +46,7 @@ curl -sSL https://download.sourceclear.com/ci.sh | bash
 
 **Note** that if you are using [parallel test steps]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}) then you likely only want to call this script once, as it's own step, rather than as part of your test steps themselves.
 
-## Codeship Basic
+## CodeShip Basic
 
 ### Setting Your API Token
 

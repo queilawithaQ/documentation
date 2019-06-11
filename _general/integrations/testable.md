@@ -1,5 +1,5 @@
 ---
-title: Using Testable And Codeship For Load Testing
+title: Using Testable And CodeShip For Load Testing
 shortTitle: Testable Load Testing
 menus:
   general/integrations:
@@ -31,9 +31,9 @@ categories:
 
 [Testable](https://testable.io) is a distributed load testing platform. Define a test with a variety of open-source tools and let Testable handle the scale, reporting, and analytics. Define your tests with  JMeter, Gatling, Locust, Node.js, Webdriver.io, Selenium Java, Serenity BDD, PhantomJS, SlimerJS, record-and-replay, and HAR files.
 
-Checkout the [Testable documentation](https://docs.testable.io) as a starting point or the instructions below on how to run load tests in your [Codeship](https://codeship.com) pipeline.
+Checkout the [Testable documentation](https://docs.testable.io) as a starting point or the instructions below on how to run load tests in your [CodeShip](https://codeship.com) pipeline.
 
-## Codeship Pro
+## CodeShip Pro
 
 ### Setting Your API Key
 
@@ -75,7 +75,7 @@ Check Testable's [parameter documentation](https://docs.testable.io/api/simple.h
 
 While the load test is running you can track the real-time results via the [Testable website](https://a.testable.io).
 
-## Codeship Basic
+## CodeShip Basic
 
 ### Setting Your API Key
 

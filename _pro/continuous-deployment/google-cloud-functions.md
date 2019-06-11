@@ -31,11 +31,11 @@ To deploy to Cloud Functions, you will need to define a Google _Service account_
 
 For full instructions, see the [authentication portion of our Google Cloud documentation]({{ site.baseurl }}{% link _pro/continuous-deployment/google-cloud.md %}#authentication).
 
-### Codeship Public Key
+### CodeShip Public Key
 
-Some Google Cloud services will require that you add your [Codeship public key]({{ site.baseurl }}{% link _general/projects/project-ssh-key.md %}) for authentication purposes.
+Some Google Cloud services will require that you add your [CodeShip public key]({{ site.baseurl }}{% link _general/projects/project-ssh-key.md %}) for authentication purposes.
 
-**Note** that Google may fail authentication if you do not add the Google Cloud user the key is for to the end of the key. For example, if the Google Cloud user is `deploy@Codeship`, you will want to add `deploy@Codeship` to the end of the SSH key itself, otherwise Google will not load the key for the user appropriately.
+**Note** that Google may fail authentication if you do not add the Google Cloud user the key is for to the end of the key. For example, if the Google Cloud user is `deploy@CodeShip`, you will want to add `deploy@CodeShip` to the end of the SSH key itself, otherwise Google will not load the key for the user appropriately.
 
 ## Cloud Storage Bucket
 
@@ -45,7 +45,7 @@ To deploy Google Cloud Functions from a local filesystem you will need a Cloud S
 
 ### Creating Your Services
 
-You will want to add a service which builds the [Google Cloud deployment image](https://hub.docker.com/r/codeship/google-cloud-deployment/), which is maintained by Codeship, in your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}). For example:
+You will want to add a service which builds the [Google Cloud deployment image](https://hub.docker.com/r/codeship/google-cloud-deployment/), which is maintained by CodeShip, in your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}). For example:
 
 ```yaml
 googleclouddeployment:

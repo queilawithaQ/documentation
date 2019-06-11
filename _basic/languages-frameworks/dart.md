@@ -1,5 +1,5 @@
 ---
-title: Using Dart In CI/CD with Codeship Basic
+title: Using Dart In CI/CD with CodeShip Basic
 shortTitle: Dart
 tags:
   - dart
@@ -49,7 +49,7 @@ We do not cache Dart dependencies between builds by default, but any dependencie
 
 ## Frameworks And Testing
 
-As dart currently doesn't have a default way to run your tests you can use exactly the same command to run those tests as you would on your local machine. Note that almost all tools for custom machine configuration will install and run without issue on Codeship.
+As dart currently doesn't have a default way to run your tests you can use exactly the same command to run those tests as you would on your local machine. Note that almost all tools for custom machine configuration will install and run without issue on CodeShip.
 
 ### Browser Testing
 
@@ -79,4 +79,4 @@ Note that aggressive parallelization can cause resource and build failure issues
 
 ## Notes And Known Issues
 
-Due to Dart version and build issues, you may find it helpful to tests your commands with different versions via an [SSH debug session]({{ site.baseurl }}{% link _basic/builds-and-configuration/ssh-access.md %}) if tests are running differently on Codeship compared to your local machine.
+Due to Dart version and build issues, you may find it helpful to tests your commands with different versions via an [SSH debug session]({{ site.baseurl }}{% link _basic/builds-and-configuration/ssh-access.md %}) if tests are running differently on CodeShip compared to your local machine.

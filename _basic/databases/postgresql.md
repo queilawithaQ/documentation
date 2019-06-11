@@ -1,5 +1,5 @@
 ---
-title: Using PostgreSQL In CI/CD with Codeship Basic
+title: Using PostgreSQL In CI/CD with CodeShip Basic
 shortTitle: PostgreSQL
 tags:
   - services
@@ -47,7 +47,7 @@ sed -i "s|5432|5433|" "config/database.yml"
 
 ### 10
 
-The **default version** of PostgreSQL on Codeship is **10**, which runs on the default port of `5432`. No additional configuration is required to use version 10.
+The **default version** of PostgreSQL on CodeShip is **10**, which runs on the default port of `5432`. No additional configuration is required to use version 10.
 
 {% csnote info %}
 PostgreSQL 10 includes PostGIS version 2.5.

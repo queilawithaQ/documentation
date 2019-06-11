@@ -71,7 +71,7 @@ This encryption happens with our [local CLI tool]({{ site.baseurl }}{% link _pro
 }
 ```
 
-* Get your AES encryption key from the _General_ settings page of your Codeship project and save it to your registry as `codeship.aes` (adding it to the `.gitignore` file is a good idea so that it does not end up in your repository).
+* Get your AES encryption key from the _General_ settings page of your CodeShip project and save it to your registry as `codeship.aes` (adding it to the `.gitignore` file is a good idea so that it does not end up in your repository).
 
 * Run the `jet encrypt` command against your image registry `dockercfg` file. This typically looks like `jet encrypt dockercfg dockercfg.encrypted`. but you can name it whatever you'd like.
 
@@ -105,7 +105,7 @@ docker run -it --rm \
 
 ### Generating Credentials With A Service
 
-Due to an increasing number of container registry vendors using different methods to generate Docker temporary credentials, we also have support for custom `dockercfg` credential generation at runtime. By using a custom service within your list of Codeship services, you can integrate with a standard `dockercfg` generation container for your desired provider.
+Due to an increasing number of container registry vendors using different methods to generate Docker temporary credentials, we also have support for custom `dockercfg` credential generation at runtime. By using a custom service within your list of CodeShip services, you can integrate with a standard `dockercfg` generation container for your desired provider.
 
 Taking advantage of this feature is fairly simple. First off, add a service using the image for your desired registry provider to your [codeship-services.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}) file. You can add any [links]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}), [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) or [volumes]({{ site.baseurl }}{% link _pro/builds-and-configuration/docker-volumes.md %}) you need, just like with a regular service.
 
@@ -132,7 +132,7 @@ To use this generator service, simply reference it using the `dockercfg_service`
   dockercfg_service: myservice_generator
 ```
 
-Codeship will run the service to generate a `dockercfg` as needed.
+CodeShip will run the service to generate a `dockercfg` as needed.
 
 ### Credential Inclusion
 
@@ -296,7 +296,7 @@ Note that GCR requires the fully registry path in our image name, and the accoun
   dockercfg_service: dockercfg_generator
 ```
 
-Learn more about [using Google Cloud with Codeship Pro]({{ site.baseurl }}{% link _pro/continuous-deployment/google-cloud.md %}).
+Learn more about [using Google Cloud with CodeShip Pro]({{ site.baseurl }}{% link _pro/continuous-deployment/google-cloud.md %}).
 
 ### Pulling From GCR
 
@@ -317,7 +317,7 @@ dockercfg_generator:
 
 This will use the image we maintain for Google authentication to generate credentials on image pull. Note that you will need to have your AWS credentials set via the [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) for the generator service, and that the AWS account you are authenticating with will need appropriate IAM permissions.
 
-Learn more about [using Google Cloud with Codeship Pro]({{ site.baseurl }}{% link _pro/continuous-deployment/google-cloud.md %}).
+Learn more about [using Google Cloud with CodeShip Pro]({{ site.baseurl }}{% link _pro/continuous-deployment/google-cloud.md %}).
 
 ## AWS ECR
 
@@ -360,7 +360,7 @@ ECR requires the fully registry path in our image name, and the account you are 
 - `AWS_SECRET_ACCESS_KEY`
 - `AWS_REGION`
 
-Learn more about [using AWS with Codeship Pro]({{ site.baseurl }}{% link _pro/continuous-deployment/aws.md %}).
+Learn more about [using AWS with CodeShip Pro]({{ site.baseurl }}{% link _pro/continuous-deployment/aws.md %}).
 
 ### Pulling From ECR
 
@@ -381,7 +381,7 @@ dockercfg_generator:
 
 This will use the image we maintain for AWS authentication to generate credentials on image pull. Note that you will need to have your AWS credentials set via the [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) for the generator service, and that the AWS account you are authenticating with will need appropriate IAM permissions.
 
-Learn more about [using AWS with Codeship Pro]({{ site.baseurl }}{% link _pro/continuous-deployment/aws.md %}).
+Learn more about [using AWS with CodeShip Pro]({{ site.baseurl }}{% link _pro/continuous-deployment/aws.md %}).
 
 ## IBM Cloud Registry
 
@@ -418,7 +418,7 @@ Note that IBM Cloud requires the fully registry path in our image name, and the 
   dockercfg_service: bluemix_dockercfg
 ```
 
-To see a full example of using IBM Cloud Container Registry with Codeship Pro, [visit our example repository](https://github.com/codeship-library/ibm-bluemix-utilities).
+To see a full example of using IBM Cloud Container Registry with CodeShip Pro, [visit our example repository](https://github.com/codeship-library/ibm-bluemix-utilities).
 
 ### Pulling From IBM Cloud Registry
 
@@ -442,7 +442,7 @@ bluemix_dockercfg:
 
 This will use the image we maintain for IBM Cloud authentication to generate credentials on image pull. Note that you will need to have the `BLUEMIX_API_KEY` variable set via [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) for the generator service.
 
-To see a full example of using IBM Cloud Container Registry with Codeship Pro, [visit our example repository](https://github.com/codeship-library/ibm-bluemix-utilities).
+To see a full example of using IBM Cloud Container Registry with CodeShip Pro, [visit our example repository](https://github.com/codeship-library/ibm-bluemix-utilities).
 
 ## Azure Container Service
 
@@ -487,7 +487,7 @@ Note that the Azure Container Service requires the fully registry path in our im
   dockercfg_service: azure_dockercfg
 ```
 
-To see a full example of using the Azure Container Service with Codeship Pro, [visit our example repository](https://github.com/codeship-library/azure-utilities).
+To see a full example of using the Azure Container Service with CodeShip Pro, [visit our example repository](https://github.com/codeship-library/azure-utilities).
 
 ### Pulling From Azure Container Service
 
@@ -518,7 +518,7 @@ Note that you will need the following credentials set via the [encrypted environ
 
 **Note** that you must enable the _Admin_ user for your the specific Azure Container Registry, which you can do via the _Access keys_ settings page of the registry you want to push the image to.
 
-To see a full example of using the Azure Container Service with Codeship Pro, [visit our example repository](https://github.com/codeship-library/azure-utilities).
+To see a full example of using the Azure Container Service with CodeShip Pro, [visit our example repository](https://github.com/codeship-library/azure-utilities).
 
 ## Common Questions
 
@@ -537,8 +537,8 @@ Along with being able to push to private registries, you can also push to tags o
 
 This `image_tag` field can contain a simple string, or be part of a [Go template](https://golang.org/pkg/text/template/). You can compose your image tag from a variety of provided values. __Note__ that because we use Go for our Regex support, negative regexes and conditional regexes are  not supported.
 
-* `ProjectID` (the Codeship defined project ID)
-* `BuildID` (the Codeship defined build ID)
+* `ProjectID` (the CodeShip defined project ID)
+* `BuildID` (the CodeShip defined build ID)
 * `RepoName` (the name of the repository according to the SCM)
 * `Branch` (the name of the current branch)
 * `CommitID` (the commit hash or ID)
@@ -576,7 +576,7 @@ See the instructions above for downloading your AES key locally to address this 
 
 ### Need a key regenerated
 
-If you need a key regenerated, you can [submit a ticket to the help desk](https://helpdesk.codeship.com) from your account. Keep in mind that this will leave current encrypted credentials and environmental variables invalid for future builds on Codeship until they are re-encrypted using the new key.
+If you need a key regenerated, you can [submit a ticket to the help desk](https://helpdesk.codeship.com) from your account. Keep in mind that this will leave current encrypted credentials and environmental variables invalid for future builds on CodeShip until they are re-encrypted using the new key.
 
 ### Only Pushing On Certain Branches
 

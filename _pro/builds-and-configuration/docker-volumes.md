@@ -34,11 +34,11 @@ Volumes are directories on the host that your containers can read from and write
 
 Volumes let your containers work together without needing to tightly couple them or build out any direct communication between them. This is a great way to keep your containers efficient, and volumes solve a lot of problems in a Docker-based architecture.
 
-**Note** that every step of your CI/CD process on Codeship runs on a separate set of containers, so volumes are the only way to persist artifacts or changes between steps during your build pipeline.
+**Note** that every step of your CI/CD process on CodeShip runs on a separate set of containers, so volumes are the only way to persist artifacts or changes between steps during your build pipeline.
 
 ## Using Volumes
 
-There are two primary ways to use Docker volumes in your CI/CD process with Codeship.
+There are two primary ways to use Docker volumes in your CI/CD process with CodeShip.
 
 ### Configuration #1: Passing Data During A Single Step
 

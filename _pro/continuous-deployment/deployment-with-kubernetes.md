@@ -24,7 +24,7 @@ redirect_from:
 * include a table of contents
 {:toc}
 
-## Issue kubectl commands to your k8s cluster from your Codeship Pro build
+## Issue kubectl commands to your k8s cluster from your CodeShip Pro build
 
 {% csnote info %}
 The public repository for our `codeship/kubectl` Docker image can be found [here](https://github.com/codeship-library/kubectl).
@@ -40,7 +40,7 @@ kubectl config view --flatten > kubeconfigdata # add --minify flag to reduce inf
 
 ### 2. Copy contents of generated k8s config file to env var file
 
-We have a Docker container built for taking the plaintext, flattened k8s config file and storing to a [Codeship Pro env file]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}). The `/root/.kube/config` path specifies exactly where we want the contents of the `kubeconfigdata` securely placed in the `codeship/kubectl` container during runtime.
+We have a Docker container built for taking the plaintext, flattened k8s config file and storing to a [CodeShip Pro env file]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}). The `/root/.kube/config` path specifies exactly where we want the contents of the `kubeconfigdata` securely placed in the `codeship/kubectl` container during runtime.
 
 ```bash
 docker run --rm -it -v $(pwd):/files codeship/env-var-helper cp kubeconfigdata:/root/.kube/config k8s-env
@@ -81,5 +81,5 @@ kubectl:
 ```
 
 {% csnote info %}
-If you’re still largely unfamiliar with Codeship Pro, then check out our step-by-step walk-through on [issuing kubectl commands in Codeship Pro](https://github.com/codeship-library/kubectl-connection-demo).
+If you’re still largely unfamiliar with CodeShip Pro, then check out our step-by-step walk-through on [issuing kubectl commands in CodeShip Pro](https://github.com/codeship-library/kubectl-connection-demo).
 {% endcsnote %}

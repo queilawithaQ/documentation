@@ -1,5 +1,5 @@
 ---
-title: Environment Variables On Codeship Pro
+title: Environment Variables On CodeShip Pro
 shortTitle: Environment Variables
 menus:
   pro/builds:
@@ -26,16 +26,16 @@ redirect_from:
 ---
 
 {% csnote info %}
-This article is about using environment variables with Codeship Pro.
-If you are unfamiliar with Codeship Pro, we recommend our [getting started guide]({{ site.baseurl }}{% link _pro/quickstart/getting-started.md %}) or [the features overview page](https://codeship.com/features/pro).
-Note that you will also need to use the [Codeship Pro local CLI tool]({{ site.baseurl }}{% link _pro/jet-cli/usage-overview.md %}) to encrypt your environment variables.
+This article is about using environment variables with CodeShip Pro.
+If you are unfamiliar with CodeShip Pro, we recommend our [getting started guide]({{ site.baseurl }}{% link _pro/quickstart/getting-started.md %}) or [the features overview page](https://codeship.com/features/pro).
+Note that you will also need to use the [CodeShip Pro local CLI tool]({{ site.baseurl }}{% link _pro/jet-cli/usage-overview.md %}) to encrypt your environment variables.
 {% endcsnote %}
 
 
 * include a table of contents
 {:toc}
 
-Using Codeship Pro, you can set environment variables in two formats: Encrypted and unsecured.
+Using CodeShip Pro, you can set environment variables in two formats: Encrypted and unsecured.
 
 This is important because some environment variables may not need to be securely stored, but some may relate to authentication or deployment access and therefore need to be secured and never visible in your repo or configuration files.
 
@@ -53,7 +53,7 @@ app:
     image: myorg/appname
     dockerfile_path: Dockerfile
   environment:
-    - NAME=Codeship
+    - NAME=CodeShip
     - URL=www.codeship.com
 ```
 
@@ -68,9 +68,9 @@ ENV URL=www.codeship.com
 
 ## Encrypted Environment Variables
 
-The most common way to use environment variables on Codeship Pro is by using our `encrypted_env_file` option. This lets you keep all environment variables securely encrypted, via a project-specific AES key, and therefore never explicitly visible in your repo.
+The most common way to use environment variables on CodeShip Pro is by using our `encrypted_env_file` option. This lets you keep all environment variables securely encrypted, via a project-specific AES key, and therefore never explicitly visible in your repo.
 
-By doing this, you never have to worry about using environment variables for passing your secrets to your CI/CD pipeline and to your builds. Codeship Pro uses [AES-256 bit encryption](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard).
+By doing this, you never have to worry about using environment variables for passing your secrets to your CI/CD pipeline and to your builds. CodeShip Pro uses [AES-256 bit encryption](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard).
 
 ### Downloading Your AES Key
 
@@ -141,9 +141,9 @@ So, if the same variable is present in multiple declarations, it will overwrite 
 
 ## Default Environment Variables
 
-By default, Codeship populates a list of CI/CD related environment variables, such as the branch and the commit ID.
+By default, CodeShip populates a list of CI/CD related environment variables, such as the branch and the commit ID.
 
-The environment variables Codeship populates are:
+The environment variables CodeShip populates are:
 
 ```
 CI_BRANCH               # The Branch name of the triggered build. Ex: master
@@ -191,7 +191,7 @@ See the tutorials on [Docker Push]({{ site.baseurl }}{% link _pro/builds-and-con
 
 ### Managing Local Credential Differences
 
-In some situations, you may find that you want to run one set of credentials locally and a different set during your Codeship builds. Or, some developers on your team may need to use different sets of credentials. There is no ideal way to resolve this issue, at the moment, although we hope to solve for it better in the future.
+In some situations, you may find that you want to run one set of credentials locally and a different set during your CodeShip builds. Or, some developers on your team may need to use different sets of credentials. There is no ideal way to resolve this issue, at the moment, although we hope to solve for it better in the future.
 
 For the time being, there are several workarounds that may be worth investigating for your team if you have this need:
 
