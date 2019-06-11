@@ -1,5 +1,5 @@
 ---
-title: Using MongoDB In CI/CD with Codeship Basic
+title: Using MongoDB In CI/CD with CodeShip Basic
 shortTitle: MongoDB
 tags:
   - services

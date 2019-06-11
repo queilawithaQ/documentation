@@ -61,7 +61,7 @@ git clone https://<token>:x-oauth-basic@github.com/owner/repo.git
 
 ### The SSH Key Option
 
-The process for securely setting your private SSH key is already covered in our [setting SSH private key documentation]({{ site.baseurl }}{% link _pro/builds-and-configuration/setting-ssh-private-key.md %}). But the outlined approach has one drawback -- it does not allow for SSH based operations during the image build. That's a concern if you are trying to bake a cloned repo right into the image (and not wanting to pull the repo into a volume for every Codeship Pro build).
+The process for securely setting your private SSH key is already covered in our [setting SSH private key documentation]({{ site.baseurl }}{% link _pro/builds-and-configuration/setting-ssh-private-key.md %}). But the outlined approach has one drawback -- it does not allow for SSH based operations during the image build. That's a concern if you are trying to bake a cloned repo right into the image (and not wanting to pull the repo into a volume for every CodeShip Pro build).
 
 **The suggested deviation from the outlined approach is to:**
 

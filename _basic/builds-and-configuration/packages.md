@@ -1,7 +1,7 @@
 ---
-title: Codeship Basic Package List
-shortTitle: Codeship Basic Package List
-description: Technical documentation listing all pre-installed packages and tools of the Codeship Basic build environment
+title: CodeShip Basic Package List
+shortTitle: CodeShip Basic Package List
+description: Technical documentation listing all pre-installed packages and tools of the CodeShip Basic build environment
 menus:
   basic/builds:
     title: Installed Packages
@@ -23,9 +23,9 @@ This page was last updated on {{ site.data.basic.latest_update }}.
 * include a table of contents
 {:toc}
 
-## Codeship Pre-Installed Packages And Tools
+## CodeShip Pre-Installed Packages And Tools
 
-In a best effort to list everything installed on Codeship Basic, we offer the following list of installed packages. While the list may not be fully complete at any given moment, we try our best to keep it comprehensive and up to date.
+In a best effort to list everything installed on CodeShip Basic, we offer the following list of installed packages. While the list may not be fully complete at any given moment, we try our best to keep it comprehensive and up to date.
 
 ## Check For Packages Versions Via SSH Session
 

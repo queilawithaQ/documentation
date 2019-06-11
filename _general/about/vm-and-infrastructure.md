@@ -13,7 +13,7 @@ tags:
   - virtual machine
   - build machine
 categories:
-  - About Codeship
+  - About CodeShip
   - Security 
 redirect_from:
   - /security/vm-and-infrastructure/
@@ -24,17 +24,17 @@ redirect_from:
 
 ## Build Machines
 
-### Codeship Basic
+### CodeShip Basic
 
-Codeship Basic runs [Ubuntu 18.04 (Bionic)](https://help.ubuntu.com/18.04/serverguide/index.html) on all build machines. To virtualize the build machines [Linux Containers (LXC)](https://linuxcontainers.org) are used. All Basic build machines run on AWS us-east-1. Basic is multi tenant meaning there are many Linux Containers running on a single AWS instance at a time.
+CodeShip Basic runs [Ubuntu 18.04 (Bionic)](https://help.ubuntu.com/18.04/serverguide/index.html) on all build machines. To virtualize the build machines [Linux Containers (LXC)](https://linuxcontainers.org) are used. All Basic build machines run on AWS us-east-1. Basic is multi tenant meaning there are many Linux Containers running on a single AWS instance at a time.
 
 **Every build is provisioned with a new LXC instance.** Changes done to the filesystem during the build are stored on a temporary filesystem in memory so your code never touches a harddrive and is completely removed as soon as the build ends.
 
-### Codeship Pro
+### CodeShip Pro
 
-All Codeship Pro builds run on dedicated, single tenant build machines, on individual AWS EC2 instances, in the us-east-1 region. On Pro, builds run on infrastructure equipped with version {{ site.data.docker.version }} of Docker.
+All CodeShip Pro builds run on dedicated, single tenant build machines, on individual AWS EC2 instances, in the us-east-1 region. On Pro, builds run on infrastructure equipped with version {{ site.data.docker.version }} of Docker.
 
-The Codeship Pro build environment is configurable depending on plan and available in the following configurations:
+The CodeShip Pro build environment is configurable depending on plan and available in the following configurations:
 
 * **Small**: 2 CPUs, 3.75gb RAM
 * **Medium**: 4 CPUs, 7.5gb RAM
@@ -43,13 +43,13 @@ The Codeship Pro build environment is configurable depending on plan and availab
 * **Massive**: 32 CPUs, 60gb RAM
 
 ## Firewall
-All incoming ports are rejected by default except port 22, which is open to allow [SSH debug sessions]({{ site.baseurl }}{% link _basic/builds-and-configuration/ssh-access.md %}). Outgoing port 25 (SMTP) is closed by default so Codeship can't be used for spamming.
+All incoming ports are rejected by default except port 22, which is open to allow [SSH debug sessions]({{ site.baseurl }}{% link _basic/builds-and-configuration/ssh-access.md %}). Outgoing port 25 (SMTP) is closed by default so CodeShip can't be used for spamming.
 
 ## Disk Space
-All builds on both Codeship Basic and Codeship Pro have 10gb of disk space allocation for the build environment.
+All builds on both CodeShip Basic and CodeShip Pro have 10gb of disk space allocation for the build environment.
 
 ## System Timeouts
 
-On **Codeship Basic**, a build can run for up to 3 hours, although builds will time out if there is no log activity for 10 minutes.
+On **CodeShip Basic**, a build can run for up to 3 hours, although builds will time out if there is no log activity for 10 minutes.
 
-On **Codeship Pro**, a build can run for up to 5 hours, although builds will time out if there is no log activity for 15 minutes.
+On **CodeShip Pro**, a build can run for up to 5 hours, although builds will time out if there is no log activity for 15 minutes.

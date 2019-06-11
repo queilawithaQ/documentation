@@ -1,5 +1,5 @@
 ---
-title: Using Elixir In CI/CD with Codeship Basic
+title: Using Elixir In CI/CD with CodeShip Basic
 shortTitle: Elixir
 tags:
   - elixir
@@ -44,7 +44,7 @@ We do not cache Elixir dependencies between builds.
 
 ## Frameworks And Testing
 
-Elixir frameworks such as Phoenix, and test tools such as ExUnit, are all supported on Codeship. Note that you will need to manually install all tools needed, in your project's [setup commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}).
+Elixir frameworks such as Phoenix, and test tools such as ExUnit, are all supported on CodeShip. Note that you will need to manually install all tools needed, in your project's [setup commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}).
 
 ## Parallel Testing
 
@@ -68,4 +68,4 @@ Note that aggressive parallelization can cause resource and build failure issues
 
 ## Notes And Known Issues
 
-Due to Elixir version and build issues, you may find it helpful to tests your commands with different versions via an [SSH debug session]({{ site.baseurl }}{% link _basic/builds-and-configuration/ssh-access.md %}) if tests are running differently on Codeship compared to your local machine.
+Due to Elixir version and build issues, you may find it helpful to tests your commands with different versions via an [SSH debug session]({{ site.baseurl }}{% link _basic/builds-and-configuration/ssh-access.md %}) if tests are running differently on CodeShip compared to your local machine.

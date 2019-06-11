@@ -1,5 +1,5 @@
 ---
-title: Deployment Pipelines On Codeship Basic
+title: Deployment Pipelines On CodeShip Basic
 shortTitle: Deployment Pipelines
 menus:
   basic/builds:
@@ -23,7 +23,7 @@ redirect_from:
 
 ## What Are Deployment Pipelines?
 
-On Codeship, you are able to define **deployment pipelines**. A deployment pipeline is a set of deployment commands, or a deployment integration, configured to run whenever code is updated on a specific branch (such as `master`).
+On CodeShip, you are able to define **deployment pipelines**. A deployment pipeline is a set of deployment commands, or a deployment integration, configured to run whenever code is updated on a specific branch (such as `master`).
 
 Every time you push a new commit or tag to this branch, or merge a pull request into this branch, a build will kick off that will run your deployment pipeline if all other setup and test command steps are successfully. Most projects will have at least one deployment pipeline, for deploying your code after successfully running your tests.
 
@@ -44,7 +44,7 @@ On the next push to this branch (in this case 'master') the deployment will be t
 
 ### Deployment Integrations
 
-As part of our deployment pipelines, Codeship provides turnkey deployment integrations for many common hosting providers, such as AWS Elastic Beanstalk, Heroku, Google App Engine and more.
+As part of our deployment pipelines, CodeShip provides turnkey deployment integrations for many common hosting providers, such as AWS Elastic Beanstalk, Heroku, Google App Engine and more.
 
 To use a deployment integration, just click on the logo of your provider after creating your pipeline and add your authentication and configuration information as required.
 
@@ -52,7 +52,7 @@ To use a deployment integration, just click on the logo of your provider after c
 
 ### Custom Script Deployments
 
-While Codeship does provide many helpful deployment integrations, you may find that you want to run your own commands or your own custom scripts as part of a deployment pipeline.
+While CodeShip does provide many helpful deployment integrations, you may find that you want to run your own commands or your own custom scripts as part of a deployment pipeline.
 
 You can use the [Script Deployment]({{ site.baseurl }}{% link _basic/continuous-deployment/deployment-with-custom-scripts.md %}) to run your custom deployment commands or to execute other tasks right after or before a deployment. These will run as part of a deployment pipeline exactly as any of our deployment integrations would, but will rely on your scripts to provide exit status codes of `0` or any non-zero status code to indicate that they have either passed or failed.
 
@@ -62,7 +62,7 @@ When using a single test pipeline, the same build container is used for the enti
 
 ### Multi-Step Deployment Pipelines
 
-You can add **multiple deployments within one deployment pipeline**. One easy example of this type of workflow would be to run your deployment commands and then, if they are successful, run post-deployment notification scripts. This process is easy to fully automated on Codeship. Note, though, that it is **not** possible to run multiple deployments in parallel.
+You can add **multiple deployments within one deployment pipeline**. One easy example of this type of workflow would be to run your deployment commands and then, if they are successful, run post-deployment notification scripts. This process is easy to fully automated on CodeShip. Note, though, that it is **not** possible to run multiple deployments in parallel.
 
 ![Multiple Deployments]({{ site.baseurl }}/images/continuous-deployment/multiple_deployments.png)
 
@@ -95,6 +95,6 @@ By clicking on "Edit Branch Settings" you can change the branch name or delete t
 
 ### Scripts Library
 
-We maintain a [scripts library](https://github.com/codeship/scripts) with scripts for common packages, deployments and other useful workflow improvements on Codeship Basic.
+We maintain a [scripts library](https://github.com/codeship/scripts) with scripts for common packages, deployments and other useful workflow improvements on CodeShip Basic.
 
 If you're looking for a specific tool or version, the scripts library is a great first place to check.

@@ -23,13 +23,13 @@ categories:
 
 ## Google Cloud Deployments
 
-Deployments to [Google Cloud](https://cloud.google.com) can be done using the gcloud CLI directly on a Codeship Basic build machine similar to how you might use the CLI locally.
+Deployments to [Google Cloud](https://cloud.google.com) can be done using the gcloud CLI directly on a CodeShip Basic build machine similar to how you might use the CLI locally.
 
 You will need to configure your authentication with environment variables and then define the CLI commands you want to run as a [custom-script deployment pipeline]({{ site.baseurl }}{% link _basic/continuous-deployment/deployment-with-custom-scripts.md %}).
 
 ### Installing The CLI
 
-The [gcloud CLI](https://cloud.google.com/sdk/gcloud) is pre-installed on Codeship Basic build machines.
+The [gcloud CLI](https://cloud.google.com/sdk/gcloud) is pre-installed on CodeShip Basic build machines.
 
 If you want to update to the latest version at build time, add the following command in the [Setup Commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}#configuring-your-setup-commands) section of your test settings:
 
@@ -54,7 +54,7 @@ gcloud auth activate-service-account --key-file="$HOME/clone/google-key.json"
 
 You will need to create a new [custom-script deployment pipeline]({{ site.baseurl }}{% link _basic/continuous-deployment/deployment-with-custom-scripts.md %}) to run the gcloud CLI commands you need for your deployment.
 
-These commands will run every time the branch the deployment pipeline is associated with is updated. They are not Codeship specific and will be standard gcloud CLI input.
+These commands will run every time the branch the deployment pipeline is associated with is updated. They are not CodeShip specific and will be standard gcloud CLI input.
 
 ## gcloud CLI Information
 

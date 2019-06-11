@@ -12,7 +12,7 @@ tags:
   - cd
   - continuous deployment
 categories:
-  - About Codeship  
+  - About CodeShip  
   - Guide
   - Configuration
 redirect_from:
@@ -30,7 +30,7 @@ CI is the process of integrating changes into a code repository continuously wit
 
 Both these processes enable developers to work faster and more efficiently since the builds and deployments are automated once the initial setup of the CI/CD system was made. In case a bug was shipped, the system can also be rolled back in the same manner, allowing for quick reactions and better user experience.
 
-Read more on CI/CD in the [Codeship Integration Essentials](https://codeship.com/continuous-integration-essentials).
+Read more on CI/CD in the [CodeShip Integration Essentials](https://codeship.com/continuous-integration-essentials).
 
 ## Links
 * [Introduction to Continuous Integration by Martin Fowler](https://martinfowler.com/articles/continuousIntegration.html)

@@ -31,7 +31,7 @@ The `jet encrypt` function will take any file as input, and output an encrypted 
 If you encounter the error `No AES key provided`, and you have already downloaded the key, verify that the file is named `codeship.aes` and in the same directory where you are executing `jet encrypt`, or you are passing in the correct `key-path` value.
 
 ## Data Signing
-As of `jet` version **2.6.0** all newly encrypted files are also signed with a checksum during encryption. This allows Codeship to verify that both the key used to decrypt the file is the same as was used to encrypt it, as well as that the encrypted data itself has not been tampered with. Signed encrypted files all contain the value `codeship:v2` at the head of the file.
+As of `jet` version **2.6.0** all newly encrypted files are also signed with a checksum during encryption. This allows CodeShip to verify that both the key used to decrypt the file is the same as was used to encrypt it, as well as that the encrypted data itself has not been tampered with. Signed encrypted files all contain the value `codeship:v2` at the head of the file.
 
 See the section on [decryption]({{ site.baseurl }}{% link _pro/jet-cli/decrypt.md %}) for more information.
 

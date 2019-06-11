@@ -30,7 +30,7 @@ jet update [flags]
 ## Extended description
 With `jet update` you can update your locally installed version to the latest available version.
 
-This command is handy if you installed the `jet` CLI by downloading the archive directly from Codeship, or via a package manager that doesn't support upgrades (e.g. Homebrew Cask).
+This command is handy if you installed the `jet` CLI by downloading the archive directly from CodeShip, or via a package manager that doesn't support upgrades (e.g. Homebrew Cask).
 
 ## Examples
 

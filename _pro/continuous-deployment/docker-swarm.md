@@ -15,25 +15,25 @@ tags:
 ---
 
 {% csnote info %}
-You can find a sample repository for deploying with Docker Swarm and Codeship Pro on Github [here](https://github.com/codeship-library/example-voting-app).
+You can find a sample repository for deploying with Docker Swarm and CodeShip Pro on Github [here](https://github.com/codeship-library/example-voting-app).
 {% endcsnote %}
 
 * include a table of contents
 {:toc}
 
-Deploying your application with Docker Swarm and Codeship Pro is easy. You'll just need a few things:
+Deploying your application with Docker Swarm and CodeShip Pro is easy. You'll just need a few things:
 
 - A provider to host your Swarm (AWS/Google Cloud/Azure/Etc)
 
 - A Docker Compose V3 file to orchestrate your Swarm
 
-- Your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}) and [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}) to run your CI/CD pipeline on Codeship Pro
+- Your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}) and [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}) to run your CI/CD pipeline on CodeShip Pro
 
 ## Setup
 
 ### Compose V3 and codeship-services.yml
 
-To deploy with Docker Swarm and Codeship Pro, an important first step is clarifying the difference between your [Docker Compose V3](https://docs.docker.com/compose/compose-file/) file and your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
+To deploy with Docker Swarm and CodeShip Pro, an important first step is clarifying the difference between your [Docker Compose V3](https://docs.docker.com/compose/compose-file/) file and your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
 
 - The Docker Compose V3 file is intended to orchestrate your production container setup. Your Swarm deployment will rely on this file for knowing what to deploy and how to configure it.
 
