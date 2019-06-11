@@ -27,7 +27,7 @@ redirect_from:
 
 In some workflows, you may want to execute a command _only when_ a previous command has failed. As one example, you may want to run an alerts script if your tests fail.
 
-By default, Codeship exits a build once their is a failure of any kind, which means when any command reports back a status code other than `0`. However, by wrapping your commands in an "on fail" script, you can create a fallback conditionality and then exit your build appropriately afterwards.
+By default, CodeShip exits a build once their is a failure of any kind, which means when any command reports back a status code other than `0`. However, by wrapping your commands in an "on fail" script, you can create a fallback conditionality and then exit your build appropriately afterwards.
 
 ## Using The "On Fail" Script
 

@@ -1,5 +1,5 @@
 ---
-title: Using Python In CI/CD with Docker and Codeship Pro
+title: Using Python In CI/CD with Docker and CodeShip Pro
 shortTitle: Python
 menus:
   pro/languages:
@@ -18,15 +18,15 @@ redirect_from:
 ---
 
 {% csnote info %}
-We've got [quickstart repos, sample apps and a getting started guide]({% link _pro/quickstart/quickstart-examples.md %}) available to make starting out with Codeship Pro faster and easier.
+We've got [quickstart repos, sample apps and a getting started guide]({% link _pro/quickstart/quickstart-examples.md %}) available to make starting out with CodeShip Pro faster and easier.
 {% endcsnote %}
 
 * include a table of contents
 {:toc}
 
-## Python on Codeship Pro
+## Python on CodeShip Pro
 
-Any Python framework or tool that can run inside a Docker container will run on Codeship Pro. This documentation article will highlight simple configuration files for a Node-based Dockerfile with nosetest and py.test.
+Any Python framework or tool that can run inside a Docker container will run on CodeShip Pro. This documentation article will highlight simple configuration files for a Node-based Dockerfile with nosetest and py.test.
 
 ## Example Repo
 
@@ -34,7 +34,7 @@ We have a sample Python/Django repo that you can clone or take a look at via the
 
 ## Services File
 
-The following is an example of a [Codeship Services file]({% link _pro/builds-and-configuration/services.md %}). Note that it is using a [PostgreSQL image](https://hub.docker.com/_/postgres/) and a [Redis image](https://hub.docker.com/_/redis/) via the Docker Hub as linked services.
+The following is an example of a [CodeShip Services file]({% link _pro/builds-and-configuration/services.md %}). Note that it is using a [PostgreSQL image](https://hub.docker.com/_/postgres/) and a [Redis image](https://hub.docker.com/_/redis/) via the Docker Hub as linked services.
 
 When accessing other containers please be aware that those services do not run on `localhost`, but on a different host, e.g. `postgres` or `mysql`. If you reference `localhost` in any of your configuration files you will have to change that to point to the service name of the service you want to access. Setting them through environment variables and using those inside of your configuration files is the cleanest approach to setting up your build environment.
 
@@ -59,7 +59,7 @@ postgres:
 
 ## Steps File
 
-The following is an example of a [Codeship Steps file]({% link _pro/builds-and-configuration/steps.md %}).
+The following is an example of a [CodeShip Steps file]({% link _pro/builds-and-configuration/steps.md %}).
 
 Note that every step runs in isolated containers, so changes made on one step do not persist to the next step.  Because of this, any required setup commands, such as migrating a database, should be done via a custom Dockerfile, via a `command` or `entrypoint` on a service or repeated on every step.
 
@@ -107,4 +107,4 @@ Because of version and test dependency issues, it is advised to try using [the J
 
 You can enable caching per service in your Services file.
 
-You can [read more about how caching works on Codeship Pro here]({{ site.baseurl }}{% link _pro/builds-and-configuration/caching.md %}).
+You can [read more about how caching works on CodeShip Pro here]({{ site.baseurl }}{% link _pro/builds-and-configuration/caching.md %}).

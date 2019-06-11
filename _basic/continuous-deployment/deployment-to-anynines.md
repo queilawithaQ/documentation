@@ -24,7 +24,7 @@ They have a great [Getting Started](https://support.anynines.com/hc/en-us/articl
 
 ## Deploying
 
-As for getting started with **anynines** on Codeship, start by getting your application to deploy from your local machine. Once this is done, you need to add the following environment variables to your project settings.
+As for getting started with **anynines** on CodeShip, start by getting your application to deploy from your local machine. Once this is done, you need to add the following environment variables to your project settings.
 
 ```
 CF_USER
@@ -45,4 +45,4 @@ cf6 push "${CF_APPLICATION}"
 
 This will deploy your application on each push to the specific branch you configured the deployment for.
 
-If you have more thorough requirements, like _blue/green deployments_ see a great article written by the folks at _anynines_ about deploying to Codeship, which is  [available at their blog](https://blog.anynines.com/setup-continuous-deployment-anynines-codeship-com).
+If you have more thorough requirements, like _blue/green deployments_ see a great article written by the folks at _anynines_ about deploying to CodeShip, which is  [available at their blog](https://blog.anynines.com/setup-continuous-deployment-anynines-codeship-com).

@@ -1,5 +1,5 @@
 ---
-title: Using Git Submodules In CI/CD with Codeship Basic
+title: Using Git Submodules In CI/CD with CodeShip Basic
 shortTitle: Git Submodules
 menus:
   basic/ci:
@@ -19,7 +19,7 @@ redirect_from:
 * include a table of contents
 {:toc}
 
-If your repository includes a `.gitmodules` file, Codeship will automatically initialize and update the configured submodules. The following command is run after cloning your repository to do this.
+If your repository includes a `.gitmodules` file, CodeShip will automatically initialize and update the configured submodules. The following command is run after cloning your repository to do this.
 
 ```shell
 git submodule update --recursive --init
@@ -33,7 +33,7 @@ Right now there is not a way to skip this command, but let us know if that creat
 
 Submodules that are hosted as public repositories should just work, but let us know if you see any issues.
 
-If your submodule is a **private repository** you need to make sure Codeship can clone the repository.
+If your submodule is a **private repository** you need to make sure CodeShip can clone the repository.
 
 1. Make sure the project's public SSH key (from the _General_ settings page) has access to the submodule repository. See [how to provide access to other repositories]({{ site.baseurl }}{% link _basic/builds-and-configuration/access-to-other-repositories.md %}) if you're not sure how to achieve this.
 2. Make sure the submodule is referenced via a SSH based URL (e.g. `git@github.com:codeship/documentation.git`). If you reference the submodule via a HTTPS based URL (e.g. `https://github.com/codeship/documentation.git`), the git client will ask for authentication credentials during the build and run into a timeout (as you can't provide them).

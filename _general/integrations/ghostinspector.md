@@ -1,5 +1,5 @@
 ---
-title: Using Ghost Inspector And Codeship For UI And Browser Testing
+title: Using Ghost Inspector And CodeShip For UI And Browser Testing
 shortTitle: Ghost Inspector Browser Testing
 menus:
   general/integrations:
@@ -26,7 +26,7 @@ By using Ghost Inspector you can easily test your UI without complex browser tes
 
 [Their documentation](https://ghostinspector.com/docs/) does a great job of providing more information, in addition to the setup instructions below.
 
-## Codeship Pro
+## CodeShip Pro
 
 ### Setting Your API Keys
 
@@ -83,7 +83,7 @@ curl "https://api.ghostinspector.com/v1/suites/$GHOST_SUITE_ID/execute/?apiKey=$
 if [ $(grep -c '"passing":false' ghostinspector.json) -ne 0 ]; then exit 1; else echo "Tests Passed"; fi
  ```
 
-## Codeship Basic
+## CodeShip Basic
 
 ### Setting Your API Keys
 

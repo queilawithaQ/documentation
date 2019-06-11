@@ -1,5 +1,5 @@
 ---
-title: Using OpsGenie To Track Deployments With Codeship Pro
+title: Using OpsGenie To Track Deployments With CodeShip Pro
 shortTitle: Tracking Deployments With OpsGenie
 menus:
   general/integrations:
@@ -28,15 +28,15 @@ By using OpsGenie your engineering team can respond to important alerts quickly 
 
 [Their documentation](https://www.opsgenie.com/docs) does a great job of providing more information, in addition to the setup instructions below.
 
-## Codeship Pro
+## CodeShip Pro
 
 ### Webhook Method
 
-The simplest way to integrate OpsGenie with Codeship is to use the webhook integration. From inside your OpsGenie account, you will first want to enable the [Codeship integration](https://app.opsgenie.com/integration#/add/Codeship).
+The simplest way to integrate OpsGenie with CodeShip is to use the webhook integration. From inside your OpsGenie account, you will first want to enable the [CodeShip integration](https://app.opsgenie.com/integration#/add/CodeShip).
 
-Once the Codeship integration is enabled in OpsGenie, you will want to create a [custom webhook in your project's notifications]({{ site.baseurl }}{% link _general/projects/notifications.md %}#webhook) using the webhook destination URL provided by the integrations page in OpsGenie.
+Once the CodeShip integration is enabled in OpsGenie, you will want to create a [custom webhook in your project's notifications]({{ site.baseurl }}{% link _general/projects/notifications.md %}#webhook) using the webhook destination URL provided by the integrations page in OpsGenie.
 
-All successful Codeship builds will now complete with a webhook to OpsGenie to trigger your configured alerts.
+All successful CodeShip builds will now complete with a webhook to OpsGenie to trigger your configured alerts.
 
 ### Manual Integration
 
@@ -70,7 +70,7 @@ This example will run a deployment command, and then a script that would theoret
   command: opsgenie.sh
 ```
 
-Alternatively, you could combine your deployment scripts with an OpsGenie API call, in a custom script that would alert OpsGenie if a deployment command fails before ultimately surfacing an exit status code `1` (or or anything other than `0`) to instruct Codeship to fail to the build:
+Alternatively, you could combine your deployment scripts with an OpsGenie API call, in a custom script that would alert OpsGenie if a deployment command fails before ultimately surfacing an exit status code `1` (or or anything other than `0`) to instruct CodeShip to fail to the build:
 
 ```yaml
 - name: deploy
@@ -92,15 +92,15 @@ curl -XPOST 'https://api.opsgenie.com/v1/json/alert' -d '
 
 Although it is worth noting that [their API](https://www.opsgenie.com/docs) provides a variety of endpoints and services you can implement.
 
-## Codeship Basic
+## CodeShip Basic
 
 ### Webhook Method
 
-The simplest way to integrate OpsGenie with Codeship is to use the webhook integration. From inside your OpsGenie account, you will first want to enable the [Codeship integration](https://app.opsgenie.com/integration#/add/Codeship).
+The simplest way to integrate OpsGenie with CodeShip is to use the webhook integration. From inside your OpsGenie account, you will first want to enable the [CodeShip integration](https://app.opsgenie.com/integration#/add/CodeShip).
 
-Once the Codeship integration is enabled in OpsGenie, you will want to create a [custom webhook in your project's notifications]({{ site.baseurl }}{% link _general/projects/notifications.md %}#webhook) using the webhook destination URL provided by the integrations page in OpsGenie.
+Once the CodeShip integration is enabled in OpsGenie, you will want to create a [custom webhook in your project's notifications]({{ site.baseurl }}{% link _general/projects/notifications.md %}#webhook) using the webhook destination URL provided by the integrations page in OpsGenie.
 
-All successful Codeship builds will now complete with a webhook to OpsGenie to trigger your configured alerts.
+All successful CodeShip builds will now complete with a webhook to OpsGenie to trigger your configured alerts.
 
 ### Manual Integration
 

@@ -15,7 +15,7 @@ tags:
 ---
 
 ## Description
-Run your Codeship Pro pipeline steps.
+Run your CodeShip Pro pipeline steps.
 
 ## Usage
 
@@ -31,7 +31,7 @@ Executing the `jet steps` command will build the services defined in the [codesh
 
 The `jet steps` command skips [push steps]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}#push-steps) and [branch/tag specific steps]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}#limiting-steps-to-specific-branches-or-tags) unless the appropriate flags are passed to the command.
 
-Docker will use existing images when running `jet` locally. This may lead to builds passing locally, and failing remotely on Codeship. This is due to the remote environment starting without any prior images. We recommend removing any locally saved Docker images prior to running `jet steps` for a more consistent result to the remote server.
+Docker will use existing images when running `jet` locally. This may lead to builds passing locally, and failing remotely on CodeShip. This is due to the remote environment starting without any prior images. We recommend removing any locally saved Docker images prior to running `jet steps` for a more consistent result to the remote server.
 
 
 ## Examples

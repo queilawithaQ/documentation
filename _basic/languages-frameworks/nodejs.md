@@ -1,5 +1,5 @@
 ---
-title: Using Node.js In CI/CD with Codeship Basic
+title: Using Node.js In CI/CD with CodeShip Basic
 shortTitle: Node.js
 menus:
   basic/languages:
@@ -25,9 +25,9 @@ redirect_from:
 {:toc}
 
 {% csnote info %}
-This article is about using Node.js with Codeship Basic.
+This article is about using Node.js with CodeShip Basic.
 
-If you'd like to learn more about Codeship Basic, we recommend the [getting started guide]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}) or [the features overview page](https://codeship.com/features/basic)
+If you'd like to learn more about CodeShip Basic, we recommend the [getting started guide]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}) or [the features overview page](https://codeship.com/features/basic)
 {% endcsnote %}
 
 ## Versions And Setup
@@ -87,7 +87,7 @@ echo "//${REGISTRY_URL}/:_authToken=${AUTH_TOKEN}" > "${HOME}/.npmrc"
 
 ### Dependency Cache
 
-Codeship automatically caches the `$REPO_ROOT/node_modules` directory between builds to optimize build performance. You can [read this article to learn more]({{ site.baseurl }}{% link _basic/builds-and-configuration/dependency-cache.md %}) about the dependency cache and how to clear it. We also configure `yarn` to write into `$HOME/cache/yarn`, which is also cached.
+CodeShip automatically caches the `$REPO_ROOT/node_modules` directory between builds to optimize build performance. You can [read this article to learn more]({{ site.baseurl }}{% link _basic/builds-and-configuration/dependency-cache.md %}) about the dependency cache and how to clear it. We also configure `yarn` to write into `$HOME/cache/yarn`, which is also cached.
 
 ### Caching Globally Installed Dependencies
 
@@ -181,7 +181,7 @@ Note that we do not officially support or integrate with this module and that it
 
 ## Notes And Known Issues
 
-Due to Node.js version issues, you may find it helpful to test your commands with different versions via an [SSH debug session]({{ site.baseurl }}{% link _basic/builds-and-configuration/ssh-access.md %}) if tests are running differently on Codeship compared to your local machine.
+Due to Node.js version issues, you may find it helpful to test your commands with different versions via an [SSH debug session]({{ site.baseurl }}{% link _basic/builds-and-configuration/ssh-access.md %}) if tests are running differently on CodeShip compared to your local machine.
 
 ### Running grunt
 
@@ -195,7 +195,7 @@ grunt test
 
 ## Frameworks And Testing
 
-All versions of Node.js run on Codeship. Additionally, all tools and test frameworks, such as karma, mocha, grunt or any other node-based tool should work without issue. You will need to be sure to install them via `npm` before using them, however.
+All versions of Node.js run on CodeShip. Additionally, all tools and test frameworks, such as karma, mocha, grunt or any other node-based tool should work without issue. You will need to be sure to install them via `npm` before using them, however.
 
 ### io.js
 

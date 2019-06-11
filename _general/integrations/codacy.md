@@ -1,5 +1,5 @@
 ---
-title: Integrating Codeship With Codacy for Code Coverage Reports
+title: Integrating CodeShip With Codacy for Code Coverage Reports
 shortTitle: Using Codacy For Code Coverage
 tags:
   - analytics
@@ -22,13 +22,13 @@ menus:
 
 ## About Codacy
 
-[Codacy](https://www.codacy.com) is an automated code coverage service. Starting with Codacy and Codeship is fast and easy.
+[Codacy](https://www.codacy.com) is an automated code coverage service. Starting with Codacy and CodeShip is fast and easy.
 
 By using Codacy you can help enforce higher standards of code quality and transparency with your engineering tea.
 
 [Their documentation](https://support.codacy.com/hc/en-us/articles/207993835-Add-coverage-to-your-repo) does a great job of providing more information, in addition to the setup instructions below.
 
-## Codeship Pro
+## CodeShip Pro
 
 ### Adding Project Token
 
@@ -52,7 +52,7 @@ For instance the Rails gem will automatically update your coverage report and ex
 
 **Note** that the above command is only for Python. We recommend reviewing [their documentation]([Their documentation](https://support.codacy.com/hc/en-us/articles/207993835-Add-coverage-to-your-repo) for your specific language to be sure the necessary commands are run.
 
-## Codeship Basic
+## CodeShip Basic
 
 ### Adding Project Token
 

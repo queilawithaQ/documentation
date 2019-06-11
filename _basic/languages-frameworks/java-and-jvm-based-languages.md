@@ -1,5 +1,5 @@
 ---
-title: Using Java And The JVM In CI/CD with Codeship Basic
+title: Using Java And The JVM In CI/CD with CodeShip Basic
 shortTitle: Java And The JVM
 tags:
   - java
@@ -161,7 +161,7 @@ The following tools are preinstalled in our virtual machine. You can add them to
 
 ### JVM-based languages
 
-[Scala](https://www.scala-lang.org), [Clojure](https://clojure.org), [Kotlin](https://kotlinlang.org), [Groovy](http://groovy-lang.org) and other JVM based languages should also run on Codeship. [Let us know](https://helpdesk.codeship.com) if you find something that doesn't work as expected.
+[Scala](https://www.scala-lang.org), [Clojure](https://clojure.org), [Kotlin](https://kotlinlang.org), [Groovy](http://groovy-lang.org) and other JVM based languages should also run on CodeShip. [Let us know](https://helpdesk.codeship.com) if you find something that doesn't work as expected.
 
 ## Dependencies
 
@@ -169,7 +169,7 @@ Installing dependencies through Maven is fully supported.
 
 ## Dependency Cache
 
-Codeship automatically caches the `$HOME/.ivy2` and `$HOME/.m2/repository` directories between builds to optimize build performance. You can [read this article to learn more]({{ site.baseurl }}{% link _basic/builds-and-configuration/dependency-cache.md %}) about the dependency cache and how to clear it.
+CodeShip automatically caches the `$HOME/.ivy2` and `$HOME/.m2/repository` directories between builds to optimize build performance. You can [read this article to learn more]({{ site.baseurl }}{% link _basic/builds-and-configuration/dependency-cache.md %}) about the dependency cache and how to clear it.
 
 ## Frameworks And Testing
 
@@ -197,7 +197,7 @@ Note that aggressive parallelization can cause resource and build failure issues
 
 ## Notes And Known Issues
 
-Due to Java version issues, you may find it helpful to test your commands with different versions via an [SSH debug session]({{ site.baseurl }}{% link _basic/builds-and-configuration/ssh-access.md %}) if tests are running differently on Codeship compared to your local machine.
+Due to Java version issues, you may find it helpful to test your commands with different versions via an [SSH debug session]({{ site.baseurl }}{% link _basic/builds-and-configuration/ssh-access.md %}) if tests are running differently on CodeShip compared to your local machine.
 
 ### JCE
 

@@ -1,5 +1,5 @@
 ---
-title: Using VictorOps To Track Deployments With Codeship Pro
+title: Using VictorOps To Track Deployments With CodeShip Pro
 shortTitle: Tracking Deployments With VictorOps
 menus:
   general/integrations:
@@ -28,7 +28,7 @@ By using VictorOps your engineering team can respond to important alerts quickly
 
 [Their documentation](https://help.victorops.com) does a great job of providing more information, in addition to the setup instructions below.
 
-## Codeship Pro
+## CodeShip Pro
 
 ### Setting Your Keys
 
@@ -60,7 +60,7 @@ This example will run a deployment command, and then a script that would theoret
   command: VictorOps.sh
 ```
 
-Alternatively, you could combine your deployment scripts with an VictorOps API call, in a custom script that would alert VictorOps if a deployment command fails before ultimately surfacing an exit status code `1` (or or anything other than `0`) to instruct Codeship to fail to the build:
+Alternatively, you could combine your deployment scripts with an VictorOps API call, in a custom script that would alert VictorOps if a deployment command fails before ultimately surfacing an exit status code `1` (or or anything other than `0`) to instruct CodeShip to fail to the build:
 
 ```yaml
 - name: deploy
@@ -77,7 +77,7 @@ curl -X POST --header 'Content-Type: application/json' --header 'Accept: applica
 
 Although it is worth noting that [their API](https://portal.victorops.com/public/api-docs.html) provides a variety of endpoints and services you can implement.
 
-## Codeship Basic
+## CodeShip Basic
 
 ### Setting Your Keys
 

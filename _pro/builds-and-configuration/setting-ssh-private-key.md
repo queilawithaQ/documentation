@@ -70,7 +70,7 @@ docker run -it --rm -v $(pwd):/app -w /app ubuntu:16.04 \
 Check out the [README page](https://github.com/codeship-library/docker-utilities/tree/master/ssh-helper) for more information on our SSH Helper tool.
 {% endcsnote %}
 
-#### 2. Configure your Codeship config files with the following as guidance
+#### 2. Configure your CodeShip config files with the following as guidance
 
 ```
 # Dockerfile
@@ -116,7 +116,7 @@ app:
 ```
 
 {% csnote info %}
-If you're unfamiliar with Codeship Pro, then check out our step-by-step walk-through on [setting up a private SSH key](https://github.com/codeship-library/setting-ssh-private-key-in-pro).
+If you're unfamiliar with CodeShip Pro, then check out our step-by-step walk-through on [setting up a private SSH key](https://github.com/codeship-library/setting-ssh-private-key-in-pro).
 {% endcsnote %}
 
 <br>

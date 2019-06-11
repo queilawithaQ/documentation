@@ -1,5 +1,5 @@
 ---
-title: Using Honeycomb For Logging And Event Tracking With Codeship Pro
+title: Using Honeycomb For Logging And Event Tracking With CodeShip Pro
 shortTitle: Logging And Event Tracking With Honeycomb
 menus:
   general/integrations:
@@ -21,13 +21,13 @@ categories:
 
 ## About Honeycomb
 
-[Honeycomb](https://www.honeycomb.io) lets you collect and track data and events for debugging and trend analysis. During your continuous deployment workflow with Codeship Pro, you can use Honeycomb to log information related to your deployments or tests.
+[Honeycomb](https://www.honeycomb.io) lets you collect and track data and events for debugging and trend analysis. During your continuous deployment workflow with CodeShip Pro, you can use Honeycomb to log information related to your deployments or tests.
 
 By using Honeycomb you can more easily track, troubleshoot and debug your applications.
 
 [Their documentation](https://honeycomb.io/docs/) does a great job of providing more information, in addition to the setup instructions below.
 
-## Codeship Pro
+## CodeShip Pro
 
 ### Setting Your Team Write Key
 
@@ -97,7 +97,7 @@ Once you have Honeymarker installed via a new service in your [codeship-services
 
 You can view the [Honeymarker documentation](https://github.com/honeycombio/honeymarker) for a full list of commands that you can use.
 
-## Codeship Basic
+## CodeShip Basic
 
 ### Setting Your Team Write Key
 
@@ -142,7 +142,7 @@ $ go get github.com/honeycombio/honeymarker
 $ honeymarker
 ```
 
-**Note** that Honeymarker installs via `go get`, which is configured by default on Codeship Basic build machines.
+**Note** that Honeymarker installs via `go get`, which is configured by default on CodeShip Basic build machines.
 
 #### Running Honeymarker Commands
 

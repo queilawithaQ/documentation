@@ -17,7 +17,7 @@ categories:
 * include a table of contents
 {:toc}
 
-Codeship makes it easy to deploy your application files to AWS S3 using Codeship's integrated [deployment pipelines]({{ site.baseurl }}{% link _basic/builds-and-configuration/deployment-pipelines.md %}).
+CodeShip makes it easy to deploy your application files to AWS S3 using CodeShip's integrated [deployment pipelines]({{ site.baseurl }}{% link _basic/builds-and-configuration/deployment-pipelines.md %}).
 
 ## Setup AWS S3 Deployment
 

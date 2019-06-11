@@ -63,7 +63,7 @@ Note: The following environment variables are populated after the _Build only on
 * CI_PR_NUMBER is populated with the pull request number.
 * CI_PULL_REQUEST is populated with the URL of the pull request. 
 
-See [Codeship Basic Environment Variables](https://documentation.codeship.com/basic/builds-and-configuration/set-environment-variables/) or [Codeship Pro Environment Variables](https://documentation.codeship.com/pro/builds-and-configuration/environment-variables/) for more information.
+See [CodeShip Basic Environment Variables](https://documentation.codeship.com/basic/builds-and-configuration/set-environment-variables/) or [CodeShip Pro Environment Variables](https://documentation.codeship.com/pro/builds-and-configuration/environment-variables/) for more information.
 
 ### Triggering Builds on Commits versus on Pull Requests
 

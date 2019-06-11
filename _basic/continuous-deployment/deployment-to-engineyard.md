@@ -17,7 +17,7 @@ categories:
 
 ## Deploy to Engine Yard
 
-To setup an [Engine Yard](https://www.engineyard.com) deployment on Codeship, first create a new [custom script deployment]({{ site.baseurl }}{% link _basic/continuous-deployment/deployment-with-custom-scripts.md %}). From there you can call our [Engine Yard deployment script](https://github.com/codeship/scripts/blob/master/deployments/engine_yard.sh).
+To setup an [Engine Yard](https://www.engineyard.com) deployment on CodeShip, first create a new [custom script deployment]({{ site.baseurl }}{% link _basic/continuous-deployment/deployment-with-custom-scripts.md %}). From there you can call our [Engine Yard deployment script](https://github.com/codeship/scripts/blob/master/deployments/engine_yard.sh).
 
 Set `EY_API_TOKEN` as an [environment variable]({{ site.baseurl }}{% link _basic/builds-and-configuration/set-environment-variables.md %}) in your Project Settings.
 

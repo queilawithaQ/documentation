@@ -26,7 +26,7 @@ categories:
 
 ## Managing Your Account's Connected Services
 
-The connected services page is where you can see which services are connected to your account, but also where you can specify your git username for us to map your builds with your Codeship account.
+The connected services page is where you can see which services are connected to your account, but also where you can specify your git username for us to map your builds with your CodeShip account.
 
 ![connected services screenshot]({{ site.baseurl }}/images/general/connected_services.png)
 
@@ -54,6 +54,6 @@ You can update existing services in different ways, depending on what you're loo
 
 To change the linked account (for SCM cloud-versions as well as Google) simply disconnect and re-connect to the service, using the account you want to switch to when re-connecting.
 
-If you want to remove the service or temporarily disconnect it, be aware that disabling the service will remove your account from the projects that use it to pull code. If you just need to temporarily stop Codeship from building, a better approach is to disable to integration on the SCM side and leave the service configured as is. If we don't get a webhook notification from the SCM, we don't run any builds.
+If you want to remove the service or temporarily disconnect it, be aware that disabling the service will remove your account from the projects that use it to pull code. If you just need to temporarily stop CodeShip from building, a better approach is to disable to integration on the SCM side and leave the service configured as is. If we don't get a webhook notification from the SCM, we don't run any builds.
 
 Naturally, you can also update the git username in case a typo sneaked in there.

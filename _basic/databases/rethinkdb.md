@@ -1,5 +1,5 @@
 ---
-title: Using RethinkDB In CI/CD with Codeship Basic
+title: Using RethinkDB In CI/CD with CodeShip Basic
 shortTitle: RethinkDB
 tags:
   - services

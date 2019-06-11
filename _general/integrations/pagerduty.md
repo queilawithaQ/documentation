@@ -1,5 +1,5 @@
 ---
-title: Using PagerDuty To Track Deployments With Codeship Pro
+title: Using PagerDuty To Track Deployments With CodeShip Pro
 shortTitle: Tracking Deployments With PagerDuty
 menus:
   general/integrations:
@@ -27,7 +27,7 @@ By using PagerDuty your engineering team can respond to important alerts quickly
 
 [The PagerDuty documentation](https://v2.developer.pagerduty.com/docs) does a great job of providing more information, in addition to the setup instructions below.
 
-## Codeship Pro
+## CodeShip Pro
 
 ### Setting Your API Token
 
@@ -103,7 +103,7 @@ You can also use the [tag directive]({{ site.baseurl }}{% link _pro/builds-and-c
   command: pagerduty.sh
 ```
 
-## Codeship Basic
+## CodeShip Basic
 
 ### Setting Your API Token
 

@@ -1,5 +1,5 @@
 ---
-title: Using Atatus To Track Deployments With Codeship Pro
+title: Using Atatus To Track Deployments With CodeShip Pro
 shortTitle: Tracking Deployments With Atatus
 menus:
   general/integrations:
@@ -22,13 +22,13 @@ categories:
 
 ## About Atatus
 
-[Atatus](https://www.atatus.com) lets you monitor performance and track errors related to your web and back-end applications in real-time. During your continuous deployment workflow with Codeship Pro, you can record your deployments in Atatus.
+[Atatus](https://www.atatus.com) lets you monitor performance and track errors related to your web and back-end applications in real-time. During your continuous deployment workflow with CodeShip Pro, you can record your deployments in Atatus.
 
 By using Atatus, you can compare performance metrics and errors with previous deployment.
 
 [Their documentation](https://www.atatus.com/docs) does a great job of providing more information, in addition to the setup instructions below.
 
-## Codeship Pro
+## CodeShip Pro
 
 ### Setting Your Admin API Key
 
@@ -63,7 +63,7 @@ You will need to call this script on all deployment-related branches by specifyi
   command: deploy-atatus.sh
 ```
 
-## Codeship Basic
+## CodeShip Basic
 
 ### Setting Your Admin API Key
 

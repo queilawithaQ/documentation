@@ -1,5 +1,5 @@
 ---
-title: Browser Testing During CI/CD With Codeship Pro
+title: Browser Testing During CI/CD With CodeShip Pro
 shortTitle: Browser Testing
 menus:
   pro/ci:
@@ -32,7 +32,7 @@ redirect_from:
 * include a table of contents
 {:toc}
 
-With Codeship Pro you have many different options to set up browser testing. The following sections describe how you can install different browsers. Please check the documentation for the language/framework you are using for specifics on how to test with your browser.
+With CodeShip Pro you have many different options to set up browser testing. The following sections describe how you can install different browsers. Please check the documentation for the language/framework you are using for specifics on how to test with your browser.
 
 ## Xvfb
 Before going into the details of setting up various browsers make sure to include [Xvfb](https://en.wikipedia.org/wiki/Xvfb) in your build. Running Xvfb before your browser sets up a virtual display the GUI of the various browsers can use.

@@ -1,5 +1,5 @@
 ---
-title: Using SQLite In CI/CD with Codeship Basic
+title: Using SQLite In CI/CD with CodeShip Basic
 shortTitle: SQLite
 tags:
   - services

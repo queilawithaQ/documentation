@@ -20,7 +20,7 @@ redirect_from:
 * include a table of contents
 {:toc}
 
-For communication between your Codeship project and outside via SSH, you will need your project's SSH public key which you can find in your project settings.
+For communication between your CodeShip project and outside via SSH, you will need your project's SSH public key which you can find in your project settings.
 
 * Select a project and then click _Project Settings_ in the upper right corner
 * Then click _General_ in the upper right corner
@@ -36,7 +36,7 @@ If you need to reset the SSH key pair for the project you can use the _Reset pro
 
 ## Use Case Examples
 
-* You are deploying to one of your own servers instead of using Codeship's integrations to services like AWS and Heroku.
+* You are deploying to one of your own servers instead of using CodeShip's integrations to services like AWS and Heroku.
 
 * Your deployment script has a few more commands you want to be executed and you want to deploy to another service directly.
 

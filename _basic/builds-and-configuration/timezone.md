@@ -16,9 +16,9 @@ redirect_from:
 * include a table of contents
 {:toc}
 
-## Default Timezone On Codeship Basic
+## Default Timezone On CodeShip Basic
 
-The default timezone on Codeship's test VMs is `UTC +00:00` or `Etc/UTC`.
+The default timezone on CodeShip's test VMs is `UTC +00:00` or `Etc/UTC`.
 
 ## Setting A Custom Timezone
 
