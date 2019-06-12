@@ -1,5 +1,5 @@
 ---
-title: Speed Up Your Builds With Caching on Codeship Basic
+title: Speed Up Your Builds With Caching on CodeShip Basic
 shortTitle: Dependency Caching
 menus:
   basic/builds:
@@ -21,12 +21,12 @@ redirect_from:
 {:toc}
 
 {% csnote info %}
-This article addresses caching on **Codeship Basic**. There is a separate guide for [caching on Codeship Pro]({{ site.baseurl }}{% link _pro/builds-and-configuration/caching.md %}).
+This article addresses caching on **CodeShip Basic**. There is a separate guide for [caching on CodeShip Pro]({{ site.baseurl }}{% link _pro/builds-and-configuration/caching.md %}).
 {% endcsnote %}
 
 ## What Is The Dependency Cache?
 
-On all Codeship Basic projects, we automatically cache the dependency directories for several popular tools to speed up future builds.
+On all CodeShip Basic projects, we automatically cache the dependency directories for several popular tools to speed up future builds.
 
 This means that all packages saved in these directories at the end of a build will be automatically loaded on the build machine for future builds.
 

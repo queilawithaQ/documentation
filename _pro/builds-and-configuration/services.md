@@ -32,32 +32,32 @@ redirect_from:
 {:toc}
 
 {% csnote info %}
-This article is about the `codeship-services.yml` file that powers Codeship Pro.
+This article is about the `codeship-services.yml` file that powers CodeShip Pro.
 
-If you are unfamiliar with Codeship Pro, we recommend our [getting started guide]({{ site.baseurl }}{% link _pro/quickstart/getting-started.md %}) or [the features overview page](https://codeship.com/features/pro).
+If you are unfamiliar with CodeShip Pro, we recommend our [getting started guide]({{ site.baseurl }}{% link _pro/quickstart/getting-started.md %}) or [the features overview page](https://codeship.com/features/pro).
 
 Also note that the `codeship-services.yml` file depends on the `codeship-steps.yml` file, which you can [learn more about here]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}).
 {% endcsnote %}
 
-## What Is Your Codeship Services File?
-Your services file - `codeship-services.yml` - is where you configure each service you need to run your CI/CD builds with Codeship. During the build, these services will be used to run the testing steps you've defined in your `codeship-steps.yml` [file]({% link _pro/builds-and-configuration/steps.md %}). You can have as many services as you'd like, and customize each of them. Each of these services will be run inside a Docker container.
+## What Is Your CodeShip Services File?
+Your services file - `codeship-services.yml` - is where you configure each service you need to run your CI/CD builds with CodeShip. During the build, these services will be used to run the testing steps you've defined in your `codeship-steps.yml` [file]({% link _pro/builds-and-configuration/steps.md %}). You can have as many services as you'd like, and customize each of them. Each of these services will be run inside a Docker container.
 
 Your services can be built from your own Dockerfiles, or pulled from any registry. Your `codeship-services.yml` will be very similar to a `docker-compose.yml` file, and most of the syntax is compatible.
 
-Running with Docker, your Codeship services allow you to:
+Running with Docker, your CodeShip services allow you to:
 
 * Set up different environments for running your unit, integration, or acceptance tests
 * Have control over dependencies and versions of software consumed within the service
 * Build specialized deployment images to unify deployment across your company
 * Use any Docker image available on an image registry for your builds
 
-**Your Codeship builds run on infrastructure equipped with version {{ site.data.docker.version }} of Docker.**
+**Your CodeShip builds run on infrastructure equipped with version {{ site.data.docker.version }} of Docker.**
 
 ## Prerequisites
-Your services file will require that you have [installed Jet locally]({{ site.baseurl }}{% link _pro/jet-cli/usage-overview.md %}) or [set up your project on Codeship.]({{ site.baseurl }}{% link _pro/quickstart/codeship-configuration.md %})
+Your services file will require that you have [installed Jet locally]({{ site.baseurl }}{% link _pro/jet-cli/usage-overview.md %}) or [set up your project on CodeShip.]({{ site.baseurl }}{% link _pro/quickstart/codeship-configuration.md %})
 
 ## Services File Setup & Configuration
-By default, we look for the filename `codeship-services.yml`. In its absence, Codeship will automatically search for a `docker-compose.yml` file to use in its place.
+By default, we look for the filename `codeship-services.yml`. In its absence, CodeShip will automatically search for a `docker-compose.yml` file to use in its place.
 
 Your services file is written in YAML and is structured similarly to a [Docker Compose](https://docs.docker.com/compose/) file, with each service declared in a block. You may choose to nest your services under a top-level services key, or declare each service in a top-level block. Both examples below are valid:
 
@@ -85,7 +85,7 @@ services:
       - ./tmp/data:/data
 ```
 
-If your file includes a `version`, Codeship will ignore the value, as the features supported by Codeship are version independent.
+If your file includes a `version`, CodeShip will ignore the value, as the features supported by CodeShip are version independent.
 
 ### Build
 Use the `build` directive to build your service's image from a Dockerfile. You [specify a build](https://docs.docker.com/compose/compose-file/#build) in the same way as is standard with Docker Compose, although you can also use an extended version as needed. You can also mix `build` and `image` between services, but not for a single service - i.e. you can build some of your services from one or more Dockerfiles while other services simply download existing images from registries.
@@ -149,7 +149,7 @@ Volumes should only be mounted from a relative path, as the hosts are ephemeral,
 
 ### HEALTHCHECK
 
-Codeship supports the `HEALTHCHECK` directive for health checks built into a Dockerfile. For images that contain the `HEALTHCHECK` directive, we will check with Docker for container availability every 1 second, for up to 60 minutes, before proceeding. You can find the health polling status in your logs:
+CodeShip supports the `HEALTHCHECK` directive for health checks built into a Dockerfile. For images that contain the `HEALTHCHECK` directive, we will check with Docker for container availability every 1 second, for up to 60 minutes, before proceeding. You can find the health polling status in your logs:
 
 ![Healthchecks logs output]({{ site.baseurl }}/images/docker/healthchecks.png)
 
@@ -230,9 +230,9 @@ Note that this is an incomplete list of the variables provided by `redis`, and t
 
 #### Default Environment Variables
 
-By default, Codeship populates a list of CI/CD related environment variables, such as the branch and the commit ID.
+By default, CodeShip populates a list of CI/CD related environment variables, such as the branch and the commit ID.
 
-For a full list of globally defined environment variables, see the [Codeship Pro environment variables documentation.]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %})
+For a full list of globally defined environment variables, see the [CodeShip Pro environment variables documentation.]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %})
 
 
 ### Docker Inside Docker
@@ -244,7 +244,7 @@ See [add_docker](https://github.com/codeship/codeship-tool-examples/tree/master/
 
 ### Caching the Docker image
 
-Caching is declared per service. For a service with caching enabled Codeship will push your image out to a secure image registry after the build is finished, and then pull that image in at the start of future builds to use non-breaking layers as a cache rather than rebuilding them.
+Caching is declared per service. For a service with caching enabled CodeShip will push your image out to a secure image registry after the build is finished, and then pull that image in at the start of future builds to use non-breaking layers as a cache rather than rebuilding them.
 
 This prevents the Docker image from building from scratch each time, to save time and speed up your CI/CD process. By default, we will fall back to the latest image that was built on the `master` branch.
 
@@ -264,13 +264,13 @@ There are several specific requirements and considerations when using caching, s
 
 Docker's multi-stage build feature allows you to build Docker images with multiple build stages in the Dockerfile, ultimately saving an image from just the final stage. This is great for creating "builder" workflows easily, and reducing the image size of your final Docker image.
 
-Because Codeship supports Docker natively, you will not need to do anything to get your multi-stage builds working on Codeship and we will fully support your multi-stage Dockerfiles. If you use the CLI to run builds locally, you must use CLI version 1.18 or above in order to use multi-stage builds. Please note that using multi-stage image builds can impact the way that caching works during your Codeship Pro builds. For more information, refer to our [our caching documentation.]({{ site.baseurl }}{% link _pro/builds-and-configuration/caching.md %})
+Because CodeShip supports Docker natively, you will not need to do anything to get your multi-stage builds working on CodeShip and we will fully support your multi-stage Dockerfiles. If you use the CLI to run builds locally, you must use CLI version 1.18 or above in order to use multi-stage builds. Please note that using multi-stage image builds can impact the way that caching works during your CodeShip Pro builds. For more information, refer to our [our caching documentation.]({{ site.baseurl }}{% link _pro/builds-and-configuration/caching.md %})
 
 You can also [read more about Docker multi-stage builds on our blog](https://blog.codeship.com/docker-17-05-on-codeship-pro/).
 
 ## Build Flags
 
-There are several Docker build flags, such as `-w`, that are not executable on Codeship because we do not provide the ability for Docker build instructions (other than via Docker in Docker).
+There are several Docker build flags, such as `-w`, that are not executable on CodeShip because we do not provide the ability for Docker build instructions (other than via Docker in Docker).
 
 These flags should instead be implemented as directives in your Services file, as available. For instance, the `-w` instruction can be replaced with the `working_dir` directive applied to any of your services. Most Compose directives not specifically excluded below should function as expected.
 
@@ -284,7 +284,7 @@ Containers are bidirectionally discoverable without requiring any custom setup a
 
 ## Unavailable Features
 
-The following features available in Docker Compose are not available on Codeship. If these keys exist in your `codeship-services.yml` file, don't panic -- we'll just ignore them.
+The following features available in Docker Compose are not available on CodeShip. If these keys exist in your `codeship-services.yml` file, don't panic -- we'll just ignore them.
 
   * `cgroup_parent`
   * `container_name`
@@ -315,7 +315,7 @@ All linking to the host is not allowed. This means the following directives are 
   * `ports`
   * `stdin_open`
 
-Labels as they relate to images are supported by Codeship and should be [declared in the Dockerfile](https://docs.docker.com/engine/reference/builder/#/label) using the `LABEL` instruction. `labels` as a key in the services file (to label the running container) is not supported.
+Labels as they relate to images are supported by CodeShip and should be [declared in the Dockerfile](https://docs.docker.com/engine/reference/builder/#/label) using the `LABEL` instruction. `labels` as a key in the services file (to label the running container) is not supported.
 
 #### Deprecated keys
 

@@ -16,7 +16,7 @@ redirect_from:
 * include a table of contents
 {:toc}
 
-As for getting started with **Cloud Foundry** on Codeship, start by getting your application to deploy from your local machine. Once this is done, you need to add the following environment variables to your project settings.
+As for getting started with **Cloud Foundry** on CodeShip, start by getting your application to deploy from your local machine. Once this is done, you need to add the following environment variables to your project settings.
 
 ```shell
 # CF_API Endpoints

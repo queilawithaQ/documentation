@@ -20,11 +20,11 @@ redirect_from:
 {:toc}
 
 {% csnote info %}
-This article is about deploying to AWS Lambda with Codeship Basic.
+This article is about deploying to AWS Lambda with CodeShip Basic.
 
-If you'd like to learn more about Codeship Basic, we recommend the [getting started guide]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}) or [the features overview page](https://codeship.com/features/basic)
+If you'd like to learn more about CodeShip Basic, we recommend the [getting started guide]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}) or [the features overview page](https://codeship.com/features/basic)
 
-You should also be aware of how [deployment pipelines]({{ site.baseurl }}{% link _basic/builds-and-configuration/deployment-pipelines.md %}) work on Codeship Basic.
+You should also be aware of how [deployment pipelines]({{ site.baseurl }}{% link _basic/builds-and-configuration/deployment-pipelines.md %}) work on CodeShip Basic.
 {% endcsnote %}
 
 ## General
@@ -36,7 +36,7 @@ This deployment method does not create the required configuration on AWS Lambda.
 
 ## IAM Policies
 
-It is generally a good idea to create a separate [IAM user](https://docs.aws.amazon.com/general/latest/gr/root-vs-iam.html) for Codeship when deploying to AWS. This allows you to explicitly control which resources Codeship can access during your builds. Please take note of the **Access Key ID** and **Secret Access Key** created during the process, as you'll need this when configuring the deployment.
+It is generally a good idea to create a separate [IAM user](https://docs.aws.amazon.com/general/latest/gr/root-vs-iam.html) for CodeShip when deploying to AWS. This allows you to explicitly control which resources CodeShip can access during your builds. Please take note of the **Access Key ID** and **Secret Access Key** created during the process, as you'll need this when configuring the deployment.
 
 It is advised that you review AWS' [IAM documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction_access-management.html) to find the correct policies for your account.
 
@@ -76,13 +76,13 @@ You need to add the following environment variables to your project:
 
 ## Deployment
 
-When you go to the Deploy settings of your repository in your Codeship account you now have to add a Script deployment. In the Script deployment, first put the new code you want to deploy into a zip file and then push it to AWS Lambda.
+When you go to the Deploy settings of your repository in your CodeShip account you now have to add a Script deployment. In the Script deployment, first put the new code you want to deploy into a zip file and then push it to AWS Lambda.
 
 After pushing to Lambda we're publishing a new version of the function and updating a previously created Lambda alias `PROD`. Through versioning and aliasing of functions you could introduce more complex deployment scenarios. One would be to first setting a `STAGING` alias, invoking it with example data to make sure the function executes properly and only then setting the `PROD` alias to the newly deployed version. For more information on Aliases and Versioning check out the [Lambda documentation](https://docs.aws.amazon.com/lambda/latest/dg/versioning-aliases.html).
 
 To test that the function works we’ll invoke it after the deployment. We're using `PROD` as a qualifier to execute the alias we just set. The same command can also be run from your local machine with the invoke script in the repo you’ve forked. Make sure you have permissions set locally that allow you to invoke a function on AWS Lambda.
 
-Following you can see the list of commands to use and how they’ve been added to a script deployment on Codeship.
+Following you can see the list of commands to use and how they’ve been added to a script deployment on CodeShip.
 
 ```shell
 pip install awscli
@@ -109,4 +109,4 @@ cat lambda_output.txt
 
 + [AWS Lambda](https://aws.amazon.com/lambda/)
 + [AWS Lambda Documentation](https://docs.aws.amazon.com/lambda/latest/dg/welcome.html)
-+ [Integrating AWS Lambda with Codeship](https://blog.codeship.com/integrating-aws-lambda-with-codeship/)
++ [Integrating AWS Lambda with CodeShip](https://blog.codeship.com/integrating-aws-lambda-with-codeship/)

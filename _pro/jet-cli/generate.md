@@ -23,4 +23,4 @@ jet generate [flags]
 ```
 
 ## Extended description
-The AES key created using `jet generate` will is not available in Codeship during the remote execution. You can use this command to create local keys for initial testing. Any files that should be decrypted remotely would need to use the key found in your _Project Settings_ during the execution of `jet encrypt`.
+The AES key created using `jet generate` will is not available in CodeShip during the remote execution. You can use this command to create local keys for initial testing. Any files that should be decrypted remotely would need to use the key found in your _Project Settings_ during the execution of `jet encrypt`.

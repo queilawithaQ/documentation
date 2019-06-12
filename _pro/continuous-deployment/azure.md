@@ -20,7 +20,7 @@ tags:
 ---
 
 {% csnote info %}
-You can find a sample repo for deploying to the Azure Container Service with Codeship Pro on Github [here](https://github.com/codeship-library/azure-utilities).
+You can find a sample repo for deploying to the Azure Container Service with CodeShip Pro on Github [here](https://github.com/codeship-library/azure-utilities).
 {% endcsnote %}
 
 * include a table of contents
@@ -36,8 +36,8 @@ You will simply need to add one of the Azure deployment images as a service in y
 
 Prior to getting started, please ensure you have the following:
 
-- [An Understanding Of Codeship Pro]({% link _pro/quickstart/getting-started.md %})
-- [Codeship's Jet CLI]({% link _pro/jet-cli/usage-overview.md %}) installed locally
+- [An Understanding Of CodeShip Pro]({% link _pro/quickstart/getting-started.md %})
+- [CodeShip's Jet CLI]({% link _pro/jet-cli/usage-overview.md %}) installed locally
 - [Docker](https://www.docker.com/products/docker-desktop)
 - [An Azure Container Service account ](https://azure.microsoft.com/account/)
 - An understanding of using Azure Container Service
@@ -55,7 +55,7 @@ These variables will be set on the [Azure deployment container](https://github.c
 
 Once you have created your [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}), you will want to add a new service to your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
 
-This file will use [the image Codeship maintains](https://github.com/codeship-library/azure-utilities) for Azure-based deployments, and will read your code from a volume connected to your primary service.
+This file will use [the image CodeShip maintains](https://github.com/codeship-library/azure-utilities) for Azure-based deployments, and will read your code from a volume connected to your primary service.
 
 This service will be used for all of your Azure Container Service deployment commands, and will use the [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) you created above.
 

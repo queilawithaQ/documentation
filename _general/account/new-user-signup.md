@@ -1,5 +1,5 @@
 ---
-title: Signing Up For A New Codeship Account
+title: Signing Up For A New CodeShip Account
 shortTitle: Signing Up For A New Account
 menus:
   general/account:
@@ -29,13 +29,13 @@ weight: 1
 * include a table of contents
 {:toc}
 
-## Setting Up A New Codeship Account
+## Setting Up A New CodeShip Account
 
-If you're looking to sign up and create a project on Codeship, this guide will walk you through the initial onboarding process.
+If you're looking to sign up and create a project on CodeShip, this guide will walk you through the initial onboarding process.
 
-### Signing up for Codeship with GitHub, Bitbucket or GitLab
+### Signing up for CodeShip with GitHub, Bitbucket or GitLab
 
-You can sign up for a new Codeship account either with your source code management (SCM) system or email address. The following SCMs are supported: GitHub, Bitbucket or GitLab.
+You can sign up for a new CodeShip account either with your source code management (SCM) system or email address. The following SCMs are supported: GitHub, Bitbucket or GitLab.
 
 To signup with your SCM:
 
@@ -47,21 +47,21 @@ Note that these oAuth login pages come directly from the SCM tools themselves an
 
 ![SCM Choice]({{ site.baseurl }}/images/new-user-setup/scm-choice.png)
 
-- **If GitHub:** You are automatically directed to a login page where you must enter your GitHub login credentials in order to give Codeship access to your account.
+- **If GitHub:** You are automatically directed to a login page where you must enter your GitHub login credentials in order to give CodeShip access to your account.
 
 ![GitHub Login]({{ site.baseurl }}/images/new-user-setup/gh-login.png)
 
-- **If Bitbucket:** You are automatically directed to a login page where you must enter your Bitbucket login credentials in order to give Codeship access to your account.
+- **If Bitbucket:** You are automatically directed to a login page where you must enter your Bitbucket login credentials in order to give CodeShip access to your account.
 
 ![Bitbucket Login]({{ site.baseurl }}/images/new-user-setup/bb-login.png)
 
-- **If GitLab:** You are automatically directed to a login page where you must enter your GitLab login credentials in order to give Codeship access to your account.
+- **If GitLab:** You are automatically directed to a login page where you must enter your GitLab login credentials in order to give CodeShip access to your account.
 
 ![GitLab Login]({{ site.baseurl }}/images/new-user-setup/gl-login.png)
 
-### Signing up for Codeship with an e-mail address
+### Signing up for CodeShip with an e-mail address
 
-To sign up for Codeship with an email:
+To sign up for CodeShip with an email:
 
 1. Enter your name, email address, and create a password.
 
@@ -69,7 +69,7 @@ To sign up for Codeship with an email:
 
 ![Email Login]({{ site.baseurl }}/images/new-user-setup/email-login.png)
 
-You can learn more about the permissions required when authenticating with your SCM [here]({{ site.baseurl }}{% link _general/about/permissions.md %}). Learn more about security at Codeship [here]({{ site.baseurl }}{% link _general/about/security.md %}).
+You can learn more about the permissions required when authenticating with your SCM [here]({{ site.baseurl }}{% link _general/about/permissions.md %}). Learn more about security at CodeShip [here]({{ site.baseurl }}{% link _general/about/security.md %}).
 
 **Note**: When signing up using your email, we won't know what your git username is, which means that your personal dashboard won't be populated with your builds. To get your builds to show up, visit the [Connected Services](https://app.codeship.com/authentications) page and connect your accounts there.
 
@@ -100,7 +100,7 @@ Right after account creation, you can either create your first project right awa
 
 To create your first project:
 
-1. Select either GitHub, Bitbucket, or GitLab. If you signed up for Codeship with your SCM, you can skip this step.
+1. Select either GitHub, Bitbucket, or GitLab. If you signed up for CodeShip with your SCM, you can skip this step.
 
 2. Enter your git clone URL. You can find the correct clone command in the header of the repository under Clone.  
 
@@ -113,9 +113,9 @@ To create your first project:
 
 3. Click the _Connect_ button.
 
-    Note that a repository can only be connected to one Codeship project.
+    Note that a repository can only be connected to one CodeShip project.
 
-4. Either select _Select Pro Project_ or _Select Basic Project_. You can choose to set up your project with [Codeship Basic](https://codeship.com/features/basic) or [Codeship Pro](https://codeship.com/features/pro).
+4. Either select _Select Pro Project_ or _Select Basic Project_. You can choose to set up your project with [CodeShip Basic](https://codeship.com/features/basic) or [CodeShip Pro](https://codeship.com/features/pro).
 
     **Basic** is a good place to start if:
     - You want out of the box configuration.
@@ -145,7 +145,7 @@ We recommend inviting people to the _Managers_ team if they will need to create 
 
 If you want to add a badge to your README showing your last build's status, you can find the code under _Project Settings > General_.
 
-![Codeship Status for codeship/documentation](https://codeship.com/projects/0bdb0440-3af5-0133-00ea-0ebda3a33bf6/status?branch=master)
+![CodeShip Status for codeship/documentation](https://codeship.com/projects/0bdb0440-3af5-0133-00ea-0ebda3a33bf6/status?branch=master)
 
 The raw URL for the image looks like this:
 
@@ -157,7 +157,7 @@ https://app.codeship.com/projects/YOUR_PROJECT_UUID/status?branch=master
 
 #### Configuring your avatar
 
-Git identifies people by your e-mail and Codeship uses your Gravatar settings for your profile picture. If you have not set up Gravatar yet and want to change the avatar shown on Codeship and in your commit messages, please head over to [Gravatar.com](https://en.gravatar.com/) and setup an avatar for both the email address you configured in your [account settings](https://app.codeship.com/user/edit) as well as for any email addresses you use in your git configuration.
+Git identifies people by your e-mail and CodeShip uses your Gravatar settings for your profile picture. If you have not set up Gravatar yet and want to change the avatar shown on CodeShip and in your commit messages, please head over to [Gravatar.com](https://en.gravatar.com/) and setup an avatar for both the email address you configured in your [account settings](https://app.codeship.com/user/edit) as well as for any email addresses you use in your git configuration.
 
 You can check the latter by running the following command on your local git repository:
 
@@ -173,7 +173,7 @@ Note that different projects can have different email addresses configured and t
 
 #### Keyboard shortcuts
 
-To make it easier to navigate through your Codeship projects, we've provided several keyboard shortcuts for quickly jumping through the interface:
+To make it easier to navigate through your CodeShip projects, we've provided several keyboard shortcuts for quickly jumping through the interface:
 
 - `Shift` + `?` brings up a list of all shortcuts
 - `gp`, available from inside your projects, will return you to your projects overview page

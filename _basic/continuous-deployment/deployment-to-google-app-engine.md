@@ -17,7 +17,7 @@ redirect_from:
   - /tutorials/continuous-deployment-google-app-engine-github-django-python/
 ---
 
-Codeship makes it easy to deploy your application to Google App Engine using Codeship's integrated [deployment pipelines]({{ site.baseurl }}{% link _basic/builds-and-configuration/deployment-pipelines.md %}).
+CodeShip makes it easy to deploy your application to Google App Engine using CodeShip's integrated [deployment pipelines]({{ site.baseurl }}{% link _basic/builds-and-configuration/deployment-pipelines.md %}).
 
 We support deploying projects in the following stacks: go, java, node, php, python, and ruby. Note that for java, you need to set an optional flag (see below for details).
 
@@ -28,8 +28,8 @@ We support deploying projects in the following stacks: go, java, node, php, pyth
 
 ### Step 1 - Google Cloud Service Account
 
-Before getting into actually configuring Codeship to deploy your code, you should create a dedicated `Service Account`. Service accounts are like users, but meant for system integrations and usually have very limited permissions.
-Since we just need to deploy your code, and not have access to anything else on your project, we suggest you create a new service account specifically for Codeship, but you could also reuse an existing one if you're comfortable with that.
+Before getting into actually configuring CodeShip to deploy your code, you should create a dedicated `Service Account`. Service accounts are like users, but meant for system integrations and usually have very limited permissions.
+Since we just need to deploy your code, and not have access to anything else on your project, we suggest you create a new service account specifically for CodeShip, but you could also reuse an existing one if you're comfortable with that.
 
 #### Creating Service Account
 

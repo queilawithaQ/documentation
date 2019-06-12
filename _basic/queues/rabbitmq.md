@@ -1,5 +1,5 @@
 ---
-title: Using RabbitMQ In CI/CD with Codeship Basic
+title: Using RabbitMQ In CI/CD with CodeShip Basic
 shortTitle: RabbitMQ
 tags:
   - services

@@ -1,5 +1,5 @@
 ---
-title: Using Meteor In CI/CD with Codeship Basic
+title: Using Meteor In CI/CD with CodeShip Basic
 shortTitle: Meteor
 menus:
   basic/languages:

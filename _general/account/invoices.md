@@ -22,7 +22,7 @@ redirect_from:
 Invoices are available every month on the date the subscription began via email or the invoices page under your subscription settings.
 
 ### View and download invoices
-To view your invoices on Codeship:
+To view your invoices on CodeShip:
 
 - As a member of the owner team within your account, go to **Subscription** in the top menu navigation
 

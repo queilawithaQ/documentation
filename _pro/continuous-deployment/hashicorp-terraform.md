@@ -17,15 +17,15 @@ tags:
 * include a table of contents
 {:toc}
 
-## Managing Infrastructure with Terraform and Codeship Pro
+## Managing Infrastructure with Terraform and CodeShip Pro
 
-Using Terraform to manage your infrastructure via Codeship Pro is as simple as setting up a service with the Terraform CLI and passing that service the commands you need. Below you will find detailed setup instructions including example configurations.
+Using Terraform to manage your infrastructure via CodeShip Pro is as simple as setting up a service with the Terraform CLI and passing that service the commands you need. Below you will find detailed setup instructions including example configurations.
 
-It is recommended that you be familiar with Codeship Pro and Docker basics before proceeding. If you are unfamiliar with either, you can reference our [Codeship Pro Getting Started Guide]({{ site.baseurl }}{% link _pro/quickstart/getting-started.md %}) and the [Docker 101]({{ site.baseurl }}{% link _pro/quickstart/docker-101.md %}) article for more information first.
+It is recommended that you be familiar with CodeShip Pro and Docker basics before proceeding. If you are unfamiliar with either, you can reference our [CodeShip Pro Getting Started Guide]({{ site.baseurl }}{% link _pro/quickstart/getting-started.md %}) and the [Docker 101]({{ site.baseurl }}{% link _pro/quickstart/docker-101.md %}) article for more information first.
 
 ### Services Setup
 
-To integrate Terraform with your Codeship Pro CI/CD pipeline, you will want to add a new service definition to your [codeship-services.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}) file.
+To integrate Terraform with your CodeShip Pro CI/CD pipeline, you will want to add a new service definition to your [codeship-services.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}) file.
 
 This service can use any container you define or pull that contains the Terraform CLI, but we recommend using the [official Terraform Docker image](https://hub.docker.com/r/hashicorp/terraform/) that Hashicorp publishes on Docker Hub and keeps updated with the latest releases.
 
@@ -117,9 +117,9 @@ This example further configures Terraform to use the execution plan created and 
 
 ### Remote State and Locking
 
-Since Terraform relies on one or more statefiles to map real world resources to your configuration, to use Terraform with Codeship Pro it is important to have [remote state](https://www.terraform.io/docs/state/remote.html) configured and working. This is because Codeship Pro build machines are ephemeral and do not share any state or data in between builds. Otherwise, you might end up recreating your infrastructure on each build run.
+Since Terraform relies on one or more statefiles to map real world resources to your configuration, to use Terraform with CodeShip Pro it is important to have [remote state](https://www.terraform.io/docs/state/remote.html) configured and working. This is because CodeShip Pro build machines are ephemeral and do not share any state or data in between builds. Otherwise, you might end up recreating your infrastructure on each build run.
 
-Additionally, because Codeship Pro often runs concurrent builds, you may want to use a Terraform backend that supports [state locking](https://www.terraform.io/docs/state/locking.html) to make sure that these concurrent runs don't result in corrupted infrastructure state.
+Additionally, because CodeShip Pro often runs concurrent builds, you may want to use a Terraform backend that supports [state locking](https://www.terraform.io/docs/state/locking.html) to make sure that these concurrent runs don't result in corrupted infrastructure state.
 
 ## Further information
 

@@ -1,5 +1,5 @@
 ---
-title: Using MySQL In CI/CD with Codeship Basic
+title: Using MySQL In CI/CD with CodeShip Basic
 shortTitle: MySQL
 tags:
   - services

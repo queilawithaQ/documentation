@@ -1,5 +1,5 @@
 ---
-title: Integrating Codeship With Brakeman Pro for Rails Security Analysis
+title: Integrating CodeShip With Brakeman Pro for Rails Security Analysis
 shortTitle: Using Brakeman Pro For Rails Security Analysis
 tags:
   - security
@@ -30,7 +30,7 @@ By using Brakeman Pro you can be confident that your Rails application is secure
 
 [Their documentation](https://brakemanpro.com/docs) does a great job of providing more information, in addition to the setup instructions below.
 
-## Codeship Pro
+## CodeShip Pro
 
 ### Setting Your Credentials
 
@@ -64,7 +64,7 @@ There are several specific options that Brakeman Pro recommends for modifying th
 
 - `--f plain`: Generates a nice, colored text report
 
-## Codeship Basic
+## CodeShip Basic
 
 ### Setting Your Credentials
 
