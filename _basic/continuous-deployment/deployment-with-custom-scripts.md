@@ -43,7 +43,7 @@ Please follow these steps to create a custom deployment script:
 
 #### Step 1
 
-Navigate to your project's deployment configuration page by selecting _Project Settings_ > _Deployment_ on the top right side of the page.
+Navigate to your project's deployment configuration page by selecting _Project Settings_ on the top right side of the page.  Next, select the _Deploy_ tab.
 
 ![Project Settings Deployment]({{ site.baseurl }}/images/continuous-deployment/project_configuration.png)
 
