@@ -22,7 +22,7 @@ CodeShip makes it easy to deploy your application files to AWS S3 using CodeShip
 ## Setup AWS S3 Deployment
 
 ### Step 1 - Navigate to Deployment Configuration
-Navigate to your project's deployment configuration page by selecting _Project Settings_ > _Deploy_ on the top right side of the page.
+Navigate to your project's deployment configuration page by selecting _Project Settings_ on the top right side of the page.  Next, select the _Deploy_ tab.
 
 ![Project Settings Deployment]({{ site.baseurl }}/images/continuous-deployment/project_configuration.png)
 
