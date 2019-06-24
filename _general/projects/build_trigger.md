@@ -111,3 +111,37 @@ To run builds only on certain branches:
 4. Enter either full branch names like "master" for exact matches or a regular expressions like "^release.*$" for a search pattern.
 
 5. Click the _Save Configuration_ button.
+
+## Skipping builds on the same branch
+
+You can automatically skip previous builds on the same branch. For example, you may want to skip previous code changes. This allows you to run builds on the latest commit.
+
+Skipping builds happens under the following  conditions: 
+* a build is in progress or running 
+* another build is queued
+
+Here is an example flow of skipping builds.
+
+The following shows a build that is running and another build that is queued.
+
+![Build is queue]({{ site.baseurl }}/images/general/queued_build.png)
+
+For CodeShip Pro, any previously queued build is skipped when a new build is queued. 
+
+![Build is queue]({{ site.baseurl }}/images/general/build_supercendence.png)
+
+For CodeShip Basic, any previously queued build is skipped when the last running build finishes or stopped. 
+
+![Build is queue]({{ site.baseurl }}/images/general/basic_build_supercedence.png)
+
+When a build is in the skipped state you can click the drip down arrow and select either _View on GitHub_ or _Project Settings_. 
+  
+To automatically skip previous builds on the same branch:
+
+1. Go to Project Settings.
+
+2. Select the Build Trigger tabs.
+
+3. Select the Auto-supersede radio button to On.
+
+4. Click the Save Configutation button.
