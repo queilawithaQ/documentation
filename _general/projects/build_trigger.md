@@ -140,8 +140,8 @@ To automatically skip previous builds on the same branch:
 
 1. Go to Project Settings.
 
-2. Select the Build Trigger tabs.
+2. Select the _Build Triggers_ tabs.
 
-3. Select the Auto-supersede radio button to On.
+3. Select the _Auto-supersede_ radio button to On.
 
-4. Click the Save Configutation button.
+4. Click the _Save the Configuration_ button.
