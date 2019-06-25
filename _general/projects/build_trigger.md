@@ -125,7 +125,7 @@ Next, pushing a commit queues a new build. The queued build appears on the top l
 
 ![Build is queue]({{ site.baseurl }}/images/general/build_supercendence.png)
 
-CodeShip Basic only updates a build status to skpped once the build had completed running. In the following, the build succeeded. 
+CodeShip Basic only updates a build status to skipped once the build had completed running. In the following, the build succeeded. 
 
 ![Build is queue]({{ site.baseurl }}/images/general/basic_build_supercedence.png)
 
