@@ -113,7 +113,7 @@ To run builds only on certain branches:
 
 ## Skipping builds on the same branch
 
-The auto-supercede feature allows you to automatically skip builds that are in the queue. By running a build based upon the latest commit, you can streamline the builds and save time. You may want to skip a build that has a particular code change, for example, when you have corrected an error and do not want to run the build with that error.
+The auto-supercede feature can automatically skip builds in the queue when a newer build on the same branch comes in. By running a build based upon the latest commit, you can streamline the builds and save time. If a code change commit contains an error and a subsequent commit corrects that error, this feature can skip the build with the error and run the fixed, latest build. 
 
 The auto-supercede feature adds a new state, _skipped_, to the build list. 
 
@@ -129,8 +129,8 @@ CodeShip Basic only updates a build status to skipped once the build had complet
 
 ![Build is queue]({{ site.baseurl }}/images/general/basic_build_supercedence.png)
 
-When a build is in the skipped state you can click the drip down arrow and select either _View on GitHub_ or _Project Settings_. 
-  
+You can not restart a skipped build. You can view the build on your source code management (SCM) system or go to Project Settings by clicking the drop-down arrow, 
+
 To automatically skip builds on the same branch:
 
 1. Go to Project Settings.
