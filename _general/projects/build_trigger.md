@@ -113,9 +113,9 @@ To run builds only on certain branches:
 
 ## Skipping builds on the same branch
 
-The auto-supercede feature can automatically skip builds in the queue when a newer build on the same branch comes in. By running a build based upon the latest commit, you can streamline the builds and save time. If a code change commit contains an error and a subsequent commit corrects that error, this feature can skip the build with the error and run the fixed, latest build. 
+The auto-supersede feature can automatically skip builds in the queue when a newer build on the same branch comes in. By running a build based upon the latest commit, you can streamline the builds and save time. If a code change commit contains an error and a subsequent commit corrects that error, this feature can skip the build with the error and run the fixed, latest build. 
 
-The auto-supercede feature adds a new state, _skipped_, to the build list. 
+The auto-supersede feature adds a new state, _skipped_, to the build list. 
 
 The following example shows how builds are skipped. First, you have a build that is running and another build that is queued.
 
@@ -140,3 +140,4 @@ To automatically skip builds on the same branch:
 3. Select the _Auto-supersede_ radio button to On.
 
 4. Click the _Save the Configuration_ button.
+![Turn on Auto-supersede]({{ site.baseurl }}/images/general/turn_on_auto_supersede.png)
