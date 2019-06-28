@@ -55,7 +55,6 @@ To trigger a build only on PRs:
 2. Select the _Build Triggers_ tab.
 
 3. Select the _Build only on PR events_ radio button.
-
 ![Build only on PRs]({{ site.baseurl }}/images/general/build_only_PR.png)
 4. Click the _Save Configuration_ button.
 
@@ -111,3 +110,34 @@ To run builds only on certain branches:
 4. Enter either full branch names like "master" for exact matches or a regular expressions like "^release.*$" for a search pattern.
 
 5. Click the _Save Configuration_ button.
+
+## Skipping builds on the same branch
+
+The auto-supersede feature can automatically skip builds in the queue when a newer build on the same branch comes in. By running a build based upon the latest commit, you can streamline the builds and save time. If a code change commit contains an error and a subsequent commit corrects that error, this feature can skip the build with the error and run the fixed, latest build. 
+
+The auto-supersede feature adds a new state, _skipped_, to the build list. 
+
+The following example shows how builds are skipped. First, you have a build that is running and another build that is queued.
+
+![Build is queue]({{ site.baseurl }}/images/general/queued_build.png)
+
+Next, pushing a commit queues a new build. The queued build appears on the top line of the build list. CodeShip Pro, updates the build list in real time, so the status of a build appears as _skipped_ immediately.  
+
+![Build is queue]({{ site.baseurl }}/images/general/build_supercendence.png)
+
+CodeShip Basic only updates a build status to skipped once the build had completed running. In the following, the build succeeded. 
+
+![Build is queue]({{ site.baseurl }}/images/general/basic_build_supercedence.png)
+
+You can not restart a skipped build. You can view the build on your source code management (SCM) system or go to Project Settings by clicking the drop-down arrow, 
+
+To automatically skip builds on the same branch:
+
+1. Go to Project Settings.
+
+2. Select the _Build Triggers_ tabs.
+
+3. Select the _Auto-supersede_ radio button to On.
+
+4. Click the _Save the Configuration_ button.
+![Turn on Auto-supersede]({{ site.baseurl }}/images/general/turn_on_auto_supersede.png)
