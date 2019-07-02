@@ -12,7 +12,6 @@ var site = '/site/';
 gulp.task('css', folders(site, function(folder) {
 	var processors = [
 		autoprefixer({
-			browsers: ['last 2 versions', '> 5%']
 		})
 	];
 
