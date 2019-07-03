@@ -114,7 +114,9 @@ app:
   build:
     image: myorg/appname
     dockerfile_path: Dockerfile
-  encrypted_env_file: env.encrypted
+  encrypted_env_file:
+    - env.encrypted
+    # one or many environment files can be defined within a service
 ```
 
 ### Decrypting
@@ -134,8 +136,8 @@ In some cases, you may have explicitly declared variables through the `environme
 In these cases, we will parse the variables in the following order:
 
 - 1) `environment` directive
-- 2) Unencrypted `env_file` file
-- 3) `encrypted_env_file` file
+- 2) Unencrypted `env_file` files
+- 3) `encrypted_env_file` files
 
 So, if the same variable is present in multiple declarations, it will overwrite in the above order.
 

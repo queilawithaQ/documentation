@@ -51,7 +51,8 @@ terraform:
     dockerfile: Dockerfile
   volumes:
     - ./:/terraform
-  encrypted_env_file: secrets.env.encrypted
+  encrypted_env_file:
+    - secrets.env.encrypted
 ```
 
 ### Configuration Via Environment Variables

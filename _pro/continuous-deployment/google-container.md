@@ -93,11 +93,13 @@ These will be added as new services in your  [codeship-services.yml file]({{ sit
 gcr_dockercfg:
   image: codeship/gcr-dockercfg-generator
   add_docker: true
-  encrypted_env_file: google-credentials.encrypted
+  encrypted_env_file:
+    - google-credentials.encrypted
 
 googleclouddeployment:
   image: codeship/google-cloud-deployment
-  encrypted_env_file: google-credentials.encrypted
+  encrypted_env_file:
+    - google-credentials.encrypted
   add_docker: true
   volumes:
     - ./:/deploy

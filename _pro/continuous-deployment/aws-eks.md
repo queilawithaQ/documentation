@@ -46,7 +46,8 @@ The first thing you will need to do is to define your Kubernetes deployment serv
 
 ```yaml
 kubernetes-deployment:
-  encrypted_env_file: k8s-env.encrypted
+  encrypted_env_file:
+    - k8s-env.encrypted
   image: codeship/kubectl
 ```
 

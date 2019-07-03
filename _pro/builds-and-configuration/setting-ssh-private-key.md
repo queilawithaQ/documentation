@@ -87,7 +87,8 @@ app:
   build:
     image: codeship/setting-ssh-key-test
     dockerfile: Dockerfile
-  encrypted_env_file: codeship.env.encrypted
+  encrypted_env_file:
+    - codeship.env.encrypted
   volumes:
   # mapping to `.ssh` directory ensures that `id_rsa` file persists to subsequent steps
   # replace container pathing if $HOME is not `/root`

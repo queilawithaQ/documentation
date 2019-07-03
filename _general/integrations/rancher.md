@@ -74,7 +74,8 @@ rancher:
   build:
     image: your_org/your_image
     dockerfile: Dockerfile
-  encrypted_env_file: rancher.env.encrypted
+  encrypted_env_file:
+    - rancher.env.encrypted
 ```
 
 Note that the service that will execute our Rancher Compose commands is using the encrypted environment variables created earlier in this documentation.

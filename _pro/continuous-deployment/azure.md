@@ -65,7 +65,8 @@ app:
     image: your-org/your-app
     path: .
     dockerfile_path: Dockerfile.app
-  encrypted_env_file: env.encrypted
+  encrypted_env_file:
+    - env.encrypted
   volumes:
     - ./:/code
 
@@ -77,7 +78,8 @@ azure_deployment:
   environment:
     - AZURE_RESOURCE_GROUP=cs-k8s
     - AZURE_CLUSTER_NAME=cs-k8s-testing
-  encrypted_env_file: aks.env.encrypted
+  encrypted_env_file:
+    - aks.env.encrypted
   volumes_from:
     - app
 ```

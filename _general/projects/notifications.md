@@ -203,7 +203,8 @@ deploynotify
   build:
     image: myuser/myrepo-deploynotify
     dockerfile: Dockerfile.notify
-  encrypted_env_file: deploy.env.encrypted
+  encrypted_env_file:
+    - deploy.env.encrypted
 ```
 
 By adding a relevant step to the steps file, we can control under what conditions this notification fires.

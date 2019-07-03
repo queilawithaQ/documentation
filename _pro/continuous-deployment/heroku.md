@@ -52,7 +52,8 @@ Note that CodeShip maintains an image for this purpose. All you need to do is in
 ```yaml
 heroku-deployment:
   image: codeship/heroku-deployment
-  encrypted_env_file: heroku-deployment.env.encrypted
+  encrypted_env_file:
+    - heroku-deployment.env.encrypted
   volumes:
     - ./:/deploy
 ```
@@ -88,12 +89,14 @@ app:
   build:
     image: registry.heroku.com/your_image_name/web
     dockerfile: Dockerfile
-  encrypted_env_file: heroku-deployment.env.encrypted
+  encrypted_env_file:
+    - heroku-deployment.env.encrypted
 
 heroku-dockercfg-generator:
   image: codeship/heroku-dockercfg-generator
   add_docker: true
-  encrypted_env_file: heroku-deployment.env.encrypted
+  encrypted_env_file:
+    - heroku-deployment.env.encrypted
 ```
 
 This `codeship/heroku-dockercfg-generator` image will be used on our image push step, and is configured to automatically generate the token using the API key provided in the encrypted environment variables file.

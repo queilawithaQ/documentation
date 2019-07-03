@@ -66,7 +66,8 @@ kubectl:
   build:
     image: codeship/kubectl
     dockerfile: Dockerfile
-  encrypted_env_file: k8s-env.encrypted
+  encrypted_env_file:
+    - k8s-env.encrypted
 ```
 
 ```shell

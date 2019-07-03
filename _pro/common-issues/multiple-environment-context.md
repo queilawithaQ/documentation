@@ -23,17 +23,23 @@ For services that have multiple environments (e.g., production, staging, develop
 app-prod:
   build:
     dockerfile: Dockerfile.app
-  encrypted_env_file: prod_env_vars.encrypted
+  encrypted_env_file:
+    - shared_env_vars.encrypted
+    - prod_env_vars.encrypted
 
 app-staging:
   build:
     dockerfile: Dockerfile.app
-  encrypted_env_file: staging_env_vars.encrypted
+  encrypted_env_file:
+    - shared_env_vars.encrypted
+    - staging_env_vars.encrypted
 
 app-dev:
   build:
     dockerfile: Dockerfile.app
-  encrypted_env_file: dev_env_vars.encrypted
+  encrypted_env_file:
+    - shared_env_vars.encrypted
+    - dev_env_vars.encrypted
 ```
 
 <br />

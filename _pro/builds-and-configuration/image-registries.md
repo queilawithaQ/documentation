@@ -118,7 +118,8 @@ app:
 
 myservice_generator:
   image: codeship/myservice-dockercfg-generator
-  encrypted_env: creds.encrypted
+  encrypted_env_file:
+    - creds.encrypted
 ```
 
 To use this generator service, simply reference it using the `dockercfg_service` field in lieu of an `encryped_dockercfg` in your steps or services file.
@@ -280,7 +281,8 @@ myapp:
 dockercfg_generator:
   image: codeship/gcr-dockercfg-generator
   add_docker: true
-  encrypted_env_file: gcr.env.encrypted
+  encrypted_env_file:
+    - gcr.env.encrypted
 ```
 
 Now, you will need a push step in your [codeship-steps.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}) with the `dockercfg_service` directive. This directive runs the service specified, when it is pushing, to generate the necessary authentication token.
@@ -312,7 +314,8 @@ myapp:
 dockercfg_generator:
   image: codeship/gcr-dockercfg-generator
   add_docker: true
-  encrypted_env_file: gcr.env.encrypted
+  encrypted_env_file:
+    - gcr.env.encrypted
 ```
 
 This will use the image we maintain for Google authentication to generate credentials on image pull. Note that you will need to have your AWS credentials set via the [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) for the generator service, and that the AWS account you are authenticating with will need appropriate IAM permissions.
@@ -338,7 +341,8 @@ myapp:
 dockercfg_generator:
   image: codeship/aws-ecr-dockercfg-generator
   add_docker: true
-  encrypted_env_file: aws.env.encrypted
+  encrypted_env_file:
+    - aws.env.encrypted
 ```
 
 Now, you will need a push step in your [codeship-steps.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}) with the `dockercfg_service` directive. This directive runs the service specified, when it is pushing, to generate the necessary authentication token.
@@ -376,7 +380,8 @@ myapp:
 dockercfg_generator:
   image: codeship/aws-ecr-dockercfg-generator
   add_docker: true
-  encrypted_env_file: aws.env.encrypted
+  encrypted_env_file:
+    - aws.env.encrypted
 ```
 
 This will use the image we maintain for AWS authentication to generate credentials on image pull. Note that you will need to have your AWS credentials set via the [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) for the generator service, and that the AWS account you are authenticating with will need appropriate IAM permissions.
@@ -402,7 +407,8 @@ app:
 bluemix_dockercfg:
   image: codeship/ibm-bluemix-dockercfg-generator
   add_docker: true
-  encrypted_env_file: bluemix.env.encrypted
+  encrypted_env_file:
+    - bluemix.env.encrypted
 ```
 
 Now, you will need a push step in your [codeship-steps.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}) with the `dockercfg_service` directive. This directive runs the service specified, when it is pushing, to generate the necessary authentication token.
@@ -437,7 +443,8 @@ base:
 bluemix_dockercfg:
   image: codeship/ibm-bluemix-dockercfg-generator
   add_docker: true
-  encrypted_env_file: bluemix.env.encrypted
+  encrypted_env_file:
+    - bluemix.env.encrypted
 ```
 
 This will use the image we maintain for IBM Cloud authentication to generate credentials on image pull. Note that you will need to have the `BLUEMIX_API_KEY` variable set via [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) for the generator service.
@@ -471,7 +478,8 @@ app:
 azure_dockercfg:
   image: codeship/azure-dockercfg-generator
   add_docker: true
-  encrypted_env_file: azure.env.encrypted
+  encrypted_env_file:
+    - azure.env.encrypted
 ```
 
 Now, you will need a push step in your [codeship-steps.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}) with the `dockercfg_service` directive. This directive runs the service specified, when it is pushing, to generate the necessary authentication token.
@@ -505,7 +513,8 @@ app:
 azure_dockercfg:
   image: codeship/azure-dockercfg-generator
   add_docker: true
-  encrypted_env_file: azure.env.encrypted
+  encrypted_env_file:
+    - azure.env.encrypted
 ```
 
 This will use the image we maintain for Azure Container Service authentication to generate credentials on image pull.
