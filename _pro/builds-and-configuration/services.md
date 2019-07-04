@@ -201,7 +201,8 @@ app:
   build:
     image: codeship/app
     dockerfile: Dockerfile
-  encrypted_env_file: env.encrypted
+  encrypted_env_file:
+    - env.encrypted
 ```
 
 The way we encrypt our environment variables is by creating a file in our root directory - in this case, a file named `env` and then [downloading our project AES key.]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) to root directory (and adding it to our `.gitignore` file.)

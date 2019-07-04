@@ -72,13 +72,15 @@ app:
     image: your-org/your-app
     path: .
     dockerfile_path: Dockerfile.app
-  encrypted_env_file: ibm.env.encrypted
+  encrypted_env_file:
+    - ibm.env.encrypted
   volumes:
     - ./deployment/tests:/tests
 
 deployment:
   image: codeship/ibm-bluemix-deployment
-  encrypted_env_file: ibm.env.encrypted
+  encrypted_env_file:
+    - ibm.env.encrypted
   volumes:
     - ./deployment/tests:/tests
   ```

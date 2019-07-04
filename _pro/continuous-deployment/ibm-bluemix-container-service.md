@@ -68,18 +68,21 @@ app:
     image: your-org/your-app
     path: .
     dockerfile_path: Dockerfile.app
-  encrypted_env_file: ibm.env.encrypted
+  encrypted_env_file:
+    - ibm.env.encrypted
   volumes:
     - ./deployment/tests:/tests
 
 dockercfg_generator:
   image: codeship/ibm-bluemix-dockercfg-generator
   add_docker: true
-  encrypted_env_file: bluemix.env.encrypted
+  encrypted_env_file:
+    - bluemix.env.encrypted
 
 deployment:
   image: codeship/ibm-bluemix-deployment
-  encrypted_env_file: ibm.env.encrypted
+  encrypted_env_file:
+    - ibm.env.encrypted
   volumes:
     - ./deployment/tests:/tests
   ```

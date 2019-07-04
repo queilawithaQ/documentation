@@ -59,7 +59,8 @@ RedLine13:
     TIMEOUT: 900
     SUCCESS_RATE: 80
     RESPONSE_TIME: 5000
-  encrypted_env_file: env.encrypted
+  encrypted_env_file:
+    - env.encrypted
 ```
 
 Using the service above you only need to include the curl command in your [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}) to instruct the service to execute the load test, wait for test to complete, and check results.

@@ -46,7 +46,8 @@ You will want to add a service which builds the [Google Cloud deployment image](
 ```yaml
 googleclouddeployment:
   image: codeship/google-cloud-deployment
-  encrypted_env_file: google-credentials.encrypted
+  encrypted_env_file:
+    - google-credentials.encrypted
   add_docker: true
   volumes:
     - ./:/deploy

@@ -67,7 +67,8 @@ The `codeship-services.yml` file uses the `codeship/aws-deployment` container an
 ```yaml
 awsdeployment:
   image: codeship/aws-deployment
-  encrypted_env_file: aws-deployment.env.encrypted
+  encrypted_env_file:
+    - aws-deployment.env.encrypted
   environment:
     - AWS_DEFAULT_REGION=us-east-1
   volumes:

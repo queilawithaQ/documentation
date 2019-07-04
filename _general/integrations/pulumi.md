@@ -89,7 +89,8 @@ Once you have an image capable of executing Pulumi Compose commands, you will wa
 app:
   build:
     dockerfile: Dockerfile
-  encrypted_env_file: env.encrypted
+  encrypted_env_file:
+    - env.encrypted
   add_docker: true
 ```
 

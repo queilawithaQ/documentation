@@ -73,7 +73,8 @@ To scan an image with Anchore, add an Anchore scan service to your [codeship-ser
 ```
 anchorescan:
   image: anchore/engine-cli:latest
-  encrypted_env_file: env.encrypted
+  encrypted_env_file:
+    - env.encrypted
 ```
 
 You'll also need to add a step to your [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}):
@@ -87,7 +88,8 @@ You'll also need to add a step to your [codeship-steps.yml file]({{ site.baseurl
     counter=0 && while (! (anchore-cli image get $ANCHORE_IMAGE_SCAN | grep 'Status\:\ analyzed') ) ; do echo -n "." ; sleep 10 ; if [ $counter -eq $ANCHORE_RETRIES ] ; then echo " Timeout waiting for analysis" ; exit 1 ; fi ; counter=$(($counter+1)) ; done &&
     echo "Analysis complete" &&
     if [ "$ANCHORE_FAIL_ON_POLICY" == "true" ] ; then anchore-cli evaluate check $ANCHORE_IMAGE_SCAN  ; fi'
-  encrypted_env_file: env.encrypted
+  encrypted_env_file:
+    - env.encrypted
 ```
 
 The job will poll the Anchore Engine every 10 seconds to check if the image has been analyzed and will repeat this until the maximum number of retries specified has been reached.
