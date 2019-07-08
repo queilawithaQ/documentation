@@ -305,6 +305,7 @@ openjdk
 openjdk8
 openjdk11
 openredis
+openssl
 openstack
 opsgenie
 oraclejdk7

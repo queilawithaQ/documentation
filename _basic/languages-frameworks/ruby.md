@@ -178,3 +178,22 @@ Following the install add this command before running `bundle install`:
 ```
 bundle config build.tiny_tds --with-freetds-lib=$HOME/cache/freetds/lib --with-freetds-include=$HOME/cache/freetds/include
 ```
+
+### Puma
+
+The [Puma gem](https://github.com/puma/puma) will fail to install by default if the version is older than 3.7. Older Puma versions use OpenSSL 1.0, but Ubuntu Bionic includes OpenSSL 1.1 by default. You can either upgrade Puma to at least 3.7 or revert to the older OpenSSL version.
+
+The error may look like this:
+
+```
+Fetching puma 3.6.0
+Installing puma 3.6.0 with native extensions
+Gem::Ext::BuildError: ERROR: Failed to build gem native extension.
+```
+
+Revert to OpenSSL 1.0 by adding these commands before `bundle install`:
+
+```
+sudo apt-get update
+sudo apt-get install -y libssl1.0-dev
+```
