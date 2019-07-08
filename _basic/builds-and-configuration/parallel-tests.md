@@ -25,7 +25,7 @@ redirect_from:
 ---
 
 {% csnote info %}
-Parallel test pipelines are an account upgrade. You can try [a free trial](https://codeship.com/projects#start-trial) to test using up to 20 parallel test pipelines for two weeks on all your projects.
+Parallel test pipelines are an account upgrade. You can try [a free trial](https://codeship.com/projects#start-trial) to test using up to 5 parallel test pipelines for two weeks on all your projects.
 {% endcsnote %}
 
 * include a table of contents
