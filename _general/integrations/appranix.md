@@ -1,6 +1,6 @@
 ---
-title: Integrating CodeShip With Appranix
-shortTitle: Integrating CodeShip With Appranix
+title: Integrating CodeShip With Appranix Deliver Service
+shortTitle: Integrating CodeShip With Appranix Deliver Service
 tags:
   - integrations
   - operations
