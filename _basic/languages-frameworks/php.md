@@ -33,7 +33,7 @@ phpenv versions
 ### Ubuntu 18.04
 By default we use {{ site.data.basic.defaults.php }}
 
-Specific versions: 5.6.40, 7.0.33, 7.1.29, 7.2.18 and 7.3.5
+Specific versions: 5.6.40, 7.0.33, 7.1.30, 7.2.20 and 7.3.7
 
 ***Do not rely on the specific versions we have as this can change any time and could break your build.***
 
