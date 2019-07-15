@@ -275,17 +275,12 @@ async-settle@^1.0.0:
   dependencies:
     async-done "^1.2.2"
 
-async@^2.1.4:
+async@^2.1.4, async@~2.6.2:
   version "2.6.2"
   resolved "https://registry.yarnpkg.com/async/-/async-2.6.2.tgz#18330ea7e6e313887f5d2f2a904bac6fe4dd5381"
   integrity sha512-H1qVYh1MYhEEFLsP97cVKqCGo7KfCyTt6uEWqsTBr9SO84oK9Uwbyd/yCW+6rKJLHksBNUVWZDAjfS+Ccx0Bbg==
   dependencies:
     lodash "^4.17.11"
-
-async@~0.2.8:
-  version "0.2.10"
-  resolved "https://registry.yarnpkg.com/async/-/async-0.2.10.tgz#b6bbe0b0674b9d719708ca38de8c237cb526c3d1"
-  integrity sha1-trvgsGdLnXGXCMo43owjfLUmw9E=
 
 atob@^2.1.1:
   version "2.1.2"
@@ -1882,7 +1877,7 @@ gulp-folders-4x@^1.0.1:
   dependencies:
     event-stream "^3.2.1"
 
-gulp-gm@~0.0.3:
+gulp-gm@~0.0.9:
   version "0.0.9"
   resolved "https://registry.yarnpkg.com/gulp-gm/-/gulp-gm-0.0.9.tgz#dbd74a812eca5ba28c0b74e8d2f729bde9844978"
   integrity sha512-T1jHDCnR3TmAABIif5ooFXonaDHdovJJRdKL9cQ8gdnMwunrW33HFqDr7E0zxw+lN0fFhBj/cp1VCeHcL9BPmg==
@@ -1892,14 +1887,14 @@ gulp-gm@~0.0.3:
     through2 "^0.4.1"
 
 gulp-image-resize@^0.13.0:
-  version "0.13.0"
-  resolved "https://registry.yarnpkg.com/gulp-image-resize/-/gulp-image-resize-0.13.0.tgz#18023ad69849b414f19d34d6f6ac979ff3ec337a"
-  integrity sha512-pRw0N3+GD+kJLxumXcoFllbYeZJeQUroXy+/m1uBjRWVIfBqkJEwcrVGYYZ6bxF6jqn7gF2iuIj7LjoRT7DHVw==
+  version "0.13.1"
+  resolved "https://registry.yarnpkg.com/gulp-image-resize/-/gulp-image-resize-0.13.1.tgz#e3518c3b9e812d478e829effd1647e83558f6dae"
+  integrity sha512-89kv4TKeklDVvRK3GDFABGq5TynKQ0KONUbka15JhJMtLyqXqMrA8RnXKc01wURKO0K2Zgg0ZMI+3pgIlIwNzA==
   dependencies:
-    async "~0.2.8"
-    gulp-gm "~0.0.3"
-    lodash "~2.4.1"
-    through2 "~0.4.1"
+    async "~2.6.2"
+    gulp-gm "~0.0.9"
+    lodash "~4.17.14"
+    through2 "~2.0.5"
 
 gulp-imagemin@^6.0.0:
   version "6.0.0"
@@ -2651,15 +2646,10 @@ load-json-file@^1.0.0:
     pinkie-promise "^2.0.0"
     strip-bom "^2.0.0"
 
-lodash@^4.17.11, lodash@^4.3.0:
+lodash@^4.17.11, lodash@^4.3.0, lodash@~4.17.14:
   version "4.17.14"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.14.tgz#9ce487ae66c96254fe20b599f21b6816028078ba"
   integrity sha512-mmKYbW3GLuJeX+iGP+Y7Gp1AiGHGbXHCOh/jZmrawMmsE7MS4znI3RL2FsjbqOyMayHInjOeykW7PEajUk1/xw==
-
-lodash@~2.4.1:
-  version "2.4.2"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-2.4.2.tgz#fadd834b9683073da179b3eae6d9c0d15053f73e"
-  integrity sha1-+t2DS5aDBz2hebPq5tnA0VBT9z4=
 
 logalot@^2.0.0:
   version "2.1.0"
@@ -4269,7 +4259,7 @@ through2-filter@^3.0.0:
     through2 "~2.0.0"
     xtend "~4.0.0"
 
-through2@^0.4.1, through2@~0.4.1:
+through2@^0.4.1:
   version "0.4.2"
   resolved "https://registry.yarnpkg.com/through2/-/through2-0.4.2.tgz#dbf5866031151ec8352bb6c4db64a2292a840b9b"
   integrity sha1-2/WGYDEVHsg1K7bE22SiKSqEC5s=
@@ -4277,7 +4267,7 @@ through2@^0.4.1, through2@~0.4.1:
     readable-stream "~1.0.17"
     xtend "~2.1.1"
 
-through2@^2.0.0, through2@^2.0.3, through2@~2.0.0:
+through2@^2.0.0, through2@^2.0.3, through2@~2.0.0, through2@~2.0.5:
   version "2.0.5"
   resolved "https://registry.yarnpkg.com/through2/-/through2-2.0.5.tgz#01c1e39eb31d07cb7d03a96a70823260b23132cd"
   integrity sha512-/mrRod8xqpA+IHSLyGCQ2s8SPHiCDEeQJSep1jqLYeEUClOFG2Qsh+4FU6G9VeqpZnGW/Su8LQGc4YKni5rYSQ==
