@@ -171,6 +171,7 @@ dockerized
 Dockerrun.aws.json
 donios
 dropdown
+dynamodb
 e.g.
 e2e
 eb-related
