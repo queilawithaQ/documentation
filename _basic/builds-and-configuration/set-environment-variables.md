@@ -69,7 +69,7 @@ CI_BUILD_NUMBER        # The specific CodeShip build number, correlates to the n
 CI_BUILD_URL           # The URL for the specific build. Ex: https://app.codeship.com/projects/*project_id*/builds/*build_number*
 CI_COMMITTER_EMAIL     # The committer's email address as set in the git commit.
 CI_COMMITTER_NAME      # The committer's name as set in the git commit.
-CI_COMMITTER_USERNAME  # The committer's SCM username.
+CI_COMMITTER_USERNAME  # The committer's SCM username. NOTE: For BitBucket users this is the nickname field.
 CI_COMMIT_ID           # The HEAD commit ID of the triggered build.
 CI_MESSAGE             # The commit message set in the git commit. If the commit message is especially long, only the end of the message will be displayed.
 CI_NAME                # Always CodeShip. Ex: codeship
