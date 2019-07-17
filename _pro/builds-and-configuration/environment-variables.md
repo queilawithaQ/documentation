@@ -153,7 +153,7 @@ CI_BUILD_APPROVED       # Build trigger on manual approval
 CI_BUILD_ID             # ID of the build
 CI_COMMITTER_EMAIL      # The committer's email address as set in the git commit
 CI_COMMITTER_NAME       # The committer's name as set in the git commit.
-CI_COMMITTER_USERNAME   # The committer's SCM username.
+CI_COMMITTER_USERNAME   # The committer's SCM username. NOTE: For BitBucket users this is the nickname field.
 CI_COMMIT_DESCRIPTION   # The description of the commit message
 CI_COMMIT_ID            # The HEAD commit ID of the triggered build.
 CI_COMMIT_MESSAGE       # The commit message
