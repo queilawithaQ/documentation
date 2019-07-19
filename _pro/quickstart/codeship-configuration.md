@@ -87,4 +87,4 @@ To switch a project from CodeShip Basic to CodeShip Pro, just click on "Project 
 
 ### Run Pro Builds On Basic Projects
 
-On any CodeShip Basic project, you can commit to the branch `codeship-docker-migration` to trigger a CodeShip Pro build. Note that this is the only branch that will run Pro builds on Basic projects, and these builds will show up in your build list. After you trigger your first CodeShip Pro build, your project will create an AES key in your general project settings which can be used to encrypt environment variables.
+On any CodeShip Basic project, you can commit to the branch `codeship-docker-migration` to trigger a CodeShip Pro build. Note that this is the only branch that will run Pro builds on Basic projects, and these builds will show up in your build queue. After you trigger your first CodeShip Pro build, your project will create an AES key in your general project settings which can be used to [encrypt environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}#encrypted-environment-variables).
