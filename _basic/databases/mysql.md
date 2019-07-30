@@ -89,3 +89,22 @@ DATABASES = {
   }
 }
 ```
+
+## Other Versions
+
+If you need to install [MySQL 8.0](https://dev.mysql.com/doc/relnotes/mysql/8.0/en), please see [this script](https://github.com/codeship/scripts/blob/master/packages/mysql-8.0.sh).
+
+To configure a specific version or port number, set them as [environment variables]({{ site.baseurl }}{% link _basic/builds-and-configuration/set-environment-variables.md %}) in your project or add this in the _Setup Commands_:
+
+```
+export MYSQL_VERSION=8.0.17
+export MYSQL_PORT=3308
+```
+
+Next add [this command](https://github.com/codeship/scripts/blob/master/packages/mysql-8.0.sh#L6) to your _Setup Commands_ and the script will automatically be called at build time. Note, this script automatically starts MySQL, but does not automatically setup any databases. You can run additional MySQL commands as needed to configure your databases.
+
+For example, you can call `mysql` as follows:
+
+```
+"$HOME/mysql-8.0.17/bin/mysql" --defaults-file="$HOME/mysql-8.0.17/my.cnf" --version
+```
