@@ -1,7 +1,7 @@
-FROM ruby:2.6.3-slim
+FROM ruby:2.6.3-slim-buster
 
-ENV CACHE_BUST=2019-04-19 \
-    DEBIAN_DISTRIBUTION="stretch" \
+ENV CACHE_BUST=2019-07-30 \
+    DEBIAN_DISTRIBUTION="buster" \
     DEBIAN_FRONTEND="noninteractive" \
     NODE_VERSION="10.x" \
     LANG=C.UTF-8
