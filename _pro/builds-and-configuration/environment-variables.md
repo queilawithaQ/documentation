@@ -80,9 +80,9 @@ Navigate to _Project Settings_ > _General_ and you'll find a section labeled _AE
 
 Save that file as `codeship.aes` in your repository root. You can add the key to your `.gitignore` file so you don't accidentally commit it to your repository.
 
-The GitHub Token Scanning feature makes sure that the file`codeship.aes` is not accidentally compromised and committed to the repositories. See [Token Scanning](https://developer.github.com/partnerships/token-scanning/) for more information.
+The GitHub Token Scanning feature looks for token names that match regular expressions. See [Token Scanning](https://developer.github.com/partnerships/token-scanning/) for more information.
 
-The regular expressions that the GitHub Token Scanning feature scans for are:
+The regular expressions are:
 
 |Tokens                     | Regular Expressions                                                   |   |
 |------------------------   |:---------------------------------------------------------------------:|---|
