@@ -80,7 +80,7 @@ The following table shows when a build is triggered.
 
 ## Configuring Branches
 
-You can run builds for all branch, exclude branches from triggering builds, and run builds only for certain branches. 
+You can run builds for all branches, exclude branches from triggering builds, and run builds only for certain branches. 
 The default behavior is to run builds for all branches.
  
 ### Excluding Branches From Triggering Builds
