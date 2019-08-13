@@ -30,7 +30,9 @@ mkdir -p "${ami}"
 # Java versions
 source "${HOME}/bin/jdk/jdk_switcher"
 echo '```shell' > "${ami}/java.md"
-jdk_switcher use openjdk7 > /dev/null
+jdk_switcher use openjdk8 > /dev/null
+java -version 2>> "${ami}/java.md" && echo >> "${ami}/java.md"
+jdk_switcher use openjdk11 > /dev/null
 java -version 2>> "${ami}/java.md" && echo >> "${ami}/java.md"
 jdk_switcher use oraclejdk7 > /dev/null
 java -version 2>> "${ami}/java.md" && echo >> "${ami}/java.md"
