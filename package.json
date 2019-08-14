@@ -10,8 +10,8 @@
   },
   "license": "MIT",
   "engines": {
-    "node": "^10.15.0",
-    "yarn": "^1.15.0"
+    "node": "^10.16.0",
+    "yarn": "^1.17.0"
   },
   "scripts": {
     "check": "mdspell -rna --en-us '{,!(node_modules)/**/}*.md'",
