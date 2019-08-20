@@ -110,4 +110,4 @@ Docker's multi-stage build feature allows you to build Docker images with multip
 
 Since the build stage layers are untagged and not associated with the final image, they are not part of the cached image. This means that -- for now -- it’s possible that your build may take a bit longer if you relied on caching all of the layers to speed up the build.
 
-If build speed AND small images are both critical for your application, you may choose to create a separate service in your `codeship-services.yml` file and cache that service, using a primary service to build and test your code and a secondary service - with a multi-stage Dockerfile - to produce your production image.
+If build speed AND small images are both critical for your application, you may choose to create a separate service in your `codeship-services.yml` file and cache that service, using a primary service to build and test your code and a secondary service - with a multi-stage Dockerfile - to produce your production image. You can see an example [here](https://documentation.codeship.com/pro/common-issues/caching-multi-stage-dockerfile/).
