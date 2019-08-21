@@ -84,11 +84,9 @@ The GitHub Token Scanning feature looks for token names that match regular expre
 
 The regular expressions are:
 
-|Tokens                     | Regular Expressions                                                   |   |
+|Token                      | Regular Expression                                                    |   |
 |------------------------   |:---------------------------------------------------------------------:|---|
-|CodeShip API credentials   |/codeship[-_]\w*api[-_](token|key|username|password|user|pass)/i       |   |
-|CodeShip AES key           |/(codeship[-_]){0,1}(\w*aes[-_]){0,1}key/i                             |   |
-|CodeShip generic           |/codeship[-_]\w*(token|key|username|password|user|pass)/i             |   |
+|CodeShip generic           |/codeship[-_]\w*(token\|key\|username\|password\|user\|pass)/i            |   |
 
 {% csnote info %}
 If you need to reset your AES key you can do so by visiting _Project Settings_ > _General_ and clicking _Reset project AES key_.
