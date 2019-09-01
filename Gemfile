@@ -3,7 +3,7 @@ ruby '2.6.3'
 
 gem 'rake', '~> 12.3.3'
 gem 'jekyll', '~> 3.8.0'
-gem 'sassc', '~> 2.0.1'
+gem 'sassc', '~> 2.2.0'
 gem 'shipyard-framework', '~> 1.0.1'
 
 # Jekyll Plugins
