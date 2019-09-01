@@ -11,7 +11,7 @@ gem 'jekyll-coffeescript', '~> 1.2.2'
 gem 'jekyll-seo-tag', '~> 2.6.1'
 gem 'jekyll-sitemap', '~> 1.3.1'
 gem 'jekyll-redirect-from', '~> 0.15.0'
-gem 'jekyll-menus', '~> 0.6.0'
+gem 'jekyll-menus', '~> 0.6.1'
 
 group :test do
   gem 'html-proofer', '~> 3.11.1'
