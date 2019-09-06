@@ -1302,9 +1302,6 @@ libmail-sendmail-perl                                        0.80-1
 libmailtools-perl                                            2.18-1
 libmatio-dev:amd64                                           1.5.11-1
 libmatio4:amd64                                              1.5.11-1
-libmaxminddb-dbg:amd64                                       1.3.2-0+maxmind1~artful
-libmaxminddb-dev:amd64                                       1.3.2-0+maxmind1~artful
-libmaxminddb0:amd64                                          1.3.2-0+maxmind1~artful
 libmbim-glib4:amd64                                          1.18.0-1~ubuntu18.04.1
 libmbim-proxy                                                1.18.0-1~ubuntu18.04.1
 libmcrypt-dev                                                2.5.8-3.3
