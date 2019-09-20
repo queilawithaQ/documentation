@@ -63,11 +63,8 @@ rm kubeconfigdata k8s-env
 ## codeship-services.yml
 
 kubectl:
-  build:
-    image: codeship/kubectl
-    dockerfile: Dockerfile
-  encrypted_env_file:
-    - k8s-env.encrypted
+  image: codeship/kubectl
+  encrypted_env_file: k8s-env.encrypted
 ```
 
 ```shell
