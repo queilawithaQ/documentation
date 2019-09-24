@@ -41,7 +41,7 @@ Now that you have a working CI process with a successful test, the next step is 
 
 Within your SCM of choice you need to have configured the directory where you have been making these files as a Repository. 
 
-You also need to have linked this Repository in your SCM to a CodeShip Pro Project at [CodeShip UI](app.codeship.com)
+You also need to have linked this Repository in your SCM to a CodeShip Pro Project at [CodeShip UI](https://app.codeship.com/home)
 
 #### Image Registry Account
 
