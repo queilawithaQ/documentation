@@ -138,7 +138,7 @@ DEPENDENCIES
   shipyard-framework (~> 1.0.1)
 
 RUBY VERSION
-   ruby 2.6.4p104
+   ruby 2.6.5p114
 
 BUNDLED WITH
    1.17.2
