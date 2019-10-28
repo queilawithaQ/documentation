@@ -1,9 +1,9 @@
 FROM ruby:2.6.5-slim-buster
 
-ENV CACHE_BUST=2019-10-02 \
+ENV CACHE_BUST=2019-10-28 \
     DEBIAN_DISTRIBUTION="buster" \
     DEBIAN_FRONTEND="noninteractive" \
-    NODE_VERSION="10.x" \
+    NODE_VERSION="12.x" \
     LANG=C.UTF-8
 
 # Basic project configuration
