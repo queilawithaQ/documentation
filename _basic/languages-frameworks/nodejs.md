@@ -24,32 +24,24 @@ redirect_from:
 * include a table of contents
 {:toc}
 
-{% csnote info %}
-This article is about using Node.js with CodeShip Basic.
-
-If you'd like to learn more about CodeShip Basic, we recommend the [getting started guide]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}) or [the features overview page](https://codeship.com/features/basic)
-{% endcsnote %}
-
 ## Versions And Setup
 
-We use **nvm** to manage different Node.js versions. We read the Node.js version you set in your **package.json** and install the appropriate one. You can use **nvm** in your [setup commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}), such as:
+CodeShip uses [nvm](https://github.com/nvm-sh/nvm) to manage different [Node.js](https://nodejs.org/en/) versions. During the `Preparing Bionic Build Container` step of the build, CodeShip attempts to read the Node.js version set in `package.json` and then installs that version. If the version is not specified in `package.json` or if your project does not include that file, CodeShip defaults to **{{ site.data.basic.defaults.node }}**.
+
+### Specifying Version
+
+Even though CodeShip attempts to automatically set the Node.js version for you, it is highly recommended to specify the version to ensure the desired version is used.
+
+In your [setup commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}) you can use `nvm` commands. For instance:
 
 ```shell
 nvm install NODE_VERSION
 ```
 
-If the version isn't already pre-installed on the build VMs `nvm` will download the version from the official repositories and make it available to your build.
+Most [Node.js versions](https://nodejs.org/en/download/releases/) are pre-installed, but if the version you specify is not already installed, `nvm` will download it automatically.
 
-### Default Version
-
-The default version when we can't find a setting in your `package.json` is the latest version of the `10` release.
-
-### Pre-installed versions
 The following Node.js versions are preinstalled:
-
 {% include basic/ami/{{ site.data.basic.ami_id }}/node.md %}
-
-Please note that we only install the latest version for each of those releases. You can however install any custom version via the `nvm install` command mentioned above.
 
 ## Dependencies
 
@@ -161,6 +153,10 @@ npm install webpack
 
 **Note** that you may need to specify a specific version of Node.js via `nvm` to use webpack successfully.
 
+## Frameworks And Testing
+
+All versions of Node.js run on CodeShip. Additionally, all tools and test frameworks, such as karma, mocha, grunt or any other node-based tool should work without issue. You will need to be sure to install them via `npm` before using them, however.
+
 ## Parallel Testing
 
 If you are running [parallel test pipelines]({{ site.baseurl }}{% link _basic/builds-and-configuration/parallel-tests.md %}), you will want separate your tests into groups and call a group specifically in each pipeline. For instance:
@@ -195,13 +191,9 @@ Instead of `npm test` run your test commands directly via `grunt` using the foll
 grunt test
 ```
 
-## Frameworks And Testing
-
-All versions of Node.js run on CodeShip. Additionally, all tools and test frameworks, such as karma, mocha, grunt or any other node-based tool should work without issue. You will need to be sure to install them via `npm` before using them, however.
-
 ### io.js
 
-If you want to use [io.js](https://iojs.org/) simply add the following step to your setup commands.
+If you want to use [io.js](https://nodejs.org/en/download/releases/) simply add the following step to your setup commands.
 
 ```shell
 nvm use iojs-v3
@@ -209,7 +201,7 @@ nvm use iojs-v3
 
 You can then either use the `node` or the `iojs` binary to run your applications.
 
-If you want to us a more specific version you need to add the following steps to your setup commands:
+If you want to use a more specific version you need to add the following steps to your setup commands:
 
 ```shell
 export NVM_IOJS_ORG_MIRROR="https://iojs.org/dist"
