@@ -3,5 +3,5 @@ ami_id: 'ami-03990dafb08de3b70'
 defaults:
   ruby: '2.5.3'
   php: '7.3'
-  node: '12.13.0'
+  node: '12.13.1'
   python: '2.7'
