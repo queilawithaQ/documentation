@@ -193,7 +193,7 @@ Note that if you need to install a custom version of PHPUnit, you can do so with
 
 ```shell
 composer global remove phpunit/phpunit
-composer global require phpunit/phpunit:5.*
+composer global require phpunit/phpunit:7.*
 ```
 
 ### Memcached
