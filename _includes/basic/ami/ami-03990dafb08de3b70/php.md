@@ -5,8 +5,10 @@
   7.0.33
   7.1
   7.1.33
-* 7.2 (set by /home/rof/.phpenv/version)
-  7.2.25
-  7.3
-  7.3.12
+  7.2
+  7.2.26
+* 7.3 (set by /home/rof/.phpenv/version)
+  7.3.13
+  7.4
+  7.4.1
 ```
