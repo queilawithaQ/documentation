@@ -39,7 +39,7 @@ The following Ruby versions are preinstalled:
 {% include basic/ami/{{ site.data.basic.ami_id }}/ruby.md %}
 
 ### Using a .ruby-version file
-You can also use your `.ruby-version` file on CodeShip. The `.ruby-version` file lives in the project root and its content is just your Ruby version, for example: `2.6.1`. You can read the Ruby version to use from that file:
+You can also use your `.ruby-version` file on CodeShip. The `.ruby-version` file lives in the project root and its content is just your Ruby version, for example: `2.7.0`. You can read the Ruby version to use from that file:
 
 ```shell
 rvm use $(cat .ruby-version) --install
