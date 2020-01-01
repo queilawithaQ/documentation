@@ -14,6 +14,6 @@ gem 'jekyll-redirect-from', '~> 0.15.0'
 gem 'jekyll-menus', '~> 0.6.1'
 
 group :test do
-  gem 'html-proofer', '~> 3.14.1'
+  gem 'html-proofer', '~> 3.15.0'
   gem 'scss_lint', '~> 0.59.0'
 end
