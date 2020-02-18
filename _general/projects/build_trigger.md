@@ -139,5 +139,6 @@ To automatically skip builds on the same branch:
 
 3. Select the _Auto-supersede_ radio button to On.
 
-4. Click the _Save the Configuration_ button.
 ![Turn on Auto-supersede]({{ site.baseurl }}/images/general/turn_on_auto_supersede.png)
+
+4. Click the _Save the Configuration_ button.
