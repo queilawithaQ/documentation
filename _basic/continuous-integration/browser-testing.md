@@ -46,7 +46,7 @@ Current versions of Google Chrome and Chromium are installed by default.
 
 Google Chrome is at version 80 and is located at `/usr/bin/google-chrome`.
 
-Chromium is at version 79 and is located at `/usr/bin/chromium-browser`.
+Chromium is at version 80 and is located at `/usr/bin/chromium-browser`.
 
 There is a `chrome` symlink in the PATH that defaults to calling Google Chrome. You can change it to point to Chromium by adding these commands to your build steps:
 
@@ -61,7 +61,7 @@ Beginning in Google Chrome 59, you can run Chrome in [headless mode](https://dev
 
 ## ChromeDriver
 
-[ChromeDriver](https://sites.google.com/a/chromium.org/chromedriver) 80.0.3987.16 is installed by default and available in the PATH.
+[ChromeDriver](https://sites.google.com/a/chromium.org/chromedriver) 80.0.3987.106 is installed by default and available in the PATH.
 
 To install a [custom ChromeDriver version](https://github.com/codeship/scripts/blob/master/packages/chromedriver.sh) add the following commands to your build steps:
 
