@@ -17,7 +17,7 @@ categories:
 * include a table of contents
 {:toc}
 
-[CouchDB](https://couchdb.apache.org) **2.3.0** runs by default on port 5984.
+[CouchDB](https://couchdb.apache.org) **3.0.0** runs by default on port 5984. The default user is `admin` and the default password is `password`.
 
 You can verify it is running with the following command:
 
