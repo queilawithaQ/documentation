@@ -106,7 +106,7 @@ Volumes solve several common problems, including:
 
 - As the hosts are ephemeral, you should not rely on existence of certain directories. Always make sure that you're mounting volumes from a directory relative to where your repo is checked out.
 
-- When mounting volumes, ensure the directory you're attempting to mount already exists. The simplest way to do that is to add the required directory to your repository. Docker version 1.12 and earlier automatically created missing directories, but this behavior have been removed in later versions.
+- When mounting volumes, ensure the directory you're attempting to mount already exists. The simplest way to do that is to add the required directory to your repository. Docker version 1.12 and earlier automatically created missing directories, but this behavior was removed in later versions.
 
 ## More Information
 
