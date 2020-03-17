@@ -16,6 +16,10 @@ menus:
 * include a table of contents
 {:toc}
 
+{% csnote info %}
+The IP whitelisting feature is only available on paid subscriptions.
+{% endcsnote %}
+
 The IP whitelisting feature is mainly useful if you have a [self-hosted git server]({{ site.baseurl }}{% link _general/about/self-hosted-scm.md %}) or if you deploy/push build artifacts to something that's hosted behind your own firewall.
 
 If you're unsure if you need IP whitelisting or not, keep reading. If you know you need it, jump to [Setting up Whitelisting](#setting-up-whitelisting) to get started.
