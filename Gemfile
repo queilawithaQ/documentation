@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
-ruby '2.6.5'
+ruby '2.6.6'
 
 gem 'rake', '~> 13.0.1'
-gem 'jekyll', '~> 3.8.0'
+gem 'jekyll', '~> 3.8.6'
 gem 'sassc', '~> 2.2.1'
 gem 'shipyard-framework', '~> 1.0.1'
 
