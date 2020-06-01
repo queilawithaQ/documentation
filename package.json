@@ -18,7 +18,7 @@
     "fix": "mdspell -na --en-us '{,!(node_modules)/**/}*.md'"
   },
   "dependencies": {
-    "autoprefixer": "^9.7.6",
+    "autoprefixer": "^9.8.0",
     "gulp": "^4.0.2",
     "gulp-folders-4x": "^1.0.1",
     "gulp-image-resize": "^0.13.0",
