@@ -63,14 +63,15 @@ Our whole infrastructure is based on Amazon EC2 or services built on top of it. 
 
 Additionally for monitoring the platform, handling payments, and potentially collecting metrics we use:
 
-+ Appcues
 + Braintree
-+ Fullstory
-+ Looker
-+ NewRelic
++ Librato
++ PagerDuty
 + Papertrail
 + Rollbar
 + Segment
++ Sisense
++ Statuspage
++ Zendesk
 
 **Note**: Although we do have access to your source code, as outlined in our Terms of Service, we only access it for a build or support request. We do not have any way to access your source code repository outside of our build environment.
 
@@ -100,19 +101,13 @@ CodeShip uses a variety of third-party javascript embeds to perform a variety of
 
 **Note** that 3rd party tracking is enabled on all application pages.
 
-- Appcues is used to communicate with users based on behavioral metrics.
-
-- Fullstory is used to capture how users interact with the CodeShip console, and helps highlight issues in the overall flow.
-
-- NewRelic is used for capturing errors and other data, to help us with debugging issues.
+- Profitwell is used to help notify customers when a credit card (stored securely in Braintree, our payments provider) needs to be renewed or updated.
 
 - Rollbar is used to collect application exception information for development purposes.
 
 - Segment is our main data analytics platform. We use the data (in aggregate) to see how CodeShip is being used and to design improvements and new features.
 
-- Zendesk is used for live chat and ticket handling. This shows up in the javascript as `zopim`.
-
-- Profitwell is used to help notify users when a credit card (stored securely in Braintree, our payments provider) needs to be renewed or updated.
+- Zendesk is used for support ticket handling.
 
 If you have not allowed us to capture data on how you use CodeShip (part of [GDPR]({{ site.baseurl }}{% link _general/about/gdpr.md %})) we will not embed Appcues and Segment.
 

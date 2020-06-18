@@ -87,8 +87,6 @@ In the future, we would also like to be more proactive in helping you improve yo
 
 When allowing us to capture how you use CodeShip, we will enable the following services:
 
-* [Fullstory](https://fullstory.com) (for optimizing our design and tracking UI issues)
-* [Appcues](https://www.appcues.com) (for communicating workflows and in-app changes)
 * [Segment](https://segment.com) (a data hub that sends data to our data warehouse)
 
 If you do opt in, but change your mind, you can easily opt out again via your Personal Settings page. Likewise, you can easily opt in on the same page, and help us improve CodeShip.
