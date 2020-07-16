@@ -181,8 +181,6 @@ You can access it in your tests on 127.0.0.1:8000.
 Also take a look at the PHP built-in webserver docs in the
 [PHP documentation](https://secure.php.net/manual/en/features.commandline.webserver.php)
 
-Thanks to [Jeff Donios](https://github.com/doniosjm) for the tip.
-
 ### Exiting Tests
 
 All commands must return an `exit code 0` to CodeShip to report a successful result, or any other error code to report an unsuccessful result. This means you must configure your test scripts to exit with a `0` status if they do not do so by default.
