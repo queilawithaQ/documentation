@@ -68,7 +68,7 @@ You can find specific instructions per-language over at the [Codacy documentatio
 
 The next step will vary by language. Some of the Codacy packages will automatically run whenever your tests run, while some will require separate commands added to your project's [test commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}).
 
-For instance the Rails gem will automatically update your coverage report and export it to Codacy and requires no additional steps, whereas the Python package will require an additional command placed either directly in your [[test commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}) or inside of a script:
+For instance the Rails gem will automatically update your coverage report and export it to Codacy and requires no additional steps, whereas the Python package will require an additional command placed either directly in your [test commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}) or inside of a script:
 
 ```shell
 python-codacy-coverage -r coverage.xml
