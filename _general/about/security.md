@@ -13,7 +13,7 @@ tags:
   - ssh
   - git
   - 2fa
-  - whitelisting
+  - static
 categories:
   - About CodeShip
   - Security
@@ -47,7 +47,7 @@ You can revoke permission in your source code provider settings and by removing 
 
 ## How Can I Access Internal Resources From CodeShip?
 
-If you need to access resources behind a custom firewall from CodeShip, e.g. pulling code from a [self-hosted git server]({{ site.baseurl }}{% link _general/about/self-hosted-scm.md %}) or perhaps deploying build artifacts to an internal environment, you can enable the IP whitelisting feature and only open the necessary ports for those IPs in your firewall. See [IP whitelisting]({{ site.baseurl }}{% link _general/account/whitelisting.md %}) documentation for more details.
+If you need to access resources behind a custom firewall from CodeShip, e.g. pulling code from a [self-hosted git server]({{ site.baseurl }}{% link _general/about/self-hosted-scm.md %}) or perhaps deploying build artifacts to an internal environment, you can enable the static IP addresses feature and only open the necessary ports for those IPs in your firewall. See [Static IP Addresses]({{ site.baseurl }}{% link _general/account/static-ip-addresses.md %}) documentation for more details.
 
 ## Is CodeShip GDPR Compliant?
 
