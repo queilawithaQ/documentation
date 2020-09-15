@@ -147,6 +147,7 @@ To automatically skip builds on the same branch:
 ## Throttle builds per project
 
 The build-throttle feature allows you to limit the number of concurrent builds that a given project can run at a time.
+The build-throttle is applied at the project level and affects all branches.
 If the limit is reached, remaining builds will be added to a queue.
 
 To enable build-throttle for a project:
