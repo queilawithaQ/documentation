@@ -144,11 +144,9 @@ To automatically skip builds on the same branch:
 
 5. Additionally you can check the box to stop the current running build.
 
-## Throttle builds per project
+## Throttle builds per project (Beta)
 
-The build-throttle feature allows you to limit the number of concurrent builds that a given project can run at a time.
-The build-throttle is applied at the project level and affects all branches.
-If the limit is reached, remaining builds will be added to a queue.
+The build-throttle feature allows you to limit the number of concurrent builds that a given project can run at a time. The build-throttle is applied at the project level and affects all branches. If the limit is reached, remaining builds will be added to a queue. This is currently a beta feature and if you are interested in trying it, [contact support](https://helpdesk.codeship.com/hc/en-us).
 
 To enable build-throttle for a project:
 
