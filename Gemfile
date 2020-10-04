@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 ruby '2.6.6'
 
 gem 'rake', '~> 13.0.1'
-gem 'jekyll', '~> 3.8.6'
+gem 'jekyll', '~> 3.8.7'
 gem 'sassc', '~> 2.4.0'
 gem 'shipyard-framework', '~> 1.0.1'
 
@@ -14,6 +14,6 @@ gem 'jekyll-redirect-from', '~> 0.16.0'
 gem 'jekyll-menus', '~> 0.6.1'
 
 group :test do
-  gem 'html-proofer', '~> 3.15.3'
+  gem 'html-proofer', '~> 3.16.0'
   gem 'scss_lint', '~> 0.59.0'
 end
