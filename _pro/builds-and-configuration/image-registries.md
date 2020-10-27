@@ -91,6 +91,8 @@ DOCKER_PASSWORD=...
 DOCKER_REGISTRY=https://index.docker.io/v1/
 ```
 
+**Note** that if your Docker Hub account has 2FA enabled, you will need to create a [personal access token](https://docs.docker.com/docker-hub/access-tokens) and use that token for `DOCKER_PASSWORD` above.
+
 - Next, run the following Docker command, which will use an image we maintain to process your credentials and create a standardized `dockercfg` file:
 
 ```bash
