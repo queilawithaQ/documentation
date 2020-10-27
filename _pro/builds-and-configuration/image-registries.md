@@ -56,7 +56,7 @@ On Docker Hub, you can use public images without authentication. Note that as of
 
 The most common way authenticate with image registries is to provide your account credentials via an encrypted `dockercfg` file. This keeps your credentials secure while allowing you to push and pull from private registry accounts.
 
-This encryption happens with our [local CLI tool]({{ site.baseurl }}{% link _pro/jet-cli/usage-overview.md %}), similar to using [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}). To encrypt your image registry credentials:
+This encryption happens with our [Jet CLI tool]({{ site.baseurl }}{% link _pro/jet-cli/usage-overview.md %}), similar to using [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}). To encrypt your image registry credentials:
 
 * First create an unencrypted dockercfg file using your account credentials. The dockercfg should look close to:
 
