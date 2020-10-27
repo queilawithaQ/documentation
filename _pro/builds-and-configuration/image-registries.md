@@ -50,7 +50,7 @@ If you need to reset your AES key you can do so by visiting _Project Settings_ >
 
 If you are using private images, you will need to authenticate with the image registries to pull and push from your account.
 
-**Note** that on Docker Hub, you can use public images without any authentication being required.
+On Docker Hub, you can use public images without authentication. Note that as of November 1, 2020, Docker introduced [rate limits](https://www.docker.com/blog/scaling-docker-to-serve-millions-more-developers-network-egress). Based on your usage you may need to upgrade your Docker plan.
 
 ### Encrypted Registry Account Credentials
 
