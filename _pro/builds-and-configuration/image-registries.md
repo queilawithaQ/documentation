@@ -77,11 +77,11 @@ This encryption happens with our [Jet CLI tool]({{ site.baseurl }}{% link _pro/j
 
 * The newly encrypted dockercfg file will be committed to your repo and used in your [codeship-services.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}) and [codeship-steps.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}) files to authenticate with your registry on pull and push.
 
-### Docker Credentials On Mac OSX
+### Docker Credentials On macOS
 
-If you are using Apple macOS, the newer versions of Docker have changed to store credentials in the macOS keychain rather than in a configuration file.
+If you are using Apple macOS, the newer versions of Docker changed to store credentials in the macOS keychain rather than in a configuration file.
 
-We have created an easy workaround to help you get the appropriate authentication file created on macOS:
+We created a workaround to help you get the appropriate authentication file created on macOS:
 
 - First, add the following credentials, as environment variables, to a file named `credentials.env`:
 
