@@ -79,7 +79,7 @@ This encryption happens with our [Jet CLI tool]({{ site.baseurl }}{% link _pro/j
 
 ### Docker Credentials On macOS
 
-If you are using Apple macOS, the newer versions of Docker changed to store credentials in the macOS keychain rather than in a configuration file.
+If you are using Apple macOS, the newer versions of Docker store credentials in the macOS keychain rather than in a configuration file.
 
 We created a workaround to help you get the appropriate authentication file created on macOS:
 
