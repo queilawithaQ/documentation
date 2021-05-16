@@ -37,6 +37,12 @@ Now that you have a working CI process with a successful test, the next step is 
 
 ### Required Services 
 
+#### Project linked to a Git Repository
+
+Within your SCM of choice you need to have configured the directory where you have been making these files as a repository. 
+
+You also need to have linked this repository in your SCM to a CodeShip Pro project at [CodeShip UI](https://app.codeship.com/home)
+
 #### Image Registry Account
 
 You need an image repository account. For this example, we use Docker Hub but you could use Quay.io or your own self-hosted image repo.
@@ -117,6 +123,8 @@ cat ${HOME}/.docker/config.json
 The newer versions of Docker have changed to store credentials in the MacOS keychain rather than in a configuration file.
 
 To get the appropriate authentication file on MacOS, you will need to remove the `credsStore` line from Docker's `config.json` to disable Keychain storage, re-run `docker login` and then use the values it then generates in your updated `dockercfg` as shown above.
+
+**NOTE:** If this method to retrieve your authentication does not work, you may manually generate your authentication key by running the following command in your terminal: `echo -n 'DOCKER_HUB_USERNAME:DOCKER_HUB_PASSWORD' | base64` and then copy this encrypted authentication key to your `${HOME}/.docker/config.json` file. 
 {% endcsnote %}
 
 {% csnote info %}
